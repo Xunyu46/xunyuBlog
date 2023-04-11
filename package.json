@@ -11,6 +11,7 @@
   "author": "xunyu",
   "license": "ISC",
   "devDependencies": {
-    "vuepress": "^1.9.9"
+    "vuepress": "^1.9.9",
+    "vuepress-plugin-auto-sidebar": "^2.3.2"
   }
 }

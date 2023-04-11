@@ -1,15 +1,16 @@
 ---
 home: true
-heroText: 一个分享各类资源的地方
-tagline: 公众号：资料分享大师
-actionText: 查看资源 →
+heroImage: /image/logo.jpg
+heroText: 寻鱼的博客
+tagline: 用代码将梦想照进现实
+actionText: 立即开始 →
 actionLink: /guide/guide
 features:
-- title: 网盘资源
-  details: 所有网盘资源均来自互联网，本网站不生产任何网盘资源，网盘资源是否失效需要自行判断。
-- title: 黑科技软件
-  details: 主要分享一些实用性的工具类、影视类、音乐类等等各种软件，均由互联网大佬提供。
-- title: 教程资源
-  details: 分享各类教程，包括编程、各类证书考试资源等等，本网站所有教程资源均来自互联网，若涉及侵权立马删除！
-footer: 科技趣玩 | 资料分享大师
+- title: Web前端学习笔记
+  details: 学习前端的一些笔记，HTML、CSS、Javascript、Ajax、webpack、ES6、微信小程序、浏览器原理和性能优化、Vue、React、Typescript、Element UI、Echarts
+- title: 前端面试题
+  details: 网络上收集的面经和面试真题，以及自我总结的一些面试真题和面经还有一些面试细节
+- title: 项目与算法
+  details: 项目的复盘、项目中遇到的问题和项目的总结，常见的算法总结
+footer: XUNYUBLOG | Copyright © 2023-present Xunyu
 ---
