@@ -6,7 +6,9 @@ module.exports = {
     lineNumbers: false,
   },
   themeConfig: {
-    lastUpdated: "Last Updated",
+    lastUpdated: "最近一次修改",
+    activeHeaderLinks: true,
+    smoothScroll: true,
     nav: [
       { text: "主页", link: "/" },
       {
@@ -72,19 +74,25 @@ module.exports = {
       { text: "项目", link: "/project/" },
     ],
     sidebar: {
+      "/guide/guide/": [
+        {
+          title: "指南",
+          collapsable: false,
+          children: [""],
+        },
+      ],
       "/interview/html/": [
-        "",
-        "2022年我的面试万字总结（HTML篇）",
-        "HTML/HTML5 面试题答案解析",
+        {
+          title: "面经",
+          collapsable: false,
+          children: ["", "2022年我的面试万字总结（HTML篇）"],
+        },
+        {
+          title: "自我总结",
+          collapsable: false,
+          children: [],
+        },
       ],
     },
   },
-  plugins: [
-    [
-      "vuepress-plugin-auto-sidebar",
-      {
-        // options
-      },
-    ],
-  ],
 };
