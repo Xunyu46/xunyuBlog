@@ -1,491 +1,154 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>寻鱼的博客</title>
-    <meta name="generator" content="VuePress 1.9.9" />
-    <link rel="icon" href="./image/favicon.ico" />
-    <meta name="description" content="分享前端学习路线和面试文章等等" />
-
-    <link rel="preload" href="./assets/css/0.styles.b5ef9bdd.css" as="style" />
-    <link rel="preload" href="./assets/js/app.e05107db.js" as="script" />
-    <link rel="preload" href="./assets/js/2.c19e14a5.js" as="script" />
-    <link rel="preload" href="./assets/js/7.e940c404.js" as="script" />
-    <link rel="prefetch" href="./assets/js/10.3b4aa42c.js" />
-    <link rel="prefetch" href="./assets/js/3.bb5f88a2.js" />
-    <link rel="prefetch" href="./assets/js/4.e78ef93d.js" />
-    <link rel="prefetch" href="./assets/js/5.87a5051c.js" />
-    <link rel="prefetch" href="./assets/js/6.faacf554.js" />
-    <link rel="prefetch" href="./assets/js/8.d9c932c4.js" />
-    <link rel="prefetch" href="./assets/js/9.6c3de4b1.js" />
-    <link rel="stylesheet" href="./assets/css/0.styles.b5ef9bdd.css" />
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/xunyu-blog/image/favicon.ico">
+    <meta name="description" content="分享前端学习路线和面试文章等等">
+    
+    <link rel="preload" href="/xunyu-blog/assets/css/0.styles.07de4ac6.css" as="style"><link rel="preload" href="/xunyu-blog/assets/js/app.df4d3ff6.js" as="script"><link rel="preload" href="/xunyu-blog/assets/js/2.c19e14a5.js" as="script"><link rel="preload" href="/xunyu-blog/assets/js/7.c36160f4.js" as="script"><link rel="prefetch" href="/xunyu-blog/assets/js/10.624d252b.js"><link rel="prefetch" href="/xunyu-blog/assets/js/3.bb5f88a2.js"><link rel="prefetch" href="/xunyu-blog/assets/js/4.e78ef93d.js"><link rel="prefetch" href="/xunyu-blog/assets/js/5.87a5051c.js"><link rel="prefetch" href="/xunyu-blog/assets/js/6.faacf554.js"><link rel="prefetch" href="/xunyu-blog/assets/js/8.4f0b4c11.js"><link rel="prefetch" href="/xunyu-blog/assets/js/9.bef1ca1e.js">
+    <link rel="stylesheet" href="/xunyu-blog/assets/css/0.styles.07de4ac6.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true">
-      <div class="theme-container no-sidebar">
-        <header class="navbar">
-          <div class="sidebar-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-              role="img"
-              viewBox="0 0 448 512"
-              class="icon"
-            >
-              <path
-                fill="currentColor"
-                d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"
-              ></path>
-            </svg>
-          </div>
-          <a
-            href="/./"
-            aria-current="page"
-            class="home-link router-link-exact-active router-link-active"
-            ><!---->
-            <span class="site-name">寻鱼的博客</span></a
-          >
-          <div class="links">
-            <div class="search-box">
-              <input
-                aria-label="Search"
-                autocomplete="off"
-                spellcheck="false"
-                value=""
-              />
-              <!---->
-            </div>
-            <nav class="nav-links can-hide">
-              <div class="nav-item">
-                <a
-                  href="/./"
-                  aria-current="page"
-                  class="nav-link router-link-exact-active router-link-active"
-                >
-                  主页
-                </a>
-              </div>
-              <div class="nav-item">
-                <div class="dropdown-wrapper">
-                  <button
-                    type="button"
-                    aria-label="前端学习笔记"
-                    class="dropdown-title"
-                  >
-                    <span class="title">前端学习笔记</span>
-                    <span class="arrow down"></span>
-                  </button>
-                  <button
-                    type="button"
-                    aria-label="前端学习笔记"
-                    class="mobile-dropdown-title"
-                  >
-                    <span class="title">前端学习笔记</span>
-                    <span class="arrow right"></span>
-                  </button>
-                  <ul class="nav-dropdown" style="display: none">
-                    <li class="dropdown-item">
-                      <h4>前端基础</h4>
-                      <ul class="dropdown-subitem-wrapper">
-                        <li class="dropdown-subitem">
-                          <a href="/./web/html/" class="nav-link"> HTML </a>
-                        </li>
-                        <li class="dropdown-subitem">
-                          <a href="/./web/css/" class="nav-link"> CSS </a>
-                        </li>
-                        <li class="dropdown-subitem">
-                          <a href="/./web/javascript/" class="nav-link">
-                            JavaScript
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-item">
-                      <h4>进阶</h4>
-                      <ul class="dropdown-subitem-wrapper">
-                        <li class="dropdown-subitem">
-                          <a href="/./web/ajax/" class="nav-link"> Ajax </a>
-                        </li>
-                        <li class="dropdown-subitem">
-                          <a href="/./web/es6/" class="nav-link"> ES6 </a>
-                        </li>
-                        <li class="dropdown-subitem">
-                          <a href="/./web/webpack/" class="nav-link">
-                            webpack
-                          </a>
-                        </li>
-                        <li class="dropdown-subitem">
-                          <a href="/./web/brower/" class="nav-link">
-                            浏览器原理和性能优化
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-item">
-                      <h4>小程序</h4>
-                      <ul class="dropdown-subitem-wrapper">
-                        <li class="dropdown-subitem">
-                          <a href="/./web/applet/" class="nav-link">
-                            微信小程序
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-item">
-                      <h4>框架</h4>
-                      <ul class="dropdown-subitem-wrapper">
-                        <li class="dropdown-subitem">
-                          <a href="/./web/vue/" class="nav-link"> Vue </a>
-                        </li>
-                        <li class="dropdown-subitem">
-                          <a href="/./web/react/" class="nav-link"> React </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-item">
-                      <h4>外部库</h4>
-                      <ul class="dropdown-subitem-wrapper">
-                        <li class="dropdown-subitem">
-                          <a href="/./web/elementui/" class="nav-link">
-                            Element Ui
-                          </a>
-                        </li>
-                        <li class="dropdown-subitem">
-                          <a href="/./web/echarts/" class="nav-link">
-                            Echarts
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-item">
-                      <h4>TypeScript</h4>
-                      <ul class="dropdown-subitem-wrapper">
-                        <li class="dropdown-subitem">
-                          <a href="/./web/typescript/" class="nav-link">
-                            TypeScript
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="nav-item">
-                <div class="dropdown-wrapper">
-                  <button
-                    type="button"
-                    aria-label="面试题"
-                    class="dropdown-title"
-                  >
-                    <span class="title">面试题</span>
-                    <span class="arrow down"></span>
-                  </button>
-                  <button
-                    type="button"
-                    aria-label="面试题"
-                    class="mobile-dropdown-title"
-                  >
-                    <span class="title">面试题</span>
-                    <span class="arrow right"></span>
-                  </button>
-                  <ul class="nav-dropdown" style="display: none">
-                    <li class="dropdown-item">
-                      <!---->
-                      <a href="/./interview/html/" class="nav-link"> HTML </a>
-                    </li>
-                    <li class="dropdown-item">
-                      <!---->
-                      <a href="/./interview/css/" class="nav-link"> CSS </a>
-                    </li>
-                    <li class="dropdown-item">
-                      <!---->
-                      <a href="/./interview/javascript/" class="nav-link">
-                        JavaScript
-                      </a>
-                    </li>
-                    <li class="dropdown-item">
-                      <!---->
-                      <a href="/./interview/es6/" class="nav-link"> ES6 </a>
-                    </li>
-                    <li class="dropdown-item">
-                      <!---->
-                      <a href="/./interview/write/" class="nav-link">
-                        手写面试题
-                      </a>
-                    </li>
-                    <li class="dropdown-item">
-                      <!---->
-                      <a href="/./interview/webpack/" class="nav-link">
-                        webpack
-                      </a>
-                    </li>
-                    <li class="dropdown-item">
-                      <!---->
-                      <a href="/./interview/brower/" class="nav-link">
-                        浏览器网络
-                      </a>
-                    </li>
-                    <li class="dropdown-item">
-                      <!---->
-                      <a href="/./interview/vue/" class="nav-link"> Vue </a>
-                    </li>
-                    <li class="dropdown-item">
-                      <!---->
-                      <a href="/./interview/react/" class="nav-link"> React </a>
-                    </li>
-                    <li class="dropdown-item">
-                      <!---->
-                      <a href="/./interview/algorithm/" class="nav-link">
-                        算法
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="nav-item">
-                <a href="/./algorithm/" class="nav-link"> 算法 </a>
-              </div>
-              <div class="nav-item">
-                <a href="/./project/" class="nav-link"> 项目 </a>
-              </div>
-              <!---->
-            </nav>
-          </div>
-        </header>
-        <div class="sidebar-mask"></div>
-        <aside class="sidebar">
-          <nav class="nav-links">
-            <div class="nav-item">
-              <a
-                href="/./"
-                aria-current="page"
-                class="nav-link router-link-exact-active router-link-active"
-              >
-                主页
-              </a>
-            </div>
-            <div class="nav-item">
-              <div class="dropdown-wrapper">
-                <button
-                  type="button"
-                  aria-label="前端学习笔记"
-                  class="dropdown-title"
-                >
-                  <span class="title">前端学习笔记</span>
-                  <span class="arrow down"></span>
-                </button>
-                <button
-                  type="button"
-                  aria-label="前端学习笔记"
-                  class="mobile-dropdown-title"
-                >
-                  <span class="title">前端学习笔记</span>
-                  <span class="arrow right"></span>
-                </button>
-                <ul class="nav-dropdown" style="display: none">
-                  <li class="dropdown-item">
-                    <h4>前端基础</h4>
-                    <ul class="dropdown-subitem-wrapper">
-                      <li class="dropdown-subitem">
-                        <a href="/./web/html/" class="nav-link"> HTML </a>
-                      </li>
-                      <li class="dropdown-subitem">
-                        <a href="/./web/css/" class="nav-link"> CSS </a>
-                      </li>
-                      <li class="dropdown-subitem">
-                        <a href="/./web/javascript/" class="nav-link">
-                          JavaScript
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-item">
-                    <h4>进阶</h4>
-                    <ul class="dropdown-subitem-wrapper">
-                      <li class="dropdown-subitem">
-                        <a href="/./web/ajax/" class="nav-link"> Ajax </a>
-                      </li>
-                      <li class="dropdown-subitem">
-                        <a href="/./web/es6/" class="nav-link"> ES6 </a>
-                      </li>
-                      <li class="dropdown-subitem">
-                        <a href="/./web/webpack/" class="nav-link"> webpack </a>
-                      </li>
-                      <li class="dropdown-subitem">
-                        <a href="/./web/brower/" class="nav-link">
-                          浏览器原理和性能优化
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-item">
-                    <h4>小程序</h4>
-                    <ul class="dropdown-subitem-wrapper">
-                      <li class="dropdown-subitem">
-                        <a href="/./web/applet/" class="nav-link">
-                          微信小程序
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-item">
-                    <h4>框架</h4>
-                    <ul class="dropdown-subitem-wrapper">
-                      <li class="dropdown-subitem">
-                        <a href="/./web/vue/" class="nav-link"> Vue </a>
-                      </li>
-                      <li class="dropdown-subitem">
-                        <a href="/./web/react/" class="nav-link"> React </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-item">
-                    <h4>外部库</h4>
-                    <ul class="dropdown-subitem-wrapper">
-                      <li class="dropdown-subitem">
-                        <a href="/./web/elementui/" class="nav-link">
-                          Element Ui
-                        </a>
-                      </li>
-                      <li class="dropdown-subitem">
-                        <a href="/./web/echarts/" class="nav-link"> Echarts </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown-item">
-                    <h4>TypeScript</h4>
-                    <ul class="dropdown-subitem-wrapper">
-                      <li class="dropdown-subitem">
-                        <a href="/./web/typescript/" class="nav-link">
-                          TypeScript
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="nav-item">
-              <div class="dropdown-wrapper">
-                <button
-                  type="button"
-                  aria-label="面试题"
-                  class="dropdown-title"
-                >
-                  <span class="title">面试题</span>
-                  <span class="arrow down"></span>
-                </button>
-                <button
-                  type="button"
-                  aria-label="面试题"
-                  class="mobile-dropdown-title"
-                >
-                  <span class="title">面试题</span>
-                  <span class="arrow right"></span>
-                </button>
-                <ul class="nav-dropdown" style="display: none">
-                  <li class="dropdown-item">
-                    <!---->
-                    <a href="/./interview/html/" class="nav-link"> HTML </a>
-                  </li>
-                  <li class="dropdown-item">
-                    <!---->
-                    <a href="/./interview/css/" class="nav-link"> CSS </a>
-                  </li>
-                  <li class="dropdown-item">
-                    <!---->
-                    <a href="/./interview/javascript/" class="nav-link">
-                      JavaScript
-                    </a>
-                  </li>
-                  <li class="dropdown-item">
-                    <!---->
-                    <a href="/./interview/es6/" class="nav-link"> ES6 </a>
-                  </li>
-                  <li class="dropdown-item">
-                    <!---->
-                    <a href="/./interview/write/" class="nav-link">
-                      手写面试题
-                    </a>
-                  </li>
-                  <li class="dropdown-item">
-                    <!---->
-                    <a href="/./interview/webpack/" class="nav-link">
-                      webpack
-                    </a>
-                  </li>
-                  <li class="dropdown-item">
-                    <!---->
-                    <a href="/./interview/brower/" class="nav-link">
-                      浏览器网络
-                    </a>
-                  </li>
-                  <li class="dropdown-item">
-                    <!---->
-                    <a href="/./interview/vue/" class="nav-link"> Vue </a>
-                  </li>
-                  <li class="dropdown-item">
-                    <!---->
-                    <a href="/./interview/react/" class="nav-link"> React </a>
-                  </li>
-                  <li class="dropdown-item">
-                    <!---->
-                    <a href="/./interview/algorithm/" class="nav-link">
-                      算法
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="nav-item">
-              <a href="/./algorithm/" class="nav-link"> 算法 </a>
-            </div>
-            <div class="nav-item">
-              <a href="/./project/" class="nav-link"> 项目 </a>
-            </div>
-            <!---->
-          </nav>
-          <!---->
-        </aside>
-        <main aria-labelledby="main-title" class="home">
-          <header class="hero">
-            <img src="./image/logo.jpg" alt="hero" />
-            <h1 id="main-title">寻鱼的博客</h1>
-            <p class="description">用代码将梦想照进现实</p>
-            <p class="action">
-              <a href="/./guide/guide.html" class="nav-link action-button">
-                立即开始 →
-              </a>
-            </p>
-          </header>
-          <div class="features">
-            <div class="feature">
-              <h2>Web前端学习笔记</h2>
-              <p>
-                学习前端的一些笔记，HTML、CSS、Javascript、Ajax、webpack、ES6、微信小程序、浏览器原理和性能优化、Vue、React、Typescript、Element
-                UI、Echarts
-              </p>
-            </div>
-            <div class="feature">
-              <h2>前端面试题</h2>
-              <p>
-                网络上收集的面经和面试真题，以及自我总结的一些面试真题和面经还有一些面试细节
-              </p>
-            </div>
-            <div class="feature">
-              <h2>项目与算法</h2>
-              <p>项目的复盘、项目中遇到的问题和项目的总结，常见的算法总结</p>
-            </div>
-          </div>
-          <div class="theme-default-content custom content__default"></div>
-          <div class="footer">XUNYUBLOG | Copyright © 2023-present Xunyu</div>
-        </main>
-      </div>
-      <div class="global-ui"></div>
-    </div>
-    <script src="./assets/js/app.e05107db.js" defer></script>
-    <script src="./assets/js/2.c19e14a5.js" defer></script>
-    <script src="./assets/js/7.e940c404.js" defer></script>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/xunyu-blog/" aria-current="page" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">寻鱼的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/xunyu-blog/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xunyu-blog/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/xunyu-blog/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/xunyu-blog/web/javascript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xunyu-blog/web/ajax/" class="nav-link">
+  Ajax
+</a></li><li class="dropdown-subitem"><a href="/xunyu-blog/web/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/xunyu-blog/web/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/xunyu-blog/web/brower/" class="nav-link">
+  浏览器原理和性能优化
+</a></li></ul></li><li class="dropdown-item"><h4>
+          小程序
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xunyu-blog/web/applet/" class="nav-link">
+  微信小程序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xunyu-blog/web/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/xunyu-blog/web/react/" class="nav-link">
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>
+          外部库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xunyu-blog/web/elementui/" class="nav-link">
+  Element Ui
+</a></li><li class="dropdown-subitem"><a href="/xunyu-blog/web/echarts/" class="nav-link">
+  Echarts
+</a></li></ul></li><li class="dropdown-item"><h4>
+          TypeScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xunyu-blog/web/typescript/" class="nav-link">
+  TypeScript
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试题" class="dropdown-title"><span class="title">面试题</span> <span class="arrow down"></span></button> <button type="button" aria-label="面试题" class="mobile-dropdown-title"><span class="title">面试题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/write/" class="nav-link">
+  手写面试题 
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/brower/" class="nav-link">
+  浏览器网络
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/algorithm/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="/xunyu-blog/algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/xunyu-blog/project/" class="nav-link">
+  项目
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/xunyu-blog/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习笔记" class="dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习笔记" class="mobile-dropdown-title"><span class="title">前端学习笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xunyu-blog/web/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/xunyu-blog/web/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/xunyu-blog/web/javascript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          进阶
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xunyu-blog/web/ajax/" class="nav-link">
+  Ajax
+</a></li><li class="dropdown-subitem"><a href="/xunyu-blog/web/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-subitem"><a href="/xunyu-blog/web/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/xunyu-blog/web/brower/" class="nav-link">
+  浏览器原理和性能优化
+</a></li></ul></li><li class="dropdown-item"><h4>
+          小程序
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xunyu-blog/web/applet/" class="nav-link">
+  微信小程序
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xunyu-blog/web/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-subitem"><a href="/xunyu-blog/web/react/" class="nav-link">
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>
+          外部库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xunyu-blog/web/elementui/" class="nav-link">
+  Element Ui
+</a></li><li class="dropdown-subitem"><a href="/xunyu-blog/web/echarts/" class="nav-link">
+  Echarts
+</a></li></ul></li><li class="dropdown-item"><h4>
+          TypeScript
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/xunyu-blog/web/typescript/" class="nav-link">
+  TypeScript
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试题" class="dropdown-title"><span class="title">面试题</span> <span class="arrow down"></span></button> <button type="button" aria-label="面试题" class="mobile-dropdown-title"><span class="title">面试题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/html/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/css/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/javascript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/es6/" class="nav-link">
+  ES6
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/write/" class="nav-link">
+  手写面试题 
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/brower/" class="nav-link">
+  浏览器网络
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/vue/" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/react/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/xunyu-blog/interview/algorithm/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="/xunyu-blog/algorithm/" class="nav-link">
+  算法
+</a></div><div class="nav-item"><a href="/xunyu-blog/project/" class="nav-link">
+  项目
+</a></div> <!----></nav>  <!----> </aside> <main aria-labelledby="main-title" class="home"><header class="hero"><img src="/xunyu-blog/image/logo.jpg" alt="hero"> <h1 id="main-title">
+      寻鱼的博客
+    </h1> <p class="description">
+      用代码将梦想照进现实
+    </p> <p class="action"><a href="/xunyu-blog/guide/guide.html" class="nav-link action-button">
+  立即开始 →
+</a></p></header> <div class="features"><div class="feature"><h2>Web前端学习笔记</h2> <p>学习前端的一些笔记，HTML、CSS、Javascript、Ajax、webpack、ES6、微信小程序、浏览器原理和性能优化、Vue、React、Typescript、Element UI、Echarts</p></div><div class="feature"><h2>前端面试题</h2> <p>网络上收集的面经和面试真题，以及自我总结的一些面试真题和面经还有一些面试细节</p></div><div class="feature"><h2>项目与算法</h2> <p>项目的复盘、项目中遇到的问题和项目的总结，常见的算法总结</p></div></div> <div class="theme-default-content custom content__default"></div> <div class="footer">
+    XUNYUBLOG | Copyright © 2023-present Xunyu
+  </div></main></div><div class="global-ui"></div></div>
+    <script src="/xunyu-blog/assets/js/app.df4d3ff6.js" defer></script><script src="/xunyu-blog/assets/js/2.c19e14a5.js" defer></script><script src="/xunyu-blog/assets/js/7.c36160f4.js" defer></script>
   </body>
 </html>
