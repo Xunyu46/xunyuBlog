@@ -1,6 +1,7 @@
 module.exports = {
   head: [["link", { rel: "icon", href: "/image/favicon.ico" }]],
   title: "寻鱼的博客",
+  base: "./",
   description: "分享前端学习路线和面试文章等等",
   markdown: {
     lineNumbers: false,
