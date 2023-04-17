@@ -94,6 +94,18 @@ module.exports = {
           children: [],
         },
       ],
+      "/interview/css/": [
+        {
+          title: "面经",
+          collapsable: false,
+          children: [""],
+        },
+        {
+          title: "自我总结",
+          collapsable: false,
+          children: [],
+        },
+      ],
     },
   },
 };
