@@ -167,7 +167,6 @@ p::before {content:"第一章：";}
 p::after {content:"Hot!";}
 p::first-line {background:red;}
 p::first-letter {font-size:30px;}
-复制代码
 ```
 
 - 伪类：将特殊的效果添加到特定选择器上。它是已有元素上添加类别的，不会产生新的元素。例如：
@@ -175,7 +174,6 @@ p::first-letter {font-size:30px;}
 ```css
 a:hover {color: #FF00FF}
 p:first-child {color: red}
-复制代码
 ```
 
 **总结：** 伪类是通过在元素选择器上加⼊伪类改变元素状态，⽽伪元素通过对元素的操作进⾏对元素的改变。
@@ -351,24 +349,20 @@ CSSSprites（精灵图），将一个页面涉及到的所有图片都包含到�
 ::: tip
 - 单行文本溢出
 
-```arduino
+```css
 overflow: hidden;            // 溢出隐藏
 text-overflow: ellipsis;      // 溢出用省略号显示
 white-space: nowrap;         // 规定段落中的文本不进行换行
-
-复制代码
 ```
 
 - 多行文本溢出
 
-```arduino
+```css
 overflow: hidden;            // 溢出隐藏
 text-overflow: ellipsis;     // 溢出用省略号显示
 display:-webkit-box;         // 作为弹性伸缩盒子模型显示。
 -webkit-box-orient:vertical; // 设置伸缩盒子的子元素排列方式：从上到下垂直排列
 -webkit-line-clamp:3;        // 显示的行数
-
-复制代码
 ```
 
 注意：由于上面的三个属性都是 CSS3 的属性，没有浏览器可以兼容，所以要在前面加一个`-webkit-` 来兼容一部分浏览器。
@@ -442,7 +436,6 @@ display:-webkit-box;         // 作为弹性伸缩盒子模型显示。
     background-color: skyblue;
   }
 }
-复制代码
 ```
 :::
 ## 24. 说说对 CSS 工程化的理解
@@ -605,7 +598,6 @@ flex 布局（CSS3中出现的）
   height: 100px;
   background: lightgreen;
 }
-复制代码
 ```
 
 - 利用flex布局，左右两栏设置固定大小，中间一栏设置为flex:1。
@@ -630,7 +622,6 @@ flex 布局（CSS3中出现的）
   flex: 1;
   background: lightgreen;
 }
-复制代码
 ```
 
 ### 如何实现双飞翼（圣杯）布局？
@@ -670,7 +661,6 @@ flex 布局（CSS3中出现的）
     left: 50%;    top: 50%;    
     transform: translate(-50%,-50%);
 }
-复制代码
 ```
 
 - 利用绝对定位，设置四个方向的值都为0，并将margin设置为auto，由于宽高固定，因此对应方向实现平分，可以实现水平和垂直方向上的居中。该方法适用于**盒子有宽高**的情况：
@@ -688,7 +678,6 @@ flex 布局（CSS3中出现的）
     right: 0;
     margin: auto;
 }
-复制代码
 ```
 
 - 利用绝对定位，先将元素的左上角通过top:50%和left:50%定位到页面的中心，然后再通过margin负值来调整元素的中心点到页面的中心。该方法适用于**盒子宽高已知**的情况
@@ -705,7 +694,6 @@ flex 布局（CSS3中出现的）
     margin-top: -50px;     /* 自身 height 的一半 */
     margin-left: -50px;    /* 自身 width 的一半 */
 }
-复制代码
 ```
 
 - 使用flex布局，通过align-items:center和justify-content:center设置容器的垂直和水平方向上为居中对齐，然后它的子元素也可以实现垂直和水平的居中。该方法要**考虑兼容的问题**，该方法在移动端用的较多：
@@ -716,7 +704,6 @@ flex 布局（CSS3中出现的）
     justify-content:center;
     align-items:center;
 }
-复制代码
 ```
 :::
 ## 32. 如何根据设计稿进行移动端适配？
@@ -738,7 +725,7 @@ Flex是FlexibleBox的缩写，意为"弹性布局"，用来为盒状模型提供
 ::: tip
 **一点**
 
-```xml
+```html
 <style>
   .warp {
     display: flex;
@@ -747,12 +734,11 @@ Flex是FlexibleBox的缩写，意为"弹性布局"，用来为盒状模型提供
     align-items: center;
   }
 </style>
-复制代码
 ```
 
 **二点**
 
-```xml
+```html
 <body>
   <div class="warp">
     <div class="column"><div class="pip"></div></div>
@@ -773,13 +759,11 @@ Flex是FlexibleBox的缩写，意为"弹性布局"，用来为盒状模型提供
     justify-content: flex-end;
   }
 </style>
-
-复制代码
 ```
 
 **三点**
 
-```xml
+```html
 <body>
   <div class="warp">
     <div class="column"><div class="pip"></div></div>
@@ -804,8 +788,6 @@ Flex是FlexibleBox的缩写，意为"弹性布局"，用来为盒状模型提供
     justify-content: flex-end;
   }
 </style>
-
-复制代码
 ```
 
 **四点**
@@ -833,8 +815,6 @@ Flex是FlexibleBox的缩写，意为"弹性布局"，用来为盒状模型提供
   display: flex;
   justify-content: space-between;
 }
-
-复制代码
 ```
 
 **五点**
@@ -868,13 +848,11 @@ Flex是FlexibleBox的缩写，意为"弹性布局"，用来为盒状模型提供
 .column:nth-child(2) {
   justify-content: center;
 }
-
-复制代码
 ```
 
 **六点**
 
-```ini
+```css
 <body>
   <div class="warp">
     <div class="column">
@@ -901,8 +879,6 @@ Flex是FlexibleBox的缩写，意为"弹性布局"，用来为盒状模型提供
   display: flex;
   justify-content: space-around;
 }
-
-复制代码
 ```
 :::
 ## 34. 响应式设计的概念及基本原理
@@ -911,9 +887,8 @@ Flex是FlexibleBox的缩写，意为"弹性布局"，用来为盒状模型提供
 
 关于原理： 基本原理是通过媒体查询`（@media）`查询检测不同的设备屏幕尺寸做处理。 关于兼容： 页面头部必须有mate声明的`viewport`。
 
-```ini
+```css
 <meta name="’viewport’" content="”width=device-width," initial-scale="1." maximum-scale="1,user-scalable=no”"/>
-复制代码
 ```
 :::
 ## 35. 浮动
@@ -1121,7 +1096,6 @@ div{
 
 ```css
 transform: scale(0.5,0.5);
-复制代码
 ```
 :::
 ## 46.移动端有哪些常见的问题，都是怎么解决的？
@@ -1132,14 +1106,12 @@ transform: scale(0.5,0.5);
 
 ```ini
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> 
-复制代码
 ```
 
 **忽略Android平台中对邮箱地址的识别**
 
 ```ini
 <meta name="format-detection" content="email=no"> 
-复制代码
 ```
 
 **当网站添加到主屏幕快速启动方式，可隐藏地址栏，仅针对ios的safari**
@@ -1148,7 +1120,6 @@ transform: scale(0.5,0.5);
 <!-- ios7.0版本以后，safari上已看不到效果 -->
 
 <meta name="apple-mobile-web-app-capable" content="yes">
-复制代码
 ```
 :::
 ## 47. 如何实现CSS 动画
@@ -1173,7 +1144,6 @@ CSS3动画可以不用鼠标触发,自动,反复的执行某些动画.
 }
 使用：
 width:var(--borderColor);
-复制代码
 ```
 
 2、**定义某元素下的变量**
@@ -1182,7 +1152,6 @@ width:var(--borderColor);
 .look{
   --borderColor: #ccc;
 }
-复制代码
 ```
 
 3、**定义媒体查询下的变量**
@@ -1197,7 +1166,6 @@ width:var(--borderColor);
 .has-border-table > tr > td {
   border-right: 1px solid var(--borderColor);
 }
-复制代码
 ```
 
 **less中定义变量**
@@ -1209,7 +1177,6 @@ width:var(--borderColor);
 .has-border-table > tr > td {
   border-right: 1px solid var(@bg-color);
 }
-复制代码
 ```
 
 **sass中定义变量**
@@ -1221,7 +1188,6 @@ $bg-color : #d9d9d9;
 .has-border-table > tr > td {
   border-right: 1px solid var($bg-color);
 }
-复制代码
 ```
 :::
 ## 49.CSS怎么解决浏览器兼容问题
@@ -1263,7 +1229,6 @@ z-index的小坑, 如果父辈元素有定位, 且配置了z-index, 优先按照
 h1 {
     color: @color;
 }
-复制代码
 ```
 
 字符串插值
@@ -1281,7 +1246,6 @@ div {
   height: 200px;
   background-image: url("@{url}1.jpg"); // 结果为/images/1.jpg
 }
-复制代码
 ```
 
 媒体查询定义变量的方式
@@ -1297,7 +1261,6 @@ div {
     background-color: #898900;
   }
 }
-复制代码
 ```
 
 （2）嵌套
@@ -1406,7 +1369,6 @@ Less提供了使用嵌套代替层叠或与层叠结合使用的能力。使用L
     <span>使用 CSS 怎么让 Chrome 支持小于 12px 的文字</span>
   </p>
 </body>
-复制代码
 ```
 :::
 ## 57. 浏览器是如何解析CSS选择器的？

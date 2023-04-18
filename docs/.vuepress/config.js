@@ -106,6 +106,18 @@ module.exports = {
           children: [],
         },
       ],
+      "/interview/javascript/": [
+        {
+          title: "面经",
+          collapsable: true,
+          children: [""],
+        },
+        {
+          title: "自我总结",
+          collapsable: false,
+          children: [],
+        },
+      ],
     },
   },
 };
