@@ -27,14 +27,13 @@ publish: true
 
 ### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_1、-script-setup-的基本用法)1、`<script setup>`的基本用法
 
-<script setup>中的this指向与setup()方法中的一样，都指向undefined
 
 ```html
+<script setup>中的this指向与setup()方法中的一样，都指向undefined
 <script setup>
   const count = 0;
   console.log(this); // undefined
 </script>
-
 ````
 
 在 `<script setup>` 声明的顶层的绑定（包括变量，函数声明，以及 import 导入的内容）都能在模板中直接使用
