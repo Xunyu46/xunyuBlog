@@ -9,6 +9,7 @@ export default defineUserConfig({
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
     logo: "/logo.jpg",
+    base: "/xunyu-blog/",
     author: "xunyu",
     authorAvatar: "/logo.jpg",
     docsRepo: "https://github.com/vuepress-reco/vuepress-theme-reco-next",
