@@ -7,7 +7,7 @@ export default defineUserConfig({
   // @ts-ignore
   base: "/xunyu-blog/",
   description: "用代码将梦想照进现实",
-  head: [["link", { rel: "icon", href: "/logo.jpg" }]],
+  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
     logo: "/logo.jpg",
