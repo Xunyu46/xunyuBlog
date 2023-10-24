@@ -4,12 +4,13 @@ import recoTheme from "vuepress-theme-reco";
 
 export default defineUserConfig({
   title: "xunyublog",
+  // @ts-ignore
+  base: "/xunyu-blog/",
   description: "用代码将梦想照进现实",
   head: [["link", { rel: "icon", href: "/logo.jpg" }]],
   theme: recoTheme({
     style: "@vuepress-reco/style-default",
     logo: "/logo.jpg",
-    base: "/xunyu-blog/",
     author: "xunyu",
     authorAvatar: "/logo.jpg",
     docsRepo: "https://github.com/vuepress-reco/vuepress-theme-reco-next",
