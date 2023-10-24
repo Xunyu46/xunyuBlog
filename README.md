@@ -7,7 +7,7 @@ modules:
   - Footer
 bannerBrand:
   bgImage: "/bg.svg"
-  title: 寻鱼的博客
+  title: 寻雨的博客
   description: 用代码将梦想照进现实
   tagline: 学习前端的一些笔记，HTML、CSS、Javascript、Ajax、webpack、ES6、微信小程序、浏览器原理和性能优化、Vue、React、Typescript、Element UI、Echarts
   buttons:
