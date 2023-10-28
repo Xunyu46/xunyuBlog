@@ -115,6 +115,16 @@ export default defineUserConfig({
           ],
         },
       ],
+      "/blogs/web/ajax/": [
+        {
+          text: "网络请求，前后端通信",
+          children: [
+            "/blogs/web/ajax/前后端数据交互 与 HTTP 协议.md",
+            "/blogs/web/ajax/本地存储 Cookie、localStorage、sessionStorage 实践.md",
+            "/blogs/web/ajax/JSON、Ajax、跨域请求、XHR 对象、Axios 与 Fetch.md",
+          ],
+        },
+      ],
     },
 
     navbar: [
@@ -134,7 +144,10 @@ export default defineUserConfig({
           {
             text: "进阶",
             children: [
-              { text: "Ajax", link: "/blogs/web/ajax/" },
+              {
+                text: "Ajax",
+                link: "/blogs/web/ajax/前后端数据交互 与 HTTP 协议.md",
+              },
               { text: "ES6", link: "/blogs/web/es6/" },
               { text: "浏览器原理和性能优化", link: "/blogs/web/brower/" },
             ],
