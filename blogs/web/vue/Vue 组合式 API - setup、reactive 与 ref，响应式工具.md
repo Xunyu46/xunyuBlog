@@ -65,7 +65,7 @@ publish: true
 - 深入响应式 API- 工具函数（二）
 - `setup()`函数参数
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#一、初识-setup-函数)一、初识 setup() 函数
+## 一、初识 setup() 函数
 
 `setup()` 函数是在组件中使用组合式 API 的入口（表演的舞台），所有组合式 API 代码都写在`setup()`函数中
 
@@ -80,7 +80,7 @@ publish: true
 </script>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_1、setup-函数的返回值)1、setup() 函数的返回值
+### 1、setup() 函数的返回值
 
 `setup()`函数的返回值通常是一个对象，这个对象的所有属性会暴露给组件模板和组件实例，所以
 
@@ -117,7 +117,7 @@ publish: true
 
 ![GIF2023-7-814-43-14](https://www.arryblog.com/assets/img/GIF2023-7-814-43-14.338bbb14.gif)
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_2、setup-函数中-this-指向)2、setup() 函数中 this 指向
+### 2、setup() 函数中 this 指向
 
 - `setup()`函数自身并不含对组件实例的访问权，在`setup()`中访问`this`会是`undefind`
 - 所以`setup()`函数内是没有办法访问到选项式 API 中的属性、方法、计算属性等。
@@ -139,7 +139,7 @@ publish: true
 </script>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_3、setup-函数执行时机)3、setup() 函数执行时机
+### 3、setup() 函数执行时机
 
 `setup()`函数是在 Vue 生命周期函数`beforeCreate()`之前被自动调用的。
 
@@ -172,7 +172,7 @@ publish: true
 
 ![image-20230522151358423](https://www.arryblog.com/assets/img/image-20230522151358423.dd146084.png)
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_4、setup-函数暴露非响应式属性)4、setup() 函数暴露非响应式属性
+### 4、setup() 函数暴露非响应式属性
 
 以下方式`setup()`函数对外暴露的属性非响应式的，当属性的值发生变化时，页面并不会同步更新。
 
@@ -209,18 +209,18 @@ publish: true
 
 > 如果想要对外暴露的属性支持响应式，需要用到响应式 API 中的`reactive()`或`ref()`方法来实现。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_5、总结)5、总结
+### 5、总结
 
 - `setup()`函数返回值通常是一个对象，这个对象的所有属性会暴露给组件模板和组件实例
 - `setup()`函数中的`this`指向`undefined`
 - `setup()`函数会在所有生命周期函数`beforeCreate`之前被执行。
 - `setup()`函数内定义的变量默认为非响应式的，所以对外暴露该属性为非响应式
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#二、初始-reactive-与-ref-响应式-api)二、初始 reactive 与 ref 响应式 API
+## 二、初始 reactive 与 ref 响应式 API
 
 本小节我们将会初步认识`reactive`与`ref` 两个响应式 API，掌握他们的基本用法。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_1、初识-reactive-方法)1、初识 reactive() 方法
+### 1、初识 reactive() 方法
 
 `reactive()`方法用来返回一个**对象**的响应式代理。
 
@@ -273,7 +273,7 @@ const objProxy = reactive(obj); // objProxy为obj对象的响应式代理
 
 > 以上过程证明`objProxy`代理对象具有响应性，所以`objProxy`为响应式代理对象。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_1-1、深层响应性)1.1、深层响应性
+### 1.1、深层响应性
 
 通过`reactive()`方法转换的响应式对象是 **"深层响应"** 的。
 
@@ -317,7 +317,7 @@ const objProxy = reactive(obj); // objProxy为obj对象的响应式代理
 
 > 当点击按扭后，往数组中添加了“A"，页面同步更新渲染出来了。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_1-2、reactive-无法转换基本数据类型)1.2、reactive() 无法转换基本数据类型
+### 1.2、reactive() 无法转换基本数据类型
 
 - `reactive()`方法只能将一个对象转换为一个响应式对象，而不能将一个基本数据类型转换为响应式对象。
 - 因为`reactive()`方法的底层采用的是`Proxy`来实现的，而`Proxy`只能创建对象的代理。
@@ -342,7 +342,7 @@ export default {
 
 警告提示，值不能被设置为响应式，最后 msg 的结果仍为原始值`"Hello Vue!!"`
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_1-3、reactive-方法底层实现原理)1.3、reactive() 方法底层实现原理
+### 1.3、reactive() 方法底层实现原理
 
 `reactive()`方法返回的响应式代理对象本质是`Proxy()`的实例。
 
@@ -375,7 +375,7 @@ function reactive(obj) {
 }
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_2、初识-ref-方法)2、初识 ref() 方法
+### 2、初识 ref() 方法
 
 接受一个内部值，返回一个响应式的、可更改的 ref 对象，此对象只有一个指向其内部值的属性 `.value`
 
@@ -412,7 +412,7 @@ function reactive(obj) {
 
 ![image-20230708154959482](data:image/png;base64,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)
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_2-1、访问-ref-对象的-value-属性)2.1、访问 ref 对象的 value 属性
+### 2.1、访问 ref 对象的 value 属性
 
 - 在`setup()`中访问`ref`对象的`value`值时，需要`.value`的形式来访问
 - 在组件模板中访问`ref`对象的`value`值时，它会**自动浅层解包**（会自动调用`ref.value`），因此你无须再在模板中为它写 `.value`。
@@ -463,7 +463,7 @@ function reactive(obj) {
 
 ![GIF2023-5-1722-12-19](https://www.arryblog.com/assets/img/GIF2023-5-1722-12-19.4a33561b.gif)
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_2-2、ref-方法转换对象)2.2、ref() 方法转换对象
+### 2.2、ref() 方法转换对象
 
 - `ref()`方法的参数如果为一个对象（引用类型），则最终返回的`ref`对象的`value`属性值为该对象的响应式代理对象。
 - 该 ref 对象是一具有**深层响**应式，可更改的`ref`对象。
@@ -545,7 +545,7 @@ function reactive(obj) {
 
 > 若要避免这种深层次的转换，请使用 `shallowRef()`来替代。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_2-3、ref-方法的底层实现)2.3、ref() 方法的底层实现
+### 2.3、ref() 方法的底层实现
 
 以上代码中的`ref()`方法，返回的`ref`对象，底层实现如下（极简版，不完整，仅供了解思路）
 
@@ -570,7 +570,7 @@ function ref(value) {
 - 当我们访问 ref 对象的 value 属性时，本质是触发了 value 属性的 get 方法。
 - 当我们给 ref 对象赋值时，本质是触发了 value 属性的 set 方法。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_3、总结)3、总结
+### 3、总结
 
 **reactive 方法**
 
@@ -585,7 +585,7 @@ function ref(value) {
 - ref 方法的参数如果为对象类型，则返回的 ref 对象的 value 属性值为该对象的 proxy 响应式代理对象。
 - ref 方法的底层实现是通过创建一个具有 get value 与 set value 属性的对象来实现。
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#三、深入响应式-api-工具函数-一)三、深入响应式 API - 工具函数（一）
+## 三、深入响应式 API - 工具函数（一）
 
 通过前面的学习我们知道`reactive()`方法的返回值为一个对象的**响应式代理**。本小节我们针对响应式代理对象做深入的学习，主要内容如下：
 
@@ -599,7 +599,7 @@ function ref(value) {
 
 > 注：我们将响应式代理对象简称为响应式对象
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_1、响应式对象会自动解包-ref-属性)1、响应式对象会自动解包 ref 属性
+### 1、响应式对象会自动解包 ref 属性
 
 一个响应式对象的属性及嵌套属性的值如果为`ref`属性，在模板或`setup()`中使用时，会自动解包，同时保持响应性
 
@@ -648,7 +648,7 @@ function ref(value) {
 
 ![GIF2023-5-1722-57-04](https://www.arryblog.com/assets/img/GIF2023-5-1722-57-04.6a787ae1.gif)
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_2、不能被自动解包的集合)2、不能被自动解包的集合
+### 2、不能被自动解包的集合
 
 当访问到某个响应式数组或 `Map` 这样的原生集合类型中的 `ref` 元素时，**不会**执行 ref 的解包。
 
@@ -662,7 +662,7 @@ const map = reactive(new Map([["count", ref(0)]]));
 console.log(map.get("count").value);
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_3、解构响应式对象)3、解构响应式对象
+### 3、解构响应式对象
 
 **如果我们直接利用解构赋值来解构响应式对象**
 
@@ -786,7 +786,7 @@ console.log(map.get("count").value);
 
 > 那我们如何保持解构后的变量都具有响应性呢 ？这就需要用到接下来讲到的`toRef()`和`toRefs()`方法
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_4、toref-方法)4、toRef() 方法
+### 4、toRef() 方法
 
 `toRef()`方法可以基于响应式对象上的一个属性，创建一个对应的 ref。
 
@@ -845,7 +845,7 @@ const variable = toRef(proxyObject, key, defaultValue);
 
 通过渲染后的结果可以看到，`objProxy.a = 10`与`a.value = 100`最终都会影响到 a 变量的值，也可以说影响到`objProxy.a`的值，同时都具有响应性。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_4-1、toref-注意事项)4.1、toRef() 注意事项
+### 4.1、toRef() 注意事项
 
 - `toRef()` 如果传入的对象非响应式的，则返回该对象上指定属性的`ref`对象。（只做了解）
 
@@ -883,7 +883,7 @@ console.log(a.value);
 // a.value = "ssss"
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_5、torefs-方法)5、toRefs() 方法
+### 5、toRefs() 方法
 
 - 将一个响应式对象转换为一个普通对象，这个普通对象的每个属性都是指向源对象相应属性的 ref。
 - 每个单独的 ref 都是使用 [`toRef()` (opens new window)](https://cn.vuejs.org/api/reactivity-utilities.html#toref)创建的。
@@ -970,7 +970,7 @@ export default {
 
 `toRefs` 在调用时只会为源对象上可以枚举的属性创建 ref。如果要为可能还不存在的属性创建 ref，请改用 [`toRef` (opens new window)](https://cn.vuejs.org/api/reactivity-utilities.html#toref)。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_6、shallowreactive-方法)6、shallowReactive() 方法
+### 6、shallowReactive() 方法
 
 - `shallowReactive()`相当于是`reactive()`的浅层作用形式。
 - 也就是`shallowReactive()`转换的响应式对象只有根级别的属性是响应式的。属性的值会被原样存储和暴露，这也意味着值为 `ref` 的属性**不会**被自动解包了。
@@ -1014,7 +1014,7 @@ export default {
 
 ![GIF2023-5-1815-55-26](https://www.arryblog.com/assets/img/GIF2023-5-1815-55-26.5c88ba5a.gif)
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_7、readonly-方法)7、readonly() 方法
+### 7、readonly() 方法
 
 接受一个对象 (不论是响应式还是普通的) 或是一个 [ref (opens new window)](https://cn.vuejs.org/api/reactivity-core.html#ref)，返回一个原值的只读代理。
 
@@ -1041,7 +1041,7 @@ export default {
 </script>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_8、isreactive-方法)8、isReactive() 方法
+### 8、isReactive() 方法
 
 检查一个对象是否是由 `reactive()`或 `shallowReactive()` 创建的代理。
 
@@ -1062,7 +1062,7 @@ export default {
 </script>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#四、深入响应式-api-工具函数-二)四、深入响应式 API - 工具函数（二）
+## 四、深入响应式 API - 工具函数（二）
 
 通过前面`ref()`方法的学习，我们对 ref 对象有了初步的了解，本小节我们将深入展开`ref`对象的学习。
 
@@ -1073,7 +1073,7 @@ export default {
 - `unref()`方法，获取 ref 属性值的一种语法糖
 - `customRef()`方法，自定义 ref
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_1、shallowref-方法)1、shallowRef() 方法
+### 1、shallowRef() 方法
 
 `shallowRef()`方法相当于`ref()`的浅层作用形式，只对`.value`的访问是响应式的，对对象的其它属性值的写操作不支持响应式。
 
@@ -1119,7 +1119,7 @@ export default {
 
 因为 state 是被`shallowRef`转换的的一个浅层的响应式对象，所以`state.value.count = 100`并不会触发页面的更新，而`state.value = { count: 200 }`会触发页面的更新。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_2、isref-方法)2、isRef() 方法
+### 2、isRef() 方法
 
 检查某个值是否为 ref 对象，如果是返回 true，否则返回 false
 
@@ -1134,7 +1134,7 @@ export default {
 };
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_3、unref-方法)3、unref() 方法
+### 3、unref() 方法
 
 `unref()`方法的参数是 ref，则返回 ref 对象的 value 属性值，否则返回参数本身。
 
@@ -1153,7 +1153,7 @@ export default {
 };
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_4、customref-自定义-ref)4、customRef() 自定义 ref
+### 4、customRef() 自定义 ref
 
 `customRef()`方法用来创建一个自定义的 ref，显式声明对其依赖追踪和更新触发的控制方式。
 
@@ -1352,7 +1352,7 @@ count.value = 100;
 
 ![GIF2023-5-2314-52-23](https://www.arryblog.com/assets/img/GIF2023-5-2314-52-23.eaac56f0.gif)
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_4-1、总结-customref-方法使用流程)4.1、总结：customRef() 方法使用流程
+### 4.1、总结：customRef() 方法使用流程
 
 **第一步：**
 
@@ -1417,7 +1417,7 @@ function createRef(value) {
 
 > 接下来，我们就来学习下 Vue 官方提供的《自定义防抖 ref》案例
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_5、实战应用-自定义防抖-ref)5、实战应用：自定义防抖 ref
+### 5、实战应用：自定义防抖 ref
 
 当在输入框中连续输入内容的间隔时间超过`500ms`，则更新 h3 标签显示的内容，否则不更新。
 
@@ -1466,7 +1466,7 @@ function createRef(value) {
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_6、总结)6、总结
+### 6、总结
 
 - `shallowRef()` 用来创建浅层的 ref 对象，只对`.value`的访问是响应式的，对象的其它均为非响应式
 
@@ -1513,11 +1513,11 @@ function createRef(value) {
 const count = createRef(0);
 ```
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#五、setup-函数参数)五、setup() 函数参数
+## 五、setup() 函数参数
 
 深入浅出 setup() 函数参数 props、context、什么情况下会使用 setup() 函数
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_1、参数-props)1、参数 props
+### 1、参数 props
 
 - `setup()`函数有两个参数，第一个参数是组件的`props`，和标准的组件一致。
 - 一个 `setup` 函数的 `props` 是响应式的，并且会在传入新的`props` 时同步更新。
@@ -1595,7 +1595,7 @@ export default {
 
 ![GIF2023-7-914-23-39](https://www.arryblog.com/assets/img/GIF2023-7-914-23-39.9a84900a.gif)
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_1-1、解构-props)1.1、解构 props
+### 1.1、解构 props
 
 通过上面案例我们知道 props 参数的值为一个响应式代理对象，但如果直接解构`props`部分属性将失去响应性。因此推荐通过`props.xxx`的形式来使用 props
 
@@ -1615,7 +1615,7 @@ setup(props) {
 }
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_2、参数-context)2、参数 context
+### 2、参数 context
 
 传入 `setup` 函数的第二个参数 context 是一个 **Setup 上下文**对象。上下文对象暴露了其他一些在 `setup` 中可能会用到的值。
 
@@ -1760,7 +1760,7 @@ setup(props, { attrs, slots, emit, expose }) {
     }
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-setup-reactive-ref.html#_3、什么情况下会使用-setup-函数)3、什么情况下会使用 setup() 函数
+### 3、什么情况下会使用 setup() 函数
 
 通过前面的学习，我们知道组合式 API 可以与选项式 API 共存，也就是说，我们可以在选项式 API 中使用`setup()`函数。
 

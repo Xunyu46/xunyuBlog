@@ -22,11 +22,11 @@ publish: true
 - 组合式 API 常见疑问
 - 实战应用：带历史记录的搜索
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#一、模板引用)一、模板引用
+## 一、模板引用
 
 深入浅出 组合式 API 中 ref 模板引用，v-for 中的模板引用，组件上的 ref 等
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_1、ref-模板引用)1、ref 模板引用
+### 1、ref 模板引用
 
 在组合式 API 中要获得对模板的引用，我们需要声明一个同名的 ref 变量。
 
@@ -52,7 +52,7 @@ publish: true
 
 你只可以**在组件挂载后**才能访问模板引用，在没有挂载前模板引用的 ref 值是一个 null。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_2、v-for-中的模板引用)2、v-for 中的模板引用
+### 2、v-for 中的模板引用
 
 当在 `v-for` 中使用模板引用时，对应的 ref 中包含的值是一个数组，它将在元素被挂载后包含对应整个列表的所有元素
 
@@ -77,7 +77,7 @@ publish: true
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_3、组件上的-ref)3、组件上的 ref
+### 3、组件上的 ref
 
 在组合式 API`<script setup>`中，模板引用中获得的值是组件实例。
 
@@ -113,7 +113,7 @@ A.vue
 </template>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#二、组合式-api-组件通信-api)二、组合式 API - 组件通信 API
+## 二、组合式 API - 组件通信 API
 
 本小节主要讲解组合式 API 中涉及组件间通信的 API，具体有：
 
@@ -123,7 +123,7 @@ A.vue
 - `defineOptions()`方法，用来在组合式 API 中声明组件选项
 - `defineExpose()`方法，用来对外暴露组件的属性和方法
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_1、defineprops)1、defineProps()
+### 1、defineProps()
 
 - 在选项式 API 中，通过 props 选项来声明父组件传递的 props
 - 在组合式 API 中，通过`defineProps()`方法来声明 props。
@@ -174,7 +174,7 @@ A.vue
 </script>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_2、defineemits-方法)2、defineEmits() 方法
+### 2、defineEmits() 方法
 
 在选项式 API 中，通过`emits`来声明父组件传递的事件监听器，在组合式 API 中，通过`defineEmits()`方法来声明。`defineEmits()`方法接收与 `emits` 选项相同的值
 
@@ -239,7 +239,7 @@ Count.vue
 
 后面点击 count++按扭，多次触发自定义事件 addEvent，则 count 不断加 1
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_3、useattrs-方法)3、useAttrs() 方法
+### 3、useAttrs() 方法
 
 在选项式 API 中，可以通过`this.$attrs`来访问透传属性。
 
@@ -313,7 +313,7 @@ Count.vue
 
 `class`与`id`属性并没有自动透传绑定 div 元素身上
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_4、defineoptions-方法)4、defineOptions() 方法
+### 4、defineOptions() 方法
 
 在 **Vue3.3+** 以上版本，defineOptions 这个宏可以用来直接在 `<script setup>` 中声明组件选项，而不必使用单独的 `<script>` 块
 
@@ -357,7 +357,7 @@ Count.vue
 
 > 属性自动透传行为被禁止，`msg`被正确的在模板中解析出来了
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_5、defineexpose-方法)5、defineExpose() 方法
+### 5、defineExpose() 方法
 
 使用 `<script setup>` 的组件是**默认关闭**的——即通过模板引用或者 `$parent` 链获取到的组件的公开实例，**不会**暴露任何在 `<script setup>` 中声明的绑定。
 
@@ -421,14 +421,14 @@ Count.vue
 
 ![image-20230519202930499](https://www.arryblog.com/assets/img/image-20230519202930499.2a83c5a4.png)
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#三、依赖与注入)三、依赖与注入
+## 三、依赖与注入
 
 在组合式 API 中，组件要为后代组件提供数据，后代组件要能使用上层组件提供的数据，需要经过以下两步：
 
 - 上层组件通过`provide()`函数向后代组件提供数据
 - 后代组件通过`inject()`函数注入上层组件提供的数据
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_1、provide-函数)1、provide() 函数
+### 1、provide() 函数
 
 `provide()`函数用于在组合式 API 中为后代组件提供数据
 
@@ -446,7 +446,7 @@ Count.vue
 
 > 一个组件可以多次调用 `provide()`，使用不同的注入名，注入不同的依赖值。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_2、inject-函数)2、inject() 函数
+### 2、inject() 函数
 
 `inject()`函数用于在组合式 API 中，后代组件要注入上层组件提供的数据
 
@@ -520,11 +520,11 @@ Item.vue
 
 ![GIF2023-5-1922-19-11](https://www.arryblog.com/assets/img/GIF2023-5-1922-19-11.5e6118f2.gif)
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#四、生命周期钩子)四、生命周期钩子
+## 四、生命周期钩子
 
 深入浅出 Vue 组合式 API 中的生命周期钩子，生命周期函数示图，生命周期函数使用 等。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_1、生命周期函数示图)1、生命周期函数示图
+### 1、生命周期函数示图
 
 > 我们再来回顾之前讲到的生命周期函数示图
 
@@ -552,7 +552,7 @@ Item.vue
 | beforeUnmount | onBeforeUnmount | 组件实例被卸载之前调用                            |
 | unmounted     | onUnmounted     | 组件实例被卸载之后调用                            |
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_2、生命周期函数使用)2、生命周期函数使用
+### 2、生命周期函数使用
 
 - 组合式 API 中生命周期函数需要先导入，然后才能使用。
 - 每个生命周期函数的第一个参数是一个回调函数，在组件或应用执行到此阶段时，会触发该回调函数。
@@ -643,11 +643,11 @@ Count.vue
 
 ![GIF2023-5-1923-28-52](https://www.arryblog.com/assets/img/GIF2023-5-1923-28-52.df8c1a9e.gif)
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#五、组合式-api-常见疑问)五、组合式 API 常见疑问
+## 五、组合式 API 常见疑问
 
 组合式 API 的常见疑问，大家可以参 Vue 官方文档：[组合式 API 常见问题(opens new window)](https://cn.vuejs.org/guide/extras/composition-api-faq.html)
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#六、实战应用-带历史记录的搜索)六、实战应用：带历史记录的搜索
+## 六、实战应用：带历史记录的搜索
 
 本小节我们一起来完成《带历史记录的搜索》案例
 
@@ -655,7 +655,7 @@ Count.vue
 
 ![GIF2023-7-1418-47-54](https://www.arryblog.com/assets/img/GIF2023-7-1418-47-54.02cd61b0.gif)
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_1、项目功能介绍)1、项目功能介绍
+### 1、项目功能介绍
 
 > 首先我们来了解下，该案例所需要实现的功能点：
 
@@ -666,7 +666,7 @@ Count.vue
 - 点击搜索历史列表中的关键字，可以触发搜索功能，将搜索的结果以列表形式呈现在页面中
 - 点击搜索历史列表右则的删除按扭，可以清空搜索历史列表。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_2、项目涉及核心知识点)2、项目涉及核心知识点
+### 2、项目涉及核心知识点
 
 > 该项目所涉及知识点较多，主要有：
 
@@ -677,7 +677,7 @@ Count.vue
 | 原生 JS 基础       | 本地数据持久化： localStorage 本地存储、JSON.parse、JSON.stringify 数组相关 API：unshift                                |
 | 网络请求           | axios                                                                                                                   |
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-ref-provide-provide-life-cycle.html#_3、学习目标)3、学习目标
+### 3、学习目标
 
 > 通过该案例的学习，我们将重点掌握以下内容
 

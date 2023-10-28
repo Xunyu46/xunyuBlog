@@ -1649,7 +1649,7 @@ io.disconnect();
 
 ![GIF2023-6-1918-56-31](https://www.arryblog.com/assets/img/GIF2023-6-1918-56-31.c72ba3b7.gif)
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_3-2、intersectionobserverentry-对象)3.2、IntersectionObserverEntry 对象
+### 3.2、IntersectionObserverEntry 对象
 
 `callback`函数的第一个参数是一个数组，数组中的每个成员是一个`IntersectionObserverEntry`对象。如果同时有两个被观察的对象的可见性发生变化，`entries`数组就会有两个成员
 
@@ -1711,7 +1711,7 @@ io.disconnect();
 
 ![image-20230619194240191](https://www.arryblog.com/assets/img/image-20230619194240191.faa13456.png)
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_3-3、intersectionobserver-实现图片懒加载)3.3、IntersectionObserver 实现图片懒加载
+### 3.3、IntersectionObserver 实现图片懒加载
 
 ![GIF2023-6-200-37-02](https://www.arryblog.com/assets/img/GIF2023-6-200-37-02.42005839.gif)
 
@@ -1797,7 +1797,7 @@ io.disconnect();
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_3-4、options-选项)3.4、options 选项
+### 3.4、options 选项
 
 - `root`：指定根元素，用于检查目标的可见性。必须是目标元素的父级元素。如果未指定或者为 null，则默认为浏览器视窗。
 - `rootMargin`：根元素的外边距，类似于 CSS 中的 margin 属性，如：“200px 200px 200px 200px"。 如果 margin-left 值为 200px，则`rootBounds`的矩形区的宽度会变大 200px。
@@ -1921,7 +1921,7 @@ io.disconnect();
 
 ![image-20230620174616829](https://www.arryblog.com/assets/img/image-20230620174616829.bfaf1b5a.png)
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_3-5、v-lazy-指令实现图片懒加载)3.5、v-lazy 指令实现图片懒加载
+### 3.5、v-lazy 指令实现图片懒加载
 
 在`/src/commont/directive.js`文件中创建注册指令的`directives`方法
 
@@ -2022,7 +2022,7 @@ app.mount("#app");
 </style>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#四、模板引用-ref-属性)四、模板引用 - ref 属性
+## 四、模板引用 - ref 属性
 
 我们之所以会选择 Vue 框架，是因为 Vue 框架帮我们做了大部分的 DOM 操作，我们只需要关注逻辑层的处理。但在某些情况下，我们仍然需要直接访问底层的 DOM 元素。
 
@@ -2031,7 +2031,7 @@ app.mount("#app");
 - 通过原生 JS 访问 DOM，比如：`document.getElementById()`或 `document.querySelectorAll()` 等更多方法
 - 通过 Vue 为我们提供了一个特殊的`ref`属性，它允许我们在一个特定的 **DOM 元素**或**子组件实例被挂载后**，获得对它的直接引用。
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_1、原生-js-访问-dom)1、原生 JS 访问 DOM
+### 1、原生 JS 访问 DOM
 
 在生命周期函数`mounted`中获取`id = box`的元素，然后在控制台输出。
 
@@ -2065,7 +2065,7 @@ export default {
 
 > 所以在 Vue 中要获取对 DOM 的引用，主要还是通过`ref`属性来实现。
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_2、ref-属性)2、ref 属性
+### 2、ref 属性
 
 当我们需要访问某个 DOM 元素时，我们可以在该元素上添加`ref`属性，如：`ref='box'`，然后就可以通过`this.$refs.box`访问到该 DOM 元素。
 
@@ -2096,9 +2096,9 @@ export default {
 
 ![image-20230508223019331](https://www.arryblog.com/assets/img/image-20230508223019331-16876734041202.099a29d0.png)
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_3、ref-的唯一性)3、ref 的唯一性
+### 3、ref 的唯一性
 
-`ref`属性更像是`id`属性的替代者，页面中不同出现相同的`ref`值。如果出现相同的，则以后面的为主。
+`ref`属性更像是`id`属性的替代者，页面中不能出现相同的`ref`值。如果出现相同的，则以后面的为主。
 
 ```html
 <script>
@@ -2129,7 +2129,7 @@ export default {
 
 通过上面打印结果，我们知道`this.$refs`是一个包含 DOM 元素的对象，对象的属性名为`ref`对应的值，属性值为`ref`所绑定的 DOM 元素。
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_4、v-for中的模板引用)4、`v-for`中的模板引用
+### 4、`v-for`中的模板引用
 
 当我们在一个包含`v-for`指令的元素上，添加了`ref='xxx'`属性时，最终`this.$refs.xxx`得到的值是一个数组，数组中每一项为`v-for`指令遍历后生成的 DOM 元素。
 
@@ -2160,7 +2160,7 @@ export default {
 
 上面`this.$refs.items`得到的数组**并不**保证与源数组相同的顺序
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_5、组件上的-ref)5、组件上的 ref
+### 5、组件上的 ref
 
 当我们在一个子组件上添加`ref = xxx`属性时，最终通过`this.$refs.xxx`得到的值是组件实例。
 
@@ -2223,7 +2223,7 @@ export default {
 
 如果我们只希望在父组件中访问子组件中允许我们访问的一些属性，那我们可以通过`expose`选项来对外暴露一些公共属性。
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_5、expose-选项)5、expose 选项
+### 5、expose 选项
 
 - 如果没有`expose`选项，默认在父组件中可以通过模板引用访问子组件实例的所有方法和属性
 - `expose`选项用于声明当组件实例被父组件通过模板引用访问时暴露的公共属性。只有出现在`expose`选项中的属性和方法才能在父组件中访问到。
@@ -2318,7 +2318,7 @@ export default {
 
 如果没有特殊的需求，父子组件通信，我们应该选择后面讲到的组件间通信的方式，如：`props`和 `emit` 接口等。
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_6、实战应用-计数器)6、实战应用：计数器
+### 6、实战应用：计数器
 
 > 开发`Count`计时器组件，最终效果如下
 
@@ -2428,7 +2428,7 @@ export default {
 </template>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#五、nexttick-与-nexttick)五、nextTick 与 $nextTick
+## 五、nextTick 与 $nextTick
 
 Vue 中 DOM 的更新是异步的，如果你想在数据更新后，获取到数据更新后的 DOM，你可以把相关的代码写在`nextTick`的回调函数中。
 
@@ -2443,7 +2443,7 @@ function nextTick(callback?: () => void): Promise<void>
 - 如何理解 DOM 更新是异步的
 - 下一次`tick`指的是什么时候
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_1、dom-更新是异步的)1、DOM 更新是异步的
+### 1、DOM 更新是异步的
 
 在 Vue 中，当响应式数据发生变化时，页面用到数据的地方也会发生变化，但并不是同步的，DOM 的更新是异步的。
 
@@ -2486,7 +2486,7 @@ function nextTick(callback?: () => void): Promise<void>
 
 如果说数据更新后，DOM 就要同步更新的话，那 DOM 要更新 100，同时侦听器回调函数也会被调用 100 次。但实际上 DOM 只更新了一次，并且侦听器也只调用了一次，侦听到的 n 值为 100。
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_1-1、dom-更新是异步-带来的问题)1.1、DOM 更新是异步，带来的问题
+### 1.1、DOM 更新是异步，带来的问题
 
 因为 DOM 更新是异步的，所以我们想在数据更新后，立刻获取到更新后的 DOM，是没有办法获取到的。
 
@@ -2523,7 +2523,7 @@ function nextTick(callback?: () => void): Promise<void>
 
 ![image-20230620223347015](https://www.arryblog.com/assets/img/image-20230620223347015.c3d725b1.png)
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_1-2、nexttick-中获取数据更新后-dom)1.2、nextTick 中获取数据更新后 DOM
+### 1.2、nextTick 中获取数据更新后 DOM
 
 如果想在数据更新后，获取到更新后的 DOM，可以把相关代码放在在`nextTick`的回调函数中来执行，`nextTick`的回调函数会在 DOM 更新后调用。
 
@@ -2567,9 +2567,9 @@ function nextTick(callback?: () => void): Promise<void>
 
 正常情况下你了解到这里，对于后期什么情况下使用`nextTick`也是没有问题的了。
 
-> 不过，我还是想给你继续来深入下来`nextTick`的原理。
+> 不过，我还是想给你继续来深入下`nextTick`的原理。
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_2、下一次-tick-指的是什么时候)2、下一次 tick 指的是什么时候
+### 2、下一次 tick 指的是什么时候
 
 要了解下一次`tick`是什么时候，我们需要知道何为一次`tick`，这就需要我们了解 JS 中的事件循环机制（Event Loop）
 
@@ -2606,7 +2606,7 @@ JS 中的任务分为同步与异步，其中异步任务又分为：宏任务�
 
 > 所以 Vue 内部本质是同步的方式更新数据，DOM 更新在微任务中执行，`nextTick`的回调也是在微任务中执行，只是在 DOM 更新后执行。
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_3、nexttick-的两种用法)3、nextTick 的两种用法
+### 3、nextTick 的两种用法
 
 `nextTick` 是一个全局方法，本质是创建一个异步任务，那么它自然要等到同步任务执行完成后才执行。
 
@@ -2676,7 +2676,7 @@ nextTick(() => {
 
 ![image-20230620233905514](https://www.arryblog.com/assets/img/image-20230620233905514.421d3b86.png)
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_4、-nexttick)4、$nextTick
+### 4、$nextTick
 
 绑定在实例上的 `nextTick()`函数
 
@@ -2692,7 +2692,7 @@ await this.$nextTick(function () {
 });
 
 await nextTick(function () {
-  console.log(this); // nudefined
+  console.log(this); // undefined
 });
 ```
 
@@ -2751,7 +2751,7 @@ await nextTick(function () {
     directives: {
       focus: {
         created(el, binding) {
-          /* 错误写法，因为this指向
+          /* 错误写法，因为this指向undefined
                 this.$nextTick(() => {
                     el.focus()
                 })
@@ -2780,7 +2780,7 @@ await nextTick(function () {
 
 在实际开发中可以根据需要来选择，能用`$nextTick`的尽量用他，因为不需要再导入全局的`nextTick`
 
-### [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#_5、实战应用-显示最新消息对话)5、实战应用：显示最新消息对话
+### 5、实战应用：显示最新消息对话
 
 当我们新增了对话消息时，对话框右边的滚动条就会滚动到最下面，显示最新的一条。
 
@@ -2835,7 +2835,7 @@ await nextTick(function () {
 </style>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/lifecycle-instruction-template.html#六、组件实例属性)六、组件实例属性
+## 六、组件实例属性
 
 > 本小节我们来学习组件实例相关的属性，如下表：
 

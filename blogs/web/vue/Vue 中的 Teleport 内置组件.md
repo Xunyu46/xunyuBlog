@@ -22,7 +22,7 @@ publish: true
 - 实战应用：根据屏幕尺寸渲染县浮窗
 - 多个 Teleport 共享目标
 
-## [#](https://www.arryblog.com/vip/vue/teleport.html#_1、to-属性)1、to 属性
+## 1、to 属性
 
 `<Teleport>` 接收一个 `to` prop 来指定传送的目标。`to` 的值可以是一个 CSS 选择器字符串，也可以是一个 DOM 元素对象。
 
@@ -76,7 +76,7 @@ publish: true
 </body>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/teleport.html#_2、注意事项)2、注意事项
+## 2、注意事项
 
 `<Teleport>` 挂载时，传送的 `to` 目标必须已经存在于 DOM 中。理想情况下，这应该是整个 Vue 应用 DOM 树外部的一个元素。
 
@@ -106,7 +106,7 @@ publish: true
 </div>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/teleport.html#_3、为什么需要-teleport-组件)3、为什么需要 Teleport 组件
+## 3、为什么需要 Teleport 组件
 
 在实际开发中我们可能会遇到这样的场景：
 
@@ -193,7 +193,7 @@ publish: true
 </template>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/teleport.html#_4、搭配组件使用)4、搭配组件使用
+## 4、搭配组件使用
 
 `<Teleport>` 只改变了渲染的 DOM 结构，它不会影响组件间的逻辑关系。
 
@@ -245,7 +245,7 @@ publish: true
 </div>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/teleport.html#_5、禁用-teleport)5、禁用 Teleport
+## 5、禁用 Teleport
 
 我们可以通过对 `<Teleport>` 动态地传入一个 `disabled` prop 来决定使用还是禁用`<Teleport>`组件。
 
@@ -256,7 +256,7 @@ publish: true
 <Teleport :disabled="isMobile"> ... </Teleport>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/teleport.html#_6、实战应用-根据屏幕大小渲染悬浮窗)6、实战应用：根据屏幕大小渲染悬浮窗
+## 6、实战应用：根据屏幕大小渲染悬浮窗
 
 - 当屏幕尺寸 `> 750` 时，元素相对于浏览器左侧悬浮显示
 - 当屏幕尺寸 `<= 750` 时， 元素在组件内全屏显示
@@ -424,7 +424,7 @@ publish: true
 </style>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/teleport.html#_7、多个-teleport-共享目标)7、多个 Teleport 共享目标
+## 7、多个 Teleport 共享目标
 
 我们可以将多个`<Teleport>`组件的内容挂载在同一个目标元素上，他们的挂载顺序书写时的顺序。
 

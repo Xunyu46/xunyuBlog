@@ -22,7 +22,7 @@ Vue 是如何将一份模板转换为真实的 DOM 节点的，这就需要我�
 
 > 相关资料查阅 Vue 官方文档，[渲染函数 & JSX(opens new window)](https://cn.vuejs.org/guide/extras/render-function.html)
 
-## [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#一、vue-描述-ui-的-2-种方式)一、Vue 描述 UI 的 2 种方式
+## 一、Vue 描述 UI 的 2 种方式
 
 Vue 提供了以下两种方式来声明式描述 UI
 
@@ -59,11 +59,11 @@ h("button", { onClick: () => count.value++ }, count.value);
 - 需要生成`button`元素，`button`元素的`innerText`值为`count`变量的值
 - 为`button`元素绑定了`click`事件，点击按扭后，`count`变量的值 +1
 
-## [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#二、虚拟-dom)二、虚拟 DOM
+## 二、虚拟 DOM
 
 本小节我们将了解虚拟 DOM 的定义、如何手动创建虚拟 DOM、如何通过 JS 自动创建虚拟 DOM。
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_1、虚拟-dom-定义)1、虚拟 DOM 定义
+### 1、虚拟 DOM 定义
 
 虚拟 DOM（Virtual DOM，简称 VDOM）是一种编程概念，意为将目标所需的 UI 通过数据结构“虚拟”地表示出来，保存在内存中，然后将真实的 DOM 与之保持同步。
 
@@ -105,7 +105,7 @@ const vnode = {
 
 > 与其说虚拟 DOM 是一种具体的技术，不如说是一种模式，所以并没有一个标准的实现。
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_2、手动创建虚拟-dom)2、手动创建虚拟 DOM
+### 2、手动创建虚拟 DOM
 
 - 将以下 DOM 结构转换为虚拟 DOM（vnode）
 
@@ -167,7 +167,7 @@ const vnode = {
   - 值可以是一个数组，数组中的每一个对象表示一个子节点。
   - 也可以是一个字符串，表示只有一个文本类的子节点。
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_3、自动创建虚拟-dom)3、自动创建虚拟 DOM
+### 3、自动创建虚拟 DOM
 
 如果真实 DOM 的结构非常复杂，我们还采用手动形式来书写虚拟 DOM 这肯定是不可行的。所以我们可以创建一个方法，用来将真实 DOM 转换成虚拟 DOM
 
@@ -342,7 +342,7 @@ export default function createNode(el) {
 }
 ```
 
-## [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#三、vue-渲染函数)三、Vue 渲染函数
+## 三、Vue 渲染函数
 
 前面我们提到 Vue 提供了 **模板语法** 与 **虚拟 DOM** 两种方式来声明式的描述 UI，那 Vue 是如何将模板与虚拟 DOM 转换为真实的 DOM 节点呢 ？这就需要用到 Vue 提供的以下两个函数：
 
@@ -376,7 +376,7 @@ export default function createNode(el) {
 
 ![GIF2023-7-1115-43-22](data:image/gif;base64,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)
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_1、h-函数的语法)1、h() 函数的语法
+### 1、h() 函数的语法
 
 - Vue 提供的`h()`函数是用创建 vnodes
 - `h()` 是 **hyperscript** 的简称 —— 意思是 “能生成 HTML（超文本标记语言）的 JavaScript”
@@ -402,14 +402,14 @@ type Slots = { [name: string]: Slot }  //  组件插槽内容
 - props ：可选参数，用于定义生成后标签元素或组件的属性、事件，值可以是一个对象也可以 null
 - children：可选参数，用于生成标签元素的子节点或组件的插槽内容
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_2、h-函数的基本用法)2、h 函数的基本用法
+### 2、h 函数的基本用法
 
 实际上`h()`函数的使用非常灵活。`h`函数可以
 
 - 创建原生 HTML 元素的 vnode
 - 也可以创建组件的 vnode
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_2-1、创建-html-元素的-vnode)2.1、创建 HTML 元素的 vnode
+### 2.1、创建 HTML 元素的 vnode
 
 以下代码为测试示例，你可以更改以下代码的`h()`，来查看最终生成的 DOM，掌握`h`函数的用法
 
@@ -471,7 +471,7 @@ h("div", ["hello", h("span", "hello")]);
 // 渲染后DOM : <div>hello<span>hello</span></div>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_2-2、创建组件的-vnode)2.2、创建组件的 vnode
+### 2.2、创建组件的 vnode
 
 当给组件创建 vnode 时，传入给`h()`函数的
 
@@ -570,7 +570,7 @@ type Slots = { [name: string]: Slot }; // 多个插槽时，要通过插槽函�
 
 ![image-20230711220200721](https://www.arryblog.com/assets/img/image-20230711220200721.b5601e88.png)
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_3、渲染函数的基本用法)3、渲染函数的基本用法
+### 3、渲染函数的基本用法
 
 `render()`用于编程式地创建组件虚拟 DOM 树的函数，返回值为 VNodeChild 类型。
 
@@ -580,7 +580,7 @@ type Slots = { [name: string]: Slot }; // 多个插槽时，要通过插槽函�
 - `setup()`函数直接返回 render 渲染函数
 - `<script setup>`中使用 render 渲染函数
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_3-1、选项式-api)3.1、选项式 API
+### 3.1、选项式 API
 
 - 在选项式 API 中，我们可以使用 `render` 选项来声明渲染函数
 - `render()`函数中的 this 为当前组件实例，所以在`render()`函数中可以访问组件的属性和方法等
@@ -609,7 +609,7 @@ type Slots = { [name: string]: Slot }; // 多个插槽时，要通过插槽函�
 <div id="box">Hello Vue!!</div>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_3-2、setup-函数中)3.2、setup() 函数中
+### 3.2、setup() 函数中
 
 - 组合式 API 中，`setup()`钩子可以直接返回渲染函数。
 - 在 `setup()` 内部声明的渲染函数天生能够访问在同一范围内声明的 props 和许多响应式状态。
@@ -640,7 +640,7 @@ type Slots = { [name: string]: Slot }; // 多个插槽时，要通过插槽函�
 <div id="box">Hello Vue!!</div>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_3-3、在-script-setup-中使用)3.3、在 `<script setup>` 中使用
+### 3.3、在 `<script setup>` 中使用
 
 在 setup 中，一个带有 render 选项的 JS 对象就会被当成组件渲染，可以直接在模板中使用。
 
@@ -660,7 +660,7 @@ type Slots = { [name: string]: Slot }; // 多个插槽时，要通过插槽函�
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_4、根渲染函数)4、根渲染函数
+### 4、根渲染函数
 
 根渲染函数是用将一个 vnode 转换为真实 DOM 挂载到指定的 DOM 容器中。
 
@@ -691,7 +691,7 @@ function render(vnode, container, isSVG?: boolean) {}
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_5、渲染函数-与-template-模板)5、渲染函数 与 template 模板
+### 5、渲染函数 与 template 模板
 
 - `render`函数是字符串模板的一种替代，所以不能一个组件中同时拥有`render`和`template`。
 - 因为单文件组件中的`template`模板，会在构建时被编译为`render`函数，添加到组件实例上。
@@ -724,7 +724,7 @@ function render(vnode, container, isSVG?: boolean) {}
 
 ![image-20230704224251227](https://www.arryblog.com/assets/img/image-20230704224251227.d03ca8d8.png)
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_6、模板-vs-渲染函数)6、模板 VS 渲染函数
+### 6、模板 VS 渲染函数
 
 Vue 提供了以下两种方式来声明式描述 UI
 
@@ -740,7 +740,7 @@ Vue 提供了以下两种方式来声明式描述 UI
 
 > 比如接下来要讲到的《动态生成带锚点标题》的案例，使用渲染函数要比使用模板语法来的更简洁高效易读。
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_7、实战应用-动态生成带锚点标题)7、实战应用：动态生成带锚点标题
+### 7、实战应用：动态生成带锚点标题
 
 我们希望创建如下这样一个组件，这个组件可以根据传入的`level`属性值，动态生成带有链接的的 h 标签。
 
@@ -812,7 +812,7 @@ Vue 提供了以下两种方式来声明式描述 UI
 
 > 通过对比，明显采用虚拟 DOM 描述 UI 的方式在这里更合适，代码相对要简洁很多。
 
-## [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#四、vue-渲染机制)四、Vue 渲染机制
+## 四、Vue 渲染机制
 
 通过前面的学习，我知道 Vue 提供了**模板语法** 与 **虚拟 DOM**两种方式声明式描述 UI。
 
@@ -829,7 +829,7 @@ Vue 提供了以下两种方式来声明式描述 UI
 
 当我们了解了以上知识点后，我们就知道 Vue 的整个渲染流程和渲染机制了。
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_1、编译器)1、编译器
+### 1、编译器
 
 Vue 中的编译器主要是将 Vue 的模板编译成渲染函数，该渲染函数会添加到组件实例上。这一步通常是通过构建步骤提前完成的，也可以使用运行时编译器即时完成。即：
 
@@ -864,7 +864,7 @@ const A = {
 };
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_2、渲染器)2、渲染器
+### 2、渲染器
 
 通过前面的学习我知道，如果 Vue 项目采用的是模板语法来描述 UI，则在构建项目时首先会利用编译器将模板编译成`render`渲染函数，渲染函数的返回值为虚拟 DOM。
 
@@ -960,7 +960,7 @@ function renderer(vnode, container) {
 
 我们上们只学习了渲染器如何在初始化时创建 DOM 节点，但渲染器的核心是 DOM 的更新，DOM 的更新涉及到 diff 算法与响应式，非常复杂，目前暂时不讲解。
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_3、渲染器渲染组件)3、渲染器渲染组件
+### 3、渲染器渲染组件
 
 > 通过前面的学习我们知道
 
@@ -1114,7 +1114,7 @@ renderer(vnode2, document.getElementById("app2"));
 </div>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_4、vue-渲染流程)4、Vue 渲染流程
+### 4、Vue 渲染流程
 
 > 通过前面的学习，我们知道了 Vue 的渲染流程大致如下图：
 
@@ -1132,7 +1132,7 @@ renderer(vnode2, document.getElementById("app2"));
 
 当某个响应式数据发生是变化时，会创建一个更新后的虚拟 DOM 树，然后渲染器遍历这棵新树，将它与旧树进行比较，然后将必要的更新应用到真实 DOM 上去。
 
-## [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#五、深入-h-函数)五、深入 h 函数
+## 五、深入 h 函数
 
 前端我们对`h`函数的用法做了一定的了解，接下来我们针对没有讲到的一些内容做相关补充
 
@@ -1178,7 +1178,7 @@ h(
 // 元素添加了点击事件，点击元素时，会弹出弹窗，显示"点击了"
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_1、vnodes-必须唯一)1、vnodes 必须唯一
+### 1、vnodes 必须唯一
 
 组件树中的 vnodes 必须是唯 一的，以下为错误示范:
 
@@ -1216,7 +1216,7 @@ h(
 </script>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#六、渲染函数案例)六、渲染函数案例
+## 六、渲染函数案例
 
 本小节我们来利用渲染函数实现与模板语法相同的功能。如：利用渲染函数实现
 
@@ -1232,7 +1232,7 @@ h(
 - 自定义指令
 - 模板引用
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_1、v-on-事件)1、v-on 事件
+### 1、v-on 事件
 
 > 模板描述 UI
 
@@ -1260,7 +1260,7 @@ h(
 </script>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_2、v-if-指令)2、v-if 指令
+### 2、v-if 指令
 
 > 模板描述 UI
 
@@ -1306,7 +1306,7 @@ h(
 
 ![GIF2023-7-1122-31-47](https://www.arryblog.com/assets/img/GIF2023-7-1122-31-47.0d202d28.gif)
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_3、v-for)3、v-for
+### 3、v-for
 
 > 模板描述 UI
 
@@ -1345,7 +1345,7 @@ h(
 
 ![image-20230711225148172](data:image/png;base64,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)
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_4、事件修饰符)4、事件修饰符
+### 4、事件修饰符
 
 - 对于 `.passive`、`.capture` 和 `.once` 事件修饰符，可以使用驼峰写法将他们拼接在事件名后面：
 
@@ -1450,7 +1450,7 @@ h(
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_5、组件)5、组件
+### 5、组件
 
 > 模板描述 UI
 
@@ -1493,7 +1493,7 @@ h(
 
 ![GIF2023-7-1123-36-16](https://www.arryblog.com/assets/img/GIF2023-7-1123-36-16.79fd4332.gif)
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_6、内置组件)6、内置组件
+### 6、内置组件
 
 诸如 `<KeepAlive>`、`<Transition>`、`<TransitionGroup>`、`<Teleport>` 和 `<Suspense>` 等[内置组件 (opens new window)](https://cn.vuejs.org/api/built-in-components.html)在渲染函数中必须导入才能使用：
 
@@ -1541,7 +1541,7 @@ h(
 
 ![GIF2023-7-1123-44-21](https://www.arryblog.com/assets/img/GIF2023-7-1123-44-21.57add776.gif)
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_7、渲染插槽)7、渲染插槽
+### 7、渲染插槽
 
 在渲染函数中，插槽可以通过 `setup()` 的上下文来访问。
 
@@ -1614,11 +1614,11 @@ h(
 
 ![image-20230712161207112](data:image/png;base64,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)
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_8、传递插槽内容)8、传递插槽内容
+### 8、传递插槽内容
 
 在使用组件时，需要传递插槽内容，前面创建组件的 vnode 时讲过，可以参考：**深入 h 函数 - 创建组件的 vnode**
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_9、组件-v-model)9、组件 v-model
+### 9、组件 v-model
 
 当我们在使用 A 组件时，在组件上绑定 v-model 指令，如下：
 
@@ -1678,7 +1678,7 @@ h(
 </script>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_10、自定义指令)10、自定义指令
+### 10、自定义指令
 
 可以使用 [`withDirectives` (opens new window)](https://cn.vuejs.org/api/render-function.html#withdirectives)将自定义指令应用于 vnode
 
@@ -1730,7 +1730,7 @@ h(
 
 ![image-20230712174144308](https://www.arryblog.com/assets/img/image-20230712174144308.2f614462.png)
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_11、模板引用)11、模板引用
+### 11、模板引用
 
 在组合式 API 中，模板引用通过将 `ref()` 本身作为一个属性传递给 vnode 来创建
 
@@ -1768,7 +1768,7 @@ h(
 </script>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#七、函数式组件)七、函数式组件
+## 七、函数式组件
 
 函数式组件是一种定义自身没有任何状态的组件的方式。
 
@@ -1791,7 +1791,7 @@ MyComponent.props = ["value"];
 MyComponent.emits = ["click"];
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_1、函数式组件的基本用法)1、函数式组件的基本用法
+### 1、函数式组件的基本用法
 
 函数式组件和普通函数一样被组册和使用
 
@@ -1831,7 +1831,7 @@ MyComponent.emits = ["click"];
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_2、函数式组件复杂应用)2、函数式组件复杂应用
+### 2、函数式组件复杂应用
 
 利用函数式组件实现如下`MyComponent`组件
 
@@ -1903,7 +1903,7 @@ MyComponent.props = ["title"];
 MyComponent.emit = ["update"];
 ```
 
-## [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#八、实战应用-无限下拉菜单)八、实战应用：无限下拉菜单
+## 八、实战应用：无限下拉菜单
 
 本小节我们一起来完成《无限下拉菜单》案例
 
@@ -1911,11 +1911,11 @@ MyComponent.emit = ["update"];
 
 ![GIF2023-7-1918-26-28](https://www.arryblog.com/assets/img/GIF2023-7-1918-26-28.9fbdcdd5.gif)
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_1、项目介绍)1、项目介绍
+### 1、项目介绍
 
 首先我们来了解：项目功能、项目涉及核心知识点、学习目标
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_1-1、项目功能)1.1、项目功能
+### 1.1、项目功能
 
 该项目所需要实现的功能如下：
 
@@ -1923,7 +1923,7 @@ MyComponent.emit = ["update"];
 - 当鼠标滑动到对应的菜单上时，才会显示对应菜单的下级菜单。
 - 针对有下级菜单的菜单不能点击跳转，针对没有下级菜单的菜单可以点击跳转
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_1-2、项目涉及核心知识点)1.2、项目涉及核心知识点
+### 1.2、项目涉及核心知识点
 
 > 该项目涉及知识点较多，主要有：
 
@@ -1933,18 +1933,18 @@ MyComponent.emit = ["update"];
 | 组件间通信         | defineProps、slot 插槽                               |
 | 其它知识           | 递归组件                                             |
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_1-3、学习目标)1.3、学习目标
+### 1.3、学习目标
 
 - 组件拆分：一个完整的项目，应该如何进行组件化拆分
 - 项目开发流程：如何一步步完成项目的开发，先做什么后做什么
 - 递归组件：如何实现递归一个组件自身
 - render 渲染函数：掌握渲染函数何递归组件。
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_2、项目开发流程)2、项目开发流程
+### 2、项目开发流程
 
 深入浅出无限下拉菜单的开发流程，分析 UI 图，实现 UI 静态布局，拆分组件，确定数据源，渲染一级 与 二级菜单，渲染无限级菜单等。
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_2-1、分析-ui-图)2.1、分析 UI 图
+### 2.1、分析 UI 图
 
 首先我们需要通过 UI 图，分析当前项目可以拆分成哪些组件，当前项目可以拆分成以下 3 个组件（未包含当前应用的 APP 组件）
 
@@ -1960,7 +1960,7 @@ MyComponent.emit = ["update"];
 
 ![image-20230719160948206](https://www.arryblog.com/assets/img/image-20230719160948206.cee1c8b3.png)
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_2-2、实现-ui-静态布局)2.2、实现 UI 静态布局
+### 2.2、实现 UI 静态布局
 
 根据 UI 图，利用`HTML + CSS`实现静态布局，同时要把所有的交互效果用到的 CSS 样式也要写好。并且要清楚的知道每一个交互背后的实现逻辑。
 
@@ -2065,7 +2065,7 @@ MyComponent.emit = ["update"];
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_2-3、拆分组件)2.3、拆分组件
+### 2.3、拆分组件
 
 - 按最开始的需求分析，将静态布局的内容拆分到如下图所示的 2 个组件中去，每个组件中有自己独立的 HTML + CSS
 - 拆分后，还需要按各个组件间的关系组合起来，组合成一个完整的应用。
@@ -2190,7 +2190,7 @@ MyComponent.emit = ["update"];
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_2-4、确定数据源)2.4、确定数据源
+### 2.4、确定数据源
 
 整个应用中最核心的数据就是菜单列表，以下数据为模拟的菜单列表数据，定义在 `src/data/menu.js` 文件中
 
@@ -2257,7 +2257,7 @@ export default [
 ];
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_2-5、渲染一级与二级菜单)2.5、渲染一级与二级菜单
+### 2.5、渲染一级与二级菜单
 
 我们先只考虑 1 级到二级菜单内容的渲染，然后再考虑递归组件渲染无限级菜单
 
@@ -2327,7 +2327,7 @@ export default [
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_2-6、渲染无限级菜单)2.6、渲染无限级菜单
+### 2.6、渲染无限级菜单
 
 不管菜单子级有多少项，我们需要渲染出来，这里就要考虑用到递归组件了。
 
@@ -2402,7 +2402,7 @@ export default [
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/virtual-dom-render-process.html#_3、完整版代码)3、完整版代码
+### 3、完整版代码
 
 - `menu.js`
 

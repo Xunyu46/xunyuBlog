@@ -27,7 +27,7 @@ TIP
 
 ![applet](https://www.arryblog.com/assets/img/applet.3427f6b8.gif)
 
-## [#](https://www.arryblog.com/vip/applet/#一、小程序的前世今生)一、小程序的前世今生
+## 一、小程序的前世今生
 
 TIP
 
@@ -59,7 +59,7 @@ TIP
 
 > 这里首先要解释一下什么是“原生”，什么是“H5”，以及它们的差别。
 
-### [#](https://www.arryblog.com/vip/applet/#_1、什么是原生-什么是-h5)1、什么是原生，什么是 H5
+### 1、什么是原生，什么是 H5
 
 原生
 
@@ -90,7 +90,7 @@ TIP
 - ①、原生 App 功能强大，体验好，但开发成本高，开发速度慢；
 - ②、H5 功能少些，体验稍差，但开发成本低，开发速度快。
 
-### [#](https://www.arryblog.com/vip/applet/#_2、微信小程序改变了什么)2、微信小程序改变了什么
+### 2、微信小程序改变了什么
 
 TIP
 
@@ -106,7 +106,7 @@ TIP
 
 图中的 “服务号 H5” 跟普通 H5 的区别，就在于它能调用微信公众平台提供的这几个功能。
 
-### [#](https://www.arryblog.com/vip/applet/#_3、服务号的本质)3、服务号的本质
+### 3、服务号的本质
 
 TIP
 
@@ -125,7 +125,7 @@ TIP
 
 > 张小龙说过：PC 互联网的入口在搜索框，移动互联网的入口在二维码。
 
-### [#](https://www.arryblog.com/vip/applet/#_4、小程序为谁而生)4、小程序为谁而生
+### 4、小程序为谁而生
 
 TIP
 
@@ -135,7 +135,7 @@ TIP
 
 平时不发东西，他安静的存在在那，低频的需求不需要安装 App，微信尝试让更多 App 以轻量便捷的形态在微信中存在，就是应用号。
 
-### [#](https://www.arryblog.com/vip/applet/#_5、小程序-vs-服务号-vs-订阅号)5、小程序 vs 服务号 vs 订阅号
+### 5、小程序 vs 服务号 vs 订阅号
 
 TIP
 
@@ -164,7 +164,7 @@ TIP
 
 也就是说，小程序被赋予更多的开发权限，所以必然就会被限制住其推送频次和推送显眼度，否则在微信开放生态的全局中，它的存在就不合理了。
 
-### [#](https://www.arryblog.com/vip/applet/#_6、小程序的优化)6、小程序的优化
+### 6、小程序的优化
 
 TIP
 
@@ -182,7 +182,7 @@ TIP
 - 限制推送消息
 - 抑制营销
 
-### [#](https://www.arryblog.com/vip/applet/#_7、小程序-vs-原生-app-vs-h5)7、小程序 vs 原生 App vs H5
+### 7、小程序 vs 原生 App vs H5
 
 TIP
 
@@ -198,7 +198,7 @@ TIP
 
 某种程度上讲，微信的小程序平台是在操作系统上面建造出来的一个中间件，它类似于 PC 时代的浏览器的作用，为大部分服务提供商提供了基础功能的支持，特别是让开发线下服务的线上功能，变得更像搭积木一样简易了。
 
-### [#](https://www.arryblog.com/vip/applet/#_8、小程序是什么)8、小程序是什么
+### 8、小程序是什么
 
 ![what-is-an-applet](https://www.arryblog.com/assets/img/what-is-an-applet.76f71f4b.jpg)
 
@@ -210,7 +210,7 @@ TIP
 
 ![applet-qrcode](https://www.arryblog.com/assets/img/applet-qrcode.32e80f85.jpg)
 
-### [#](https://www.arryblog.com/vip/applet/#_9、小程序发展历史-技术角度)9、小程序发展历史 - 技术角度
+### 9、小程序发展历史 - 技术角度
 
 TIP
 
@@ -222,7 +222,7 @@ TIP
 
 ![image-20221230002653113](https://www.arryblog.com/assets/img/image-20221230002653113.3d437950.png)
 
-### [#](https://www.arryblog.com/vip/applet/#_9-1、微信的-hybrid-方案)9.1、微信的 Hybrid 方案
+### 9.1、微信的 Hybrid 方案
 
 TIP
 
@@ -232,7 +232,7 @@ TIP
 
 有了 Hybrid 这个方案后，就可以实现在微信里边运行网页并唤起通讯录、摄像头等实现这些功能的（之前直接通过网页时无法实现的，但借助微信就可以实现），这样做的好处是：以前的前端工程师如果要开发一个类似 Native 原生的应用是没有能力开发的，有了 Hybrid 的基础就可以实现调用摄像头、录音、通讯录等功能，前端也可以开发出类似 Native 的原生应用，微信之前是基于 Hybrid 的方案，可以让前端有更多的能力做更多的事情。
 
-### [#](https://www.arryblog.com/vip/applet/#_9-2、微信小程序的技术诞生)9.2、微信小程序的技术诞生
+### 9.2、微信小程序的技术诞生
 
 TIP
 
@@ -244,7 +244,7 @@ TIP
 
 有了小程序之后前端能做到的是：通过编写 HTML、CSS、JS 代码实现一个和原生应用功能性能非常类似的一个应用。这就是小程序带来的行业变革，小程序发展起来之后，它的开发成本相对原生 APP 更低，发布成本也更低。因此很多没有必要使用原生应用去开发的小应用，就开始使用小程序的方案去做了技术的替换。
 
-### [#](https://www.arryblog.com/vip/applet/#_9-3、小程序的本质)9.3、小程序的本质
+### 9.3、小程序的本质
 
 TIP
 
@@ -274,7 +274,7 @@ TIP
 - 易用且安全的微信数据开放
 - 高效和简单的开发
 
-### [#](https://www.arryblog.com/vip/applet/#_9-4、为什么叫做小程序-小在哪里)9.4、为什么叫做小程序，小在哪里
+### 9.4、为什么叫做小程序，小在哪里
 
 TIP
 
@@ -286,7 +286,7 @@ TIP
 
 > 因此，小程序使得我们前端工程师有能力去开发和原生应用体验类似的小应用了，极大的扩展了前端工程师的开发能力。
 
-### [#](https://www.arryblog.com/vip/applet/#_9-5、学习小程序的前置技术储备)9.5、学习小程序的前置技术储备
+### 9.5、学习小程序的前置技术储备
 
 TIP
 
@@ -295,13 +295,13 @@ TIP
 - JavaScript 核心基础 + ES6 新特性 + 模块化、组件化
 - 如果你有 Vue 的开发经验更好，小程序的语法与 Vue 很相似（有找到初恋的感觉）
 
-## [#](https://www.arryblog.com/vip/applet/#二、小程序开发环境准备和基础信息配置)二、小程序开发环境准备和基础信息配置
+## 二、小程序开发环境准备和基础信息配置
 
 TIP
 
 完成微信公众平台小程序的账号注册，基础环境信息的配置
 
-### [#](https://www.arryblog.com/vip/applet/#_1、小程序账号注册)1、小程序账号注册
+### 1、小程序账号注册
 
 - ①、进入微信公众平台地址：[https://mp.weixin.qq.com/(opens new window)](https://mp.weixin.qq.com/)
 
@@ -343,7 +343,7 @@ TIP
 
 > 微信扫码验证完成后，在平台中点击 ”继续“ 按钮 -> 验证信息通过 -> 平台显示 ”信息提交成“ -> 前往小程序即完成了注册流程。
 
-### [#](https://www.arryblog.com/vip/applet/#_2、小程序发布流程-补充基本信息)2、小程序发布流程 - 补充基本信息
+### 2、小程序发布流程 - 补充基本信息
 
 ![image-20230106020724265](https://www.arryblog.com/assets/img/image-20230106020724265.392c25b7.png)
 
@@ -365,7 +365,7 @@ TIP
 
 ![image-20230107170302831](https://www.arryblog.com/assets/img/image-20230107170302831.80e61bac.png)
 
-### [#](https://www.arryblog.com/vip/applet/#_3、小程序开发工具下载、安装)3、小程序开发工具下载、安装
+### 3、小程序开发工具下载、安装
 
 ①、在小程序平台首页中，找到小程序开发工具下载入口
 
@@ -385,7 +385,7 @@ TIP
 
 ![image-20230107230106788](https://www.arryblog.com/assets/img/image-20230107230106788.4fa31082.png)
 
-### [#](https://www.arryblog.com/vip/applet/#_4、小程序配置服务器)4、小程序配置服务器
+### 4、小程序配置服务器
 
 TIP
 
@@ -413,7 +413,7 @@ TIP
 
 ![image-20230108015251098](https://www.arryblog.com/assets/img/image-20230108015251098.f62117f7.png)
 
-### [#](https://www.arryblog.com/vip/applet/#_5、在线-api-接口-mock-平台)5、在线 API 接口 MOCK 平台
+### 5、在线 API 接口 MOCK 平台
 
 TIP
 
@@ -431,13 +431,13 @@ TIP
 
 ![image-20230108021128015](https://www.arryblog.com/assets/img/image-20230108021128015.755ccdbc.png)
 
-## [#](https://www.arryblog.com/vip/applet/#三、创建第一个微信小程序工程)三、创建第一个微信小程序工程
+## 三、创建第一个微信小程序工程
 
 TIP
 
 快速了解，并创建第一个小程序，具体操作步骤如下
 
-### [#](https://www.arryblog.com/vip/applet/#_1、打开-微信开发者工具)1、打开 ”微信开发者工具“
+### 1、打开 ”微信开发者工具“
 
 > 创建小程序 -> 填写基础信息（如下）
 
@@ -445,7 +445,7 @@ TIP
 
 打开 “微信开发者工具” 默认页面 -> 选择 “小程序” -> 点击 “ + ” 创建小程序
 
-### [#](https://www.arryblog.com/vip/applet/#_2、创建小程序工程-注意事项)2、创建小程序工程 - 注意事项
+### 2、创建小程序工程 - 注意事项
 
 TIP
 
@@ -463,7 +463,7 @@ TIP
 
 ![image-20230111210106633](https://www.arryblog.com/assets/img/image-20230111210106633.647fc514.png)
 
-### [#](https://www.arryblog.com/vip/applet/#_3、微信开发者工具-默认小程序简介)3、微信开发者工具，默认小程序简介
+### 3、微信开发者工具，默认小程序简介
 
 TIP
 
@@ -488,7 +488,7 @@ TIP
 - [小程序开发者工具的官方图文教程(opens new window)](https://developers.weixin.qq.com/miniprogram/dev/devtools/page.html)
 - [小程序调试三大功能区介绍(opens new window)](https://developers.weixin.qq.com/miniprogram/dev/devtools/debug.html)
 
-### [#](https://www.arryblog.com/vip/applet/#_4、前后台切换)4、前后台切换
+### 4、前后台切换
 
 TIP
 
@@ -502,13 +502,13 @@ TIP
 
 ![image-20230116225503824](https://www.arryblog.com/assets/img/image-20230116225503824.d0321ed4.png)
 
-## [#](https://www.arryblog.com/vip/applet/#四、小程序开发协作及上线流程)四、小程序开发协作及上线流程
+## 四、小程序开发协作及上线流程
 
 TIP
 
 打开前面生成的默认小程序，我们知道了只需要在编辑器中编写或改动我们的代码，左侧的模拟器中就会实时编译和变化，对于我们开发的同学来说一般在编辑写代码，在模拟器中看效果即可。
 
-### [#](https://www.arryblog.com/vip/applet/#_1、预览-真机查看小程序)1、预览 - 真机查看小程序
+### 1、预览 - 真机查看小程序
 
 TIP
 
@@ -522,7 +522,7 @@ TIP
 
 在实际开发中，除了使用左侧的模拟器，还需要使用 “预览” 功能，它能帮助我们在真机上去看到小程序真正在用户手机上运行的情况。
 
-### [#](https://www.arryblog.com/vip/applet/#_2、小程序团队协作开发)2、小程序团队协作开发
+### 2、小程序团队协作开发
 
 TIP
 
@@ -544,7 +544,7 @@ TIP
 
 ![image-20230113005641851](https://www.arryblog.com/assets/img/image-20230113005641851.555d3dad.png)
 
-### [#](https://www.arryblog.com/vip/applet/#_3、发布版本)3、发布版本
+### 3、发布版本
 
 TIP
 
@@ -552,7 +552,7 @@ TIP
 
 > 具体发布版本的步骤如下：
 
-### [#](https://www.arryblog.com/vip/applet/#_3-1、上传小程序源代码)3.1、上传小程序源代码
+### 3.1、上传小程序源代码
 
 TIP
 
@@ -564,7 +564,7 @@ TIP
 
 作为开发者，我们开发完成具体的项目代码后，自我测试没有问题了，然后就将小程序的项目代码上传到小程序的后台中，即阶段性的开发就结束了。
 
-### [#](https://www.arryblog.com/vip/applet/#_3-2、查看已上传的小程序版本)3.2、查看已上传的小程序版本
+### 3.2、查看已上传的小程序版本
 
 TIP
 
@@ -572,7 +572,7 @@ TIP
 
 ![image-20230113211858134](https://www.arryblog.com/assets/img/image-20230113211858134.40f82551.png)
 
-### [#](https://www.arryblog.com/vip/applet/#_3-3、生成小程序的体验版本)3.3、生成小程序的体验版本
+### 3.3、生成小程序的体验版本
 
 TIP
 
@@ -586,7 +586,7 @@ TIP
 
 ![applet-experience-version](https://www.arryblog.com/assets/img/applet-experience-version.279f793a.jpg)
 
-### [#](https://www.arryblog.com/vip/applet/#_3-4、添加小程序体验版-用户权限)3.4、添加小程序体验版 - 用户权限
+### 3.4、添加小程序体验版 - 用户权限
 
 TIP
 
@@ -607,13 +607,13 @@ TIP
 
 ![image-20230113222554717](https://www.arryblog.com/assets/img/image-20230113222554717.5631a5f0.png)
 
-### [#](https://www.arryblog.com/vip/applet/#_4、小程序上线)4、小程序上线
+### 4、小程序上线
 
 TIP
 
 通过前边的学习，我们知道了该如何开发小程序、测试小程序，当团队中的测试、运营、产品同学都觉得我们开发的小程序没有问题时，接下来就正式进入 “小程序的上线” 流程。
 
-### [#](https://www.arryblog.com/vip/applet/#_4-1、-体验版本-线上版本)4.1、 “体验版本” -> “线上版本”
+### 4.1、 “体验版本” -> “线上版本”
 
 TIP
 
@@ -625,7 +625,7 @@ TIP
 
 > 在 “提交审核” 的表单页面，填写好对应小程序的信息，提交给微信团队等待审核即可
 
-### [#](https://www.arryblog.com/vip/applet/#_4-2、发布上线)4.2、发布上线
+### 4.2、发布上线
 
 TIP
 
@@ -641,7 +641,7 @@ TIP
 
 > 待开发完小程序项目后，再提交即可 !
 
-### [#](https://www.arryblog.com/vip/applet/#_5、小程序开发者平台-功能探索)5、小程序开发者平台 - 功能探索
+### 5、小程序开发者平台 - 功能探索
 
 TIP
 
@@ -661,7 +661,7 @@ TIP
 - 遇到学习和开发的问题时，可搜索、可提问：[《微信小程序开放社区》(opens new window)](https://developers.weixin.qq.com/community/develop/mixflow)
 - 微信小程序官方视频教程：[《微信学堂》(opens new window)](https://developers.weixin.qq.com/community/business)
 
-## [#](https://www.arryblog.com/vip/applet/#五、微信小程序综合项目实践)五、微信小程序综合项目实践
+## 五、微信小程序综合项目实践
 
 ![image-20230216150846457](https://www.arryblog.com/assets/img/image-20230216150846457.60080c0a.png)
 

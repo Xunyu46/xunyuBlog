@@ -534,7 +534,7 @@ Vue 为我们提供了以下三种插槽
 
 观察以上代码发现，`.title`元素添加上了唯一`data-v-b7ac1dbf-s`属性，同时 css 选择器也添加上了属性选择，即：`.list .title[data-v-b7ac1dbf-s]`
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_4-5、案例演示)4.5、案例演示
+### 4.5、案例演示
 
 接下来，我们用插槽来实现下图所示的案例
 
@@ -644,7 +644,7 @@ Vue 为我们提供了以下三种插槽
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_5、具名插槽)5、具名插槽
+### 5、具名插槽
 
 有时候我们需要在一个组件中包含多个插槽出口，同时为每个插槽出口指定对应的插槽内容，如下图所示的弹窗效果。
 
@@ -661,7 +661,7 @@ Vue 为我们提供了以下三种插槽
 
 > 课程最后，我们会带大家来开发这个弹窗效果
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_5-1、具名插槽与默认插槽区别)5.1、具名插槽与默认插槽区别
+### 5.1、具名插槽与默认插槽区别
 
 相对于前面讲到的默认插槽而言，具名插槽的`<slot>`元素上有一个特殊的`name`属性，用来给各个插槽分配唯一的 ID，以确定每一处要渲染的内容。
 
@@ -682,7 +682,7 @@ Vue 为我们提供了以下三种插槽
 <slot name="default"></slot>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_5-2、具名插槽的使用)5.2、具名插槽的使用
+### 5.2、具名插槽的使用
 
 > 使用具名插槽，需要分以下两步：
 
@@ -757,7 +757,7 @@ Vue 为我们提供了以下三种插槽
 </div>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_5-3、注意事项)5.3、注意事项
+### 5.3、注意事项
 
 - 当一个组件同时接收默认插槽和具名插槽时，所有位于顶级的非 `<template>` 节点都被隐式地视为默认插槽的内容，所以上面内容也可以写成
 
@@ -838,7 +838,7 @@ Vue 为我们提供了以下三种插槽
 </template>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#二、实战应用-自定义-dialog-弹窗组件)二、实战应用：自定义 Dialog 弹窗组件
+## 二、实战应用：自定义 Dialog 弹窗组件
 
 - 点击显示弹窗按扭，会弹出对应的弹窗
 - 点击弹窗中的取消与确认按扭，都会关闭弹窗。
@@ -848,7 +848,7 @@ Vue 为我们提供了以下三种插槽
 
 ![GIF2023-7-419-31-41](https://www.arryblog.com/assets/img/GIF2023-7-419-31-41.4137741f.gif)
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_1、实现步骤)1、实现步骤
+### 1、实现步骤
 
 **第一步：** 首先定义一个子组件`Dialog`，实现如下布局效果
 
@@ -1154,7 +1154,7 @@ Vue 为我们提供了以下三种插槽
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_2、完整版代码)2、完整版代码
+### 2、完整版代码
 
 - `App.vue` 根组件
 
@@ -1348,7 +1348,7 @@ Vue 为我们提供了以下三种插槽
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_3、作用域插槽)3、作用域插槽
+### 3、作用域插槽
 
 在上面**插槽的渲染**中我们提到，插槽的内容可以访问父组件数据作用域（即父组件状态），但无法访问到子组件的状态
 
@@ -1365,7 +1365,7 @@ Vue 为我们提供了以下三种插槽
 
 > 当需要接受插槽 props 时，默认插槽和具名插槽的使用方式有一些小区别，我们分开来讲解。
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_3-1、默认作用域插槽)3.1、默认作用域插槽
+### 3.1、默认作用域插槽
 
 在默认插槽中，我们需要通过**子组件标签**（如：`<MyComponent>`）上的`v-slot`指令，直接接受一个插槽 props 对象。
 
@@ -1421,7 +1421,7 @@ Vue 为我们提供了以下三种插槽
 
 ![image-20230513230428102](data:image/png;base64,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)
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_3-2、具名作用域插槽)3.2、具名作用域插槽
+### 3.2、具名作用域插槽
 
 - 我们要在父组件中接受对应具名插槽传过来的 props，可以在插槽内容对应的`<template>`标签上的`v-slot`指令的值中被访问到。
 - 如果一个组件中同时使用了默认插槽和具名插槽，则默认插槽内容一定要写在`<template #default>`标签中,然后能过 `#default="defaultProps"`方式来接受值。如果直接在子组件的`v-slot`中来接受，会导致编译错误。这是为了避免因默认插槽的 props 的作用域而困惑
@@ -1531,7 +1531,7 @@ Vue 为我们提供了以下三种插槽
 </div>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#三、实战应用-高级列表组件)三、实战应用：高级列表组件
+## 三、实战应用：高级列表组件
 
 > 我们来实现如下图所示的无限滚动加载更多内容的案例
 
@@ -1576,7 +1576,7 @@ Vue 为我们提供了以下三种插槽
 </div>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_1、实现思路)1、实现思路
+### 1、实现思路
 
 第一步：
 
@@ -1752,7 +1752,7 @@ Vue 为我们提供了以下三种插槽
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_2、完整版代码-2)2、完整版代码
+### 2、完整版代码
 
 - `App.vue`文件
 
@@ -1870,7 +1870,7 @@ Vue 为我们提供了以下三种插槽
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_3、获取鼠标坐标)3、获取鼠标坐标
+### 3、获取鼠标坐标
 
 ![GIF 2023-7-115-40-15](https://www.arryblog.com/assets/img/GIF-2023-7-115-40-15.662db6ce.gif)
 
@@ -1914,13 +1914,13 @@ Vue 为我们提供了以下三种插槽
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_4、作用域插槽的应用场景)4、作用域插槽的应用场景
+### 4、作用域插槽的应用场景
 
 如果某个组件同时封装了逻辑和视图，然而又希望把一部视图的输出交给父组件来实现，这时子组件需要将一部分数据供给给到插槽让父组件来使用。就好比上面讲到高级列表组件。
 
 当然还有一部分组件只封装了逻辑，没有视图，我们在使用这部分组件时，子组件也需把数据供给到插槽供父组件来使用。就好比上面讲到的获取鼠标坐标案例。
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_5、总结)5、总结
+### 5、总结
 
 > 本小节我们重点需要掌握以下内容
 
@@ -2001,7 +2001,7 @@ Vue 为我们提供了以下三种插槽
 </MyComponent>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#四、祖先组件向孙组件传值-依赖与注入)四、祖先组件向孙组件传值 - 依赖与注入
+## 四、祖先组件向孙组件传值 - 依赖与注入
 
 本小节我们来学习祖先组件如何向孙组件及更远的后代祖件提供数据，这就需要用到依赖（Provide）与注入（Inject）。
 
@@ -2015,7 +2015,7 @@ Vue 为我们提供了以下三种插槽
 - 注入（Inject）
 - 使用 Symbol 作为注入名
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_1、prop-逐级透传问题)1、Prop 逐级透传问题
+### 1、Prop 逐级透传问题
 
 通常情况下，当我们需要从父组件向子组件传递数据时，会使用`props`。
 
@@ -2102,14 +2102,14 @@ Prop 逐级透传问题
 
 > 针对上面提到的问题，依赖与注入要以帮助我们解决。
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_2、依赖与注入定义)2、依赖与注入定义
+### 2、依赖与注入定义
 
 - 一个父组件相对于其所有的后代组件而言，他是数据提供者，我们称为**依赖提供（Provide）者**。
 - 所有该组件的后代组件，无论层级有多深，都可以**注入（Inject）**由祖先组件提供给整条链路的数据（依赖）
 
 ![image-20230516151734357](https://www.arryblog.com/assets/img/image-20230516151734357.c2e52a23.png)
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_3、依赖注入的基本使用)3、依赖注入的基本使用
+### 3、依赖注入的基本使用
 
 祖先组件向后代组件提供数据，后代组件能接受到数据。
 
@@ -2195,7 +2195,7 @@ export default {
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_4、provide-选项)4、provide 选项
+### 4、provide 选项
 
 关于`provide`选项在提供数据时，有以下几个需要特别注意的点
 
@@ -2205,7 +2205,7 @@ export default {
 
 > 接下来，我们就针对这三个点分别展开讲解。
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_4-1、提供组件实例的状态)4.1、提供组件实例的状态
+### 4.1、提供组件实例的状态
 
 如果我们需要提供依赖当前组件实例的状态（比如：那些由 `data()` 定义的数据属性），`provide`选项的值必需改写成函数形式。
 
@@ -2226,7 +2226,7 @@ export default {
 
 > 这种方式提供的数据，在注入时不会保持响应性，如在子组件中通过`this.msg='Hello update`更新`msg`的值，页面并不会同步更新。
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_4-2、inject-注入数据时保持响应性)4.2、inject 注入数据时保持响应性
+### 4.2、inject 注入数据时保持响应性
 
 如果需要使提供的数据在注入时保持响应性，我们需要使用`computed()`函数提供一个计算属性
 
@@ -2258,7 +2258,7 @@ export default {
 app.config.unwrapInjectedRef = true;
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_4-3、如何操作-inject-注入的数据)4.3、如何操作 inject 注入的数据
+### 4.3、如何操作 inject 注入的数据
 
 如果我们需要在后代组件中操作`inject`注入的数据，推荐在上层组件提供数据时，顺带提供操作此数据的方法。
 
@@ -2286,7 +2286,7 @@ export default {
 };
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_4-4、代码演示)4.4、代码演示
+### 4.4、代码演示
 
 以下代码演示了`App`组件向后代组件`Item`提供了`msg`属性和更新数据的`update`方法。
 
@@ -2362,7 +2362,7 @@ export default {
 
 ![GIF2023-5-1618-07-33](https://www.arryblog.com/assets/img/GIF2023-5-1618-07-33.5412b3ec.gif)
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_5、应用层-provide)5、应用层 Provide
+### 5、应用层 Provide
 
 除了在一个组件中提供依赖，我们还可以在整个应用层面提供依赖
 
@@ -2376,7 +2376,7 @@ app.provide("msg", "hello!"); // msg 为注入名   hello 为值
 
 在应用级别提供（provide）的数据在该应用内的所有组件中都可以注入（inject）。这在你编写**插件**时会特别有用，因为插件一般都不会使用组件形式来提供值。
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_6、注入-inject)6、注入（Inject）
+### 6、注入（Inject）
 
 在子组件中注入上层组件提供的数据时，有以下几个需要注意的点
 
@@ -2386,7 +2386,7 @@ app.provide("msg", "hello!"); // msg 为注入名   hello 为值
 
 > 接下来，我们就针对这三个点分别展开讲解。
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_6-1、注入被解析时机)6.1、注入被解析时机
+### 6.1、注入被解析时机
 
 `inject`（注入）会在组件自身的状态**之前**被解析，你可以在
 
@@ -2416,7 +2416,7 @@ export default {
 };
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_6-2、注入别名)6.2、注入别名
+### 6.2、注入别名
 
 如果我们想在子组件中用一个不同的**本地属性**名注入上层组件提供的属性时，`inject`选项需要采用以下对象写法
 
@@ -2438,7 +2438,7 @@ export default {
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_6-3、注入默认值)6.3、注入默认值
+### 6.3、注入默认值
 
 如果`inject`选项中声明的注入名没有被提供，则会抛出一个运行时警告。所以在注入一个值时不要求必须有提供者，那么我们应该声明一个默认值。
 
@@ -2467,7 +2467,7 @@ export default {
 };
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_6-4、代码演示)6.4、代码演示
+### 6.4、代码演示
 
 - `App.vue` 根组件
 
@@ -2566,7 +2566,7 @@ export default {
 
 ![GIF2023-5-1620-11-54](https://www.arryblog.com/assets/img/GIF2023-5-1620-11-54.3233261a.gif)
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_7、使用-symbol-作为注入名)7、使用 Symbol 作为注入名
+### 7、使用 Symbol 作为注入名
 
 但如果你正在构建大型的应用，包含非常多的依赖提供，或者你正在编写提供给其他开发者使用的组件库。
 
@@ -2618,7 +2618,7 @@ export default {
 };
 ```
 
-### [#](https://www.arryblog.com/vip/vue/slots-dialog-list-provide-inject.html#_8、总结)8、总结
+### 8、总结
 
 > 本小节我们重点需要掌握以下内容：
 

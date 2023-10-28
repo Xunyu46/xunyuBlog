@@ -22,13 +22,13 @@ publish: true
 - Vue Router 编程式导航
 - 实战应用：项目框架搭建
 
-## [#](https://www.arryblog.com/vip/vue/vue-router-2.html#一、vue-router-的基本用法)一、Vue Router 的基本用法
+## 一、Vue Router 的基本用法
 
 Vue Router 是 [Vue.js (opens new window)](https://vuejs.org/)的官方路由。它与 Vue.js 核心深度集成，让用 Vue.js 构建**SPA 单页应用**变得轻而易举。在 Vue3 中需要安装`vue-router`4 版本。
 
 > Vue Router 官网地址：https://router.vuejs.org/zh/guide/
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_1、使用-vue-router-的步骤)1、使用 vue-router 的步骤
+### 1、使用 vue-router 的步骤
 
 在 vue3 中使用`vue-router@4.x` 版本步骤
 
@@ -43,7 +43,7 @@ Vue Router 是 [Vue.js (opens new window)](https://vuejs.org/)的官方路由。
 
 ![GIF2023-8-218-02-39](https://www.arryblog.com/assets/img/GIF2023-8-218-02-39.d4123c52.gif)
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_1-1、第一步-安装vue-router-4-x版本)1.1、第一步：安装`vue-router@4.x`版本
+### 1.1、第一步：安装`vue-router@4.x`版本
 
 执行以下 npm 命令，安装`vue-router`4.x 版本，安装成生产依赖
 
@@ -51,7 +51,7 @@ Vue Router 是 [Vue.js (opens new window)](https://vuejs.org/)的官方路由。
 npm install vue-router@4
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_1-2、第二步-定义路由组件)1.2、第二步：定义路由组件
+### 1.2、第二步：定义路由组件
 
 在 `src/views/`目录下新建当前应用需要用到的所有路由组件（也称视图组件）
 
@@ -61,7 +61,7 @@ views / About.vue; //  About 组件
 views / News.vue; // News 组件
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_1-3、第三步-创建路由实例)1.3、第三步：创建路由实例
+### 1.3、第三步：创建路由实例
 
 在`src/router/`目录下新建`router.js`文件，此文件最终对外暴露`router`路由实例
 
@@ -78,7 +78,7 @@ const router = createRouter({
 export { router };
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_1-4、第四步-配置路由映射-路径和组件映射关系)1.4、第四步：配置路由映射 - 路径和组件映射关系
+### 1.4、第四步：配置路由映射 - 路径和组件映射关系
 
 - ①、导入路由组件
 - ②、定义路由：路径与组件的映射关系
@@ -120,7 +120,7 @@ const router = createRouter({
 export { router };
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_1-5、第五步-全局注册-router-实例)1.5、第五步：全局注册 router 实例
+### 1.5、第五步：全局注册 router 实例
 
 在`main.js`中利用 app.use 方法注册 router 路由实例
 
@@ -135,7 +135,7 @@ app.use(router);
 app.mount("#app");
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_1-6、第六步-使用路由通过-router-link-和-router-view)1.6、第六步：使用路由通过`<router-link>`和`<router-view>`
+### 1.6、第六步：使用路由通过`<router-link>`和`<router-view>`
 
 可以在`App.vue`组件中调用`<router-link>`和`<router-view>`组件使用路由
 
@@ -192,7 +192,7 @@ app.mount("#app");
 
 > 经过以上 6 步，最终我们完成了刚开始我们期望的效果。
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_2、路由模式)2、路由模式
+### 2、路由模式
 
 `createRouter`方法参数对象的`history`属性用来指定路由的模式，当`history`的值为
 
@@ -207,7 +207,7 @@ const router = createRouter({
 });
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_3、链接激活时-class-类名)3、链接激活时 Class 类名
+### 3、链接激活时 Class 类名
 
 默认情况下，链接被激活时会加上`router-link-active` Class 类名，比如前面提到的案例
 
@@ -245,7 +245,7 @@ const router = createRouter({
 
 > 关于什么情况下会加上的`router-link-exact-active`Class 类名，及有什么用，后面会讲到
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_4、去掉路由历史记录)4、去掉路由历史记录
+### 4、去掉路由历史记录
 
 如果想在页面切换时，不留下历史记录，也就是在浏览器最顶部左侧不会出现前进和后退按扭。我们只需要在`<router-link>`标签上添加`replace`属性（表示用当前路径替换之前路径）
 
@@ -272,7 +272,7 @@ const router = createRouter({
 
 ![GIF2023-8-218-31-06](https://www.arryblog.com/assets/img/GIF2023-8-218-31-06.c1be8089.gif)
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_5、访问router实例和当前路由route)5、访问`router`实例和当前路由`route`
+### 5、访问`router`实例和当前路由`route`
 
 通过调用 `app.use(router)`注册 vue-router 插件后。
 
@@ -323,7 +323,7 @@ const router = createRouter({
 
 ![image-20230802190555269](https://www.arryblog.com/assets/img/image-20230802190555269.127c0c95.png)
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_6、嵌套路由)6、嵌套路由
+### 6、嵌套路由
 
 以下图中展示的效果就是一个嵌套路由效果
 
@@ -396,7 +396,7 @@ const router = createRouter({
 
 > 关于更深层级的路由嵌套和上面一样，一层一层嵌套下去就好。
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_7、链接精确激活时-class-类名)7、链接精确激活时 Class 类名
+### 7、链接精确激活时 Class 类名
 
 默认情况下，链接精确激活时会加上`router-link-exact-active` Class 类名。
 
@@ -423,7 +423,7 @@ const router = createRouter({
 >
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_8、命名路由)8、命名路由
+### 8、命名路由
 
 在定义路由时，我们可以为路由添加`name`属性来指定路由的名字
 
@@ -496,7 +496,7 @@ const routes = [
 
 当我们的路由名很长很复杂时，在`<router-link>`标签中可以通过`name`属性来简化，而不需要书写`path`属性
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_9、路由重定向)9、路由重定向
+### 9、路由重定向
 
 当我们访问某个路径时，我们希望他能重定向到其它的路径，比如访问`/news`时，希望重定向到到`/news/tab1`。
 
@@ -568,7 +568,7 @@ const routes = [
 
 ![GIF2023-8-219-24-55](https://www.arryblog.com/assets/img/GIF2023-8-219-24-55.d07a785b.gif)
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_9-1、注意事项)9.1、注意事项
+### 9.1、注意事项
 
 如果重定向的路由**没有子路由**，则该路由中的`component`可以省略不写，因为它从来没有被直接访问过
 
@@ -587,7 +587,7 @@ const routes = [
 ]
 ```
 
-## [#](https://www.arryblog.com/vip/vue/vue-router-2.html#二、vue-router-路由传参)二、vue Router 路由传参
+## 二、vue Router 路由传参
 
 在路由进行跳转时，我们可以通过传参的形式为当前路由携带相关数据。
 
@@ -596,7 +596,7 @@ const routes = [
 - query 参数
 - params 参数
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_1、路由的-query-参数)1、路由的 query 参数
+### 1、路由的 query 参数
 
 query 参数最终会以 `key = value` 键值对的形式出现在地址 `？` 后面。
 
@@ -676,7 +676,7 @@ const routes = [
 
 ![image-20230803130053537](https://www.arryblog.com/assets/img/image-20230803130053537.25740485.png)
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_1-1、实战应用-根据-query-参数渲染数据)1.1、实战应用：根据 query 参数渲染数据
+### 1.1、实战应用：根据 query 参数渲染数据
 
 - 当我们点击不同的新闻标题时，需要把当前新闻的`id`作为参数传递给到`Detail`组件
 - `Detail`组件接受传递过来的`id`值，向后端发请求获取当前 Id 对应的新闻详细内容，然后渲染在页面中
@@ -802,7 +802,7 @@ const routes = [
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_2、路由的-params-参数)2、路由的 params 参数
+### 2、路由的 params 参数
 
 以`params`形式传参，需要在配置路由时，以`:key`形式先占位。
 
@@ -871,7 +871,7 @@ const routes=[
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_2-1、实战应用-根据-params-参数渲染数据)2.1、实战应用：根据 params 参数渲染数据
+### 2.1、实战应用：根据 params 参数渲染数据
 
 针以前面的`query`参数案例，我们只需做以下相关修改，就可以实现与之相同的效果
 
@@ -918,7 +918,7 @@ const routes = [
 const id = route.params.id;
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_3、路由的-props-配置)3、路由的 props 配置
+### 3、路由的 props 配置
 
 路由的 props 配置可以让路由组件以 props 的形式来接受传递的 params 或 query 参数，写法更简洁。
 
@@ -949,7 +949,7 @@ const id = route.params.id;
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_3-1、props-布尔模式)3.1、props 布尔模式
+### 3.1、props 布尔模式
 
 当 props 的值为布尔值 true 时，相当于`route.params`将被设置为组件的`props`。
 
@@ -1002,7 +1002,7 @@ const routes = [
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_3-2、props-对象模式)3.2、props 对象模式
+### 3.2、props 对象模式
 
 当`props`是一个对象时，这个对象会被设置为组件的 props。
 
@@ -1037,7 +1037,7 @@ const routes = [
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_3-3、props-函数模式)3.3、props 函数模式
+### 3.3、props 函数模式
 
 当 props 的值是一个函数时，允许返回值是一个 props 对象，函数的第一个参数为当前`route`路由对象。
 
@@ -1164,7 +1164,7 @@ const routes = [
 const props = defineProps(["id", "title", "msg"]);
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_4、响应路由参数的变化)4、响应路由参数的变化
+### 4、响应路由参数的变化
 
 我们来看下面这个带参的路由
 
@@ -1218,7 +1218,7 @@ const routes = [
 </script>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_4-1、实战应用)4.1、实战应用
+### 4.1、实战应用
 
 我们来实现如下效果，当用户从`/news/1001`导航到`/news/1002`或`/news/1003`时都能拿到变化后的参数，然后根据参数的值来发请求获取新闻数据列表。
 
@@ -1389,7 +1389,7 @@ export { router };
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_5、总结)5、总结
+### 5、总结
 
 本小节重点掌握路由传参和路由的 props 配置
 
@@ -1402,7 +1402,7 @@ export { router };
 | query 参数  | query 传递显示参数，在地址栏中明确知道那部分是参数 query 参数在`<script setup>`中通过`useRoute().query.id`形式获取，在模板中以`$route.query.id`形式获取                      |
 | params 参数 | parmas 传递，不会显示参数，所以 params 传参相比 query 传参更安全一些 params 参数在`<script setup>`中通过`useRoute().params.id`形式获取，在模板中以`$route.params.id`形式获取 |
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_5-1、路由-props-配置)5.1、路由 props 配置
+### 5.1、路由 props 配置
 
 路由 props 配置的主要作用：
 
@@ -1417,7 +1417,7 @@ export { router };
 | 对象写法     | 当我们需要给路由组件传递一些静态的 props 时，可以采用对象写法                                            |
 | 函数写法     | 当我们需要把路由的`query参数`或`params`参数与一些静态值一起作为 props 传递给路由组件时，可以采用函数写法 |
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_5-3、响应路由参数的变化)5.3、响应路由参数的变化
+### 5.3、响应路由参数的变化
 
 当路由带参时，比如`/news/:id`路由，当用户从`/news/1001`导航到`/news/1002`时，**相同的组件实例将被重复使用**，所以组件的生命周期钩子不会被调用，这样造成没有办法获取到变化后的参数值。
 
@@ -1432,7 +1432,7 @@ watch(
 );
 ```
 
-## [#](https://www.arryblog.com/vip/vue/vue-router-2.html#三、路由别名)三、路由别名
+## 三、路由别名
 
 在路由配置时，我们可以通过`alias`属性为路由取别名。
 
@@ -1441,7 +1441,7 @@ watch(
 
 > 通过别名，你可以自由地将 UI 结构映射到一个任意的 URL，而不受配置的嵌套结构的限制
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_1、别名是一个绝对或相对路径)1、别名是一个绝对或相对路径
+### 1、别名是一个绝对或相对路径
 
 别名可以是一个以`/`开头的绝对路径，也可以是一个没有`/`开头的相对路径
 
@@ -1500,7 +1500,7 @@ const routes = [
 
 ![image-20230803204444342](https://www.arryblog.com/assets/img/image-20230803204444342.910877b7.png)
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_2、别名是一个数组)2、别名是一个数组
+### 2、别名是一个数组
 
 别名可以由多个以相对或绝对路径组成的数组
 
@@ -1529,7 +1529,7 @@ const routes = [
 
 > 我们通过`/Info` `/news/commonInfo` 最终访问的都是`/news/tab3`路由的内容
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_3、别名携带参数)3、别名携带参数
+### 3、别名携带参数
 
 如果路由有参数，一定要在任何绝对别名中包含它们
 
@@ -1557,11 +1557,11 @@ const routes = [
 <li><router-link to="/1001">关于我们</router-link></li>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/vue-router-2.html#四、命名视图)四、命名视图
+## 四、命名视图
 
 本小节我们讲解命名视图和嵌套命名视图
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_1、命名视图)1、命名视图
+### 1、命名视图
 
 有时候想同时（同级）展示多个视图，而不是嵌套展示。例如创建一个布局，有 header（头部）、main（主内容）、footer（底部）三个视图，这个时候命名视图就派上用场了。
 
@@ -1598,7 +1598,7 @@ const router = createRouter({
 });
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_2、命名视图应用)2、命名视图应用
+### 2、命名视图应用
 
 我们利用命名视图实现如下图所示的效果
 
@@ -1711,7 +1711,7 @@ const router = createRouter({
 export { router };
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_3、嵌套命名视图)3、嵌套命名视图
+### 3、嵌套命名视图
 
 如果上面案例中 `/news` 路由还存在子路由，子路由对应的页面也可以由多个命名视图来展示
 
@@ -1756,7 +1756,7 @@ const routes = [
 ];
 ```
 
-## [#](https://www.arryblog.com/vip/vue/vue-router-2.html#五、动态路由的匹配语法)五、动态路由的匹配语法
+## 五、动态路由的匹配语法
 
 本小节我们来学习动态路由的匹配语法，主要内容有：
 
@@ -1767,7 +1767,7 @@ const routes = [
 - 捕获 404 Not Found 路由
 - Sensitive 与 strict 路由配置
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_1、参数中自定义正则)1、参数中自定义正则
+### 1、参数中自定义正则
 
 当我们使用`user/:userId`这样的动态路由时，`:userId`为路径参数，他能匹配任意的字符，所以`user/12`、`user/ab` 都能匹配成功。
 
@@ -1797,7 +1797,7 @@ const routes = [
 ];
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_2、可重复的参数)2、可重复的参数
+### 2、可重复的参数
 
 如果你需要匹配具有多个部分的路由，如`/user/:urls` 可以匹配 `/user/one` `/user/one/two`、`/user/one/two/123` 等
 
@@ -1823,7 +1823,7 @@ const routes = [
 ];
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_3、可选参数)3、可选参数
+### 3、可选参数
 
 你可以在路径参数后面使用 `?` 修饰符（0 个或 1 个）将一个参数标记为可选。
 
@@ -1846,7 +1846,7 @@ const routes = [
 - `*` 表示 0 个或多个，同时参数可以重复
 - `?` 表示 0 个或 1 个，参数不能重复
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_4、注意事项)4、注意事项
+### 4、注意事项
 
 > 我们来看下面两个路由
 
@@ -1867,7 +1867,7 @@ const routes = [
 
 与`/:id(\\d+)`和`/:keyword`在 routes 数组中的顺序没有关系。
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_5、捕获-404-not-found-路由)5、捕获 404 Not Found 路由
+### 5、捕获 404 Not Found 路由
 
 我们可以在定义`routes`时，配置一个匹配所有路由的路由对象，该路由所渲染的组件为`NotFound`显示 404 页面内容。
 
@@ -1886,7 +1886,7 @@ const routes = [
 ];
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_6、sensitive-与-strict-路由配置)6、Sensitive 与 strict 路由配置
+### 6、Sensitive 与 strict 路由配置
 
 默认情况下路由`/users`将匹配 `/users`、`/users/`、甚至 `/Users/`。我们可以在`createRouter(options)`的 options 中来配置`sensitive`与`strict`选项来区分大小写要禁用尾部斜线。
 
@@ -1938,7 +1938,7 @@ const router = createRouter({
 - 以上`/about`路由可以与`/about`和`/About`匹配成功，但与`/about/`匹配失败
 - 以上`/news`路由可以与`/news`和`/news/`匹配成功，但与`/News`匹配失败
 
-## [#](https://www.arryblog.com/vip/vue/vue-router-2.html#六、vue-router-编程式导航)六、vue Router 编程式导航
+## 六、vue Router 编程式导航
 
 除了使用 `<router-link>` 创建 a 标签来定义导航链接，我们还可以借助 router 的实例方法，通过编写代码来实现。
 
@@ -1959,7 +1959,7 @@ const router = createRouter({
 | `back()`        | 相当于后退按扭，后退到前一页                                     |
 | `forward()`     | 相当于前进按扭，前进到前一页                                     |
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_1、push-方法)1、push 方法
+### 1、push 方法
 
 push 方法用来导航到一个新的 URL，他接受一个参数，该参数与`<router-link>`组件中 to 属性值的写法一模一样，可以是一个字符串路径，或者一个描述地址对象。
 
@@ -1989,7 +1989,7 @@ router.push({ path: "/about", hash: "#team" });
 router.push({ path: "/news/tab1", params: { id: "001" } });
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_2、实战应用)2、实战应用
+### 2、实战应用
 
 接下来，我们利用编程式导航实现下图所示的导航切换
 
@@ -2092,7 +2092,7 @@ export { router };
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_3、replace-方法)3、replace 方法
+### 3、replace 方法
 
 与 push 方法一样用来导航到一个新的 URL，但会替换掉之前的 URL，无法后退到之前 URL
 
@@ -2112,7 +2112,7 @@ function goTo(url) {
 }
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_4、go、back、forward-方法)4、go、back、forward 方法
+### 4、go、back、forward 方法
 
 ```js
 router.go(1); // 向前移动一页，相当于前进按扭
@@ -2162,7 +2162,7 @@ router.forward(); // 与go(1) 是一样的
 
 ![GIF2023-5-3122-08-59](https://www.arryblog.com/assets/img/GIF2023-5-3122-08-59.4288407f.gif)
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_5、总结-2)5、总结
+### 5、总结
 
 你可能已经注意到，`router.push`、`router.replace` 和 `router.go` 是 [`window.history.pushState`、`window.history.replaceState` 和 `window.history.go` (opens new window)](https://developer.mozilla.org/en-US/docs/Web/API/History)的翻版，它们确实模仿了 `window.history` 的 API。
 
@@ -2170,20 +2170,20 @@ router.forward(); // 与go(1) 是一样的
 
 值得一提的是，无论在创建路由器实例时传递什么样的 [`history` 配置 (opens new window)](https://router.vuejs.org/zh/api/#history)，Vue Router 的导航方法( `push`、`replace`、`go` )都能始终正常工作。
 
-## [#](https://www.arryblog.com/vip/vue/vue-router-2.html#七、实战应用-项目框架搭建)七、实战应用：项目框架搭建
+## 七、实战应用：项目框架搭建
 
 本小节结合前面学习过的 Vant UI 与 Vue Router 实现一个简单的应用导航框架，具体效果如下。
 
 ![GIF2023-8-414-50-20](https://www.arryblog.com/assets/img/GIF2023-8-414-50-20.ec35d3e7.gif)
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_1、实现步骤)1、实现步骤
+### 1、实现步骤
 
 - 路由设计
 - 安装 Vant 组件库
 - 实现页面路由
 - 单页面开发
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_2、路由设计)2、路由设计
+### 2、路由设计
 
 首先根据当前应用的需求设计好当前应用的路由。
 
@@ -2242,7 +2242,7 @@ app.use(router);
 // ......
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_3、安装-vant-组件库)3、安装 Vant 组件库
+### 3、安装 Vant 组件库
 
 在此项目中，我们会用到 Vant 组件库，所以我们需要先安装好 Vant 组件库
 
@@ -2275,7 +2275,7 @@ export default {
 };
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_4、实现页面路由)4、实现页面路由
+### 4、实现页面路由
 
 根据路由实现各页面之间的链接（跳转）关系。
 
@@ -2305,7 +2305,7 @@ export default {
 
 ![image-20230804151401327](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA2wAAAA/CAIAAAAT/NzCAAASuUlEQVR4nO3dfVBT95oH8AfQoEjQTugyBW81WovVacQG2m3T2hIdUFxeeldp1wa3ELxtWQ3QaStXjExKtdg6xaS9tjsS6MBpuzc6DuAUgdpYR3N71WSkx1mn1NVY2+BQzUgJokSB/SMhbwQkCASa72f8g3DOiT+dM+d8z/N7OUH9/f0EAAAAAOCLad23evzdBgAAAACYYoJQiQQAAAAAXwX7uwEAAAAAMPUgRAIAAACAzxAiAQAAAMBnCJEAAAAA4DOESAAAAADwGUIkAAAAAPgMIRIAAAAAfIYQCQAAAAA+m+bvBkwBd35iul8p73uqcEaZZGa4v1sDganX3Kq/1ElEFBoZK+DP8Xd7AIbnPGN9x12QsIQ3ts0BGI1eq6n1hzYLRUQv5kdzOSH+bs/kgzfW3EOPVnErlelPeTrI8H3/PMn0gyXhuLjBxDu37+lXK632D3yJ+ovCOI5fGwQwjDbNq2m7z43+eMFf66vWRY9dewB81Gthv9j+1n6duXvgN3MS8na/J41HAnCDEDmMnltVm29v/i7ojY9mlKVONx3uevXNvp9fmNb4CffRUH+3DQKO1WLp6SWi60d2rN9N8mZVOi5mMFmx5cKc1re/+HD1KIJg25Gtr+xeUmnIF4x9uwBGxNy4dV3x0R7BK1sL14v5XOps0zV+snvfqR5RyUFVGh5vnNCdPZRrXSVZd/b8GlSmCduynENE81K5tXO7crPuLk///XANV/wgxpPCROJwuRwiIu7ixzhU0fpjh2U099iQUPvXAIwzTlgkdw7X9+MiOXhIhwln1leWvV+jvUx5nx/LbC9XHHXLi9w5q6UfiwSf5Lyu2F37lDIjyr+NnUQQIr3pumgpSL/71dzgrxrD0+Y6RkEEz14e8VVjV1HundTEzk/qZmUvnO7PVkKAiolJINLIVmpGdTRH9O5h1VoUMQEA7Mxf5//bDl3oU5nSdIF4ofnb/Y3WVe/t9Kg4hnATNhVkHsyvbGjNyI71U0snHYRIT33m7yzrNvX9vDzkREX4ExGe5cZpc8P3aLrn5fZsXn3z8v6ZihfwzAwTjMuLIUrY+uUHa3x+GjZq/pKz7/wl61oeqpHgB92tjPJIZLp09ZJRVCgBxof1TEWZjtYpD78j4oYQEVuro4TtAi/naNjiZfGkYY1misWDuA1CpJs7PzE3Vyv6w5OmHfsbd95Qe0WEbdEEz9t2+z82dZtK+vZiyjZMKM4sDtEP161crq9ztNuNP1wkcc5iJEjwj5+OlB9k6CBT9pSkaDOiJEwOxnO6bspcY0uQdpwQFIhGBOP6nHq0ipvLFf2xeZwTbgmy7/ezlmLF71+dtbrsPCNtV9iJwiCt4naqoss84W2FQPYQX0TWnh6fj7OcO6MjkWg57tzgZ5ZTTHFW4gt5extbLf5uCwS80PBwIutNxx2eG7OEdLozXk5N66Uf9BQj4KMM6YAQadNzq2pTdyrTn7Vr5uHCWbOdG3p/PmzJyLy7l+nLzex+6/Dtu85NnCfyuMc+CibmTsImy0++39IBRieMyyUytvn67GI5c6yRloiWYUg4TA6WU0zxhkTZ13gKB7+an5AynzQf7RuIjfyV60V0VF3RYnXfz8p++oGmWyBZhQGRTgiRRETU3tyz+fsgRfWsz9bPcOnh79GWWRLf7JshnX7lQthhKR1681ZqmWvdMWReKrdWEyL8/u7WA7cnvtkQmLiRkUSXzdd9O8rKnmmkGPEy/vg0CsB3nNgX5f+1AmUd8C9+5q4CwW/M6ynJG7K2N7YTb+1W+QoTI32l9CBrsliJyPoLq3kv+7Vqk6jkvcw/+bu9kwnGRBIRUVRqeFtS0OxQlxERPbdq3rz9ejNllczYI5kZTiQuCm6c271OcSfxF8vBjxxLRQbPXh7xleHO3VDM1IaJEsmPJ6bTx+L3+TO1FJ37DJ6hYTLgCta9UZiTKUBdHPzOwmqUarabiKz22mNIdMaegzPef1vxfk7t+wO7hcVmlHyxFYtEukOItJs223UU7a9db+Xe+dRlkUgiIpr+qIR7Yql9qcgDFdyUufZC7rTQ6fiPhIkTOiOM6KLRTIKR13Baz2qtYeKER8axWQD3wI3kE5eL+AiTR1vj21nbtVaBtFyeJeLb59b0Wlq/0TT8w+jWn91tPHGsLuERTAhzg+zjqe/3s125Wb0NnotE2jiXily/urOsxjViAkwUXvR8In1PJ9GIQ2TryUNtlJKwGO9+BT9aKDl4WkI4CWGS6GbLt2zXzpF89nlBwkAytF7UFP/lA20Hh7ciY6sscdnSxdFc6mz78dz5Yw2VmuIspiJN/uHb6fwwv7Z80kCIdNP784Gu1G19XctDvq+JEAwxw3/a3PA9dd3zsnqKMm/+766+T9yGUQJMAG5ULJ1v8zqv1dph6SHr9cuXrveQ+Zczl65Rz9VzZ/7vkrGNMlck4JkH/AwJEiYLK7t/O/ObSP53lwTZsneDlDHFpsv3FWTEOiuO3DkJMUsSVr9YYPxmd/HO0nWssaqmQIAciRDpqo9VWzLK+mOl05mi8HtUeELDtmhClpbdyt12K7Wz/4h05sQ0EYCIiCLCIonYI9XMyZud1HH55HkT9V43tpqtXvbl8pdEc0KWZfx1fe6/IkMCABARkeXk36vb+Js/zHCMcmyre2sLY1ohP7gnPcbr004Ih79a/uVSgWxD6WvF/CF3CyQIkU7WH//Z375+OlsUPrLFw0PFRcGfdXa9+M+7JinFjHPjAFzwHuYTMRolS0Tc+bHRYRTxyJqs5zgRMctiozjEjVkczcVrsgEAhmJl9Y0UuzXRMdfQXFtWqvsXSdXOe0XDP6Xv+di4QVq6++tnVWmBvrYAQqSHiGBfXj8zfU4E0bVxawzAEGZGxBAlqvWFcf5uCYA3oWF05jPZhgOjOfb6ZeI8NtYNAnB37TcjUcLi+QOfz9dV6jiZqryRdFJz4vIK12lk++ta1+bEBnYxEutEAkxB0fMfJ9IdP2PusFhG/qfb382GQCHI/e93xPOH2mptO9/a2uZt8AURES1IfOfz/xSMT8MA7KyW6zQ/0jHskf2mwhSdmzHSMT8c0ZpMTltFw7nxat5UgUokwBTEffalN2Jf+/SNpGpfjhLJm1Xpgd77AhOCsyRz577MITay5cIcJk3+ZT6SIvgNf+MBwyuOT8Yf9VZKfNyHsuKShAxiWo1tFBfQK0ciRDoFTSOiA9bU74d8QB6s61eiJ/C/CBOOI8j94vhLlp5enw7iYn0zAAA7Z2S0mM5T7NpIH47lREZGk+bKdSKESCAiotCkImuBopf93YdjwpcGVxXNwKq54A8cLpfTa7X0cLjDDOLptVp6OZhgA/5l7bC4vGHJ9iI5i6XDZZUqDne40xhgfMU8tjYhYqlPM2T5CX9OWP1QoE+qDerv7/d3GwBgVDq0pf/+Tm0HN2NPvTzRW5GxvVG2bruOYvP2VUkfR5AEPzm37+lXK+/RwxOWU3UiD93bAFMLKpEAU9ZltraDiCy1rFGe6OX+a9Yf0XUTUeuRsybp4/yJbh6AzZKXPt+X0Dn8PnMWIEECTDkIkQBT1pI1hSuOVLQuzl292Ot2XqI073G2htbkrUKCBP8J4cU+hQldAH9A6M4GAAAAAJ9hnUgAAAAA8BlCJAAAAAD4DCESAAAAAHyGEAkAAAAAPkOIBAAAAACfIUQCAAAAgM8QIgEAAADAZ1hsnIiou2zRXfGFiCddfnW67MbHC2fWrJ9h/3y2c1Zm74i+TBp6swjvgIVRYcuFOYzzo6TKUCAgc63sXSpWZnh/RTtbLlTzG+xbzfX5SUapIX/4d3+Ya2XJ2lVNqjSs/wxjrWWvsJLfrErn2X6WMl722VhpyBdQe50spVR3j68TyRuGOvMB7tvASSgqaVI9XGM7dU3K+Aq+x+XRyzVzZBfbPz6ESCKisKxdHY8u6qj6x5zMB4mITpfdSKTQm44ESUTLI25ecD/omiXrmf4t7tET4H457ppsuVBLRNRSU6rTUUp8qec+tvgodTmWrVaQvOFeF7WWmlKdpEqFBAljz3zFSAvF9nMrrsBgKHDdyirjs6tF8pcFRERR6SpDuuuhwz4sAYwVc60seeDxRVJl0KtsP7bzRURE5pjn5SRNFhornQGx/aRWJ8l1u2aO7GIbAAI5RA4qLmY/cyPb+alnlrrH/uML037az41xP/q0+u4haWjNOLcRApFrOjTXVlKVQS9w3zrwM39BFBkdW1q0DHnETXJJnK41TsoWeisR2WufAKNkMupE/B3ettjOQNfKouc5SURDnL3j0VIIWLwMlT6DbGVI4+CtvLh0lYFfLswpf15fGGd78iEi0tmvmZIqQ0FMvdrzYruxMjCrkoEcIgcXF892zmqaNkxn9OmyG4lq11+4BE0ioiBHLRNgTLTUlC4UN9fnCwf3m7RoGWIY23UtJV5bUik+apQ36DOu7hVW8puLSZFizDWIv7UnTkGhQV9I7r2NAGPHXJ+fpLCVd5KFCiIiiVpfGGffyipzGM9HlIFzkmy3c60YeRH8S2c0EfGIbCen49eikoGObFvubK9TKEjeoHecrub6/KTBcTQwBHKIJCIvubB3+Fz4510uAyXddJctso5LEyFgMdlSkqizTlTqJDlKj23scYY2VhryyT4m8upe4UKpIYrMp4y0UMy7qtWJ+CWeX8iWSxmJWm9LkBjTA2OIl6Y0pLHlQu1KQ4HAVk1/yG0HUUmWe0Hdswyp8yxD2rmGUYD75T5UV+feJ+PxUaLWr/Q83lixk6GSJjzw2AR8iKTR58Lbmk23LuU9ULR8vBoGgU5SZSgQtNfJSF4S5zaBhsh86aJIXiwgYm0fayupSiUgIpNRJ3leab6idg5NG2CuVzMbKw24H8M4adEyIv5G+wf+guHuss4ypLk+P+moGNVxmCCOobrtdbIUY66zOu54BHLDHvc4np+rUuLJ2wEhkujQtluHtt0aYmNQ1YS2BYCIXAc7mk9padUOHhFfpDNeJbLfmHkZKmdtUrszmVY1ZRARsd9Wi/gvk+m4TvK8ktrrjMRfOZA7TxzVkU4nrHb9i1w+iuS4kcP9MF8xilZl8ciWJolk8dlus6/t3dzkWlxs2Zuk0BHpkoReqpDObkSA8eIYrbuDLzJeaidBFHlM89IpnKcukSSXMC7ICSHyvnqogxbMHZcmQSC7anQZXcNWK0jcwCOi51aJSo+zbv16A/0ykhz7Ldlcr2Y2Sg1RbHm1iP+yx/cODCcfgO5sGFPmE0d1uoUmIh57nBGtaipMKygc2MZ6WTbFcQJ7n87FKuMrxr/REJgcQ3h1QqoaKIqzC3XfXiWyTUPcKG8e2NlzTCQRxRU0r8pPEhptp+7Q88n++BAiR12JvHbn8HfBWzCNBsaQoNCgpPY6LTEV9VkqQwG17M12nQMoEpuJb6tTssr47IvyZkNltWPwmX24t8Bcn8+IxM1RRO1+/LdAoOFlqPTP1ecLhToiSZXhXjUa59A0Zoi1Akg0aFQvwP1qr5OllFJJk6HhpHt3NsXwRYw0nqERTbXmpSmbKT9JVtesSh9+zz82hMjRViJPq+8eIjq06IZcg2GRMIbMp7R8dSVJk8sf1he6rbTHlgvVJ1rEtjqlIF9vIBoYE0lEbHlKKZU0ZUSx5QqSN6TziOiq0dv0GoDxwkvbIT+aXKpjspXi4W7D7XUyKSMqaVKlmbwORCNUImGcOBYoHeIZe2CshblWlmzMGTyxxomXpjSkERGZxryRUwdCpC+eLHrAtjDk6bIbieqQYxcinrxmyXrmxiwiueaBogt4UQ3cN7ZawV9pEAga5LKU/Fq3RU8cdUpvhylzjCVNqjSqleUYS5oKozy22pc6G8RjiCRGocF9Mde/W0ryZsOzJ2TJQuXQ5RznSuMmVCLB7wZ6t0UiERmvmCmOZ++jLh7pN/AfDtDLJkKkj93Z9iWBpKE3bZHxQW7NBaqh7rJFA1ESVUkYNXOtLIfUegERRaWr1Ebh/7AZ7rdh8ymtTiQefG8V5OtVthHiGysNAymQPc7QwkoeES9fb8gf9JdhTCSMKXN9fpKCX2VI5xF5DMAdFsZEgh+x5cIcRiRvNih5ZOvsTi5/WF/4kNEoEm+MIpPXiTXu3/BtNdHzE9nmSQQhcmTd2aYDHY9u6yciueaBm0WD9wwruhBWRN1li25kDfltAMNjlcnaVU0qx9SZuAL7cjxubxkW2buqPZltNUhDGs9l2WdJlQEZESZEe53iqLjZ4H5yOgc+iuQNQ5VqUImECeXsmdlYqSKBwLHoPRFFpasaSJYSLyQSlTTxiExeJ9a4vTuRKICXTgvq7+/3dxsAAAAAYIoJ9ncDAAAAAGDqQYgEAAAAAJ8hRAIAAACAzxAiAQAAAMBnCJEAAAAA4DOESAAAAADw2f8D2hBtUj8RscwAAAAASUVORK5CYII=)
 
-### [#](https://www.arryblog.com/vip/vue/vue-router-2.html#_5、单页面开发)5、单页面开发
+### 5、单页面开发
 
 整个应用的页面路由（导航）实现好之后，我们就可以开发单个路由页面的功能了。
 

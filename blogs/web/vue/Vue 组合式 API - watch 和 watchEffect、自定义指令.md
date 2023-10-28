@@ -19,22 +19,22 @@ publish: true
 - watchEffect 方法
 - 自定义指令
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#一、-script-setup)一、`<script setup>`
+## 一、`<script setup>`
 
 在单文件组件中使用组合式 API，需要在`<script>`标签上添加`setup`属性。 此时写在`<script setup>`标签中的代码会被编译成组件`setup()`函数的内容。
 
 > `<script setup>`是在单文件组件（SFC）中使用组合式 API 的编译时语法糖
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_1、-script-setup-的基本用法)1、`<script setup>`的基本用法
-
+### 1、`<script setup>`的基本用法
 
 ```html
-<script setup>中的this指向与setup()方法中的一样，都指向undefined
 <script setup>
-  const count = 0;
-  console.log(this); // undefined
+  中的this指向与setup()方法中的一样，都指向undefined
+  <script setup>
+    const count = 0;
+    console.log(this); // undefined
 </script>
-````
+```
 
 在 `<script setup>` 声明的顶层的绑定（包括变量，函数声明，以及 import 导入的内容）都能在模板中直接使用
 
@@ -55,7 +55,7 @@ publish: true
   <div>{{ sayHello() }}</div>
   <div>2+3={{ sum(2, 3) }}</div>
 </template>
-````
+```
 
 > 最终渲染效果如下：
 
@@ -66,7 +66,7 @@ publish: true
 - 在 `<script setup>` 中创建的变量不会作为属性添加到组件实例中。
 - 如果在某些情况下确实需要从选项式 API 中访问到`<script setup>`中的变量，建议切换到`setup()`函数写法
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_2、响应式数据)2、响应式数据
+### 2、响应式数据
 
 - 在 `<script setup>` 中声明的顶层**变量**并不是响应式的，需要借助响应式 API（如`ref()`或`reactive()`）方法来创建响应式变量
 - 如果变量为`ref`对象，在模板中直接使用时会自动解包，这一特点与`setup()`函数中是一样的
@@ -95,7 +95,7 @@ publish: true
 
 ![GIF2023-5-1819-50-13](https://www.arryblog.com/assets/img/GIF2023-5-1819-50-13.60b8aa74.gif)
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_3、使用组件)3、使用组件
+### 3、使用组件
 
 在`<script setup>`中直接通过`import`导入需要的组件，然后该组件就可以直接在模板中通过标签名使用
 
@@ -119,7 +119,7 @@ publish: true
 
 > 对于全局组件可以通过组件名直接在模板中使用
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_4、动态组件)4、动态组件
+### 4、动态组件
 
 在`<script setup>`中组件是通过变量引用而不是基于字符串组件名注册。
 
@@ -151,7 +151,7 @@ publish: true
 
 ![GIF2023-7-1017-37-36](https://www.arryblog.com/assets/img/GIF2023-7-1017-37-36.5f2fe25d.gif)
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_5、计算属性-computed)5、计算属性 computed
+### 5、计算属性 computed
 
 - 在组合式 API 中使用计算属性，需要借助 Vue 为我们提供的`computed()`方法
 - `computed()`方法接受一个 getter 函数，返回值为一个计算属性 ref，计算属性在模板中使用时会自动解包
@@ -194,7 +194,7 @@ publish: true
 </template>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#二、侦听器-watch)二、侦听器 watch
+## 二、侦听器 watch
 
 本小节将学习如何在`<script setup>`中使用 watch 侦听器，主要内容涉及如下：
 
@@ -205,7 +205,7 @@ publish: true
 - 实战应用：单位千米与米的相互转换
 - 停止侦听器
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_1、watch-方法的基本使用)1、watch 方法的基本使用
+### 1、watch 方法的基本使用
 
 在组合式 API 中，我们需要使用 Vue 提供的`watch()`函数来侦听一个或多个响应式数据源的变化，并在数据源变化时调用所给的回调函数。
 
@@ -236,7 +236,7 @@ watch(source, callback, options);
 - **`deep`** 如果数据源是对象，强制深度遍历，以便在深层级变更时触发回调
 - **`flush`**：调整回调函数的刷新时机，`flush:'post'`表示在 Vue 更新之后 DOM 之后调用侦听器回调，可以侦听器回调中访问到 Vue 更新之后的 DOM
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_2、侦听数据源)2、侦听数据源
+### 2、侦听数据源
 
 侦听的 **“数据源”**，他可以是以下几种形式
 
@@ -426,7 +426,7 @@ watch(
 
 > 可以通过添加`deep:true`配置开启深侦听
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_3、副作用清理)3、副作用清理
+### 3、副作用清理
 
 在某些场景下，当监听的数据源发生变化时，就会向后台发起请求，如果数据在请求还没有回来时，数据源变化了 5 次，那就会向后台发送 5 次请求，完全是没有必要的。
 
@@ -459,7 +459,7 @@ watch(
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_4、options-配置项)4、options 配置项
+### 4、options 配置项
 
 关于`options`配置项中每一项配置的含义，与前面讲的项选项式 API 中`watch`是一样的。
 
@@ -469,7 +469,7 @@ watch(
 
 > 具体用法可以参考选项式 API：[侦听器配置选项(opens new window)](https://www.arryblog.com/vip/vue/mastache-event-computed-watch.html#_2、侦听器配置选项)
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_5、实战应用-单位千米与米的相互转换)5、实战应用：单位千米与米的相互转换
+### 5、实战应用：单位千米与米的相互转换
 
 实现单位千米与米的转换
 
@@ -497,7 +497,7 @@ watch(
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_6、停止侦听器)6、停止侦听器
+### 6、停止侦听器
 
 在 `setup()` 或 `<script setup>` 中用**同步语句创建的侦听器**，会自动绑定到宿主组件实例上，并且会在宿主组件卸载时自动停止。因此，在大多数情况下，你无需关心怎么停止一个侦听器。
 
@@ -589,11 +589,11 @@ onBeforeUnmount(() => {
 
 ![GIF2023-5-1915-37-32](https://www.arryblog.com/assets/img/GIF2023-5-1915-37-32.4f4ad570.gif)
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#三、watcheffect-方法)三、watchEffect() 方法
+## 三、watchEffect() 方法
 
 深入浅出 `watchEffect()` 方法的基本使用，侦听器调试，副作用清除，停止侦听器，`watch()` 与 `watchEffect()` 对比，axios 取消请求，实战应用 等。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_1、watcheffect-的基本使用)1、watchEffect() 的基本使用
+### 1、watchEffect() 的基本使用
 
 `watchEffect()`方法一旦被调用，会立即运行其回调函数，同时响应式地追踪其依赖，并在依赖更改时重新执行。
 
@@ -649,7 +649,7 @@ interface WatchEffectOptions {
 
 `watch()`方法是惰执行的，只在数据更新时才会执行，即第一次初始化时并不会侦听，除非添加了`immediate: true`配置。
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_2、侦听器调试)2、侦听器调试
+### 2、侦听器调试
 
 如果我们想要对侦听器做调试，可以向 `watchEffect()` 传入第二个参数，是一个包含了 `onTrack` 和 `onTrigger` 两个回调函数的对象。
 
@@ -690,7 +690,7 @@ interface WatchEffectOptions {
 
 > 更多响应性调试，查阅 Vue 官方文档：[响应性调试(opens new window)](https://cn.vuejs.org/guide/extras/reactivity-in-depth.html#reactivity-debugging)
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_3、副作用清除)3、副作用清除
+### 3、副作用清除
 
 `watchEffect`回调函数的第一个参数`onCleanup`为副作用清除函数，`onCleanup`函数接收一个函数作为参数，该参数会在下一次回调函数调用前执行。
 
@@ -704,7 +704,7 @@ watchEffect((onCleanup) => {
 });
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_4、停止侦听器)4、停止侦听器
+### 4、停止侦听器
 
 停止侦听器的方式和`watch`方法一样。
 
@@ -717,7 +717,7 @@ const stop = watchEffect(() => {});
 stop();
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_5、watch-与-watcheffect-对比)5、watch() 与 watchEffect() 对比
+### 5、watch() 与 watchEffect() 对比
 
 **`watch()`侦听器特点**
 
@@ -731,7 +731,7 @@ stop();
 - `watchEffect()`不需要指定侦听的数据源，会自动收集依赖数据，依赖数据更新时重新执行自身
 - 无法获取到变化前的原始值，只能得到变化后的值
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_6、axios-取消请求)6、axios 取消请求
+### 6、axios 取消请求
 
 副作用清理函数常用来取消上一次请求，所以接下来，我们先来学习下如何在 axios 中取消上一次请求。
 
@@ -818,7 +818,7 @@ controller.abort();
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#_7、实战应用)7、实战应用
+### 7、实战应用
 
 以下示例展示了 `paramId` 变量的数据发生变化时，会发送 Ajax 请求。
 
@@ -886,7 +886,7 @@ controller.abort();
 
 当我们点击菜单 2 时，在数据没有回来前再点击菜单 3，则菜单 2 的请求被取消，然后发请求获取菜单 3 的内容最终返回的新内容替换原来的内容，渲染成列表显示在页面。
 
-## [#](https://www.arryblog.com/vip/vue/composition-api-watch-custom-instructions.html#四、自定义指令)四、自定义指令
+## 四、自定义指令
 
 - 在全局注册的自定义指令，在任意组件的模板中可以直接使用。
 - 在`<script setup>`中不需要显式注册局部指令，如果一个变量的命名遵循`vNameOfDirective`这样的规范，Vue 会自动把他当作一条指令来执行。

@@ -9,6 +9,10 @@ export default defineUserConfig({
   description: "用代码将梦想照进现实",
   head: [["link", { rel: "icon", href: "favicon.ico" }]],
   theme: recoTheme({
+    smoothScroll: true,
+    lastUpdatedText: "最后一次修改",
+    editLinkPattern: "https://gitee.com/xunyuBlog/xunyu-blog",
+    editLinkText: "修改此页面",
     style: "@vuepress-reco/style-default",
     logo: "/logo.jpg",
     author: "xunyu",
@@ -16,7 +20,6 @@ export default defineUserConfig({
     docsRepo: "https://github.com/vuepress-reco/vuepress-theme-reco-next",
     docsBranch: "main",
     docsDir: "example",
-    lastUpdated: "最近一次修改",
     primaryColor: "rgb(86,95,211)",
     // series 为原 sidebar
     series: {
@@ -69,6 +72,29 @@ export default defineUserConfig({
           ],
         },
       ],
+      "/blogs/web/typescript/": [
+        {
+          text: "TypeScript 核心基础",
+          children: [
+            "/blogs/web/typescript/TypeScript 快速入门 - 核心基础，TS 基本数据类型.md",
+            "/blogs/web/typescript/TypeScript 数组、元组，any、unknown、never 类型.md",
+            "/blogs/web/typescript/TypeScript 函数类型、symbol 类型、对象类型.md",
+            "/blogs/web/typescript/TypeScript 中 Enum 枚举类型、interface 接口类型.md",
+            "/blogs/web/typescript/TS 中 class 类型，泛型，类型断言核心基础 与 实践应用.md",
+            "/blogs/web/typescript/TS 的类型检查机制，类型兼容性、保护机制、高级类型.md",
+            "/blogs/web/typescript/TS 模块，namespace 命名空间，declare 关键字.md",
+            "/blogs/web/typescript/TypeScript 类型运算符，类型映射，类型工具.md",
+            "/blogs/web/typescript/TypeScript 注释指令，tsconfig.json，tsc 命令行编辑器.md",
+          ],
+        },
+        {
+          text: "TypeScript 工程实践",
+          children: [
+            "/blogs/web/typescript/TS 工程实践，构建工具，模块系统，编写类型声明文件.md",
+            "/blogs/web/typescript/TS 工程实践中的编译工具，代码检查工具，单元测试.md",
+          ],
+        },
+      ],
     },
 
     navbar: [
@@ -90,7 +116,6 @@ export default defineUserConfig({
             children: [
               { text: "Ajax", link: "/blogs/web/ajax/" },
               { text: "ES6", link: "/blogs/web/es6/" },
-              { text: "webpack", link: "/blogs/web/blogs/webpack/" },
               { text: "浏览器原理和性能优化", link: "/blogs/web/brower/" },
             ],
           },
@@ -112,16 +137,25 @@ export default defineUserConfig({
             text: "外部库",
             children: [
               { text: "Element Ui", link: "/blogs/web/elementui/" },
+              { text: "Naive Ui", link: "/blogs/web/naiveui/" },
               { text: "Echarts", link: "/blogs/web/echarts/" },
             ],
           },
           {
             text: "TypeScript",
-            children: [{ text: "TypeScript", link: "/blogs/web/typescript/" }],
+            children: [
+              {
+                text: "TypeScript",
+                link: "/blogs/web/typescript/TypeScript 快速入门 - 核心基础，TS 基本数据类型.md",
+              },
+            ],
           },
           {
             text: "构建工具",
-            children: [{ text: "Vite", link: "/blogs/web/vite/" }],
+            children: [
+              { text: "Webpack", link: "/blogs/web/webpack/" },
+              { text: "Vite", link: "/blogs/web/vite/" },
+            ],
           },
         ],
       },
@@ -143,14 +177,23 @@ export default defineUserConfig({
       },
       { text: "算法", link: "/algorithm/", icon: "CalculationAlt" },
       { text: "项目", link: "/project/", icon: "Workspace" },
+      {
+        text: "文件夹",
+        icon: "Folder",
+        children: [
+          { text: "vue", link: "/categories/vue/1/" },
+          { text: "微信小程序", link: "/categories/applet/1/" },
+          { text: "面试", link: "/categories/mianshi/1/" },
+        ],
+      },
     ],
-    // algolia: {
-    //   appId: "xxx",
-    //   apiKey: "xxx",
-    //   indexName: "xxx",
-    //   inputSelector: "### REPLACE ME ####",
-    //   algoliaOptions: { facetFilters: ["lang:$LANG"] },
-    //   debug: false, // Set debug to true if you want to inspect the dropdown
-    // },
+    algolia: {
+      appId: "ATRY2UAMFR",
+      apiKey: "2cf59883a19ba748d13086307f869776",
+      indexName: "xunyu",
+      inputSelector: "### REPLACE ME ####",
+      algoliaOptions: { facetFilters: ["lang:$LANG"] },
+      debug: false, // Set debug to true if you want to inspect the dropdown
+    },
   }),
 });

@@ -20,7 +20,7 @@ Vue 为我们提供了两个内置组件`<Transition>`和`<TransitionGroup>`，�
 
 > 对 CSS 动画不熟悉，可查阅系统学习教程[《transition 过渡动画与 animation 自定义动画》(opens new window)](https://www.arryblog.com/guide/css3/css-transition-animation.html#一、transition-过渡动画)
 
-## [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#一、-transition-内置组件)一、`<Transition>`内置组件
+## 一、`<Transition>`内置组件
 
 本小节我们将系统学习`<Transition>`内置组件实现过渡与动画效果，具体内容如下：
 
@@ -39,7 +39,7 @@ Vue 为我们提供了两个内置组件`<Transition>`和`<TransitionGroup>`，�
 - 动画的 Javascript 钩子
 - 封装可复用过渡效果的组件
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_1、-transition-组件的基本用法)1、`<Transition>`组件的基本用法
+### 1、`<Transition>`组件的基本用法
 
 - `<Transition>` 是一个内置组件，这意味着它在任意别的组件中都可以被使用，无需注册
 - 将需要使现过渡和动画的**单个根元素**或**单个单根组件**作为`<Transition>`组件的默认插槽内容传入
@@ -112,7 +112,7 @@ Vue 为我们提供了两个内置组件`<Transition>`和`<TransitionGroup>`，�
 
 > 为什么在加入了对应的`CSS`样式后，动画就生效了呢？接下来我们就会讲到过渡与动画的实现原理。
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_2、css-过渡-class)2、CSS 过渡 Class
+### 2、CSS 过渡 Class
 
 在利用`<Transition>`内置组件实现过渡与动画时，会自动为元素在不同的时刻添加和移除对应的 CSS class。
 
@@ -221,7 +221,7 @@ Enter 入场动画 （插入元素时动画）
 */
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_3、元素初次渲染时过渡-appear-属性)3、元素初次渲染时过渡 （appear 属性）
+### 3、元素初次渲染时过渡 （appear 属性）
 
 前面讲到的 **“淡入与淡出”** 动画，在页面初次渲染时并没有呈现一个淡入的动画效果，如果想在元素初次渲染时应用一个过渡效果，你可以为他添加`appear`属性。
 
@@ -273,7 +273,7 @@ Enter 入场动画 （插入元素时动画）
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_4、元素间过渡)4、元素间过渡
+### 4、元素间过渡
 
 接下来，我们实现如下图所示的多个元素来回切换的过渡动画效果
 
@@ -394,7 +394,7 @@ Enter 入场动画 （插入元素时动画）
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_5、过渡模式-mode-out-in)5、过渡模式 mode="out-in"
+### 5、过渡模式 mode="out-in"
 
 我们观察上面代码实现的多个元素切换的过渡动画（如下图），可以看到**入场和出场的元素都是同时开始动画的**。
 
@@ -415,7 +415,7 @@ Enter 入场动画 （插入元素时动画）
 
 ![GIF2023-5-2414-29-21](https://www.arryblog.com/assets/img/GIF2023-5-2414-29-21.9a40310f.gif)
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_6、-component-组件间过渡)6、`<component>`组件间过渡
+### 6、`<component>`组件间过渡
 
 我们前面提到过`<Transition>`也可以作用于由`<component>` 切换的动态组件
 
@@ -478,7 +478,7 @@ Enter 入场动画 （插入元素时动画）
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_7、为过渡效果命名)7、为过渡效果命名
+### 7、为过渡效果命名
 
 当一个页面同时有多个不同的过渡动画时，则需要为不同的过渡动画取不同的过渡效果名。
 
@@ -527,7 +527,7 @@ Enter 入场动画 （插入元素时动画）
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_8、深层级过渡与显式指定过渡时长)8、深层级过渡与显式指定过渡时长
+### 8、深层级过渡与显式指定过渡时长
 
 通过前面的学习，我们知道过渡 class 仅能应用在`<Transition>`组件的根元素上，如果我们想使根元素的后代元素有过渡和动画效果。
 
@@ -679,7 +679,7 @@ Enter 入场动画 （插入元素时动画）
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_8-1、复杂动画应用)8.1、复杂动画应用
+### 8.1、复杂动画应用
 
 我们在上面代码的基础上，做相关优化，最终实现如下动画效果
 
@@ -802,7 +802,7 @@ Enter 入场动画 （插入元素时动画）
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_9、css-的-animation-动画)9、CSS 的 animation 动画
+### 9、CSS 的 animation 动画
 
 在`<Transition>`组件中，实现原生 CSS 的`animation`动画与原生 CSS 的`transition`动画的应用方式基本是相同的，只有一点不同，那就是`*-enter-from`不是在元素插入后立即移除，而是在一个 `animationend` 事件触发时被移除。
 
@@ -888,7 +888,7 @@ Enter 入场动画 （插入元素时动画）
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_10、自定义过渡-class)10、自定义过渡 class
+### 10、自定义过渡 class
 
 你也可以向 `<Transition>` 传递以下的 props 来指定自定义的过渡 class：
 
@@ -970,13 +970,13 @@ Enter 入场动画 （插入元素时动画）
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_11、animate-css-与-transition-组件结合应用)11、animate.css 与 `<Transition>`组件结合应用
+### 11、animate.css 与 `<Transition>`组件结合应用
 
 当我们想要在 Vue 的动画机制下集成其他的第三方 CSS 动画库时，自定义过渡 class 就显得非常有用。
 
 > 比如：常见的第三方 CSS 动画库：[Animate.css(opens new window)](https://daneden.github.io/animate.css/)
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_11-1、如何使用-animate-动画库)11.1、如何使用 Animate 动画库
+### 11.1、如何使用 Animate 动画库
 
 深入浅出在 Vue 中使用 Animate 动画库
 
@@ -1027,7 +1027,7 @@ import "animate.css";
 
 ![GIF2023-5-2418-59-03](https://www.arryblog.com/assets/img/GIF2023-5-2418-59-03.8c963873.gif)
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_11-2、应用-入场出场动画)11.2、应用：入场出场动画
+### 11.2、应用：入场出场动画
 
 接下来，我们利用`Animate`与`<Transition>`实现以下酷炫动画效果
 
@@ -1067,7 +1067,7 @@ import "animate.css";
 
 以上代码中的`name`属性相对于自定义过渡 class 而言，是不生效的，但对于没有定义的过渡 class 是生效的
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_12、同时使用-transition-和-animation)12、同时使用 transition 和 animation
+### 12、同时使用 transition 和 animation
 
 不管是`transition`动画还是`animation`动画，Vue 之所以能知道动画在何时结束，是因为内部监听了`transitionend`和`animationend`事件。
 
@@ -1147,7 +1147,7 @@ import "animate.css";
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_13、动画的-javascript-钩子)13、动画的 JavaScript 钩子
+### 13、动画的 JavaScript 钩子
 
 Vue 为`<Transition>`组件添加了一些事件，这些事件会在过渡不同生命阶段自被动调用。
 
@@ -1212,7 +1212,7 @@ function onLeaveCancelled(el) {}
 <Transition :css="false"> ... </Transition>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_13-1、测试钩子执行时机)13.1、测试钩子执行时机
+### 13.1、测试钩子执行时机
 
 我们来看下面这个淡入与淡出动画，当我们点击按扭来切换动画时，不同情况下会有那些钩子函数被调用。
 
@@ -1299,7 +1299,7 @@ function onLeaveCancelled(el) {}
 
 如果给上面代码中的`<Transition>`组件加上`:css = 'false'`，则不会有动画效果，因为会忽略 CSS 过渡动画效果。
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_13-2、钩子函数功能)13.2、钩子函数功能
+### 13.2、钩子函数功能
 
 各个钩子函数中具体实现的功能
 
@@ -1316,7 +1316,7 @@ function onLeaveCancelled(el) {}
 | @after-leave     | 出场动画结束后，移除添加到元素身上的动画样式 （还要移除`v-enter-active`)  |
 | @leave-cancelled | 出场动画中途被中断后，通常要移除`leave-to`状态                            |
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_13-3、钩子函数的基本使用)13.3、钩子函数的基本使用
+### 13.3、钩子函数的基本使用
 
 我们利用钩子函数实现和上面 CSS 一样的过渡动画效果
 
@@ -1491,7 +1491,7 @@ function onLeaveCancelled(el) {}
 </script>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_13-4、案例-弹性动画)13.4、案例：弹性动画
+### 13.4、案例：弹性动画
 
 ![GIF2023-5-2516-44-34](https://www.arryblog.com/assets/img/GIF2023-5-2516-44-34.354be2b1.gif)
 
@@ -1611,7 +1611,7 @@ function onLeaveCancelled(el) {}
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_14、封装可复用过渡效果的组件)14、封装可复用过渡效果的组件
+### 14、封装可复用过渡效果的组件
 
 如果你想把常用的一些动画效果封装在一个组件中，当你调用该组件时，只需要传入动画所需要执行的时间和动画名，就可以给到你想要的动画。
 
@@ -1656,7 +1656,7 @@ function onLeaveCancelled(el) {}
 | duration      | 动画执行时间，如：2s 或 5s                                                         |
 | animationName | 动画过渡名 值只能是：`fade` 或`slide` fade 表示淡入淡出动画 slide 表示左右滑动动画 |
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_14-1、封装动画组件)14.1、封装动画组件
+### 14.1、封装动画组件
 
 接下来我们把**淡出与淡入**动画 和 **左右滑动动画**封装在`<CustomTransiton>`组件中，当我们传入以下不同 props 时，显示不同的动画。
 
@@ -1734,11 +1734,11 @@ function onLeaveCancelled(el) {}
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_15、-transition-总结)15、`<Transition>`总结
+### 15、`<Transition>`总结
 
 总结 Transition 内置组件相关核心重点知识 及 实践应用
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_15-1、-transition-的基本用法)15.1、`<Transition>` 的基本用法
+### 15.1、`<Transition>` 的基本用法
 
 - `<Transition>` 组件中只能是 **单根元素** 或 **单根组件**
 - 进入或离开的动画由以下条件之一触发
@@ -1747,12 +1747,12 @@ function onLeaveCancelled(el) {}
   - 由特殊元素 `<component>` 切换的动态组件
   - 改变特殊的 `key` 属性
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_15-2、过渡与动画默认-class)15.2、过渡与动画默认 class
+### 15.2、过渡与动画默认 class
 
 - 入场动画 class：`v-enter-from` 、`v-enter-active`、`v-enter-to`
 - 出场动画 calss：`v-leave-from` 、`v-leave-active` 、`v-leave-to`
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_15-3、-transition-组件-props)15.3、`<Transition>` 组件 props
+### 15.3、`<Transition>` 组件 props
 
 | props    | 功能             | 值                       | 说明                                                                                                                                                                                |
 | :------- | :--------------- | :----------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1762,7 +1762,7 @@ function onLeaveCancelled(el) {}
 | duration | 过渡时长         | 整数                     | 表示动画执行的时长，单位为毫秒                                                                                                                                                      |
 | type     | 指定监听动画类型 | "transition" "animation" | 值为"transition"表示监听`transitionend`事件，当 tranition 动画结束后即元素身上所有动画结束 值为”animation"表示监听`animationend`事件，当`animation`动画结束后即元素身上所有动画结束 |
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_15-4、自定义过渡-class)15.4、自定义过渡 class
+### 15.4、自定义过渡 class
 
 你也可以向 `<Transition>` 传递以下的 props 来指定自定义的过渡 class：
 
@@ -1773,7 +1773,7 @@ function onLeaveCancelled(el) {}
 - `leave-active-class`
 - `leave-to-class`
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_15-5、动画-javascript-钩子)15.5、动画 Javascript 钩子
+### 15.5、动画 Javascript 钩子
 
 ```html
 <Transition
@@ -1790,7 +1790,7 @@ function onLeaveCancelled(el) {}
 </Transition>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_16、案例-动态选项卡切换效果)16、案例：动态选项卡切换效果
+### 16、案例：动态选项卡切换效果
 
 ![GIF2023-5-2415-38-17](https://www.arryblog.com/assets/img/GIF2023-5-2415-38-17.e74c2f6e.gif)
 
@@ -1906,7 +1906,7 @@ function onLeaveCancelled(el) {}
 </style>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#二、实战应用-开发-message-组件)二、实战应用：开发 Message 组件
+## 二、实战应用：开发 Message 组件
 
 本小节我们一起来开发《Message 组件》，通过调用 JS 方法来实现组件的挂载
 
@@ -1957,17 +1957,17 @@ function onLeaveCancelled(el) {}
 
 ![GIF2023-7-2417-49-59](https://www.arryblog.com/assets/img/GIF2023-7-2417-49-59.12e86242.gif)
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_1、项目介绍)1、项目介绍
+### 1、项目介绍
 
 首先我们来了解：项目功能、项目涉及核心知识点、学习目标
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_1-1、项目功能)1.1、项目功能
+### 1.1、项目功能
 
 - Message 组件有**成功**、**警告**、**消息**、**错误** 四种样式，显示不同的操作反馈
 - 提示框显示与离开都伴有动画效果
 - 同时显示多个提示框，会有序的从上往下排列，前面元素离开后，后面元素会缓慢的向上移动
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_1-2、项目涉及核心知识点)1.2、项目涉及核心知识点
+### 1.2、项目涉及核心知识点
 
 | 知识分类           | 涉及内容                                                                                                         |
 | :----------------- | :--------------------------------------------------------------------------------------------------------------- |
@@ -1975,12 +1975,12 @@ function onLeaveCancelled(el) {}
 | 组件间通信         | `defineProps`、`defineExpose`                                                                                    |
 | 其它知识           | `async/await` 、`Promise`、`setTimeout`、`clearTimeout` 数组方法：`forEach`、`findIndex`                         |
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_1-3、学习目标)1.3、学习目标
+### 1.3、学习目标
 
 - 了解 createApp 方法的应用技巧
 - 学习通过 JS 方法来实现组件挂载
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_1-4、项目开发思路)1.4、项目开发思路
+### 1.4、项目开发思路
 
 根据项目的功能分析该项目的开发思路，具体实现思路如下：
 
@@ -1991,15 +1991,15 @@ function onLeaveCancelled(el) {}
 - 当同时有多个 Messag 组件挂载后，后面的组件的按顺序在其它组件后面显示
 - 当前面的组件消失后，后面组件会有序的缓慢向前移动。
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_2、项目开发流程)2、项目开发流程
+### 2、项目开发流程
 
 深入浅出 Message 组件的开发流程
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_2-1、分析-ui-图)2.1、分析 UI 图
+### 2.1、分析 UI 图
 
 在这个项目中，只有 一个 Message 组件，所以不涉及组件的拆分。
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_2-2、实现-message-组件)2.2、实现 Message 组件
+### 2.2、实现 Message 组件
 
 根据 UI 图，利用`html+css`实现静态布局，同时要把所有的交互效果用到的 CSS 样式也要写好。并且要清楚的知道每一个交互背后的实现逻辑。
 
@@ -2107,7 +2107,7 @@ function onLeaveCancelled(el) {}
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_2-2、实现-message-方法基本框架)2.2、实现 Message 方法基本框架
+### 2.2、实现 Message 方法基本框架
 
 - 在`App.vue`组件中，创建 4 个按扭，点击不同按扭分别调用 Message 方法或 Message 身上的静态方法，显示 4 种不同状态的提示框
 
@@ -2180,7 +2180,7 @@ function Message(options) {
 export default Message;
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_2-3、message-方法实现组件挂载)2.3、Message 方法实现组件挂载
+### 2.3、Message 方法实现组件挂载
 
 当调用 Message 方法时，需要将 Message 组件挂载到页面中。需要分以下几步：
 
@@ -2268,7 +2268,7 @@ export default Message;
 
 实际上，我们在将组件挂载到页面后就要将 Message 组件的 isShow 设置为 true，在规定的延迟时间到了后，才将组件从页面移除。
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_2-4、实现显示组件)2.4、实现显示组件
+### 2.4、实现显示组件
 
 - 一开始 Message 组件中的`isShow = false`，所以 Message 组件挂载到页面后，并不会显示，则需要设置`isShow = true`。
 - 在 Message 组件中创建`setShow`方法，用来设置`isShow`属性的值，然后将该方法通过`defineExpose`对外暴露
@@ -2294,7 +2294,7 @@ function showMessage(app, options) {
 }
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_2-5、实现卸载组件)2.5、实现卸载组件
+### 2.5、实现卸载组件
 
 - 我们可以创建`hideMessage`方法，在规定的延迟时间到达后，用来卸载对应的 Message 组件
 - 卸载组件时要保证先完成离开动画，然后再卸载组件
@@ -2353,7 +2353,7 @@ function hideMessage(app, vm, duration) {
 }
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_2-6、计算元素的-top-值)2.6、计算元素的 Top 值
+### 2.6、计算元素的 Top 值
 
 - 创建一个数组`messageArr = []`用来保存当前创的所有 vm 组件实例
 - 每创建一个新的 vm，将 vm 添加 push 到 messageArr 数组中，每当有一个 vm 被卸载，则从数组中移除
@@ -2404,7 +2404,7 @@ messageArr.splice(index, 1); // 卸载 app.unmount(); clearTimeout(vm.timer);
 vm.timer = null; }, duration || 2000); }
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_3、完整版代码)3、完整版代码
+### 3、完整版代码
 
 - `App.vue`
 
@@ -2636,7 +2636,7 @@ export default Message;
 </style>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#三、-transitiongroup-内置组件)三、`<TransitionGroup>` 内置组件
+## 三、`<TransitionGroup>` 内置组件
 
 通过前面的学习，我们知道`<Transition>`组件只能应用单个元素或单个单根组件。
 
@@ -2652,7 +2652,7 @@ export default Message;
 - 常用于对 `v-for` 列表中的元素或组件的插入、移除和顺序改变添加动画效果。
 - `<TransitionGroup>` 支持和 `<Transition>` 基本相同的 props、CSS 过渡 class 和 JavaScript 钩子监听器，不过还存在一些不同点。
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_1、-transitiongroup-与-transition-的不同)1、`<TransitionGroup>`与`<Transition>`的不同
+### 1、`<TransitionGroup>`与`<Transition>`的不同
 
 - 可以为`<TransitionGroup>`组件传入`tag`prop 来指定一个元素作为容器元素来渲染
 
@@ -2723,7 +2723,7 @@ export default Message;
 
 ![GIF2023-7-2519-35-32](https://www.arryblog.com/assets/img/GIF2023-7-2519-35-32.ba452ec8.gif)
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_2、实战应用-多元素延迟淡入淡出动画)2、实战应用：多元素延迟淡入淡出动画
+### 2、实战应用：多元素延迟淡入淡出动画
 
 接下来我们利用`<TransitionGroup>`组件实现如下动画效果。
 
@@ -2797,7 +2797,7 @@ export default Message;
 - 我们发现过渡 class 加在了每个元素身上，每个元素身上的过渡 class 是同一时间被加上的。
 - 还有每个元素身上的 class 是在同一时间被删除，同一时间被删除主要是受`duration="2600"`属性的影响。
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_2-1、优化版-多元素延迟淡入淡出动画)2.1、优化版：多元素延迟淡入淡出动画
+### 2.1、优化版：多元素延迟淡入淡出动画
 
 在实际的开发中，我们肯定是希望所有内部元素的动画执行完成后，再把外部元素也给隐藏或移除掉。
 
@@ -2862,7 +2862,7 @@ class
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_2-2、最终优化版-多元素延迟淡入淡出动画)2.2、最终优化版：多元素延迟淡入淡出动画
+### 2.2、最终优化版：多元素延迟淡入淡出动画
 
 一般列表内容在实际开发中是通过`v-for`列表来渲染的，所以我们把内容改成通过`v-for`来渲染。
 
@@ -2989,7 +2989,7 @@ class
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_3、实战应用-列表添加、删除、排序元素时动画)3、实战应用：列表添加、删除、排序元素时动画
+### 3、实战应用：列表添加、删除、排序元素时动画
 
 接下来，我们利用`<TransitionGroup>`组件实现如下动画效果
 
@@ -3080,7 +3080,7 @@ class
 }
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_3-1、优化版-列表添加、删除、排序元素时动画)3.1、优化版：列表添加、删除、排序元素时动画
+### 3.1、优化版：列表添加、删除、排序元素时动画
 
 ```html
 <script setup>
@@ -3144,7 +3144,7 @@ class
 
 > 注意观察控制台中元素 class 的变化。
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_4、总结)4、总结
+### 4、总结
 
 `<TransitionGroup>` 支持和 `<Transition>` 基本相同的 props、CSS 过渡 class 和 JavaScript 钩子监听器，不过还存在以下不同：
 
@@ -3163,11 +3163,11 @@ class
 
 - 在移除或隐藏元素时，要保证后面元素有过渡动画，可以`.v-leave-active`中添加`position:absolute`这样出场动画刚执行时后面的元素就会发生位移，然后被添加.move Class。
 
-## [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#四、其它动画)四、其它动画
+## 四、其它动画
 
 深入浅出基于 css class 的动画 和 基于侦听器的动画实践应用。
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_1、基于-css-class-的动画)1、基于 css class 的动画
+### 1、基于 css class 的动画
 
 对于不是正在进入或离开的 DOM 元素，我们可以通过给元素动态添加 CSS class 来触发动画
 
@@ -3271,7 +3271,7 @@ class
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/transition-transitiongroup.html#_2、基于侦听器的动画)2、基于侦听器的动画
+### 2、基于侦听器的动画
 
 以下数字动画是其于侦听器与原生 JS 动画来实现的。
 

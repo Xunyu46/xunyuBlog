@@ -18,11 +18,11 @@ publish: true
 - Element Plus 组件库
 - Vant UI 组件库
 
-## [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#一、vue-插件开发)一、Vue 插件开发
+## 一、Vue 插件开发
 
 本小节我们将学习如何定义一个插件，如何使用插件、插件能实现的功能范围。
 
-### [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#_1、vue-插件介绍)1、Vue 插件介绍
+### 1、Vue 插件介绍
 
 插件（Plugins）是一种能为 Vue 添加全局功能的工具代码。
 
@@ -52,7 +52,7 @@ export function myPlugin(app, options) {
 }
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#_2、插件的使用)2、插件的使用
+### 2、插件的使用
 
 在 Vue 中可以在`src/main.js`文件中通过调用`app.use()`来注册插件。
 
@@ -120,7 +120,7 @@ app1.mount("#app");
 
 ![image-20230726142822324](https://www.arryblog.com/assets/img/image-20230726142822324.c68428dd.png)
 
-### [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#_3、插件的功能范围)3、插件的功能范围
+### 3、插件的功能范围
 
 插件没有严格定义的使用范围，但是插件发挥作用的常见场景主要包括以下几种：
 
@@ -231,7 +231,7 @@ app.mount("#app");
 
 ![GIF2023-7-2616-37-22](https://www.arryblog.com/assets/img/GIF2023-7-2616-37-22.1f36b243.gif)
 
-## [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#二、星级评分插件)二、星级评分插件
+## 二、星级评分插件
 
 本小节我们一起来开发《星级评分》插件，`Rate`星级评分组件使用方法
 
@@ -249,14 +249,14 @@ app.mount("#app");
 
 ![GIF2023-7-2723-10-53](https://www.arryblog.com/assets/img/GIF2023-7-2723-10-53.cb6e0561.gif)
 
-### [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#_1、开发流程)1、开发流程
+### 1、开发流程
 
 - 开发 Rate 组件
 - 将 Rate 组件做成插件
 - 注册插件
 - 使用 Rate 组件
 
-### [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#_2、开发-rate-组件)2、开发 Rate 组件
+### 2、开发 Rate 组件
 
 - 利用阿里`iconfont`图标来绘制星星
 
@@ -532,7 +532,7 @@ app.mount("#app");
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#_2-1、rate-组件最终版)2.1、Rate 组件最终版
+### 2.1、Rate 组件最终版
 
 ```html
 <script setup>
@@ -598,7 +598,7 @@ app.mount("#app");
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#_2-2、将组件做成插件)2.2、将组件做成插件
+### 2.2、将组件做成插件
 
 `src/components/Rate/index.js` 文件内容如下：
 
@@ -614,7 +614,7 @@ export default {
 };
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#_2-3、注册插件)2.3、注册插件
+### 2.3、注册插件
 
 `/src/main.js`中注册插件
 
@@ -626,7 +626,7 @@ import Rate from "./components/Rate";
 app.use(Rate);
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#_2-4、使用-rate-组件)2.4、使用 Rate 组件
+### 2.4、使用 Rate 组件
 
 ```html
 <script setup>
@@ -638,7 +638,7 @@ app.use(Rate);
 </template>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#三、element-plus-组件库)三、Element Plus 组件库
+## 三、Element Plus 组件库
 
 [Element Plus (opens new window)](https://element-plus.org/)是基于 Vue 3，面向设计师和开发者的组件库。
 
@@ -654,7 +654,7 @@ app.use(Rate);
 npm install element-plus --save
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#_1、完整引入)1、完整引入
+### 1、完整引入
 
 如果你对打包后的文件大小不是很在乎，那么使用完整导入会更方便
 
@@ -667,7 +667,7 @@ import "element-plus/dist/index.css";
 app.use(ElementPlus);
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#_2、按需导入-自动导入-推荐)2、按需导入 - 自动导入（推荐）
+### 2、按需导入 - 自动导入（推荐）
 
 根据项目中用到的 Element 组件来导入对应组件。
 
@@ -700,7 +700,7 @@ export default defineConfig({
 });
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#_3、按需导入-手动导入)3、按需导入 - 手动导入
+### 3、按需导入 - 手动导入
 
 Element Plus 提供了基于 ES Module 的开箱即用的 [Tree Shaking (opens new window)](https://webpack.js.org/guides/tree-shaking/)功能。
 
@@ -764,7 +764,7 @@ export default defineConfig({
 </script>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#四、vant-组件库)四、Vant 组件库
+## 四、Vant 组件库
 
 [Vant 4.x (opens new window)](https://vant-contrib.gitee.io/vant/#/zh-CN)是一个轻量、可定制的移动端 Vue3 组件库
 
@@ -779,7 +779,7 @@ export default defineConfig({
 npm i vant
 ```
 
-### [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#_1、常规用法)1、常规用法
+### 1、常规用法
 
 如果你不在乎打包后文件的大小，可以采用以下方式注册 Vant 组件。
 
@@ -823,7 +823,7 @@ Vant 默认支持 Tree Shaking，因此你不需要配置任何插件，通过 T
 
 > 如果需要按需引入 CSS 样式，请参考下面的方法二。
 
-### [#](https://www.arryblog.com/vip/vue/vue-plugin-element-plus-vant-ui.html#_2、按需引入-推荐)2、按需引入（推荐）
+### 2、按需引入（推荐）
 
 相比于常规用法，这种方式可以按需引入组件的 CSS 样式，从而减少一部分代码体积，但使用起来会变得繁琐一些
 

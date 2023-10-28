@@ -1,12 +1,12 @@
 ---
 title: Vue 单文件组件，父子组件间传值、通信，透传属性
 date: 2023-10-24
-sidebar: 'auto'
+sidebar: "auto"
 categories:
- - vue
+  - vue
 tags:
- - vue
- - 组件通信
+  - vue
+  - 组件通信
 publish: true
 ---
 
@@ -67,8 +67,8 @@ publish: true
 </script>
 <template>
   <div class="main">
-    <A></A>
-    <B></B>
+    <a></a>
+    <b></b>
   </div>
 </template>
 
@@ -499,9 +499,7 @@ publish: true
 
 ![image-20230623164308792](https://www.arryblog.com/assets/img/image-20230623164308792.fddac5c3.png)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_5、css-modules)5、CSS Modules
-
-
+### 5、CSS Modules
 
 一个 `<style module>` 标签会被编译为 `CSS Modules` 并且将生成的 CSS class 作为 `$style` 对象暴露给组件。
 
@@ -546,9 +544,7 @@ publish: true
 
 ![image-20230623172218207](https://www.arryblog.com/assets/img/image-20230623172218207.04e9d819.png)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_5-1、自定义注入名称)5.1、自定义注入名称
-
-
+### 5.1、自定义注入名称
 
 你可以通过给 `module` attribute 一个值来自定义注入 class 对象的属性名：
 
@@ -588,9 +584,7 @@ publish: true
 
 > 最终渲染后效果与前面的`$style`效果一模一样。
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_6、css-中的-v-bind)6、CSS 中的 v-bind()
-
-
+### 6、CSS 中的 v-bind()
 
 单文件组件的 `<style>` 标签中支持使用 `v-bind` CSS 函数将 CSS 的值链接到动态的组件状态。
 
@@ -661,9 +655,7 @@ publish: true
 
 ![image-20230623183702349](https://www.arryblog.com/assets/img/image-20230623183702349.171954b3.png)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_7、css-预处理器)7、CSS 预处理器
-
-
+### 7、CSS 预处理器
 
 在`<style>`标签上可以使用`lang`这个属性来声明 CSS 的预处理器语言。
 
@@ -708,15 +700,11 @@ npm i sass -D # 安装sass 依赖包
 }
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_8、总结)8、总结
-
-
+### 8、总结
 
 本小节重点掌握如下单文件组 CSS 功能
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_8-1、scoped-属性)8.1、scoped 属性
-
-
+### 8.1、scoped 属性
 
 - 当 `<style>` 标签带有 `scoped` attribute 的时候，它的 CSS 只会影响当前组件的元素。因为 html 标签被编译后会被加上`data-v-xx`属性，对应的 CSS 选择器会加上`[data-v-xx]`属性选择。
 - 单根子组件的根元素会被加上父组件的`data-v-xx`属性，这样涉及的目的是为了让父组件可以调整子组件的根元素样式
@@ -745,9 +733,7 @@ npm i sass -D # 安装sass 依赖包
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_8-2、-deep-伪类)8.2、:deep() 伪类
-
-
+### 8.2、:deep() 伪类
 
 在`<style scoped>`标签中使用`:deep()`伪类可以帮助我们在父组件中选择子组件中根元素以外的元素，这样我们就可以在父组件中调整子组件的样式
 
@@ -771,9 +757,7 @@ npm i sass -D # 安装sass 依赖包
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_8-3、-global-伪类)8.3、:global() 伪类
-
-
+### 8.3、:global() 伪类
 
 在`<style scoped>`标签中使用`:global()`伪类可以让某一个样式规则应用于全局。
 
@@ -806,9 +790,7 @@ npm i sass -D # 安装sass 依赖包
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_8-4、v-bind-函数)8.4、v-bind() 函数
-
-
+### 8.4、v-bind() 函数
 
 `v-bind()`函数可以将 CSS 的值链接到动态的组件状态。
 
@@ -851,9 +833,7 @@ npm i sass -D # 安装sass 依赖包
 </body>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_8-5、css-modules)8.5、CSS Modules
-
-
+### 8.5、CSS Modules
 
 一个 `<style module>` 标签会被编译为 `CSS Modules` 并且将生成的 CSS class 作为 `$style` 对象暴露给组件。
 
@@ -884,9 +864,7 @@ npm i sass -D # 安装sass 依赖包
 </body>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_8-6、css-预处理器)8.6、CSS 预处理器
-
-
+### 8.6、CSS 预处理器
 
 - 在`<style>`标签上可以使用`lang`这个属性来声明 CSS 的预处理器语言，如：`<style lang="scss">` ，表示可以采用 Sass 语法编写 CSS。
 - 要使代码最终编译成`CSS`，需要安装对应的预处理器依赖。执行`npm i sass -D`安装 sass 依赖
@@ -922,9 +900,7 @@ npm i sass -D # 安装sass 依赖包
 </style>
 ```
 
-## [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#二、组件间通信)二、组件间通信
-
-
+## 二、组件间通信
 
 **组件间通信**是指各个组件间之间可以相互传递数据，实现数据的共享。
 
@@ -949,9 +925,7 @@ npm i sass -D # 安装sass 依赖包
 - 祖孙与后代组件之间的通信
 - 非关系组件之间的通信
 
-## [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#三、父组件向子组件传值-props)三、父组件向子组件传值 - props
-
-
+## 三、父组件向子组件传值 - props
 
 本小节重点学习父组件如何通过`props`向子组件传递数据，内容主要有：
 
@@ -966,9 +940,7 @@ npm i sass -D # 安装sass 依赖包
 - 单向数据流
 - 总结
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_1、props-选项)1、props 选项
-
-
+### 1、props 选项
 
 父组件向子组件传递数据，可以通过自定义 Prop（属性）来传递。
 
@@ -1049,9 +1021,7 @@ npm i sass -D # 安装sass 依赖包
 
 ![image-20230630132934048](https://www.arryblog.com/assets/img/image-20230630132934048.cb597d5e.png)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_2、prop-名字格式)2、Prop 名字格式
-
-
+### 2、Prop 名字格式
 
 **定义属性：** 如果在传递数据时，属性的名字很长，由两个以上单词组成，建议在`HTML`标签上使用`kebab-case`形式来定义属性名。
 
@@ -1120,9 +1090,7 @@ npm i sass -D # 安装sass 依赖包
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_3、静态-vs-动态-prop)3、静态 VS 动态 Prop
-
-
+### 3、静态 VS 动态 Prop
 
 组件在进行 prop 传值时，属性的值可以是一个静态值，也可以是一个动态值。
 
@@ -1188,9 +1156,7 @@ npm i sass -D # 安装sass 依赖包
 
 ![image-20230510192021929](https://www.arryblog.com/assets/img/image-20230510192021929.2a76af59.png)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_4、props-对象写法)4、props 对象写法
-
-
+### 4、props 对象写法
 
 props 选项的值可以是一个字符串类型的数组，也可以是一个对象。
 
@@ -1273,9 +1239,7 @@ export default {
 
 ![image-20230511144552371](https://www.arryblog.com/assets/img/image-20230511144552371.4ba5be8d.png)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_4-1、属性支持的检测类型)4.1、属性支持的检测类型
-
-
+### 4.1、属性支持的检测类型
 
 属性支持的检测类型可以是以下这些原生的构造函数：
 
@@ -1386,9 +1350,7 @@ userInfo:{
 
 ![image-20230629145118670](https://www.arryblog.com/assets/img/image-20230629145118670.8368c1dd.png)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_5、prop-校验)5、Prop 校验
-
-
+### 5、Prop 校验
 
 如果我们需要对传过来的值做更严格的校验，可以将 props 选项对象的属性值写成一个带有校验选项的对象。
 
@@ -1496,9 +1458,7 @@ userInfo:{
 
 ![image-20230510201703963](https://www.arryblog.com/assets/img/image-20230510201703963.6db83acb.png)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_6、boolean-类型-prop-简写形式)6、Boolean 类型 Prop 简写形式
-
-
+### 6、Boolean 类型 Prop 简写形式
 
 当父组件向子组件通过 Prop 传值时，传递的属性值为 Boolean 类型时，可以支持以下简写形式
 
@@ -1569,9 +1529,7 @@ export default {
 
 ![image-20230510205033391](https://www.arryblog.com/assets/img/image-20230510205033391.1b0e5d46.png)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_7、使用一个对象绑定多个-prop)7、使用一个对象绑定多个 Prop
-
-
+### 7、使用一个对象绑定多个 Prop
 
 如果你想要将一个对象的所有属性都当作 props 传入，你可以使用没有参数的 `v-bind`。
 
@@ -1607,9 +1565,7 @@ export default {
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_8、props-选项被处理的时机)8、Props 选项被处理的时机
-
-
+### 8、Props 选项被处理的时机
 
 Props 选项是在生命周期函数`beforeCreate`之前被解析，且 prop 的校验是在组件实例被创建**之前**处理的。
 
@@ -1693,9 +1649,7 @@ App.vue
 
 ![image-20230510213454413](https://www.arryblog.com/assets/img/image-20230510213454413.0e76f57e.png)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_9、更新-prop-的值)9、更新 prop 的值
-
-
+### 9、更新 prop 的值
 
 如果需要更新 prop 的值，推荐在父组件中更新，每次父组件中的数据更新后，所有子组件中对应的 props 都会被更新到最新值。
 
@@ -1733,9 +1687,7 @@ App.vue
 
 ![GIF2023-6-2915-42-32](https://www.arryblog.com/assets/img/GIF2023-6-2915-42-32.e46d645d.gif)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_10、单向数据流)10、单向数据流
-
-
+### 10、单向数据流
 
 所有的 props 都遵循着**单向绑定**原则，子组件中可以使用父组件传过来的数据，但这些数据是**只读**的，在子组件中不能去修改这些数据。这避免了子组件意外修改父组件的状态的情况，不然应用的数据流将很容易变得混乱而难以理解。
 
@@ -1760,9 +1712,7 @@ export default {
 
 > 那应该如何操作呢 ？
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_10-1、更改基本数据类型的-prop-值)10.1、更改基本数据类型的 prop 值
-
-
+### 10.1、更改基本数据类型的 prop 值
 
 **针对场景一：** prop 用来传入初始值，而子组件想在之后将其作为一个局部数据属性。
 
@@ -1854,9 +1804,7 @@ m `Person.vue`
 
 ![GIF2023-5-1022-12-42](https://www.arryblog.com/assets/img/GIF2023-5-1022-12-42.db21ff5e.gif)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_10-2、更改对象-数组类型的-prop-值)10.2、更改对象 / 数组类型的 prop 值
-
-
+### 10.2、更改对象 / 数组类型的 prop 值
 
 如果 prop 的值是数组或对象，我们虽然不能直接修改属性的值（重新给属性赋值），但我们依然可以更改数组和对象内部的值。
 
@@ -1916,9 +1864,7 @@ Person.vue
 
 > 所以，针对 prop 的值是对象或数组，而我们又想在子组件中更改这些数据时，官方给我们提供了一种最佳的实现方式：**子组件抛出一个事件来通知父组件做出改变**。这也是我们下小节需要学习的内容。
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_11、总结)11、总结
-
-
+### 11、总结
 
 本小节我们主要学习了以下内容：
 
@@ -2066,9 +2012,7 @@ Props 选项是在生命周期函数`beforeCreate`之前被解析，且 prop 的
 
 - 如果 prop 的值是数组或对象，需要在子组件中更改他们的值，则推荐使用下一小节讲到的:**子组件抛出一个事件来通知父组件做出改变**
 
-## [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#四、子组件向父组件传值-emits)四、子组件向父组件传值 - emits
-
-
+## 四、子组件向父组件传值 - emits
 
 在上一小节中我们学习了在父组件中通过`props`向子组件传递数据，但在子组件中不能修改父组件中传过来的数据。但某些情况下我们确实需要通过子组件去操作父组件中的数据，或传一些数据给到父组件。所以本小节要讲到的自定义事件，就可以帮助我们实现这个目标。
 
@@ -2081,9 +2025,7 @@ Props 选项是在生命周期函数`beforeCreate`之前被解析，且 prop 的
 - 自定义事件校验
 - 自定义事件注意事项
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_1、监听与触发自定义事件)1、**监听与触发自定义事件**
-
-
+### 1、**监听与触发自定义事件**
 
 自定义事件也可以称为组件事件，因为自定义事件主要是绑定在组件身上，用来解决子组件向父组件传递数据或修改父组件中数据。
 
@@ -2202,9 +2144,7 @@ export default {
 - 在子组件模板中通过`$emit`方法触发自定义事件；
 - 在子组件实例上通过`this.$emit()`方式触发自定义事件
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_2、emits-选项)2、emits 选项
-
-
+### 2、emits 选项
 
 `emits`选项用来显示声明子组件需要触发的事件，**他支持数组与对象两种写法**。
 
@@ -2257,9 +2197,7 @@ export default {
 
 > 关于透传属性，我们在下小节讲会讲到
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_3、自定义事件名格式)3、自定义事件名格式
-
-
+### 3、自定义事件名格式
 
 与 prop 名一样，事件的名字也提供了自动的格式转换。在父组件中监听自定义事件时，推荐采用`kebab-case`形式为自定义事件命名。
 
@@ -2273,9 +2211,7 @@ export default {
 <button @click="$emit('updateEvent')">更新数据1</button>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_4、自定义事件参数)4、自定义事件参数
-
-
+### 4、自定义事件参数
 
 有时候我们需要在触发自定义事件时传一些数据给到父组件，则可以将需要传递的数据作为`$emit()`方法的第二个及之后的参数传入。
 
@@ -2295,20 +2231,9 @@ export default {
 - 事件处理函数为组件的方法，定义在`methods`选项中
 
 ```html
-<List @update-event="update" />
-methods: {
-    update(a, b, c) {
-        // a b c对应传过来的数据 5 6 7
-        console.log(a, b, c);
-    }
-    // 或通过arguments来接收
-    /*
-    update() {
-        Array.from(arguments).forEach((item) => {
-            this.arr.push(item)
-        })
-    }
-    */
+<List @update-event="update" /> methods: { update(a, b, c) { // a b
+c对应传过来的数据 5 6 7 console.log(a, b, c); } // 或通过arguments来接收 /*
+update() { Array.from(arguments).forEach((item) => { this.arr.push(item) }) } */
 }
 ```
 
@@ -2369,9 +2294,7 @@ methods: {
 
 ![GIF2023-5-1121-30-04](https://www.arryblog.com/assets/img/GIF2023-5-1121-30-04.b8506a27.gif)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_5、自定义事件校验)5、自定义事件校验
-
-
+### 5、自定义事件校验
 
 - 如果我们想要对触发的自定义事件的**参数**进行验证，可以将`emits`选项写成一个对象。
 - 对象中每个事件被赋值为一个函数，函数可接受的参数为`this.$emit`触发事件时传入的参数（除第一个参数之外的所有参数）
@@ -2469,9 +2392,7 @@ export default {
 
 > 所以在`delEvent(index)`函数中校验不成功，所以每次执行时，都会在控制台抛出警告，但事件最终还是触发了。
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_6、自定义事件注意事项)6、自定义事件注意事项
-
-
+### 6、自定义事件注意事项
 
 以下是我们在使用自定义事件时，需要注意的相关事项：
 
@@ -2546,9 +2467,7 @@ export default {
 
 因为此时`"click"`事件被当成自定义事件处理，原生的`click`事件将不会再触发了。你可以通过`this.$emit('click')`来触发自定义的 click 事件。
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_7、总结)7、总结
-
-
+### 7、总结
 
 本小节我们主要学习了以下内容
 
@@ -2617,13 +2536,11 @@ emits:{
 - 原生的 JS 事件，不要出现在`emits`选项中，如果出现在`emits`选项中，会被当成了自定义事件，需要通过`$emits()`方法来触发，同时原生 JS 事件不会被触发。
 - 在组件上监听 JS 原生的事件，可以直接透传到**单根组件的根元素上**，但**多根组件就没办法接收**。
 
-## [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#五、组件-v-model)五、组件 v-model
-
-
+## 五、组件 v-model
 
 `v-model`指令不仅可以用在输入元素上，用来实现双向数据绑定，也可以用在组件上实现双向绑定。
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_1、v-model-绑定输入元素)1、v-model 绑定输入元素
+### 1、v-model 绑定输入元素
 
 以下是`v-model`指令应用在输入元素上，实现双向数据绑定
 
@@ -2642,7 +2559,7 @@ emits:{
 
 本质上`v-model`是一个语法糖，帮我们简化了以上代码的书写。
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_2、v-model-绑定组件)2、v-model 绑定组件
+### 2、v-model 绑定组件
 
 以下是`v-model`指令应用于一个自定义弹窗组件，用来实现双向绑定
 
@@ -2666,9 +2583,7 @@ emits:{
 
 > 本质上`v-model`是一个语法糖，帮我们简化了以上代码的书写。
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_3、v-model-实战应用-点击弹窗)3、v-model 实战应用：点击弹窗
-
-
+### 3、v-model 实战应用：点击弹窗
 
 利用`v-model`指令实现如下弹窗效果，点击显示按扭时会弹出弹窗，点击弹窗关闭按扭时会关闭弹窗
 
@@ -2883,9 +2798,7 @@ emits:{
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_4、组件-v-model-参数)4、组件 v-model 参数
-
-
+### 4、组件 v-model 参数
 
 默认情况下，`v-model`底层在组件上绑定的是`modelValue`属性，并且监听`update:modelValue`事件。
 
@@ -2937,9 +2850,7 @@ emits:{
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_5、多个-v-model-绑定)5、多个 v-model 绑定
-
-
+### 5、多个 v-model 绑定
 
 通过给`v-model`指定一个参数可以更改绑定的属性名和事件名，所以我们可以同时为一个组件绑定多个`v-model`
 
@@ -3066,9 +2977,7 @@ emits:{
 </style>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_6、v-model-修饰符)6、v-model 修饰符
-
-
+### 6、v-model 修饰符
 
 `v-model`指令绑定表单输入元素时可以使用一些内置的修饰符，如：`.trim`、`.number`、`.lazy`。
 
@@ -3124,9 +3033,7 @@ export default {
 };
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_6-1、实战应用-输入内容首字母大写)6.1、实战应用：输入内容首字母大写
-
-
+### 6.1、实战应用：输入内容首字母大写
 
 如果`<MyComponent>`组件上的`v-modle`添加`capitalize`修饰符，则返回的内容首字母大小，否则正常输出
 
@@ -3190,9 +3097,7 @@ export default {
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_7、总结-2)7、总结
-
-
+### 7、总结
 
 本小节需要重点掌握的以下相关内容
 
@@ -3241,15 +3146,11 @@ export default {
 
 > 以上`v-model`修饰符最终在子组件中以`textModifiers`属性访问
 
-## [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#六、透传属性-attributes)六、透传属性（Attributes）
-
-
+## 六、透传属性（Attributes）
 
 深入浅出透传属性是什么，单根组件透传属性的继承、注意事项，禁用透传属性自动继承，$attr 属性、注意事项，多根组件透传属性的继承，深层组件继承等。
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_1、透传属性定义)1、透传属性定义
-
-
+### 1、透传属性定义
 
 当我们给一个组件传递的`Prop`或`v-on`事件监听器，没有出现在该组件的`props`或`emits`选项中，那这些`Prop`和`v-on`事件监听被称为透传属性（Attributes）。
 
@@ -3277,9 +3178,7 @@ export default {
 - 传递给子组件`<List>`的 Prop 有`a`，`b`两个，传递的`v-on`事件监听器有`click`,`add-event`两个。
 - 但在子组件的`props`选项中只声明了`a`，在`emits`选项中只声明了`addEvent`，没有声明的`b`属性和`click`事件就可以称为透传属性（Attributes）。
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_2、单根组件透传属性的继承)2、单根组件透传属性的继承
-
-
+### 2、单根组件透传属性的继承
 
 当组件是一个**单根组件**时，透传的属性（Attributes）会被自动被添加到组件的根元素上。相当于根元素自动继承组件的属性。
 
@@ -3338,9 +3237,7 @@ export default {
 
 ![image-20230629175017841](https://www.arryblog.com/assets/img/image-20230629175017841.c3679eb0.png)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_3、透传属性继承的注意事项)3、透传属性继承的注意事项
-
-
+### 3、透传属性继承的注意事项
 
 如果组件是一个单根组件，透传属性的自动继承有以下两个需要注意的点：
 
@@ -3428,9 +3325,7 @@ export default {
 
 ![GIF2023-5-1218-11-40](https://www.arryblog.com/assets/img/GIF2023-5-1218-11-40.68e2e51c.gif)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_4、禁用透传属性自动继承)4、禁用透传属性自动继承
-
-
+### 4、禁用透传属性自动继承
 
 在某些场景下我们并不希望透传属性自动继承到单根组件的根元素上，而是想把透传的属性按需要添加到根节点以外的其他元素上，这时我们就需要禁用透传属性的自动继承行为。
 
@@ -3449,9 +3344,7 @@ export default {
 
 > 那我们如何访问到透传进来的所有属性呢 ？这就需要用到`$attr`属性，接下来我们就来学习下`$attr`属性。
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_5、-attr-属性)5、$attr 属性
-
-
+### 5、$attr 属性
 
 如果我们想在一个组件中访问到所有透传的属性，可以通过以下两种方式来实现
 
@@ -3532,9 +3425,7 @@ export default {
 
 ![image-20230512200709432](https://www.arryblog.com/assets/img/image-20230512200709432.3c7d660f.png)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_5-1、-attrs-属性的注意事项)5.1、$attrs 属性的注意事项
-
-
+### 5.1、$attrs 属性的注意事项
 
 - 与`props`有所不同，透传属性在 JS 中保留了它们原始的大小写，所以在父组件中通过`kebab-case`方式命名的属性，需要通过`$attrs["kebab-case"]`形式来访问。
 - 所有`v-on`绑定的事件监听器，在`$attrs`对象下被暴露为一个**函数**。如果父组件中添加`@add-event='add'`事件监听听，在`$attrs`对象上要通过`$attrs.onAdd`形式来访问。
@@ -3588,9 +3479,7 @@ export default {
 
 ![GIF2023-5-1220-56-57](https://www.arryblog.com/assets/img/GIF2023-5-1220-56-57.ecaf67a6.gif)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_6、多根组件透传属性的继承)6、多根组件透传属性的继承
-
-
+### 6、多根组件透传属性的继承
 
 和单根组件有所不同，多根组件的透传属性不会自动继承到组件的根元素上，所以我们需要显示绑定`$attrs`。
 
@@ -3624,7 +3513,7 @@ export default {
 </template>
 ```
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_7、深层组件继承)7、深层组件继承
+### 7、深层组件继承
 
 有些情况下一个组件会在根节点上渲染另一个组件，如下：
 
@@ -3695,9 +3584,7 @@ export default {
 
 ![GIF2023-5-1221-49-46](https://www.arryblog.com/assets/img/GIF2023-5-1221-49-46.ff09bd37.gif)
 
-### [#](https://www.arryblog.com/vip/vue/parent-child-component-values.html#_8、总结-2)8、总结
-
-
+### 8、总结
 
 **透传属性定义**
 
