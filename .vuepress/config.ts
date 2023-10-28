@@ -125,6 +125,26 @@ export default defineUserConfig({
           ],
         },
       ],
+      "/blogs/web/es6/": [
+        {
+          text: "ES6核心基础",
+          children: [
+            "/blogs/web/es6/ECMAScript、ES6 简史，let、const、var 区别和应用.md",
+            "/blogs/web/es6/Symbol、BigInt、模板字符串的应用场景和底层原理.md",
+            "/blogs/web/es6/ES6 箭头函数 和 对象自面量增强，大厂面试真题解析.md",
+            "/blogs/web/es6/ES6 解构赋值，函数参数默认值，在项目中的应用场景.md",
+            "/blogs/web/es6/ES6 剩余参数 和 展开运算符在实际开发中的应用.md",
+            "/blogs/web/es6/Set、WeakSet、Map 数据结构的应用及面试真题解析.md",
+            "/blogs/web/es6/Class 类的属性、方法、继承、构造函数及解决方案.md",
+            "/blogs/web/es6/设计模式 - 迭代器模式和 Iterator 遍历器与 for...of 循环.md",
+            "/blogs/web/es6/ES6 字符串、数组、对象的新增方法和常见应用.md",
+            "/blogs/web/es6/Generator 函数的实践与实践应用.md",
+            "/blogs/web/es6/Promise 用法、实例方法、原理与异步编程的实践应用.md",
+            "/blogs/web/es6/JavaScript 中的 Event Loop 事件循环、微任务与宏任务.md",
+            "/blogs/web/es6/ES6 Module 模块系统.md",
+          ],
+        },
+      ],
     },
 
     navbar: [
@@ -148,7 +168,10 @@ export default defineUserConfig({
                 text: "Ajax",
                 link: "/blogs/web/ajax/前后端数据交互 与 HTTP 协议.md",
               },
-              { text: "ES6", link: "/blogs/web/es6/" },
+              {
+                text: "ES6",
+                link: "/blogs/web/es6/ECMAScript、ES6 简史，let、const、var 区别和应用.md",
+              },
               { text: "浏览器原理和性能优化", link: "/blogs/web/brower/" },
             ],
           },
