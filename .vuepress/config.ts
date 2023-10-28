@@ -95,6 +95,26 @@ export default defineUserConfig({
           ],
         },
       ],
+      "/blogs/web/applet/": [
+        {
+          text: "微信小程序",
+          children: [
+            "/blogs/web/applet/微信小程序发展史、开发环境准备、团队协作上线流程.md",
+            "/blogs/web/applet/小程序项目结构、配置层、视图层、逻辑层、宿主环境.md",
+            "/blogs/web/applet/微信小程序视图层的组件、数据绑定，列表、条件渲染.md",
+            "/blogs/web/applet/微信小程序页面导航、传参、事件、API、网络请求.md",
+            "/blogs/web/applet/微信小程序的生命周期、生命周期函数 与 实践应用.md",
+            "/blogs/web/applet/前后端分离架构 VS 传统架构，行业最佳实践.md",
+            "/blogs/web/applet/微信小程序自定义组件，核心基础 和 实践应用.md",
+            "/blogs/web/applet/微信小程序自定义组件封装，项目最佳实践综合应用.md",
+            "/blogs/web/applet/JS 面向对象，代码分层架构设计实践 与 网络请求封装.md",
+            "/blogs/web/applet/JS 面向对象、分层设计、动态数据遍历最佳实践与应用.md",
+            "/blogs/web/applet/小程序节流防抖，骨架屏功能、用户体验优化与实践.md",
+            "/blogs/web/applet/小程序 npm 支持，状态管理，分包，自定义 tabBar.md",
+            "/blogs/web/applet/微信小程序云开发实现注册登录 与 多终端常见登录方式.md",
+          ],
+        },
+      ],
     },
 
     navbar: [
@@ -121,7 +141,12 @@ export default defineUserConfig({
           },
           {
             text: "小程序",
-            children: [{ text: "微信小程序", link: "/blogs/web/applet/" }],
+            children: [
+              {
+                text: "微信小程序",
+                link: "/blogs/web/applet/微信小程序发展史、开发环境准备、团队协作上线流程.md",
+              },
+            ],
           },
           {
             text: "框架",
