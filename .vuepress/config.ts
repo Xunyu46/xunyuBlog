@@ -145,6 +145,12 @@ export default defineUserConfig({
           ],
         },
       ],
+      "/blogs/algorithm/": [
+        {
+          text: "二叉树",
+          children: ["/blogs/algorithm/二叉树.md"],
+        },
+      ],
     },
 
     navbar: [
@@ -197,7 +203,7 @@ export default defineUserConfig({
           {
             text: "外部库",
             children: [
-              { text: "Element Ui", link: "/blogs/web/elementui/" },
+              { text: "Element Ui", link: "https://element.eleme.io/#/zh-CN" },
               { text: "Naive Ui", link: "/blogs/web/naiveui/" },
               { text: "Echarts", link: "/blogs/web/echarts/" },
             ],
@@ -236,7 +242,11 @@ export default defineUserConfig({
           { text: "算法", link: "/interview/algorithm/" },
         ],
       },
-      { text: "算法", link: "/algorithm/", icon: "CalculationAlt" },
+      {
+        text: "算法",
+        link: "/blogs/algorithm/二叉树.md",
+        icon: "CalculationAlt",
+      },
       { text: "项目", link: "/project/", icon: "Workspace" },
       {
         text: "文件夹",
@@ -251,7 +261,7 @@ export default defineUserConfig({
     algolia: {
       appId: "ATRY2UAMFR",
       apiKey: "2cf59883a19ba748d13086307f869776",
-      indexName: "xunyu",
+      indexName: "My First Application",
       inputSelector: "### REPLACE ME ####",
       algoliaOptions: { facetFilters: ["lang:$LANG"] },
       debug: false, // Set debug to true if you want to inspect the dropdown
