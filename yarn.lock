@@ -1601,7 +1601,7 @@
     "require-from-string" "^2.0.2"
     "uri-js" "^4.2.2"
 
-"algoliasearch@^4.19.1", "algoliasearch@>= 4.9.1 < 6":
+"algoliasearch@^4.19.1", "algoliasearch@^4.20.0", "algoliasearch@>= 4.9.1 < 6":
   "integrity" "sha512-y+UHEjnOItoNy0bYO+WWmLWBlPwDjKHW6mNHrPi0NkuhpQOOEbrkwQH/wgKFDLh7qlKjzoKeiRtlpewDPDG23g=="
   "resolved" "https://registry.npmmirror.com/algoliasearch/-/algoliasearch-4.20.0.tgz"
   "version" "4.20.0"

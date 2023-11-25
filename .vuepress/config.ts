@@ -1,5 +1,4 @@
 import { defineUserConfig } from "vuepress";
-import type { DefaultThemeOptions } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
 
 export default defineUserConfig({
@@ -150,6 +149,10 @@ export default defineUserConfig({
           text: "二叉树",
           children: ["/blogs/algorithm/二叉树.md"],
         },
+        {
+          text: "数组字符串",
+          children: ["/blogs/algorithm/数组字符串.md"],
+        },
       ],
     },
 
@@ -230,6 +233,10 @@ export default defineUserConfig({
         text: "面试题",
         icon: "DataCenter",
         children: [
+          {
+            text: "每日面试题",
+            link: "/blogs/interview/everyday/每日面试题.md",
+          },
           { text: "HTML", link: "/blogs/interview/html/" },
           { text: "CSS", link: "/blogs/interview/css/" },
           { text: "JavaScript", link: "/blogs/interview/javascript/" },
@@ -259,10 +266,11 @@ export default defineUserConfig({
       },
     ],
     algolia: {
-      appId: "ATRY2UAMFR",
-      apiKey: "2cf59883a19ba748d13086307f869776",
-      indexName: "My First Application",
+      appId: "4O2ZBJSNI0",
+      apiKey: "fc85df2e265f17a9a23c973dc1dd3721",
+      indexName: "xunyublog",
       inputSelector: "### REPLACE ME ####",
+      lang: "zh-CN",
       algoliaOptions: { facetFilters: ["lang:$LANG"] },
       debug: false, // Set debug to true if you want to inspect the dropdown
     },
