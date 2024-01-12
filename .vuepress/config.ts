@@ -204,14 +204,6 @@ export default defineUserConfig({
             ],
           },
           {
-            text: "外部库",
-            children: [
-              { text: "Element Ui", link: "https://element.eleme.io/#/zh-CN" },
-              { text: "Naive Ui", link: "/blogs/web/naiveui/" },
-              { text: "Echarts", link: "/blogs/web/echarts/" },
-            ],
-          },
-          {
             text: "TypeScript",
             children: [
               {
@@ -225,6 +217,26 @@ export default defineUserConfig({
             children: [
               { text: "Webpack", link: "/blogs/web/webpack/" },
               { text: "Vite", link: "/blogs/web/vite/" },
+            ],
+          },
+        ],
+      },
+      {
+        text: "外部库",
+        icon: "CopyLink",
+        children: [
+          {
+            text: "外部库",
+            children: [
+              { text: "Element Ui", link: "https://element.eleme.io/#/zh-CN" },
+              {
+                text: "Naive Ui",
+                link: "https://www.naiveui.com/zh-CN/light/docs/introduction",
+              },
+              {
+                text: "Echarts",
+                link: "https://echarts.apache.org/zh/index.html",
+              },
             ],
           },
         ],

@@ -118,7 +118,7 @@ const sum = (x) => {
 console.log(sum(1)); // 2
 
 // 单个参数可以省略圆括号
-const sum = (x) => {
+const sum = x => {
   return x + 1;
 };
 console.log(sum(1)); // 2

@@ -11,8 +11,6 @@ publish: true
 
 # ECMAScript、ES6 简史，let、const、var 区别和应用
 
-TIP
-
 很开心当我们已经把 JavaScript 核心基础到高级进阶部分的内容已全部学完，从本节开始我们将进入到 ES6~最新版本的学习，这也将是我们未来项目开发每天都会用到的。
 
 **之前有同学经常问到的一些疑问：**
@@ -55,8 +53,6 @@ ES 是指 ECMAScript，Ecma 是一个专门为技术制定标准的组织。ECMA
 
 ### 1、什么是神秘的 ECMA-262
 
-TIP
-
 Ecma 国际的标准都会以 `Ecma-Number` 命名，ECMA-262 就是 ECMA 262 号标准，具体就是**指 ECMAScript 遵照的标准**。1996 年 11 月，网景公司将 JavaScript 提交给 Ecma 国际进行标准化。ECMA-262 的第一个版本于 1997 年 6 月被 Ecma 国际采纳。
 
 Ecma 国际制定了许多标准，而 ECMA-262 只是其中的一个，所有标准列表查看
@@ -75,8 +71,6 @@ Ecma 标准涉及的类别非常多，官网提供了按照类别和最新修改
 
 ### 2、语法提案的批准流程
 
-TIP
-
 任何人都可以向标准委员会（又称 TC39 委员会）提案，要求修改语言标准。
 
 一种新的语法从提案到变成正式标准，需要经历五个阶段。每个阶段的变动都需要由 TC39 委员会批准。
@@ -90,8 +84,6 @@ TIP
 一个提案只要能进入 Stage 2，就差不多肯定会包括在以后的正式标准里面。ECMAScript 当前的所有提案，可以在 TC39 的官方网站[GitHub.com/tc39/ecma262 (opens new window)](https://github.com/tc39/ecma262)查看。
 
 ### 3、探秘 TC39 神秘组织
-
-TIP
 
 TC39 是 Technical Committee 39 的简称（[点击查看，该组织官方介绍 (opens new window)](https://www.ecma-international.org/technical-committees/tc39/)），是**制定 ECMAScript 标准的委员会**。
 
@@ -117,8 +109,6 @@ TC39（Technical Committee 39）是推进 ECMAScript 发展的委员会。其会
 
 ### 4、如何加入 Ecma 组织成员
 
-TIP
-
 应 Ecma 秘书长的邀请，来自非成员公司的专家可以参加 Ecma 小组，例如熟悉工作方式。要定期参加，组织必须加入 Ecma 作为成员。[点击查看官方加入方式(opens new window)](https://www.ecma-international.org/about-ecma/join-ecma/)
 
 ![image-20221005004959828](https://www.arryblog.com/assets/img/image-20221005004959828.50d5443a.png)
@@ -134,8 +124,6 @@ TIP
 > 详细规则和细节，[查看官方即可(opens new window)](https://www.ecma-international.org/about-ecma/join-ecma/)
 
 ### 5、ECMAScript 版本
-
-TIP
 
 ECMAScript = 由 ECMA 这个标准化组织制定的一个语言标准
 
@@ -161,22 +149,20 @@ ECMAScript = 由 ECMA 这个标准化组织制定的一个语言标准
 
 > 我们学习的重心还是要放在 ES6 上，不要本末倒置就好
 
-每年的 ES 新版本都会引入很多新特性，如下
+每年的 ES 新版本都会引入很多新特性，如下：
 
 | 版本           | 发布时间 | 主要更新内容                                                                                                                                                                                                                                                                                                                                                       |
-| :------------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| :------------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ES6（ES2015）  | 2015 年  | 改动最多，具有里程碑意义 新增变量 let 和 const，箭头函数 新增数组方法，如：map、filter 等 解构赋值，快速复制数组和对象，模板字符串 模块化，面向对象，Promise 等                                                                                                                                                                                                    |
 | ES7（ES2016）  | 2016 年  | 数组扩展：`Array.prototype.includes()` ，幂运算符                                                                                                                                                                                                                                                                                                                  |
-| ES8（ES2017）  | 2017 年  | 异步编程解决方案 新增 async、await 对象扩展：`Object.values()` ，`Object.entries()` 对象属性描述：`Object.getOwnPropertyDescriptors()` 字符串扩展：`String.prototype.padStart()`，`String.prototype.padEnd()` 尾逗号 Trailing commas                                                                                                                               |
+| ES8（ES2017）  | 2017 年  | 异步编程解决方案 新增 async、await 对象扩展：`Object.values()` ，`Object.entries()` 对象属性描述：`Object.getOwnPropertyDescriptors()` 字符串扩展：`String.prototype.padStart()`，`String.prototype.padEnd()`  尾逗号 Trailing commas                                                                                                                              |
 | ES9（ES2018）  | 2018 年  | 异步迭代：`for await of` ，`Symbol.asyncIterator` 正则表达式扩展：dotAll，具名组匹配，后行断言 对象扩展：Rest & Spread Promise 扩展：`Promise.prototype.finally()` 字符串扩展：放松模板字符串文字限制                                                                                                                                                              |
 | ES10（ES2019） | 2019 年  | 对象扩展：`Object.fromEntries()` 字符串扩展：`String.prototype.trimStart()` ，`String.prototype.trimEnd()` 数组扩展：`Array.prototype.flat()`，`Array.prototype.flatMap()` 修订 `Function.prototype.toString()` 可选的 Catch Binding：省略 catch 绑定的参数和括号 JSON 扩展：JSON superset，`JSON.stringify()`增强能力 Symbol 扩展：`Symbol.prototype.description` |
 | ES11（ES2020） | 2020 年  | 全局模式捕获：`String.prototype.matchAll()` 动态/按需导入：`Dynamic import()` 新的原始数据类型：BigInt Promise 扩展：`Promise.allSettled()` ，`allSettled() vS all()` 全局对象：globalThis 可选链：Optional chaining 空值合并运算符：Nullish coalescing Operator                                                                                                   |
-| ES12（ES2021） | 2021 年  | `String.prototype.replaceAll`：替换字符不用写正则了 Promise.any() WeakRefs：使用弱引用对象 逻辑运算符和赋值表达式：`                                                                                                                                                                                                                                               |     | =` ，`&&=` ，`??=` 数字分隔符：在数字之间创建可视化分隔符，通过`\_`下划线来分割数字 `Intl.ListFormat`：用来处理和多语言相关的对象格式化操作 `Intl.DateTimeFormat` API 中的 dateStyle 和 timeStyle 的配置项：用来处理多语言下的时间日期格式化的函数 |
+| ES12（ES2021） | 2021 年  | `String.prototype.replaceAll`：替换字符不用写正则了 Promise.any() WeakRefs：使用弱引用对象 逻辑运算符和赋值表达式：`                                                                                                                                                                                                                                               |  | =` ，`&&=` ，`??=` 数字分隔符：在数字之间创建可视化分隔符，通过`\_`下划线来分割数字 `Intl.ListFormat`：用来处理和多语言相关的对象格式化操作 `Intl.DateTimeFormat` API 中的 dateStyle 和 timeStyle 的配置项：用来处理多语言下的时间日期格式化的函数 |
 | ES13（ES2022） | 2022 年  | Top-level Await（顶级 await） Object.hasOwn() at() error.cause 正则表达式匹配索引 类 class：公共实例字段，私有实例字段，私有方法 静态公共字段、静态私有字段、静态私有方法，类静态块                                                                                                                                                                                |
 
 ### 6、ES6 之前的历史版本
-
-TIP
 
 之前的版本中有 `ES1 ~ ES3`， `ES5 ~ ES6` 唯独跳过了 ES4，因为
 
@@ -217,14 +203,10 @@ ES1 和 ES2 都是比较原始的版本，都还不太成熟，真正成熟的�
 
 ### 7、ES、ES6 与 JavaScript 的关系
 
-TIP
-
 - JavaScript（浏览器端）= ECMAScript（语法+API）+ DOM（文档对象模型） + BOM（浏览器对象模型）
 - ES 等同于 ECMAScript ，是语言的标准，6 是版本号，即 ES6 = ECMAScript 这门语言的第 6 代标准
 
 ### 8、ES6 的兼容性
-
-TIP
 
 - 主流浏览器的最新版几乎全部支持 ES6
 - IE 老版本等不支持的浏览器，可以用 [Babel 转码(opens new window)](https://babeljs.io/)
@@ -235,8 +217,6 @@ TIP
 ![image-20221005160502430](https://www.arryblog.com/assets/img/image-20221005160502430.ec4ee74c.png)
 
 ### 9、ES6 环境搭建
-
-TIP
 
 目前各大浏览器基本上都支持 ES6 的新特性，其中 Chrome 和 Firefox 浏览器对 ES6 新特性最友好，IE7~11 不支持 ES6
 
@@ -269,8 +249,6 @@ ES 每一年都会不断的更新，我们的目的是希望这些语法都能�
 
 ### 10、为什么要学习 ES6~ES13 呢
 
-TIP
-
 有些同学会认为我们现在前端开发不都在使用框架吗 ？那 ES 还重要吗 ？
 
 是的没错，目前项目基本都是基于框架来开发的。很多同学会误以为学会了框架就等于掌握了前端
@@ -298,13 +276,9 @@ TIP
 
 ## 二、let 和 const
 
-TIP
-
 ES6（ES2015）新增加了两个重要的 JavaScript 关键字: **let** 和 **const**。
 
 ### 1、什么是 let 和 const ？
-
-TIP
 
 let 和 const 是用来声明变量或声明常量的，在 ES6 之前我们声明变量都是使用 var，在 ES6 中
 
@@ -312,8 +286,6 @@ let 和 const 是用来声明变量或声明常量的，在 ES6 之前我们声�
 - const 声明常量，constant 的缩写
 
 ### 2、let 和 const 的用法
-
-TIP
 
 let 和 const 的用法与 var 一样
 
@@ -325,8 +297,6 @@ console.log(username, age, sex); // 清心老师 18 female
 ```
 
 ### 3、什么是变量，什么是常量 ？
-
-TIP
 
 - var、let 声明的就是变量，变量一旦初始化之后，还可以重新赋值
 - const 声明的就是常量，常量一旦初始化，就不能重新赋值了，否则就会报错
@@ -430,8 +400,6 @@ const 声明的常量，其实在某些情况下是可以修改它的值得，�
 
 ### 6、什么时候用 const ，什么时候用 let
 
-TIP
-
 什么时候用 const 声明常量，什么时候用 let 声明变量，这个在实际开发中经常会困扰大家。之前我们只有一个 var 没得选，好处就是用就完了。
 
 > 那么，现在有得选了，到底使用 const 好呢 ？还是用 let 好呢 ？
@@ -461,8 +429,6 @@ username = "arry";
 
 ## 三、let、const 和 var 的区别
 
-TIP
-
 let、const 和 var 的区别总共有 5 点：
 
 - 不允许重复声明
@@ -474,8 +440,6 @@ let、const 和 var 的区别总共有 5 点：
 其中 块级作用域是 let、const 和 var 之间最重要的一个区别了。这也是我们面试真题中高频面试题了，能否真正给出有竞争力的回答，就看我们是否有真正的理解到位了。
 
 ### 1、不允许重复声明
-
-TIP
 
 - 重复声明：是指在同—作用域下已经存在的变量或常量，又声明了—遍
 - **同一作用域下**，var 允许重复声明，let、const 不允许
@@ -515,8 +479,6 @@ foo();
 > 也就是说 let 和 const 的表现是一致的。
 
 ### 2、不存在变量提升
-
-TIP
 
 `var`命令会发生“变量提升”现象，即变量可以在声明之前使用，值为`undefined`。这种现象多多少少是有些奇怪的，按照一般的逻辑，变量应该在声明语句之后才可以使用。
 
@@ -565,8 +527,6 @@ let 和 const 之所以不存在变量提升，还是为了让我们养成良好
 > 对于所有的变量或常量，我们一定要做到 **先声明，后使用**
 
 ### 3、暂时性死区
-
-TIP
 
 - 只要作用域内存在 let、const ，它们所声明的变量或常量就自动 “绑定” 这个区域，不再受到外部作用域的影响
 - let、const 存在暂时性死区，var 不存在
@@ -648,8 +608,6 @@ ES6 规定暂时性死区和`let`、`const`语句不出现变量提升，主要�
 
 ### 4、window 对象的属性和方法
 
-TIP
-
 全局作用域中，var 声明的变量，通过 function 声明的函数，**会自动变成**window 对象的属性或方法
 
 ```js
@@ -680,8 +638,6 @@ console.log(window.add === add); // false
 
 ### 5、块级作用域
 
-TIP
-
 let、const 和 var 最重要的区别即：是否拥有块级作用域。
 
 在深入了解它们的区别前，我们需要了解一下，在 JavaScript 中有哪些作用域：
@@ -698,8 +654,6 @@ let、const 和 var 最重要的区别即：是否拥有块级作用域。
 
 ### 5.1、全局作用域
 
-TIP
-
 全局作用域顾名思义，就是在任何地方都能访问到它，在浏览器中能通过 window 对象拿到的变量就是全局作用域下声明的变量。
 
 ```js
@@ -711,8 +665,6 @@ console.log(window.username); // icoding
 ```
 
 ### 5.2、函数作用域
-
-TIP
 
 - 函数作用域，也称为**局部作用域**，所有写在函数内部的代码，就是在函数作用域中
 - 声明在函数作用域中的变量为**局部变量**，从外层是无法直接访问函数内部的变量
@@ -737,8 +689,6 @@ console.log(foo("hello")); // hello arry
 > 借助 return 执行函数 foo 可以取到函数内部的变量 username 的值进行使用。
 
 ### 5.3、块级作用域（ES6 新增）
-
-TIP
 
 块级作用域是 ES6 的概念，它的产生是要有一定的条件的，在花括号`{}`中，使用 `let` 或 `const` 声明的变量，才会产生块级作用域。
 
@@ -846,8 +796,6 @@ console.log(age); // 18
 
 ### 5.4、为什么需要块级作用域 ？
 
-TIP
-
 我们通过之前的学习知道，ES5 只有全局作用域和函数作用域，没有块级作用域，这带来很多不合理的场景。所以在 ES6 中新增了块级作用域。
 
 - **第一种不合理场景：** 内层变量可能会覆盖外层变量
@@ -909,8 +857,6 @@ console.log("循环外：" + i); // Uncaught ReferenceError: i is not defined
 
 ### 5.6、深入理解块级作用域
 
-TIP
-
 很多人对于`for(let i=0; i<5; i++){ }` 这里不理解，不理解为什么外面就访问不到 i 了。我们说这是 es6 的语法规定的，let 可以形成块级作用域。
 
 那如果没有 es6，那我们要实现相同的功能，用 es5 如何模拟呢 ？
@@ -960,8 +906,6 @@ console.log(i);
 
 ### 5.7、作用域链的复习
 
-TIP
-
 关于变量的查找会涉及到作用域链，我们再次来复习一下
 
 ```js
@@ -1006,8 +950,6 @@ console.log(i); // Uncaught ReferenceError: i is not defined
 
 ### 5.8、ES6 中有哪些块级作用域
 
-TIP
-
 大部分具有花括号`{}`的结构，都可以构成块级作用域
 
 ```js
@@ -1020,8 +962,6 @@ console.log(age); // Uncaught ReferenceError: age is not defined
 ```
 
 > 报错原因：`{}` 花括号就是一个块级作用域， 它执行完毕之后就会被销毁
-
-TIP
 
 - 还具有`{}`块级作用域的结构，如：`{}`、`for(){}`、`while(){}`、`do{}while()`、`if(){}`、`switch(){}`
 - 其中 `function(){}` 也有`{}` 但属于函数作用域，不属于块级作用域
@@ -1193,21 +1133,15 @@ TIP
 
 ## 五、总结
 
-TIP
-
 总结本章重难点知识，理清思路，把握重难点。并能轻松回答以下问题，说明自己就真正的掌握了。
 
 用于故而知新，快速复习。
 
 ### 1、ES 标准相关，ES6 简介及相关历史
 
-TIP
-
 这个部分作为了解和开阔视野，深入了解我们日常开发中遵循的标准都是怎么来的。
 
 ### 2、let 和 const 是什么 ？
-
-TIP
 
 - `let` 声明变量的一个关键字
 
@@ -1225,8 +1159,6 @@ TIP
 - 尽量使用 `let` 去代替 `var` 来声明变量。
 
 ### 3、let、const 与 var 的区别 ？
-
-TIP
 
 - 重复声明：let、const 不允许重复声明，var 允许重复声明
 - 变量提升：let、const 不允许变量提升，var 允许变量提升
@@ -1246,8 +1178,6 @@ TIP
 
 ## 六、测试题
 
-TIP
-
 自我测试：在不看答案的前提下，看看自己是否真正掌握了本节所学内容。
 
 ### 1、关于以下描述正确的选项是 ？
@@ -1257,7 +1187,13 @@ TIP
 - C、变量声明之后，可以重新赋值
 - D、常量声明之后，不可以被重新赋值
 
-<details class="custom-block details" open="" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">自己先分析，再点击查看正确答案</summary><p style="line-height: 1.7;">正确答案：A C D</p><p style="line-height: 1.7; margin-bottom: 0px; padding-bottom: 0px;">答案解析：本题主要是考查常量和变量的概念。ES6 中新增的 const 关键字是用来声明常量，并不是用来替代 var 的，B 选项描述是错的。</p></details>
+::: details 自己先分析，再点击查看正确答案
+
+正确答案：A C D
+
+答案解析：本题主要是考查常量和变量的概念。ES6 中新增的 const 关键字是用来声明常量，并不是用来替代 var 的，B 选项描述是错的。
+
+:::
 
 ### 2、以下代码中，可以正常输出结果的是 ？
 
@@ -1297,7 +1233,19 @@ obj = {};
 conosle.log(obj);
 ```
 
-<details class="custom-block details" open="" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">自己先分析，再点击查看正确答案</summary><p style="line-height: 1.7;">正确答案：C</p><p style="line-height: 1.7;">答案解析：本题主要考查 const 的使用方式</p><ul style="padding-left: 1.2em; line-height: 1.7;"><li>const 声明常量初始化时必须赋值，否则会报错，A 选项错误。</li><li>const 声明常量初始化后，不可以再重新赋值，B、D 选项错误。</li><li>const 声明常量为引用数据类型，不可以重新赋值，但可以修改里面的值。C 选项正确。</li></ul></details>
+::: details 自己先分析，再点击查看正确答案
+
+正确答案：C
+
+答案解析：本题主要考查 const 的使用方式
+
+- const 声明常量初始化时必须赋值，否则会报错，A 选项错误。
+
+- const 声明常量初始化后，不可以再重新赋值，B、D 选项错误。
+
+- const 声明常量为引用数据类型，不可以重新赋值，但可以修改里面的值。C 选项正确。
+
+:::
 
 ### 3、以下代码运行的结果是 ？
 
@@ -1314,7 +1262,13 @@ let i = 2;
 - C、undefined
 - D、报错
 
-<details class="custom-block details" open="" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">自己先分析，再点击查看正确答案</summary><p style="line-height: 1.7;">正确答案：D</p><p style="line-height: 1.7;">答案解析：本题主要考查暂时性死区</p><p style="line-height: 1.7;">let 声明的变量存在暂时性死区，暂时性死区的本质就是：在当前作用域，所要使用的变量已经存在，不会再访问该作用域以外的同名变量，并且只有在声明变量之后，才可以获取和使用该变量，否则就会报错。</p><p style="line-height: 1.7; margin-bottom: 0px; padding-bottom: 0px;">本题中：在块级作用域中使用 let 声明变量 i ，形成了暂时性死区，导致无法访问全局作用域中的同名变量 i ，且输出语句是在声明变量的前面，会出现报错。</p></details>
+::: details 自己先分析，再点击查看正确答案
+
+正确答案：D
+
+答案解析：本题主要考查暂时性死区let 声明的变量存在暂时性死区，暂时性死区的本质就是：在当前作用域，所要使用的变量已经存在，不会再访问该作用域以外的同名变量，并且只有在声明变量之后，才可以获取和使用该变量，否则就会报错。本题中：在块级作用域中使用 let 声明变量 i ，形成了暂时性死区，导致无法访问全局作用域中的同名变量 i ，且输出语句是在声明变量的前面，会出现报错。
+
+:::
 
 ### 4、以下代码中，在 ES6 中属于块级作用域的是 ？
 
@@ -1348,7 +1302,17 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-<details class="custom-block details" open="" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">自己先分析，再点击查看正确答案</summary><p style="line-height: 1.7;">正确答案：A D</p><p style="line-height: 1.7;">答案解析：本题考查 es6 块级作用域的基本概念</p><p style="line-height: 1.7;">块级作用域是 ES6 中新增的一个作用域，指在大括号<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">{}</code>里面使用 let 或 const 关键字声明变量或常量，就会形成一个块级作用域。但有两个需要特殊记忆，函数和对象的大括号<code style="font-family: source-code-pro, Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace; color: rgb(71, 101, 130); padding: 0.25rem 0.5rem; margin: 0px; font-size: 0.85em; background-color: rgba(27, 31, 35, 0.05); border-radius: 3px;">{}</code>不属于块级作用域。</p><p style="line-height: 1.7; margin-bottom: 0px; padding-bottom: 0px;">B 选项中，是表达式声明了一个函数，C 选项中是声明了一个对象，都不属于块级作用域。</p></details>
+::: details 自己先分析，再点击查看正确答案
+
+正确答案：A D
+
+答案解析：本题考查 es6 块级作用域的基本概念
+
+块级作用域是 ES6 中新增的一个作用域，指在大括号{}里面使用 let 或 const 关键字声明变量或常量，就会形成一个块级作用域。但有两个需要特殊记忆，函数和对象的大括号{}不属于块级作用域。
+
+B 选项中，是表达式声明了一个函数，C 选项中是声明了一个对象，都不属于块级作用域。
+
+:::
 
 ### 5、以下代码中，访问常量 m 时存在的作用域链，描述正确的是（单选） ？
 
@@ -1375,4 +1339,18 @@ func();
 - C、函数作用域 -> 块级作用域 –> 块级作用域 –> 函数作用域 –> 全局作用域
 - D、块级作用域 –> 块级作用域 –> 函数作用域 –> 全局作用域
 
-<details class="custom-block details" open="" style="display: block; position: relative; border-radius: 2px; margin: 1.6em 0px; padding: 1.6em; background-color: rgb(238, 238, 238);"><summary style="outline: none; cursor: pointer; color: rgb(62, 175, 124);">自己先分析，再点击查看正确答案</summary><p style="line-height: 1.7;">正确答案：D</p><p style="line-height: 1.7;">答案解析：本题主要考查作用域和作用域链的知识</p><ul style="padding-left: 1.2em; line-height: 1.7;"><li>作用域就是代码的执行环境，如：全局执行环境就是全局作用域</li><li>访问一个变量/常量的值，若在当前作用域中没有查到，就会向上级作用域中查找，一直查找到全局作用域，这么一个查找过程形成的链条就叫做作用域链。</li></ul><p style="line-height: 1.7;">在本题中，当执行到 bar(m)时，会先对 m 右查询，找到 m 对应的值。在找 m 值时，先到 if 块级作用域中找，然后再到 for 块级作用域中查找，最后在 func 函数作用域中找，都没找到，最后找到全局作用域中的 m</p><p style="line-height: 1.7; margin-bottom: 0px; padding-bottom: 0px;">在这个过程中形成的作用域链是： if 块级作用域 –&gt; for 块级作用域 –&gt; func 函数作用域 –&gt; window 全局作用域</p></details>
+::: details 自己先分析，再点击查看正确答案
+
+正确答案：D
+
+答案解析：本题主要考查作用域和作用域链的知识
+
+- 作用域就是代码的执行环境，如：全局执行环境就是全局作用域
+
+- 访问一个变量/常量的值，若在当前作用域中没有查到，就会向上级作用域中查找，一直查找到全局作用域，这么一个查找过程形成的链条就叫做作用域链。
+
+在本题中，当执行到 bar(m)时，会先对 m 右查询，找到 m 对应的值。在找 m 值时，先到 if 块级作用域中找，然后再到 for 块级作用域中查找，最后在 func 函数作用域中找，都没找到，最后找到全局作用域中的 m
+
+在这个过程中形成的作用域链是： if 块级作用域 –> for 块级作用域 –> func 函数作用域 –> window 全局作用域
+
+:::
