@@ -11,7 +11,7 @@ publish: true
 
 # TypeScript 数组、元组，any、unknown、never 类型
 
-TIP
+
 
 从本节开始正式学习 TypeScript 常见基础类型
 
@@ -23,13 +23,13 @@ TIP
 
 ## 一、数组类型
 
-TIP
+
 
 JavaScript 数组在 TypeScript 里面分成两种类型，分别是数组（array）和元组（tuple）。
 
 ### 1、TS 数组的特征
 
-TIP
+
 
 TypeScript 数组有一个根本特征：
 
@@ -38,7 +38,7 @@ TypeScript 数组有一个根本特征：
 
 ### 2、数组的类型语法
 
-TIP
+
 
 TS 中定义数组有两种写法，以下是简单写法
 
@@ -65,7 +65,7 @@ let arr2: Array<number | string> = [1, 2, 3, "艾编程"];
 
 ### 2.1、数组类型的第一种写法
 
-TIP
+
 
 方式一：在数组成员的类型后面，加上一对方括号。
 
@@ -97,7 +97,7 @@ let arr: any[];
 
 ### 2.2、数组类型的第二种写法
 
-TIP
+
 
 使用 TypeScript 内置的 Array 接口
 
@@ -119,7 +119,7 @@ console.log(arr); // [ 1, 2, 'icoding', 3 ]
 
 ### 2.3、数组类型注意事项
 
-TIP
+
 
 数组类型声明了以后，成员数量是不限制的，任意数量的成员都可以，也可以是空数组。
 
@@ -181,7 +181,7 @@ type UserName = UserNames[number]; // string
 
 ### 3、数组的类型推断
 
-TIP
+
 
 如果数组变量没有声明类型，TypeScript 就会推断数组成员的类型。这时，推断行为会因为值的不同，而有所不同。
 
@@ -220,7 +220,7 @@ arr.push("icoding"); // 报错
 
 ### 4、只读数组，const 断言
 
-TIP
+
 
 JavaScript 规定，`const`命令声明的数组变量是可以改变成员的。
 
@@ -235,7 +235,7 @@ console.log(arr); // [ 1, 5, 3 ]
 
 ### 4.1、readonly 只读
 
-TIP
+
 
 很多时候确实有声明为只读数组的需求，即不允许变动数组成员。
 
@@ -253,7 +253,7 @@ delete arr[0]; // 报错
 
 ### 4.2、readonly 注意事项
 
-TIP
+
 
 TypeScript 将`readonly number[]`与`number[]`视为两种不一样的类型，后者是前者的子类型。
 
@@ -328,7 +328,7 @@ arr[0] = [2]; // 报错，无法分配到 “0”，因为它是只读属性
 
 ### 5、多维数组
 
-TIP
+
 
 TypeScript 使用`T[][]`的形式，表示二维数组，`T`是最底层数组成员的类型
 
@@ -343,7 +343,7 @@ let multi: number[][] = [
 
 ## 二、元组类型
 
-TIP
+
 
 元组（tuple）是 TypeScript 特有的数据类型，也是一种特殊的数组。
 
@@ -359,7 +359,7 @@ const a: [string, number, boolean] = ["icoding", 123, true];
 
 ### 1、元组类型的语法差异
 
-TIP
+
 
 元组类型的写法，与数组类型的语法有一个重大差异。数组的成员类型写在方括号外面（`number[]`），元组的成员类型是写在方括号里面（`[number]`）。
 
@@ -379,7 +379,7 @@ let tuple: [number] = [123];
 
 ### 2、元组的使用
 
-TIP
+
 
 使用元组时，必须明确给出类型声明（上例的`[number]`），不能省略，否则 TypeScript 会把一个值自动推断为数组。
 
@@ -412,7 +412,7 @@ type Tuple = [number, number, number?, string?];
 
 ### 3、元组的越界问题
 
-TIP
+
 
 由于需要声明每个成员的类型，所以大多数情况下，元组的成员数量是有限的，从类型声明就可以明确知道，元组包含多少个成员，越界的成员会报错。
 
@@ -449,7 +449,7 @@ TS 中可以通过 push 方法为元组添加新的元素，但仍然不能进�
 
 ### 4、不限成员数量的元组
 
-TIP
+
 
 使用扩展运算符（`...`），可以表示不限成员数量的元组。
 
@@ -483,7 +483,7 @@ type Tuple = [...any[]];
 
 ### 5、添加元组成员名
 
-TIP
+
 
 元组的成员可以添加成员名，这个成员名是说明性的，可以任意取名，没有实际作用。
 
@@ -501,7 +501,7 @@ console.log(c); // [ 255, 255, 255 ]
 
 ### 6、读取元组成员类型
 
-TIP
+
 
 元组可以通过方括号，读取成员类型
 
@@ -524,7 +524,7 @@ type A = Tuple[number]; // string | number | Date
 
 ### 7、只读元组
 
-TIP
+
 
 元组也可以是只读的，不允许修改，有两种写法
 
@@ -581,7 +581,7 @@ foo(a as [number, number]); // 正确
 
 ### 8、成员数量的推断
 
-TIP
+
 
 如果没有可选成员和扩展运算符，TypeScript 会推断出元组的成员数量（即元组长度）。
 
@@ -629,7 +629,7 @@ if (tuple.length === 4) {
 
 ### 9、扩展运算符与成员数量
 
-TIP
+
 
 扩展运算符（`...`）将数组（注意，不是元组）转换成一个逗号分隔的序列，这时 TypeScript 会认为这个序列的成员数量是不确定的，因为数组的成员数量是不确定的。
 
@@ -682,13 +682,13 @@ const arr = [1, 2] as const;
 
 ## 三、any、unknown、never 类型
 
-TIP
+
 
 TypeScript 中三种特殊类型，可以作为学习 TypeScript 类型系统的起点
 
 ### 1、any 类型
 
-TIP
+
 
 在 TS 中如果我们不止定义一个变量和类型，它默认就是 any 类型，这和 JS 就没有任何区别了。我们可以给这个变量任意的赋值 ！
 
@@ -726,7 +726,7 @@ b.foo = 123; // 不报错
 
 ### 1.1、any 类型的应用场景
 
-TIP
+
 
 应该尽量避免使用`any`类型，否则就失去了使用 TypeScript 的意义。
 
@@ -741,7 +741,7 @@ TIP
 
 ### 1.2、类型推断问题
 
-TIP
+
 
 对于开发者没有指定类型、TypeScript 必须自己推断类型的那些变量，如果无法推断出类型，TypeScript 就会认为该变量的类型是`any`。
 
@@ -797,7 +797,7 @@ a = { foo: "icoding" };
 
 ### 1.3、注意事项
 
-TIP
+
 
 建议使用`let`和`var`声明变量时，如果不赋值，就一定要显式声明类型，否则可能存在安全隐患。
 
@@ -813,7 +813,7 @@ const a; // 报错
 
 ### 1.4、污染问题
 
-TIP
+
 
 `any`类型除了关闭类型检查，还有一个很大的问题，就是它会“污染”其他变量。它可以赋值给其他任何类型的变量（因为没有类型检查），导致其他变量出错。
 
@@ -837,7 +837,7 @@ b.toFixed(); // 不报错
 
 ### 2、unknown 类型
 
-TIP
+
 
 为了解决`any`类型“污染”其他变量的问题，TypeScript 3.0 引入了[`unknown`类型 (opens new window)](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html#new-unknown-top-type)。
 
@@ -845,7 +845,7 @@ TIP
 
 ### 2.1、unknown 与 any 的相似之处
 
-TIP
+
 
 `unknown`跟`any`的相似之处，在于所有类型的值都可以分配给`unknown`类型。
 
@@ -861,7 +861,7 @@ a = "icoding"; // 正确
 
 ### 2.2、unknown 与 any 的不同处
 
-TIP
+
 
 `unknown`类型跟`any`类型的不同之处在于，它不能直接使用。
 
@@ -907,7 +907,7 @@ a === 1; // 正确
 
 ### 2.3、使用 unknown 类型变量
 
-TIP
+
 
 只有经过“类型缩小”，`unknown`类型变量才可以使用。所谓“类型缩小”，就是缩小`unknown`变量的类型范围，确保不会出错
 
@@ -944,7 +944,7 @@ if (typeof a === "string") {
 
 ### 3、never 类型
 
-TIP
+
 
 为了保持与集合论的对应关系，以及类型运算的完整性，TypeScript 还引入了“空类型”的概念，即该类型为空，不包含任何值。
 
@@ -958,7 +958,7 @@ let a: never;
 
 ### 3.1、never 类型的使用场景
 
-TIP
+
 
 `never`类型的使用场景，主要是在一些类型运算之中，保证类型运算的完整性（后边会详细 讲解）。
 
@@ -1005,7 +1005,7 @@ let c: boolean = foo(); // 不报错
 
 ### 3.2、总结
 
-TIP
+
 
 never 类型表示：永远不会有返回值的类型。
 

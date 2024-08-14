@@ -11,7 +11,7 @@ publish: true
 
 # JSON、Ajax、跨域请求、XHR 对象、Axios 与 Fetch
 
-TIP
+
 
 从本节内容我们开始学习未来实际开发中最最常用的 Ajax（从入门到自定义封装，Promise 改造封装 Ajax，Ajax 在实际项目中应用实践）、JSON、跨域请求、XHR 对象、Axios 与 Fetch 完整系统内容。
 
@@ -62,13 +62,13 @@ TIP
 
 ## 一、JSON 数据
 
-TIP
+
 
 深入浅出什么是 JSON，为什么需要 JSON，JSON 的 3 种形式，JSON 的常用方法 等
 
 ### 1、JSON 是什么 ？
 
-TIP
+
 
 JSON 全称是 JavaScript Object Notation ，即：JavaScript 对象表示法
 
@@ -84,7 +84,7 @@ JSON 全称是 JavaScript Object Notation ，即：JavaScript 对象表示法
 
 ### 2、序列化 与 反序列化
 
-TIP
+
 
 - **序列化：** 将对象转、数组、字符串、布尔值、null 转换成 JSON 字符串
 - **反序列化（解析）：** 将 JSON 字符串转换为对象、数组、字符串、布尔值、null
@@ -149,7 +149,7 @@ TIP
 
 ### 3、为什么需要 JSON
 
-TIP
+
 
 前后端通信过程中需要交换数据，如果将前端 JS 的数据（对象、数组 等）直接传给后端，后端是无法解析的；后端直接传给前端的数据也是无法解析的，因为他们互相都不认识，因此就需要一种能够进行前后端通信的统一的数据格式作为中转。
 
@@ -165,7 +165,7 @@ TIP
 
 ### 4、JSON 的 3 种形式
 
-TIP
+
 
 JSON 有 3 种形式：简单值形式、对象形式、数组形式
 
@@ -174,7 +174,7 @@ JSON 有 3 种形式：简单值形式、对象形式、数组形式
 
 ### 4.1、JSON 简单值形式
 
-TIP
+
 
 - JSON 的简单值形式就对应着 JS 中的基础数据类型
 - 数字、字符串、布尔值、null
@@ -195,7 +195,7 @@ TIP
 
 ### 4.2、JSON 对象形式
 
-TIP
+
 
 JSON 的对象形式就是对应着 JS 中的对象，但与 JS 中的对象存在以下不同点
 
@@ -228,7 +228,7 @@ let strJson4 = `{'name':1,'age':32}`; // 错误的JSON字符串
 
 ### 4.3、JSON 数组形式
 
-TIP
+
 
 JSON 的数组形式就对应着 JS 中的数组，但也有如下区别：
 
@@ -279,7 +279,7 @@ let arrStr4 = "[{'name':清心'},3,4,5]"; // 错误
 
 ### 4.4、总结：JSON 数据的注意事项
 
-TIP
+
 
 JSON 数据一般是保存在`.json`的文件中，当然其写法一定要是合法的 JSON 字符串，否则解析会报错。合法即以下规则：
 
@@ -336,13 +336,13 @@ console.log(jsonStr);
 
 ## 二、原生 Ajax
 
-TIP
+
 
 深入浅出原生 Ajax ，基本用法，GET 请求、POST 请求 等。
 
 ### 1、Ajax 是什么
 
-TIP
+
 
 Ajax 是 Asynchronous Javascript And XML（异步 JavaScript 和 XML）的简写
 
@@ -355,7 +355,7 @@ Ajax 是 Asynchronous Javascript And XML（异步 JavaScript 和 XML）的简写
 
 ### 2、Ajax 主要作用
 
-TIP
+
 
 `Ajax` 最吸引人的就是它的“异步”特性，也就是说它可以在不重新刷新页面的情况下与服务器通信，交换数据，或更新页面。
 
@@ -386,7 +386,7 @@ TIP
 
 ### 3、搭建 Ajax 开发环境
 
-TIP
+
 
 Ajax 需要服务器环境，在非服务器环境下（如本地文件直接打开的形式），浏览器无法正常使用 Ajax
 
@@ -396,7 +396,7 @@ Ajax 需要服务器环境，在非服务器环境下（如本地文件直接打
 
 **使用 VSCode 搭建 Ajax 开发环境**
 
-TIP
+
 
 使用 VSCode 开发，建议使用 `Live Server` 插件，它会给我们提供一个本地的服务器环境。使用注意事项如下：
 
@@ -418,13 +418,13 @@ TIP
 
 ### 3、Ajax 的基本用法
 
-TIP
+
 
 深入浅出 XMLHttpRequest、Ajax 的使用步骤、如何使用 Ajax 完成前后端通信
 
 ### 3.1、XMLHttpRequest
 
-TIP
+
 
 我们要使用 Ajax ，但浏览器是没有直接提供 类似 Ajax 这样对象的。因此
 
@@ -496,13 +496,13 @@ xhr.onreadystatechange = function () {
 
 `xhr.readyState`属性记录了整个通信过程中的状态，它的值从 `0 ~ 4`，一共 5 个状态
 
-| 值  | 状态               | 描述                                                |
-| :-- | :----------------- | :-------------------------------------------------- |
-| `0` | `UNSENT`           | 代理被创建，但尚未调用 open() 方法。                |
-| `1` | `OPENED`           | `open()` 方法已经被调用。                           |
-| `2` | `HEADERS_RECEIVED` | `send()` 方法已经被调用，并且头部和状态已经可获得。 |
-| `3` | `LOADING`          | 下载中，`responseText` 属性已经包含部分数据。       |
-| `4` | `DONE`             | 下载操作已完成。                                    |
+| 值   | 状态               | 描述                                                |
+| :--- | :----------------- | :-------------------------------------------------- |
+| `0`  | `UNSENT`           | 代理被创建，但尚未调用 open() 方法。                |
+| `1`  | `OPENED`           | `open()` 方法已经被调用。                           |
+| `2`  | `HEADERS_RECEIVED` | `send()` 方法已经被调用，并且头部和状态已经可获得。 |
+| `3`  | `LOADING`          | 下载中，`responseText` 属性已经包含部分数据。       |
+| `4`  | `DONE`             | 下载操作已完成。                                    |
 
 > 每次状态发生改变，都会触发`readystatechange`事件
 
@@ -521,7 +521,7 @@ xhr.onreadystatechange = function () {
 
 ### 3.3、使用 Ajax 完成前后端通信
 
-TIP
+
 
 通过以上四个步骤完成 Ajax 前后端通信，不过我们一般会把`xhr.onreadystatechange`事件写在`xhr.open()`和`xhr.send()`代码前面，保证请求发出去后的状态一定能被事件监听到。
 
@@ -554,7 +554,7 @@ xhr.send();
 
 ### 4、Ajax 发送 GET 请求
 
-TIP
+
 
 前面了解了 Ajax 是如何发送请求的，接下来深入了解 发送 GET 请求时，如何携带数据 和 数据编码
 
@@ -601,7 +601,7 @@ xhr.send();
 
 ### 5、Ajax 发送 POST 请求
 
-TIP
+
 
 - POST 请求主要通过请求体携带数据，同量也可以在请求头携带（不过实际开发不这样用）
 - 请求体数据作为`send()`方法的参数（一般是字符串），被传送到服务器端。
@@ -668,7 +668,7 @@ xhr.send(
 
 ### 6、请求数据编码
 
-TIP
+
 
 不管是`GET`还是`POST`请求，如果请求携带的数据是非英文字母的，如：中文汉字，就需要编码之后再发送给后端，不然会造成乱码问题
 
@@ -708,7 +708,7 @@ xhr.send(null);
 
 ### 7、form 表单 post 请求携带数据
 
-TIP
+
 
 form 表单在发送`post`请求时，请求体数据类型有如下三种，通过`enctype`属性设置。
 
@@ -770,7 +770,7 @@ form 表单只有在发送 post 请求时，需要设置 enctype 属性的值，
 
 ### 8、FormData 对象
 
-TIP
+
 
 通过 Ajax 来提交 Form 表单，如果提交的数据类型为`multipart/form-data`类型，则需要利用到 FormData 构造函数来创建对应类型的数据。
 
@@ -909,13 +909,13 @@ for (let item of data) {
 
 ## 三、跨域
 
-TIP
+
 
 深入浅出什么是跨域，什么是不同域，什么是同域，跨域请求为什么会被阻止，跨域的解决方案，CORS 跨域资源共享，JSONP 等 。
 
 ### 1、什么是跨域 ？
 
-TIP
+
 
 跨域问题其实就是浏览器的[同源策略 (opens new window)](https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy)所导致的。
 
@@ -980,7 +980,7 @@ https://www.icodingedu.com:443 与 https://www.icodingedu.com 是同域
 
 ### 3、同域请求
 
-TIP
+
 
 如果请求的 URL 地址和当前 URL 地址是同域，则不会受浏览器的同源策略限制。所以服务端响应的内容前端能正常的接受到。
 
@@ -1025,7 +1025,7 @@ TIP
 
 ### 4、跨域请求
 
-TIP
+
 
 如果请求的 URL 地址和当前 URL 地址是不同域，则会受浏览器的同源策略限制，即服务端响应的会被浏览器给丢弃掉。
 
@@ -1076,7 +1076,7 @@ http://127.0.0.1:8887");
 
 ### 5、跨域请求为什么会被阻止
 
-TIP
+
 
 阻止跨域请求，其实是浏览器本身的一种安全策略，即：同源策略
 
@@ -1100,7 +1100,7 @@ TIP
 
 ### 6、CORS 跨域资源共享
 
-TIP
+
 
 深入浅出 CORS 是什么，使用 CORS 跨域的过程，CORS 的兼容性 等
 
@@ -1108,7 +1108,7 @@ TIP
 
 ### 6.1、CORS 是什么
 
-TIP
+
 
 **CORS**（Cross-Origin Resource Sharing）通俗地译为跨域资源共享，定义了浏览器与服务器如何实现跨源通信。背后的基本思路是一种基于 HTTP 头的机制，该机制通过允许服务器标示除了它自己以外的其它源（域、协议或端口），使得浏览器允许这些源访问加载自己的资源。
 
@@ -1128,7 +1128,7 @@ Access-Control-Allow-Origin: "https://www.xxx.com"
 
 ### 6.2、CORS 实现资源共享
 
-TIP
+
 
 接下来我们用代码来演示，CORS 是如何解决不同域之间的资源共享。
 
@@ -1179,7 +1179,7 @@ console.log("Server running at http:127.0.0.1:8886");
 
 ### 6.3、使用 CORS 跨域过程
 
-TIP
+
 
 - ①、浏览器发送请求
 - ②、后端在响应头中添加 `Access-Control-Allow-Origin` 头信息
@@ -1191,7 +1191,7 @@ TIP
 
 ### 6.4、如何给 CORS 设置多域名
 
-TIP
+
 
 如果想要指定多个外源能访问该资源，其需要一定的办法才能办到，同时我们还需要了解以下两个必要的知识点：
 
@@ -1254,13 +1254,13 @@ console.log("Server running at http:127.0.0.1:8886");
 
 ### 7、JSONP 实现跨域
 
-TIP
+
 
 深入浅出 JSONP 的原理 和 JSONP 实现跨域的具体实践和应用。
 
 ### 7.1、JSONP 的原理
 
-TIP
+
 
 在浏览器中`<img> 、<link> 、<video> 、<script>`等标签在跨域请求资源时不受浏览器同源策略的影响。
 
@@ -1268,7 +1268,7 @@ JSONP 主要就是利用 `<script>` 标签，加载跨域文件
 
 ### 7.2、 使用 JSONP 实现跨域
 
-TIP
+
 
 为了让大家能理解 JSONP 是如何实现跨域来请求资源，我们先来从一段简单的 JS 代码开始说起
 
@@ -1307,7 +1307,7 @@ handle({ userName: "icoding", password: 123456 });
 
 **`node.js` 搭建 HTTP 服务**
 
-TIP
+
 
 接下来我们来搭建 HTTP 服务，让大家感受完整的处理过程。即后端拿收到`http://127.0.0.1:8885/callback=handle`这个请求后，会如何响应，才能实现我们想要的结果
 
@@ -1340,13 +1340,13 @@ console.log("Server running at http://127.0.0.1:8885");
 
 ### 8、代理跨域
 
-TIP
+
 
 深入浅出代理跨域的原理 和 代理跨域的具体实践和应用。
 
 ### 8.1、代理跨域的原理
 
-TIP
+
 
 我们前面说过，跨域请求被阻止是浏览器的行为，服务器和服务器之间是没有这种限制。
 
@@ -1362,7 +1362,7 @@ TIP
 
 ### 8.2、模拟代理跨域的实现过程
 
-TIP
+
 
 - 创建`a.js`，来创建 HTTP 服务器，服务地址`http:127.0.0.1:8881`
 - 创建`b.js`，来创建 HTTP 服务，服务地址`http:127.0.0.1:8882` 在这个服务器中返回一个 html 页面，这个返回的需要发送 Ajax 请求，获取服务器`http:127.0.0.1:8881`的响应结果。
@@ -1445,7 +1445,7 @@ console.log("Server running at http:127.0.0.1:8882");
 
 ## 四、XHR 对象的属性
 
-TIP
+
 
 深入浅出 XHR 对象的属性：responseType 和 response 属性、timeout 属性、withCredentials 属性
 
@@ -1463,7 +1463,7 @@ TIP
 
 **代码演示**
 
-TIP
+
 
 如果`xhr.responseType='json'`，则 `xhr.response` 的返回值是经过 json 解析后的 js 对象。
 
@@ -1503,7 +1503,7 @@ xhr.send();
 
 ### 2、timeout 属性
 
-TIP
+
 
 **`timeout`** 的值是 是一个无符号长整型数（正整数），代表着一个请求在被自动终止前所消耗的毫秒数。也就是说在规定时间内请求发出去还没有响应，则取消请求。
 
@@ -1535,7 +1535,7 @@ xhr.send();
 
 ### 3、withCredentials 属性
 
-TIP
+
 
 `withCredentials` 属性：指定**Ajax 跨域**请求是要不要携带 cookie 等。
 
@@ -1584,13 +1584,13 @@ xhr.send(JSON.stringify({ username: "admin", password: "123456" }));
 
 ## 五、XHR 对象的方法
 
-TIP
+
 
 深入浅出 XHR 对象的方法：`abort()` 方法、`setRequestHeader()` 方法
 
 ### 1、abort() 方法
 
-TIP
+
 
 - 如果该请求已被发出，`XMLHttpRequest.abort()` 方法将终止该请求
 - 需要`send()`方法发送请求完之后再调用`abort()`方法
@@ -1621,7 +1621,7 @@ xhr.abort();
 
 ### 2、setRequestHeader 方法
 
-TIP
+
 
 `XMLHttpRequest.setRequestHeader()` 是设置 HTTP 请求头部的方法。
 
@@ -1665,7 +1665,7 @@ xhr.send(JSON.stringify(data));
 
 ## 六、XHR 对象的事件
 
-TIP
+
 
 深入浅出 XHR 对象的 load 事件、error 事件、abort 事件、timeout 事件，这些事件都需要会用。
 
@@ -1689,7 +1689,7 @@ XHR 常用的事件有
 
 ### 1、load、loadstart、loadend 事件
 
-TIP
+
 
 `load`事件：用于响应数据成功时触发，相当于 `readyState === 4`时，才会触发。
 
@@ -1741,7 +1741,7 @@ xhr.send();
 
 ### 2、error 事件
 
-TIP
+
 
 error 事件：请求发生错误时触发
 
@@ -1766,7 +1766,7 @@ xhr.send();
 
 ### 3、abort 事件
 
-TIP
+
 
 abort 事件：调用 `abort()` 终止请求时触发
 
@@ -1791,7 +1791,7 @@ xhr.abort();
 
 ### 4、timeout 事件
 
-TIP
+
 
 timeout 事件：当请求超时后触发
 
@@ -1815,7 +1815,7 @@ xhr.send();
 
 ### 5、progress 事件
 
-TIP
+
 
 `progress` 事件会在请求接收到数据的时候被周期性触发。
 
@@ -1961,13 +1961,13 @@ xhr.send();
 
 ## 七、Ajax 的简单封装
 
-TIP
+
 
 接下来就是 Ajax 的进阶内容的学习了，深入浅出 Ajax 封装，接下来在项目实践中就可以轻松的用起来
 
 ### 1、Promise 简单封装 Ajax
 
-TIP
+
 
 利用 Promise 来简单封装下 Ajax 请求，关于更完善更复杂的封装后面再讲。
 
@@ -2001,7 +2001,7 @@ export default ajax;
 
 ### 2、Ajax 并发问题
 
-TIP
+
 
 利用 `Promise.all` 来处理多个 Ajax 并发的问题
 
@@ -2040,7 +2040,7 @@ p.then([data1,data2]=>{
 
 ## 八、Ajax 的实践与应用
 
-TIP
+
 
 深入浅出 Ajax 在实际项目开发中的应用场景和具体实践
 
@@ -2443,13 +2443,13 @@ function render(data) {
 
 ## 九、Axios
 
-TIP
+
 
 深入浅出 Axios 是什么，基本用法，应用实践。
 
 ### 1、Axios 是什么
 
-TIP
+
 
 - axios 是一个基于 Promise 的 HTTP 库，可以用在浏览器 和 `node.js` 中
 - 可理解为 axios 是一个第三方 Ajax 库，这个库是基于 Promise 的
@@ -2458,7 +2458,7 @@ TIP
 
 ### 2、axios 的基本用法
 
-TIP
+
 
 axios 是一个第三个库，所以我们需要引入这个库才能使用。最简单的方式就是通过`<script>`标签来引入对应的 `axios.js` 文件来使用。
 
@@ -2500,7 +2500,7 @@ axios 函数的返回值是一个 Promise 对象，所以可以通过`then()`方
 
 **使用 axios 来发送 get 请求**
 
-TIP
+
 
 如果`axios`只传一个参数，这个参数是一个 url，则默认为 get 请求，其它相关参数会采用默认配置
 
@@ -2520,7 +2520,7 @@ axios(url).then((response) => {
 
 ### 3、config 请求配置
 
-TIP
+
 
 `config`为`axios` 创建请求时可用的配置选项，相关的配置项可能参考官方地址：[https://axios-http.com/zh/docs/req_config(opens new window)](https://axios-http.com/zh/docs/req_config)
 
@@ -2637,7 +2637,7 @@ post 请求
 
 ### 4、response 响应对象
 
-TIP
+
 
 当请求响应回来后，相关信息保存在 response 响应对象中，响应对象的相关信息如下
 
@@ -2671,7 +2671,7 @@ TIP
 
 ### 5、使用别名方式请求
 
-TIP
+
 
 为了方便起见，已经为所有支持的请求方法提供了别名。
 
@@ -2718,13 +2718,13 @@ axios 是别人封装好的，已经是非常成熟了，我们未来企业项�
 
 ## 十、Fetch
 
-TIP
+
 
 深入浅出 Fetch 是什么，基本用法，应用实践。
 
 ### 1、Fetch 是什么
 
-TIP
+
 
 - 与 Ajax 类似，Fetch 也是前后端通信的一种方式。Fetch 要比 Ajax 年轻一些
 - Fetch 被称为下一代 Ajax 技术（用来替代 XMLHttpRequest），内部是采用 Promise 的方式来处理数据。
@@ -2745,7 +2745,7 @@ Fetch 缺点
 
 ### 2、Fetch 的基本用法
 
-TIP
+
 
 全局的 `fetch()` 方法用于发起获取资源的请求。它返回一个 promise，这个 promise 会在请求响应被 resolve，并传回 `Response`对象。
 
@@ -2774,7 +2774,7 @@ const p = fetch(url, options).then((response) => {
 
 **利用 fetch 发送 get 请求**
 
-TIP
+
 
 - 如果`fetch()`只接受一个`url`字符串参数，则表示向该网址发送 get 请求，请求返回一个 Promise 对象
 - 能过 Promise 的 then 方法可以得到一个 response 对象，对象的`status`属性获取返回响应的状态码，通过这个状态码可以知道响应是成功还是失败。
@@ -2807,7 +2807,7 @@ fetch(
 
 ### 3、response 对象
 
-TIP
+
 
 关于 fetch 方法发起请求响应成功后，promise 对象返回的 response 对象的相关属性和方法可以[查阅官方文档(opens new window)](https://developer.mozilla.org/zh-CN/docs/Web/API/Response)
 
@@ -2892,7 +2892,7 @@ fetch(
 
 ## 十一、总结
 
-TIP
+
 
 总结本章重难点知识，理清思路，把握重难点。并能轻松回答以下问题，说明自己就真正的掌握了。
 
@@ -3055,7 +3055,7 @@ JSON.stringify([2, true, "str"]);
 
 ### 5、跨域
 
-TIP
+
 
 - 协议、域名、端口号，任何一个不一样，就是不同域
 - 不同域之间的请求，就是跨域请求，会被浏览器阻止
@@ -3063,7 +3063,7 @@ TIP
 
 ### 6、CORS 跨域资源共享
 
-TIP
+
 
 - 后端在响应头中添加 Access-Control-Allow-Origin 头信息
 - 主要是后端来设置，前端无需做任何操作
@@ -3078,7 +3078,7 @@ Access-Control-Allow-Origin: http://127.0.0.1:5501
 
 ### 7、JSONP
 
-TIP
+
 
 - JSONP 利用 script 标签加载跨域文件（使用 script 标签将 JSONP 的接口引入）
 - JSONP 的接口是需要特殊设计的，如下
@@ -3105,7 +3105,7 @@ function handleResponse(data) {
 
 ### 8、XHR 的属性
 
-TIP
+
 
 **response 和 responseText**
 
@@ -3121,7 +3121,7 @@ TIP
 
 ### 9、XHR 的方法
 
-TIP
+
 
 - `abort()` 用来终止当前请求
 - `setRequestHeader(名称,值)` 用来设置请求头信息，常用的设置方式如下
@@ -3152,7 +3152,7 @@ xhr.addEventListener(
 
 ### 11、FormData
 
-TIP
+
 
 可用于发送表单数据，也可以独立于表单，用于发送键值对数据。IE10 开始支持
 
@@ -3285,7 +3285,7 @@ fetch(url, {
 
 ## 十二、测试题
 
-TIP
+
 
 自我测试：在不看答案的前提下，看看自己是否真正掌握了本节所学内容。
 

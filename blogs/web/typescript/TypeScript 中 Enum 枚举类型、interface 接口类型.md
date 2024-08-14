@@ -11,7 +11,7 @@ publish: true
 
 # TypeScript 中 Enum 枚举类型、interface 接口类型
 
-TIP
+
 
 从本节正式开始学习 Enum 枚举类型、interface 接口类型的核心基础 和 应用实践。
 
@@ -20,7 +20,7 @@ TIP
 
 ## 一、枚举类型
 
-TIP
+
 
 观察以下代码，这是一个角色判断的案例：一般系统都会有很多种角色，每个角色都会有不同的操作权限，同时也会对应不同的 UI 界面。
 
@@ -50,7 +50,7 @@ function initByRole(role) {
 
 ### 1、什么是枚举
 
-TIP
+
 
 枚举：一组有名字的常量集合
 
@@ -62,7 +62,7 @@ TIP
 
 ### 2、数字枚举
 
-TIP
+
 
 使用 enum 关键字定义一个数字枚举，该枚举包含了 5 个枚举成员，它们的取值从零开始
 
@@ -115,7 +115,7 @@ console.log(r1, r2); // 3 3
 
 ### 2.1、自定义枚举的初始值
 
-TIP
+
 
 枚举可定义初始值，给第一个枚举成员设置初始值，后边的枚举成员会在此基础上依次递增
 
@@ -148,7 +148,7 @@ console.log(Role);
 
 ### 2.2、枚举的实现原理
 
-TIP
+
 
 它是如何实现的 ？ 可在 [TypeScript - Playground (opens new window)](https://www.typescriptlang.org/play?#code/PTAEgdTR1bULPND45AoApgOwK4FtQCUD2AbRUAb3lDNBFECvAwLO1BJOSjkBC3QXCVBpzUB4FQLjlQBGQGH-AG3mAS6MBzcgAZAAPptS5AMqoADogBOAQQAm6AJbJtAZwAuKgIaGcK0AF4+AGlllNOvUdPmV+++VAB5FRt0TFQBPJ10DYzMLL3IAVX1VGLIAEUQAN0Q8HGUVeABfIA)中编译查看编译后的 JS 代码
 
@@ -164,7 +164,7 @@ TIP
 
 ### 3、Enum 结构的特别之处
 
-TIP
+
 
 Enum 结构的特别之处在于，它既是一种类型，也是一个值。
 
@@ -190,7 +190,7 @@ let Color = {
 
 ### 4、Enum 应用场景
 
-TIP
+
 
 由于 TypeScript 的定位是 JavaScript 语言的类型增强，所以官方建议谨慎使用 Enum 结构，因为它不仅仅是类型，还会为编译后的代码加入一个对象。
 
@@ -228,7 +228,7 @@ console.log(res); // 9
 
 ### 5、Enum 注意事项
 
-TIP
+
 
 [TypeScript 5.0 (opens new window)](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-0.html#enum-overhaul)之前，Enum 有一个 Bug，就是 Enum 类型的变量可以赋值为任何数值。
 
@@ -289,7 +289,7 @@ if (x === Bar.A) {
 
 ### 6、Enum 成员的值
 
-TIP
+
 
 Enum 成员默认不必赋值，系统会从零开始逐一递增，按照顺序为每个成员赋值，比如 0、1、2……
 
@@ -425,7 +425,7 @@ const z = 2; /* Color.Blue */
 
 ### 7、同名 Enum 的合并
 
-TIP
+
 
 多个同名的 Enum 结构会自动合并
 
@@ -514,7 +514,7 @@ const enum E {
 
 ### 8、字符串枚举
 
-TIP
+
 
 Enum 成员的值除了设为数值，还可以设为字符串。也就是说，Enum 也可以用作一组相关字符串的集合。
 
@@ -540,7 +540,7 @@ enum Message {
 
 ### 8.1、字符串枚举 - 注意事项
 
-TIP
+
 
 字符串枚举的所有成员值，都必须显式设置。
 
@@ -648,7 +648,7 @@ enum MyEnum {
 
 ### 9、keyof 运算符
 
-TIP
+
 
 keyof 运算符可以取出 Enum 结构的所有成员名，作为联合类型返回。
 
@@ -666,7 +666,7 @@ type Foo = keyof typeof MyEnum;
 
 ### 9.1、keyof 运算符 - 注意事项
 
-TIP
+
 
 这里的`typeof`是必需的，否则`keyof MyEnum`相当于`keyof number`
 
@@ -696,7 +696,7 @@ type Foo = { [key in MyEnum]: any };
 
 ### 10、异构枚举
 
-TIP
+
 
 数字枚举 和 字符串枚举 混用，就构成了 异构枚举。
 
@@ -712,7 +712,7 @@ enum Answer {
 
 ### 11、枚举成员的性质
 
-TIP
+
 
 枚举成员的值是一个只读类型，因此定义之后是不能修改的。
 
@@ -736,7 +736,7 @@ Role.SuperAdministrator = 2;
 
 ### 12、枚举成员的分类
 
-TIP
+
 
 枚举成员的分为两类
 
@@ -787,7 +787,7 @@ enum Char {
 
 ### 13、常量枚举
 
-TIP
+
 
 用 const 声明的枚举 就是 **常量枚举**
 
@@ -837,7 +837,7 @@ let month = [Month.Jan, Month.Feb, Month.Mar];
 
 ### 14、枚举类型
 
-TIP
+
 
 在某些情况下，枚举 和 枚举成员都可以作为一种单独的类型存在。
 
@@ -891,7 +891,7 @@ let c2: C.a = C.a; // C.a 的取值只能是它自身
 
 ### 15、总结
 
-TIP
+
 
 关于 TS 的枚举类型，需要我们掌握一种思维方法：将程序中不容易记忆的硬编码 或 在未来中可能改变的常量抽取出来，定义成枚举类型。
 
@@ -899,13 +899,13 @@ TIP
 
 ## 二、interface 接口
 
-TIP
+
 
 接口在 TS 中是一个非常重要的概念，接口可以用来约束对象、函数、以及类的结构 和 类型，这是一种代码协作的契约，我们必须遵守而且不能改变。
 
 ### 1、什么是 interface 接口
 
-TIP
+
 
 interface 是对象的模板，可以看作是一种类型约定，中文译为“接口”。使用了某个模板的对象，就拥有了指定的类型结构。
 
@@ -946,7 +946,7 @@ type A = Foo["a"]; // string
 
 ### 2、interface 表示对象的 5 种语法
 
-TIP
+
 
 interface 可以表示对象的各种语法，它的成员有 5 种形式。
 
@@ -1043,7 +1043,7 @@ interface B {
 
 ### 2.3、对象的方法
 
-TIP
+
 
 对象的方法共有三种写法
 
@@ -1112,7 +1112,7 @@ const a: A = {
 
 ### 2.4、函数
 
-TIP
+
 
 interface 也可以用来声明独立的函数
 
@@ -1128,7 +1128,7 @@ const myAdd: Add = (x, y) => x + y;
 
 ### 2.5、构造函数
 
-TIP
+
 
 interface 内部可以使用`new`关键字，表示构造函数。
 
@@ -1144,7 +1144,7 @@ interface ErrorConstructor {
 
 ### 3、interface 的继承
 
-TIP
+
 
 interface 可以继承其他类型
 
@@ -1154,7 +1154,7 @@ interface 可以继承其他类型
 
 ### 3.1、interface 继承 interface
 
-TIP
+
 
 interface 可以使用`extends`关键字，继承其他 interface。
 
@@ -1228,7 +1228,7 @@ interface Baz extends Foo, Bar {
 
 ### 3.2、interface 继承 type
 
-TIP
+
 
 interface 可以继承`type`命令定义的对象类型。
 
@@ -1251,7 +1251,7 @@ interface Allen extends Person {
 
 ### 3.3、interface 继承 class
 
-TIP
+
 
 interface 还可以继承 class，即继承该类的所有成员。（后边会详细讲解 class）
 
@@ -1313,7 +1313,7 @@ class C implements B {
 
 ### 4、接口合并
 
-TIP
+
 
 多个同名接口会合并成一个接口。
 
@@ -1338,7 +1338,7 @@ interface Box {
 
 ### 4.1、接口合并 - 注意事项
 
-TIP
+
 
 Web 网页开发经常会对`windows`对象和`document`对象添加自定义属性，但是 TypeScript 会报错，因为原始定义没有这些属性。
 
@@ -1418,7 +1418,7 @@ interface A {
 
 ### 4.2、接口合并实践应用
 
-TIP
+
 
 以下应用是 Document 对象的`createElement()`方法，它会根据参数的不同，而生成不同的 HTML 节点对象
 
@@ -1472,7 +1472,7 @@ s.area; // bigint | number
 
 ### 5、interface 与 type 的异同
 
-TIP
+
 
 `interface`命令与`type`命令作用类似，都可以表示对象类型。
 
@@ -1480,7 +1480,7 @@ TIP
 
 ### 5.1、相似之处
 
-TIP
+
 
 它们的相似之处，首先表现在都能为对象类型起名。
 
@@ -1506,7 +1506,7 @@ interface Users {
 
 ### 5.2、interface 与 type 的区别
 
-TIP
+
 
 - ①、`type`能够表示非对象类型，而`interface`只能表示对象类型（包括数组、函数等）
 - ②、`interface`可以继承其他类型，`type`不支持继承。
@@ -1676,7 +1676,7 @@ type AorBwithName = AorB & {
 
 ### 6、对象类型接口
 
-TIP
+
 
 需求：从后端获取一组数据，然后将数据渲染到页面中，我们应该如何定义接口 ？
 
@@ -1762,7 +1762,7 @@ render(result);
 
 ### 7.1、鸭式辨型法特殊情况
 
-TIP
+
 
 如果直接传入对象字面量，TS 就会对额外的字段进行类型检查
 
@@ -1832,7 +1832,7 @@ interface List {
 
 ### 8、接口成员 - 可选属性
 
-TIP
+
 
 需求：判断 value 中是否有新的字段，如果有就打印出来
 
@@ -1878,7 +1878,7 @@ render(result);
 
 ### 9、接口成员 - 只读属性
 
-TIP
+
 
 只读属性：给一个属性添加 `readonly` ，一般 id 都是只读的，并且只读属性都是不能修改的。
 
@@ -1922,7 +1922,7 @@ render(result);
 
 ### 10、可索引类型的接口 - 数字索引
 
-TIP
+
 
 以上接口的属性个数都是固定的，当我们不确定一个接口中有多少个属性时，就可以使用可索引类型的接口。
 
@@ -1975,7 +1975,7 @@ interface Names {
 
 ### 12、总结
 
-TIP
+
 
 以上学习了对象类型接口，可以将过去我们开发过的 API 或 调用过的 API ，用接口去描述一下。
 
@@ -1983,7 +1983,7 @@ TIP
 
 ### 13、函数类型接口
 
-TIP
+
 
 在数据类型中学过，使用变量来定义一个函数类型。如下
 
@@ -2017,7 +2017,7 @@ let add: Add = (a, b) => a + b;
 
 ### 14、混合类型接口
 
-TIP
+
 
 一个接口既可以定义一个函数，也可以像对象一样拥有属性和方法，即：混合类型接口
 

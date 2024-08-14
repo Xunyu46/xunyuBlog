@@ -11,7 +11,7 @@ publish: true
 
 # ES6 字符串、数组、对象的新增方法和常见应用
 
-TIP
+
 
 本章我们来学习 ES6 中为字符串、数组、对象新增的一些方法和应用
 
@@ -30,7 +30,7 @@ TIP
 
 ### 1、padStart
 
-TIP
+
 
 用一个字符串从当前字符串的左侧来填充当前字符串，使字符串达到指定长度。
 
@@ -68,7 +68,7 @@ console.log("abcd".padStart(8, "01234")); // 0123abcd
 
 ### 2、padEnd
 
-TIP
+
 
 用一个字符串从当前字符串的末尾来填充当前字符串，使字符串达到指定长度。
 
@@ -132,7 +132,7 @@ map.forEach((v, k) => {
 
 ### 3、trimStart
 
-TIP
+
 
 **`trimStart()`** 方法会删除字符串开头的空白字符。`trimLeft()` 是此方法的别名
 
@@ -146,7 +146,7 @@ console.log(str.length); // 7
 
 ### 4、trimEnd
 
-TIP
+
 
 **`trimEnd()`** 方法会删除字符串末尾的空白字符。`trimRight()` 是这个方法的别名。
 
@@ -160,7 +160,7 @@ console.log(str.length); // 7
 
 ### 5、trim
 
-TIP
+
 
 **`trim()`** 方法从字符串的两端清除空格，返回一个新的字符串，而不修改原始字符串
 
@@ -174,7 +174,7 @@ console.log(str.length); // 4
 
 ### 6、startsWith
 
-TIP
+
 
 **`startsWith()`** 方法用来判断当前字符串是否以另外一个给定的子字符串开头。如果是返回 `true`，否则返回`false`。
 
@@ -200,7 +200,7 @@ console.log("data_iconfont".startsWith("icon", 5)); // true
 
 ### 8、endsWith
 
-TIP
+
 
 **`endsWith()`** 方法用来判断当前字符串是否是以另外一个给定的子字符串“结尾”的。
 
@@ -228,7 +228,7 @@ console.log("data_iconfont".startsWith("con", 10)); // false
 
 ### 9、repeat 方法
 
-TIP
+
 
 构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本。
 
@@ -280,7 +280,7 @@ console.log("abc".repeat(3)); // abcabcabc
 
 ### 1、map 方法
 
-TIP
+
 
 `map()` 方法创建一个新数组，这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成。
 
@@ -348,7 +348,7 @@ arr.map(function () {
 
 ### 2、some 方法
 
-TIP
+
 
 **`some()`** 方法测试数组中是不是至少有 1 个元素通过了被提供的函数测试。
 
@@ -399,7 +399,7 @@ console.log(result); //true
 
 ### 3、every 方法
 
-TIP
+
 
 **`every()`** 方法测试一个数组内的所有元素是否都能通过某个指定函数的测试
 
@@ -437,7 +437,7 @@ console.log(result2); // true
 
 ### 4、reduce 方法
 
-TIP
+
 
 **`reduce()`** 方法对数组中的每个元素按序执行一个由您提供的 **reducer** 函数，每一次运行 **reducer** 会将先前元素的计算结果作为参数传入，最后将其结果汇总为单个返回值。
 
@@ -588,7 +588,7 @@ for (let [k, v] of arr.entries()) {
 
 ### 6、fill 方法
 
-TIP
+
 
 `fill()`方法用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。不包括终止索引。
 
@@ -640,7 +640,7 @@ console.log(arr); // [1,{a:1},{a:1},{a:1}]
 
 ### 7、copyWithin
 
-TIP
+
 
 **`copyWithin()`** 方法浅复制数组的一部分到同一数组中的另一个位置，会覆盖原有成员。不会改变原数组的长度。
 
@@ -679,7 +679,7 @@ console.log(obj); // {0: 'b', 1: 'c', 2: 'c', 3: 'd', 4: 'e', length: 5}
 
 ### 8、flat 方法
 
-TIP
+
 
 flat 方法用于将数组按指定层级来扁平化（展开）。
 
@@ -720,7 +720,7 @@ console.log(arr.flat()); // [1, 2, 3, 4]
 
 ### 9、flatMap 方法
 
-TIP
+
 
 flatMap 方法相当于数组的 map 方法和 flat 方法的合并用法。
 
@@ -765,7 +765,7 @@ console.log(word); // ['Happy', 'New', 'Year', 'May', 'you', 'be', 'happy', 'and
 
 ### 10、at 方法
 
-TIP
+
 
 返回数组指定索引的元素。索引值允许正数和负数。 负数表示从末尾开始。
 
@@ -784,7 +784,7 @@ at(index); // index为整数，正数负数都可以
 
 ### 11、Array.from 方法
 
-TIP
+
 
 `Array.form()`方法对一个类似数组或可迭代对象创建一个新的，浅拷贝的数组实例。
 
@@ -855,7 +855,7 @@ console.log(res2);
 
 ### 12、Array.of 方法
 
-TIP
+
 
 **`Array.of()`** 方法通过可变数量的参数创建一个新的 `Array` 实例，而不考虑参数的数量或类型。
 
@@ -916,7 +916,7 @@ Array.of = function () {
 
 ### 1、Object.is 方法
 
-TIP
+
 
 **`Object.is()`** 方法判断两个值是否为同一个值。如果是同一个值，返回 true,否则返回 false。
 
@@ -943,7 +943,7 @@ console.log(Object.is(-0, +0)); // false
 
 ### 2、Objec.assign 方法
 
-TIP
+
 
 `Object.assign()`方法用于将源（source）对象的所有**可枚举**的**自有**属性复制到目标 target 对象。
 
@@ -1017,7 +1017,7 @@ console.log(obj1); // {0: 'h', 1: 'e', 2: 'l', 3: 'l', 4: 'o', a: 1, b: 2}
 
 ### 3、Object.assign 的注意事项
 
-TIP
+
 
 如果目标对象与源对象具有相同的属性，则目标对象中的属性将被源对象属性覆盖。
 
@@ -1106,7 +1106,7 @@ console.log(obj1.x);
 
 ### 4、Object.assign 的常见应用
 
-TIP
+
 
 常用合并默认参数和用户参数
 
@@ -1208,7 +1208,7 @@ console.log([1, 2, 3].entries()); // Array Iterator {}
 
 ### 7、Object.getOwnPropertyDescriptor
 
-TIP
+
 
 方法返回指定对象上一个自有属性对应的属性描述符，如果对象身上有这个属性，返回其属性描述符对象，否则返回`undefined`
 
@@ -1246,7 +1246,7 @@ console.log(desc3);
 
 ### 8、Object.getOwnPropertyDescriptors
 
-TIP
+
 
 获取一个对象的所有自身属性的描述符。如果没有属性，则返回空对象
 
@@ -1318,7 +1318,7 @@ obj2.sex = 22;
 
 ### 9、Object.getOwnPropertyNames
 
-TIP
+
 
 返回一个由指定对象的所有自身属性的属性名（包括不可枚举属性但不包括 Symbol 值作为名称的属性）组成的数组。
 
@@ -1354,7 +1354,7 @@ Object.getOwnPropertyNames("hello"); //  ['0', '1', '2', '3', '4', 'length']
 
 ### 10、Object.getOwnPropertySymbols
 
-TIP
+
 
 返回一个给定对象自身的所有 Symbol 属性的数组
 
@@ -1450,7 +1450,7 @@ obj2.internal.a; // undefined
 
 ### 13、Object.fromEntries
 
-TIP
+
 
 **`Object.fromEntries()`** 方法把键值对列表转换为一个对象。其返回值为一个新的对象。
 

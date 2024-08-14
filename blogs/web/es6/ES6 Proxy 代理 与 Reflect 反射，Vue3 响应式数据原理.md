@@ -11,7 +11,7 @@ publish: true
 
 # ES6 Proxy 代理 与 Reflect 反射，Vue3 响应式数据原理
 
-TIP
+
 
 本章我们来学习 Proxy，Proxy 英文翻译为代理。
 
@@ -46,13 +46,13 @@ TIP
 
 ## 一、Proxy 基本用法
 
-TIP
+
 
 Proxy（代理）可以理解成：在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写。
 
 ### 1、Proxy 语法
 
-TIP
+
 
 ES6 原生提供了 Proxy 构造函数，用于生成 Proxy 实例。
 
@@ -71,7 +71,7 @@ const proxy = new Proxy(target, handler);
 
 ### 2、proxy 基本用法
 
-TIP
+
 
 当我们读取对象的某个属性时，handler 对象中的 get 方法就可以拦截该操作，如果读取对象身上不存在的属性时，就会抛出错误。
 
@@ -112,7 +112,7 @@ console.log(proxy.sex); // Uncaught Error: 访问的属性不存在
 
 ### 3、注意事项
 
-TIP
+
 
 当`handler = {}`时，相当于没有设置任何拦截，那操作代理对象等同于直接操作目标对象。
 
@@ -135,7 +135,7 @@ console.log(proxy.sex); // undefined
 
 ## 二、handler 对象的方法
 
-TIP
+
 
 `handler`：是一个处理器对象，对象的每个属性是一个函数（每个函数相当于是具有特定功能的捕捉器），用来定制相关的拦截行为。如果对象中没有指定相关的捕捉器，那就会保留目标对象的默认行为。
 
@@ -143,7 +143,7 @@ TIP
 
 ### 1、handler.get() 方法
 
-TIP
+
 
 - `handler.get()` 方法用于拦截对象的读取属性操作，包括访问原型上的属性。
 - **返回值**：可以是任何类型，表示最终访问到的属性值。
@@ -248,7 +248,7 @@ console.log(proxy.c); // 如果上面return3，则正确输出3，否则抛错
 
 ### 2、handler.set() 方法
 
-TIP
+
 
 `handler.set()`方法用于拦截对对象的某个属性做赋值操作。
 
@@ -383,7 +383,7 @@ proxy._sex = "男";
 
 ### 3、handler.has() 方法
 
-TIP
+
 
 `handler.has()`方法用来拦截判断某个属性是否为对象属性的操作，但并不拦截判断某个属性是否为对象自身属性的操作。
 
@@ -498,7 +498,7 @@ console.log("a" in proxy); // 抛出错误
 
 ### 4、handler.apply() 方法
 
-TIP
+
 
 `handler.apply()` 方法用于拦截函数的调用，call 和 apply 操作。返回值可以是任意类型，表示函数调用的返回值
 
@@ -560,7 +560,7 @@ console.log(proxy()); // [1, 3, 4, 5, 6, 20, 44]
 
 - 预加载图片
 
-TIP
+
 
 在 web 开发中，图片预加载是一种常用的技术。通常我们加载一张图片的做法是：
 
@@ -605,7 +605,7 @@ proxyImg(url);
 
 ### 5、handler.construct() 方法
 
-TIP
+
 
 `construct()`方法用于拦截 new 命令。其返回值必需是一个对象，否则报错
 
@@ -679,7 +679,7 @@ new proxy(1, 2);
 
 ### 6、handler.deleteProperty() 方法
 
-TIP
+
 
 `handler.deleteProperty()` 方法用于拦截对对象属性的 `delete`操作。
 
@@ -761,7 +761,7 @@ console.log(delete proxy.say);
 
 ### 7、handler.defineProperty() 方法
 
-TIP
+
 
 `handler.defineProperty()` 用于拦截对象的 `Object.defineProperty()` 操作，也就是给对象添加新的属性时会被拦截。
 
@@ -853,7 +853,7 @@ console.log(obj); // {name:'清心'}
 
 ### 8、handler.getOwnPropertyDescriptor() 方法
 
-TIP
+
 
 ```
 handler.getOwnPropertyDescriptor()`方法用来拦截`Object.getOwnPropertyDescriptor()`方法。其返回值是一个属性描述符对象或`undefinedy
@@ -901,7 +901,7 @@ console.log(Object.getOwnPropertyDescriptor(proxy, "age"));
 
 ### 9、handler.getPrototypeOf() 方法
 
-TIP
+
 
 `handler.getPrototypeOf()` 用来拦截获取对象原型的操作。
 
@@ -987,7 +987,7 @@ console.log(Object.getPrototypeOf(proxy) === obj.__proto__);
 
 ### 10、handler.setPrototypeOf() 方法
 
-TIP
+
 
 `handler.setPrototypeOf()` 方法用于拦截`Object.setPrototypeOf`方法。
 
@@ -1049,7 +1049,7 @@ Object.setPrototypeOf(proxy, Array.prototype); // 正常执行
 
 ### 11、handler.ownKeys() 方法
 
-TIP
+
 
 `handler.ownKeys()`方法用来拦截对象自身属性的读取操作，具体拦截以下操作：
 
@@ -1169,7 +1169,7 @@ console.log(keys3); // ['a']
 
 ## 三、this 问题
 
-TIP
+
 
 虽然 Proxy 可以代理针对目标对象的访问，但它不是目标对象的透明代理，即不做任何拦截的情况下也无法保证与目标对象的行为一致。
 
@@ -1198,7 +1198,7 @@ proxy.say();
 
 ### 1、this 问题，造成无法代理
 
-TIP
+
 
 我们再来看一个例子，由于 this 指向的变化导致 Proxy 无法代理目标对象
 
@@ -1254,7 +1254,7 @@ export default Stack;
 
 ### 2、无法代理的原生对象
 
-TIP
+
 
 有些原生对象的内部属性只能通过正确的 this 才能获取，所以 Proxy 也无法代理这些原生对象属性。比如`new Date()`出来的对象
 
@@ -1289,7 +1289,7 @@ console.log(proxy.getMonth()); // 报错  因为this指向不是Date实例
 
 ## 四、Reflect 反射
 
-TIP
+
 
 Reflect 对象与 Proxy 对象一样，也是 ES6 为了操作对象而提供的新的 API。
 
@@ -1299,7 +1299,7 @@ Reflect 是一个内置的对象，他不是一个函数对象，所以他不可
 
 ### 1、Reflect 对象被设计的目的
 
-TIP
+
 
 Reflect 对象被设计出来，主要有以下四个目的：
 
@@ -1336,7 +1336,7 @@ if (Reflect.defineProperty(obj, "name", { value: "清心" })) {
 
 - 让 Object 的操作变成函数行为
 
-TIP
+
 
 比如判断某个属性是否为对象的属性时，我们采用的是 `属性 in 对象`。而`Reflect.has()`方法，让他变成了函数行为。
 
@@ -1390,7 +1390,7 @@ console.log(obj);
 
 ### 2、Reflect 对象的静态方法
 
-TIP
+
 
 Reflect 对象一共有 13 个静态方法，这些方法与 Proxy 对象的方法一一对象。
 
@@ -1512,7 +1512,7 @@ Reflect 和 Object 上都存在的方法，建议以后使用 Reflect 身上的�
 
 ### 3、注意事项
 
-TIP
+
 
 关于 Reflect 对象的静态方法，有以下几个需要注意的点
 

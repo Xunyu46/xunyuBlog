@@ -11,7 +11,7 @@ publish: true
 
 # Set、WeakSet、Map 数据结构的应用及面试真题解析
 
-TIP
+
 
 本节内容我们开始学习 ES6 中的 Set、WeakSet、Map、WeakMap 数据结构、实例的方法和属性，构造函数的参数，在实际开发中的注意事项和应用。
 
@@ -47,7 +47,7 @@ TIP
 
 ## 一、Set 的核心基础
 
-TIP
+
 
 Set 是 ES6 中指供的一种新的数据结构，Set 对象允许你存储**任何类型的唯一值**。
 
@@ -110,7 +110,7 @@ console.log(s);
 
 ### 2、Set 成员的唯一性
 
-TIP
+
 
 Set 中的成员必需是唯一的，其内部判断两个值是否相同类传于精确相等运算符 `===` 主要的区别 Set 中认为 NaN 和 NaN 是相等的，同时 `+0`，`0`，`-0` 也是相等的。
 
@@ -248,7 +248,7 @@ Set 实例对象没有办法像数组一样，通过下标来访问和设置成�
 
 ### 7、for ... of 循环
 
-TIP
+
 
 在学习 Set 实例的遍历方法前，我们简单了解 `for...of` 循环，它是 ES6 新增的用来遍历可迭代对象的循环语句。
 
@@ -274,7 +274,7 @@ for (let item of set) {
 
 ### 7.1、keys 和 values 方法
 
-TIP
+
 
 keys 和 values 方法返回的都是迭代对象，由于 Set 结构没有键名，只有键值（或者说键名与键值是同一个值）所以 keys 方法和 values 方法的返回值完全一致。
 
@@ -326,7 +326,7 @@ Set.prototype[Symbol.iterator] === Set.prototype.values; // true
 
 ### 7.2、entries()
 
-TIP
+
 
 返回一个新的遍历器（迭代器）对象，该对象包含 Set 键值对集合的，其顺序与 Set 成员插入顺序一致
 
@@ -341,7 +341,7 @@ for (let item of s.entries()) {
 
 ### 7.3、 forEach( )方法
 
-TIP
+
 
 按照 Set 成员的插入顺序，为 Set 对象中的每一个成员调用一次 callBack 回调函数。
 
@@ -380,7 +380,7 @@ s.forEach((value) => {
 
 ### 8、Set 与解构赋值
 
-TIP
+
 
 我们之前讲数组的解构赋值时提到，`=`等号的右边只要是可迭代对象都可以利用数组模式来解构赋值，那 Set 也可以。
 
@@ -391,7 +391,7 @@ console.log(x, y, z); // a b c
 
 ### 9、Set 与扩展运算符
 
-TIP
+
 
 可以利用`...`扩展运算符将 Set 实例对象在数组中展开
 
@@ -402,7 +402,7 @@ console.log(arr);
 
 ### 10、Set 实例如何应用数组的方法操作成员
 
-TIP
+
 
 如果想让 Set 实例应用数组相关的方法，按以下三步来操作
 
@@ -424,7 +424,7 @@ console.log(s); // Set(2) {9, 10}
 
 ## 二、Set 在实际开发中的应用
 
-TIP
+
 
 以下情况，我们可以考虑使用 Set
 
@@ -442,7 +442,7 @@ console.log(arr1); // [1, 2, 3, 4, 5]
 
 ### 2、求并集
 
-TIP
+
 
 并集：将两个数组合并，然后去除重复项
 
@@ -456,11 +456,11 @@ console.log(union);
 
 ### 3、求交集
 
-TIP
+
 
 交集：求两个数组都有的项，然后再去除重复项
 
-![image-20230114202919790](data:image/png;base64,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)
+![image-20230114202919790](data:image/png;base64,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)
 
 ```js
 const arr1 = [2, 3, 5, 6, 5, 7, 8];
@@ -482,7 +482,7 @@ let result = new Set(
 
 ### 4、求差集
 
-TIP
+
 
 求差集：求 arr1 在 arr2 中没有的项，然后再去重
 
@@ -502,7 +502,7 @@ console.log(result); // Set(3) {3, 5, 7}
 
 ## 三、WeakSet 数据结构
 
-TIP
+
 
 WeakSet 结构与 Set 类似，也是不重复值的集合，但是，他与 Set 存在以下两个方面的区别
 
@@ -513,7 +513,7 @@ WeakSet 结构与 Set 类似，也是不重复值的集合，但是，他与 Set
 
 ### 1、WeakSet 的基本用法
 
-TIP
+
 
 WeakSet 是一个构造函数，可以通过 `new WeakSet()` 方式创建 WeakSet 数据结构
 
@@ -551,7 +551,7 @@ console.log(ws);
 
 ### 2、WeakSet 成员特性
 
-TIP
+
 
 - WeakSet 成员只能是唯一的，同时只能是对象，不能是其它类型
 - 所以在 `new WeakSet()` 的同时，初始化成员，其数组（可迭代对象）成员只能是对象类型。
@@ -618,7 +618,7 @@ console.log(ws.has({})); // false
 
 ### 4、WeakSet 成员持弱引用
 
-TIP
+
 
 WeakSet 中的对象都是弱引用，即垃圾回收机制不考虑 WeakSet 对该对象的引用。
 
@@ -626,7 +626,7 @@ WeakSet 中的对象都是弱引用，即垃圾回收机制不考虑 WeakSet 对
 
 ### 4.1、垃级回收
 
-TIP
+
 
 > [官方文档垃圾回收参考(opens new window)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Memory_Management#垃圾回收)
 
@@ -644,7 +644,7 @@ obj2 = null; // 解除obj对{a:1}对象的引用，计数-1，引用次数共0�
 
 ### 4.2、WeakSet 中的对象都是弱引用
 
-TIP
+
 
 WeakSet 中对象都是弱引用，所以在引用计数时，引用次数并不会 `+1`
 
@@ -679,7 +679,7 @@ console.log(s);
 
 ### 4.3、WeakSet 注意事项
 
-TIP
+
 
 - 因为 WeakSet 中的对象都是弱引用，只要外部对 WeakSet 中的对象没有引用，这个对象就会被垃圾回收掉。
 - 所以 WeakSet 实例对象没有 size 属性和 forEach 方法，不允许遍历，因为无法保存成员的存在。
@@ -709,7 +709,7 @@ ws.forEach((element) => {}); // 报错
 
 ## 四、WeakSet 实际应用
 
-TIP
+
 
 如果我们希望对象身上的方法在被调用时，其内部的 this 永远指向该对象，而不能是其它对象。也就是`bind、call、apply`都没有办法更改其内部的 this 指向。
 
@@ -793,7 +793,7 @@ console.log(ws); // 但因为ws中保存着对对象p的引用，所以垃圾回
 
 ## 五、Map 的核心基础
 
-TIP
+
 
 深入浅出 Map 是什么，Map 实例的属性和方法，Map 构造函数的参数，Map 在实际开发中的注意事项和应用。
 
@@ -842,7 +842,7 @@ Map 的强大点
 
 ### 2、Map 的基本用法
 
-TIP
+
 
 Map 是一个构造函数，可以用他来创建 Map 数据结构。
 
@@ -859,7 +859,7 @@ console.log(map);
 
 ### 3.1、new Map() 方式创建，并初始化成员
 
-TIP
+
 
 Map 构造函数接受二维数组作为参数，二维数组的每一项是一个双元素数组
 
@@ -929,7 +929,7 @@ console.log(m); // Map(2) {'a' => 11, 'b' => [1, 2, 3]}
 
 ### 4、Map 中键的唯一性
 
-TIP
+
 
 在 Map 中，键名是唯一的。键的比较是基于**零值相等算法** ，认为 NaN 和 NaN 是相等的，同时 `0`，`-0`，`+0` 也是相等的，其它判断和`===`严格相等一样
 
@@ -949,7 +949,7 @@ console.log(map); // Map(4) {NaN => 2, 0 => 'c', {…} => 1, {…} => 2}
 
 ### 5、Map 键的顺序
 
-TIP
+
 
 `Map` 中的键是有序的。其顺序为插入时的顺序。因此，当迭代的时候，一个 `Map` 对象以插入的顺序返回键值。
 
@@ -1013,7 +1013,7 @@ console.log(m.size); // 4
 
 ### 9、set(key,value)
 
-TIP
+
 
 设置`Map`对应的键值，并返回当前`Map`对象，所以`set`方法支持链式调用
 
@@ -1036,7 +1036,7 @@ console.log(map); // Map(2) {'{a:1}' => 'obj', 'name' => 'icoding'}
 
 ### 9.1、get(key)
 
-TIP
+
 
 返回指定键 key 对应的值，若不存在，则返回`undefined`
 
@@ -1053,7 +1053,7 @@ console.log(value); // a
 
 ### 9.2、has(key)
 
-TIP
+
 
 判断`Map`中是否存在指定的键，有返回`true`，没有返回`false`
 
@@ -1069,7 +1069,7 @@ console.log(map.has(key1)); //true
 
 ### 9.3、delete(key)
 
-TIP
+
 
 根据键名，删除`Map`中指定的键值对。删除成功返回`true`，否则返回`false`
 
@@ -1086,7 +1086,7 @@ console.log(map); // Map(1) {'name' => '清心'}
 
 ### 9.4、clear()
 
-TIP
+
 
 移除 `Map` 对象中所有的键值对
 
@@ -1116,7 +1116,7 @@ Map 中的内容是有顺序的，其遍历出来的元素顺序与插入时的�
 
 ### 10.1、keys() 方法
 
-TIP
+
 
 返回一个新的迭代对象，其中包含 `Map` 对象中所有的键，其顺序为`Map`对象插入成员时的顺序排列
 
@@ -1137,7 +1137,7 @@ for (let key of map.keys()) {
 
 ### 10.2、values() 方法
 
-TIP
+
 
 返回一个新的迭代对象，其中包含 `Map` 对象中所有的值，其顺序为`Map`对象插入成员时的顺序排列
 
@@ -1158,7 +1158,7 @@ for (let value of map.values()) {
 
 ### 10.3、entries() 方法
 
-TIP
+
 
 返回一个新的迭代对象，其为一个包含 `Map` 对象中所有键值对的 `[key, value]` 数组，其顺序为`Map`对象插入成员时的顺序排列
 
@@ -1202,7 +1202,7 @@ Map.prototype[Symbol.iterator] === Map.prototype.entries;
 
 ### 10.4、forEach() 方法
 
-TIP
+
 
 以插入的顺序对 `Map` 对象中存在的键值对分别调用一次 `callbackFn`。如果给定了 `thisArg` 参数，这个参数将会是回调函数中 `this` 的值。
 
@@ -1241,7 +1241,7 @@ map.forEach(() => {
 
 ### 11、Map 与解构赋值
 
-TIP
+
 
 Map 为可迭代对象，所以 Map 可以按数组的解构赋值模式来解构
 
@@ -1303,7 +1303,7 @@ console.log(map3); // Map(4) {'a' => '{a:1}', 'b' => 2, 'c' => null, 'd' => 'd'}
 
 ### 13、Map 使用数组的所有方法
 
-TIP
+
 
 Map 本身没有太多的方法用来操作成员，不过我们可以利用扩展运算符将 Map 在数组中展开，然后利用数组的方法来操作其成员，操作完成后再将数组作为 Map 构造函数的参数。
 
@@ -1332,7 +1332,7 @@ console.log(map);
 
 ## 六、Map 经典面试真题解析
 
-TIP
+
 
 深入浅出互联网大厂 ES6 中 Map 高频面试真题解析 和 相关扩展知识
 
@@ -1340,7 +1340,7 @@ TIP
 
 ### 1、Object 和 Map 的区别（小米、滴滴）
 
-TIP
+
 
 Object 和 Map 相似处在于，它们都允许你按键存取一个值、删除键、检测一个键是否绑定了值。
 
@@ -1354,7 +1354,7 @@ Object 和 Map 相似处在于，它们都允许你按键存取一个值、删�
 | 键的类型     | 一个 `Map` 的键可以是**任意值**，包括函数、对象或任意基本类型。                 | 一个 `Object` 的键必须是一个`String`或`Symbol`类型                                                                                                                                                                                      |
 | 键的顺序     | `Map` 中的键是有序的。因此，当迭代的时候，一个 `Map` 对象以插入的顺序返回键值。 | 虽然 `Object` 的键目前是有序的，但并不总是这样，而且这个顺序是复杂的。因此，最好不要依赖属性的顺序。                                                                                                                                    |
 | size         | `Map` 的键值对个数可以轻易地通过 `size` 属性获取。                              | `Object` 的键值对个数只能手动计算                                                                                                                                                                                                       |
-| 迭代         | `Map` 是 可迭代的 的，所以可以直接被迭代。                                      | `Object` 没有实现迭代协议，所以使用 JavaSctipt 的 `for...of`表达式并不能直接迭代对象。 更多参考上面提供的 MDN 官方参考资 料                                                                                                             |
+| 迭代         | `Map` 是 可迭代的 的，所以可以直接被迭代。                                      | `Object` 没有实现迭代协议，所以使用 JavaSct 的 `for...of`表达式并不能直接迭代对象。 更多参考上面提供的 MDN 官方参考资 料                                                                                                                |
 | 性能         | 在频繁增删键值对的场景下表现更好                                                | 在频繁添加和删除键值对的场景下未作出优化。                                                                                                                                                                                              |
 | 序列化和解析 | 没有元素的序列化和解析的支持。                                                  | 原生的由 [`Object` (opens new window)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)到 JSON 的序列化支持，使用 `JSON.stringify()` 原生的由 JSON 到 `Object`的解析支持，使用 `JSON.parse()`。 |
 
@@ -1464,7 +1464,7 @@ console.log(map); // Map(3) {'a' => 1, 'b' => 2, 'c' => 3}
 
 ## 七、Map 在实际开发中的应用
 
-TIP
+
 
 Map 和对象最大的区别在于其键可以是任意的类型，而对象的键只能是字符串和 Symbol 类型。
 
@@ -1620,7 +1620,7 @@ Map 常用来保存 DOM 节点和及节点相关的信息。
 
 ## 八、WeakMap 数据结构
 
-TIP
+
 
 WeakMap 结构与 Map 结构类似，也是用于生成键值对的集合。
 
@@ -1631,7 +1631,7 @@ WeakMap 结构与 Map 结构类似，也是用于生成键值对的集合。
 
 ### 1、WeakMap 的基本用法
 
-TIP
+
 
 WeakMap 是一个构造函数，所以可以调用构造函数来创建 WeakMap 数据结构
 
@@ -1660,7 +1660,7 @@ console.log(wm);
 
 ### 2、WeakMap 中成员特性
 
-TIP
+
 
 - WeakMap 中的键名是唯一的，如果出现相同的键名，则后面的会覆盖前面的
 - WeakMap 的键名只能是一个对象类型，不能是其它类型。（2021 的新提案中，建议允许 Symbol 类型，但目前还不支持）
@@ -1684,7 +1684,7 @@ console.log(wm);
 
 ### 3、WeakMap 实例的方法
 
-TIP
+
 
 WeakMap 只有以下 4 个方法
 
@@ -1721,7 +1721,7 @@ console.log(wm); // WeakMap {{…} => 'obj1值', Array(1) => 'arr1值'}
 
 ### 4、WeakMap 中键名所指向的对象保持弱引用
 
-TIP
+
 
 所谓的弱引用，即垃圾回收不会将该引用考虑在内。只要该对象没有被其他引用，则垃圾回收机制就会回收该对象所占用的内存。
 
@@ -1757,7 +1757,7 @@ console.log(wm);
 
 ### 5、Map 与 WeakMap 的区别 ？面试真题解析
 
-TIP
+
 
 Map 和 WeakMap 是两种数据结构，用于操作键值之间的关系。
 
@@ -1772,7 +1772,7 @@ Map 和 WeakMap 是两种数据结构，用于操作键值之间的关系。
 
 ## 九、WeakMap 在实际开发中的应用
 
-TIP
+
 
 当我们需要保存某个对象的相关信息，但又不想干扰垃圾回收机制对该对象的回收。我们就可以把这个对象与之相关的信息以键值对的形式保存在 WeakMap 中。
 
@@ -1780,7 +1780,7 @@ TIP
 
 ### 1、缓存数据
 
-TIP
+
 
 当某个**函数的计算结果**需要被记住”缓存“时，我们就可以把对象作为键，其相关信息做为值，添加到 WeakMap 中，在后续我们需要用到相关信息时，如果缓存中有，就直接读取缓存的，如果没有，则重新存一份到 WeakMap 中。
 
@@ -1830,7 +1830,7 @@ obj = null;
 
 ### 2、模拟私有变量
 
-TIP
+
 
 把对象与当前对象的私有属性形成键值对的映射关系，存入到 WeakMap 中，这样创建出来的实例对象身上没有这个私有属性，也就能真正达到属性私有化的目的。
 
@@ -1866,7 +1866,7 @@ stack.view(); //  [1, 2]
 
 ## 十、重难点总结
 
-TIP
+
 
 总结本章重难点知识，理清思路，把握重难点。并能轻松回答以下问题，说明自己就真正的掌握了。
 
@@ -1874,7 +1874,7 @@ TIP
 
 ### 1、Set 是什么 ？
 
-TIP
+
 
 - Set 中的成员是唯一的，没有重复值，这一特点，我们可以用它来做数组或字符串的去重。
 - Set 中成员的遍历顺序和成员插入时的顺序是一致的。
@@ -1882,7 +1882,7 @@ TIP
 
 ### 2、Map 是什么 ？
 
-TIP
+
 
 - Map 的本质是键值对的集合（和对象一样本质都是键值对的集合）
 - 对象与 Map 不同的是，对象只能使用字符串和 Symbol 来当做键，而 Map 任意数据类型都可以作为键
@@ -1903,7 +1903,7 @@ TIP
 
 ### 4、Set 和 Map 构造函数的参数
 
-TIP
+
 
 - Set：数组、字符串、arguments、NodeList、Set 等，其实参数只要是一个可迭代对象就行
 - Map：数组（二维数组），其实参数只要是一个可迭代对象，同时迭代对象返回的每一个成员是一个二元数组就可以
@@ -1912,14 +1912,14 @@ TIP
 
 ### 5、Set 和 Map 对相同值/键的判断
 
-TIP
+
 
 - 基本可用严格相等 `===` 判断
 - 例外：对于 NaN 的判断与`===`不同，Set/Map 中 NaN 等于 NaN
 
 ### 6、什么时候使用 Set ？
 
-TIP
+
 
 - 数组 或 字符串去重时
 - 不需要通过下标访问，只需要遍历时
@@ -1929,7 +1929,7 @@ TIP
 
 ### 7、什么时候使用 Map ？
 
-TIP
+
 
 - 只需要 `key -> value` 的结构时
 - 需要字符串以外的值做键时
@@ -1939,7 +1939,7 @@ TIP
 
 ### 8、关于 WeakSet 与 WeakMap
 
-TIP
+
 
 WeakSet 中的成员只能是对象，不能是其它类型。WeakMap 中的键名只能是对象类型，不能是其它类型
 
@@ -1952,13 +1952,13 @@ WeakSet 和 WeakMap 中的成员都是弱引用，所以都没有 size、forEach
 
 ### 9、实际应用场景
 
-TIP
+
 
 手动实现 Set、Map、WeakSet、WeakMap 在实际开发中的应用相关的案例。
 
 ## 十一、测试题
 
-TIP
+
 
 自我测试：在不看答案的前提下，看看自己是否真正掌握了本节所学内容。
 
@@ -2055,7 +2055,7 @@ fn();
 
 ## 十二、面试题
 
-TIP
+
 
 深入浅出互联网大厂 ES6 高频面试真题解析 和 相关扩展知识
 
@@ -2063,7 +2063,7 @@ TIP
 
 ### 1、 实现函数的链式调用（商汤）
 
-TIP
+
 
 写一个类，其构造出来的对象打点调用自身的方法，这个方法支持链式调用。
 
@@ -2089,7 +2089,7 @@ console.log(stack.view());
 
 ### 2、 利用 map 记录字符串中每个字符出现次数（小米）
 
-TIP
+
 
 比如：字符串：“abcdaaasscccdeeesdd“ 中每个字符出现的次数，分别为
 
@@ -2112,7 +2112,7 @@ console.log(map);
 
 ### 3、找数组中的主要元素
 
-TIP
+
 
 所谓的数组中的主要元素是指，数组中的某个元素有出现次数超过了数组长度的一半，那这个元素为数组中的主要元素，返回当前元素。如果没有主要元素，返回值为 `-1`
 

@@ -11,7 +11,7 @@ publish: true
 
 # 小程序 npm 支持，状态管理，分包，自定义 tabBar
 
-TIP
+
 
 从本节内容开始我们学习微信小程序对 npm 的支持，全局数据共享，即状态管理，小程序项目的分包，实践自定义 tabBar 的具体实践。
 
@@ -26,7 +26,7 @@ TIP
 
 ## 一、小程序对 npm 的支持与限制
 
-TIP
+
 
 深入浅出小程序如何使用 npm 第三方包，以及注意事项和最佳实践
 
@@ -66,7 +66,7 @@ TIP
 
 ### 2、安装 Vant 组件库
 
-TIP
+
 
 在小程序开发中，安装 Vant 组件库主要分为 3 步
 
@@ -110,7 +110,7 @@ npm i @vant/weapp -S --production
 
 ### 2.2、步骤 2：构建 npm 包
 
-TIP
+
 
 打开微信开发者工具，点击 **工具 -> 构建 npm**，构建完成后，即可引入组件。
 
@@ -130,7 +130,7 @@ TIP
 
 ### 2.3、步骤 3：修改 app.json
 
-TIP
+
 
 将 `app.json` 中的 `"style": "v2"` 去除，小程序的[新版基础组件 (opens new window)](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#style)强行加上了许多样式，难以覆盖，不关闭将造成部分组件样式混乱。
 
@@ -138,7 +138,7 @@ TIP
 
 ### 3、引入组件
 
-TIP
+
 
 以 Button 组件为例，只需要在`app.json` 或 `index.json`中配置 Button 对应的路径即可。
 
@@ -181,13 +181,13 @@ TIP
 
 ## 三、定制主题样式
 
-TIP
+
 
 深入浅出 Vant Weapp 实现定制主题
 
 ### 1、使用 CSS 变量实现定制主题
 
-TIP
+
 
 Vant Weapp 使用 CSS 变量实现定制主题，关于 CSS 变量的基本用法，参考 [使用 CSS 自定义属性（变量）MDN 官方文档 (opens new window)](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)即可
 
@@ -214,7 +214,7 @@ element {
 
 ### 2、Vant 样式变量实现定制主题
 
-TIP
+
 
 定制使用的 CSS 变量 与 Less 变量 同名，下面是一些基本的样式变量，所有可用的变量请参考 [配置文件 (opens new window)](https://github.com/youzan/vant-weapp/blob/dev/packages/common/style/var.less)。
 
@@ -268,7 +268,7 @@ page {
 
 ## 四、全局数据共享 - 状态管理
 
-TIP
+
 
 深入浅出状态管理 及 小程序中的状态管理。
 
@@ -276,7 +276,7 @@ TIP
 
 ### 1、状态管理
 
-TIP
+
 
 小程序中组件间传值的 3 个方式：数据绑定、事件绑定以及获取组件实例。在中小型项目中，使用这 3 种传值方式已经能够满足我们项目的需求。
 
@@ -298,7 +298,7 @@ TIP
 
 ### 2、小程序中的状态管理（全局数据共享方案）
 
-TIP
+
 
 在小程序中，官方推荐一个辅助工具库 [mobx-miniprogram (opens new window)](https://github.com/wechat-miniprogram/mobx)配合 [mobx-miniprogram-bindings (opens new window)](https://github.com/wechat-miniprogram/mobx-miniprogram-bindings)实现全局数据共享，来解决项目中组件间数据共享的问题。
 
@@ -321,7 +321,7 @@ mobx-miniprogram 基于 MobX 4（因为 iOS 9 不支持 MobX 5）实现，因此
 
 ### 3、安装 MobX 相关包 并 构建
 
-TIP
+
 
 如果要在在项目中使用 mobx-miniprogram ，首先需要安装这个两个包。
 
@@ -359,7 +359,7 @@ npm i --save mobx-miniprogram mobx-miniprogram-bindings
 
 ### 3.3、步骤 3：构建 npm 包
 
-TIP
+
 
 打开微信开发者工具，点击 **工具 -> 构建 npm**，构建完成后，即可使用。
 
@@ -373,7 +373,7 @@ TIP
 
 ### 4、创建 MobX 的 Store 实例对象
 
-TIP
+
 
 具体的创建及使用方法，详细见官方文档 - [小程序的 MobX 绑定辅助库(opens new window)](https://github.com/wechat-miniprogram/mobx-miniprogram-bindings)
 
@@ -403,7 +403,7 @@ export const store = observable({
 
 ### 5、修改 Store 中的数据
 
-TIP
+
 
 定义 action 来修改 Store 中的数据
 
@@ -442,7 +442,7 @@ export const store = observable({
 
 ### 6、将 Store 绑定到页面上
 
-TIP
+
 
 ①、在页面逻辑头部导入需要的成员
 
@@ -535,7 +535,7 @@ Page({
 
 ### 8、将 Store 中绑定到组件上
 
-TIP
+
 
 ①、从 mobx-miniprogram-bindings 库中按需导入 storeBindingsBehavior 方法
 
@@ -636,25 +636,25 @@ Component({
 
 ## 五、小程序的分包加载
 
-TIP
+
 
 深入浅出微信小程序项目分包加载相关构成、规则、限制、原则等具体实践。
 
 ### 1、什么是小程序的分包
 
-TIP
+
 
 分包指：某些情况下，开发者需要将**完整的小程序项目**按需求**划分成不同的子包**，在构建时打包成不同的分包，用户在使用时**按需进行加载**。
 
 ### 2、分包的好处
 
-TIP
+
 
 对小程序进行分包，可以优化小程序首次启动的下载时间，以及在多团队共同开发时可以更好的解耦协作。
 
 ### 3、分包前项目的构成
 
-TIP
+
 
 在分包前，小程序项目中**所有的页面** 和 **资源**都被打包到了一起，导致整个**项目体积过大**，影响小程序**首次启动的下载时间**。
 
@@ -662,7 +662,7 @@ TIP
 
 ### 4、分包后的项目构成
 
-TIP
+
 
 分包后，小程序项目由 **1 个主包 + 多个分包** 组成：
 
@@ -673,7 +673,7 @@ TIP
 
 ### 5、分包的加载规则
 
-TIP
+
 
 - ①、在小程序启动时，默认会**下载主包** 并 **启动主包内页面**。即：tabBar 页面需要放到主包中
 - ②、当用户进入分包内某个页面时，**客户端才会把对应分包下载下来**，下载完成后再进行展示
@@ -682,7 +682,7 @@ TIP
 
 ### 6、分包的体积限制
 
-TIP
+
 
 目前小程序分包大小有以下限制：
 
@@ -781,7 +781,7 @@ icoding-package
 
 ### 8、查看分包的体积
 
-TIP
+
 
 在微信开发者工具中，工具栏 -> 详情 -> 基本信息 -> 本地代码 中点击可查看
 
@@ -793,7 +793,7 @@ TIP
 
 ### 9、分包的打包原则
 
-TIP
+
 
 - 声明 `subpackages` 后，将按 `subpackages` 配置路径进行打包，`subpackages` 配置路径外的目录将被打包到主包中
 - 主包也可以有自己的 pages，即最外层的 pages 字段。
@@ -802,7 +802,7 @@ TIP
 
 ### 10、分包的引用原则
 
-TIP
+
 
 - 主包无法引用分包内的私有资源
 - 分包之间不能互相引用私有资源
@@ -810,13 +810,13 @@ TIP
 
 ## 六、小程序的独立分包
 
-TIP
+
 
 深入浅出微信小程序项目中的独立分包 与 普通分包的区别，应用场景、引用原则、最佳实践等
 
 ### 1、什么是独立分包
 
-TIP
+
 
 独立分包是小程序中一种特殊类型的分包，可以独立于主包和其他分包运行。
 
@@ -834,7 +834,7 @@ TIP
 
 ### 2、独立分包 和 普通分包的区别
 
-TIP
+
 
 核心区别在于：是否依赖于主包才能运行
 
@@ -843,7 +843,7 @@ TIP
 
 ### 3、独立分包的应用场景
 
-TIP
+
 
 开发者可以按需将某些具有一定功能独立性的页面配置到独立分包中。
 
@@ -855,7 +855,7 @@ TIP
 
 ### 4、独立分包 - 配置方法
 
-TIP
+
 
 开发者通过在`app.json`的`subpackages`字段中对应的分包配置项中定义`independent`字段声明对应分包为独立分包。
 
@@ -892,7 +892,7 @@ TIP
 
 ### 5、独立分包的引用原则
 
-TIP
+
 
 独立分包 和 普通分包 以及 主包之间，**是相互隔离的，不能互相引用彼此的资源**
 
@@ -904,19 +904,19 @@ TIP
 
 ## 七、小程序的分包预下载
 
-TIP
+
 
 深入浅出微信小程项目中分包预下载相关 配置、限制、具体实践等
 
 ### 1、什么是分包预下载
 
-TIP
+
 
 在进入小程序某个页面时，由框架自动预下载可能需要的分包，提升进入后续分包页面时的启动速度。
 
 ### 2、分包预下载 - 配置
 
-TIP
+
 
 预下载分包行为在进入某个页面时触发，通过在 `app.json` 增加 `preloadRule` 配置来控制。
 
@@ -953,7 +953,7 @@ TIP
 
 ### 3、测试分包预下载效果
 
-TIP
+
 
 配置完成后，重新编译，切换至对应的页面即可在控制台中看到对应的打印信息
 
@@ -965,7 +965,7 @@ TIP
 
 ### 4、分包预下载的限制
 
-TIP
+
 
 同一个分包中的页面**享有共同的预下载大小限额 2M**，限额会在工具中打包时校验。
 
@@ -973,7 +973,7 @@ TIP
 
 ## 八、自定义 tabBar
 
-TIP
+
 
 自定义 tabBar 可以让开发者更加灵活地设置 tabBar 样式，以满足更多个性化的场景。
 
@@ -989,7 +989,7 @@ TIP
 
 ### 1、自定义 tabBar - 实现步骤
 
-TIP
+
 
 自定义 tabBar 步骤：具体步骤见 [微信小程序官方文档 - 自定义 tabBar(opens new window)](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/custom-tabbar.html)
 
@@ -999,7 +999,7 @@ TIP
 
 ### 2、配置信息
 
-TIP
+
 
 - 在 `app.json` 中的 `tabBar` 项指定 `custom` 字段，同时其余 `tabBar` 相关配置也补充完整。
 - 所有 tab 页的 json 里需声明 `usingComponents` 项，也可以在 `app.json` 全局开启。
@@ -1073,7 +1073,7 @@ TIP
 
 ### 3、添加 tabBar 代码文件
 
-TIP
+
 
 在项目的根目录中新建 `custom-tab-bar` 文件夹，并创建名为 `index` 的自定义组件
 
@@ -1094,7 +1094,7 @@ icoding-cou-npm
 
 ### 4、编写 tabBar 代码
 
-TIP
+
 
 用自定义组件的方式编写即可，该自定义组件完全接管 tabBar 的渲染。
 
@@ -1102,7 +1102,7 @@ TIP
 
 ### 4.1、使用 Vant UI 组件的 tabBar 实现
 
-TIP
+
 
 具体使用方法，详细查阅 [Vant UI 组件库 - TabBar 标签栏(opens new window)](https://vant-contrib.gitee.io/vant-weapp/#/tabbar)
 
@@ -1154,7 +1154,7 @@ Component({
 
 ### 4.2、改造符合项目需求的自定义 tabBar
 
-TIP
+
 
 详细查阅 [Vant UI 官方文档 - 自定义图标 (opens new window)](https://vant-contrib.gitee.io/vant-weapp/#/tabbar#zi-ding-yi-tu-biao)根据官方示例改造自定义 tabBar
 
@@ -1190,7 +1190,7 @@ TIP
 
 ### 4.3、动态循环渲染 自定义 tabBar
 
-TIP
+
 
 将 `app.json` 的 tabBar 节点中的 `list` 节点内容复制到 tabBar 自定义组件的 `data` 节点中
 
@@ -1282,7 +1282,7 @@ Component({
 
 ### 5、渲染自定义 tabBar 的数字徽标
 
-TIP
+
 
 数字徽标渲染，只需要在 `van-tabbar-item` 选项标签上加上 `info` 属性即可
 
@@ -1353,7 +1353,7 @@ data: {
 
 ### 7、购物车数字徽标 - 动态更新
 
-TIP
+
 
 我们将使用上次课中全局状态管理 - 计算属性 sum 的值作为购物车中动态数字的效果来展示，模拟购物车中数量的增加或减少。
 
@@ -1423,7 +1423,7 @@ Component({
 
 ### 9、优化 tabBar 页面切换，选中项错乱问题
 
-TIP
+
 
 我们可以将当前组件 data 节点中 `active: 0,` 选中项索引删除掉，同时将选中项索 `active` 引定义在 store 中，作一个全局数据共享。
 

@@ -11,7 +11,7 @@ publish: true
 
 # Promise 用法、实例方法、原理与异步编程的实践应用
 
-TIP
+
 
 本节内容我们开始学习 ES6 中的 Promise 异步编程的解决方案。比传统的解决方案：回调函数和事件，更合理和更强大。
 
@@ -19,13 +19,13 @@ TIP
 
 ## 一、认识 Promise
 
-TIP
+
 
 深入浅出 Promise 是什么，什么时候才使用 Promise
 
 ### 1、什么是 Promise
 
-TIP
+
 
 Promise 是异步编程的一种解决方案，关于异步编程的解决方案，在之前我们学习过，回调函数是解决异步操作的一种解决方案，但是他存在一些缺陷，而这些缺陷 Promise 可以完美解决。
 
@@ -105,7 +105,7 @@ preloadImage(urls[0], (data) => {
 
 ### 2、什么时候使用 Promise
 
-TIP
+
 
 Promise 一般用来解决**层层嵌套**的回调函数（回调地狱 `callback hell`）的问题
 
@@ -162,13 +162,13 @@ Promise 改造后的代码是按正常的代码书写逻辑，从上往下来书
 
 ## 二、Promise 的基本用法
 
-TIP
+
 
 深入浅出 Promise 的用法和实践
 
 ### 1、 创建 Promise 实例
 
-TIP
+
 
 ES6 规定，Promise 对象是一个构造函数，用来生成 Promise 实例。
 
@@ -216,7 +216,7 @@ const p1 = new Promise(function (resolve, reject) {
 
 ### 2、Promise 的三种状态
 
-TIP
+
 
 Promise 代表一种异步操作，他有三种状态，分别代表异步操作的三种状态
 
@@ -284,7 +284,7 @@ console.log(p1);
 
 ### 4、then 方法的简单应用
 
-TIP
+
 
 then 方法的作用是为 Promise 实例添加状态改变时的回调函数。then 方法中有两个参数，这两个参数分别为两个回调函数。
 
@@ -324,7 +324,7 @@ promise.then(
 
 ### 5、resolve 和 reject 参数
 
-TIP
+
 
 resolve 和 reject 参数分别为两个函数，这两个函数的作用分别用来在异步操作成功和失败时调用。
 
@@ -380,7 +380,7 @@ console.log(promise);
 
 ### 6、resolve 和 reject 函数的参数
 
-TIP
+
 
 resolve 函数的参数为不同类型时，其传递给 then 方法的值会有所不同
 
@@ -535,7 +535,7 @@ const p = new Promise((resolve, reject) => {
 
 ## 三、Promise 的实例方法
 
-TIP
+
 
 深入浅出 Promise 实例的方法：`then()` ，`catch()`，`finally()` 方法
 
@@ -547,7 +547,7 @@ TIP
 
 ### 1、then 方法
 
-TIP
+
 
 then 方法的作用是为 promise 添加被兑现和被拒绝状态的回调函数，并返回一个新的 promise 对象
 
@@ -560,7 +560,7 @@ then 方法的作用是为 promise 添加被兑现和被拒绝状态的回调函
 
 ### 1.1 、then 方法什么时候执行
 
-TIP
+
 
 - then 方法相当于一个**异步方法**（是一个微任务），内部的回调函数并不会立即执行，只有 Promise 的状态改变之后，没有同步代码需要执行时，才会执行。
 
@@ -623,7 +623,7 @@ console.log(2);
 
 ### 1.2、then 方法的简写
 
-TIP
+
 
 then 方法的两个回调函数并不一定都要写
 
@@ -686,7 +686,7 @@ p1.then(null, () => {
 
 ### 1.4 、then 方法向后传值
 
-TIP
+
 
 then 方法回调函数的返回值，会传递给下一个 then 方法的回调函数的参数。不过参数的类型不同，其结果会有所不同。
 
@@ -815,7 +815,7 @@ p.then((data) => {
 
 ### 1.5 、then 返回失败的 Promise
 
-TIP
+
 
 如果 then 需要返回一个失败的 Promise 对象，有以下三种实现方式：
 
@@ -885,7 +885,7 @@ p.then((data) => {
 
 ### 2、catch 方法
 
-TIP
+
 
 重点了解：`catch()` 方法有什么用 和 基本用法。
 
@@ -984,7 +984,7 @@ p1.then((data) => {
 
 ### 2.1、catch 方法有什么好处理呢 ？
 
-TIP
+
 
 - 如果只需要处理失败（错误）的回调，则可以用直调用 catch 方法就好，不用调用 then 方法。
 - 如果成功与失败的回调都要处理，则可以采用链式调用写法，相当更直观，简洁。
@@ -1005,7 +1005,7 @@ p1.then((data) => {
 
 ### 2.2、总结
 
-TIP
+
 
 `catch()` 方法主要用来捕获它前面的错误
 
@@ -1017,7 +1017,7 @@ catch 方法主要是用来捕获它前面的错误，promise 抛出一个错误
 
 ### 3、finally 方法
 
-TIP
+
 
 需要重点了解：`finally()`方法什么时候执行，本质是什么 ?
 
@@ -1043,7 +1043,7 @@ finally 方法并不会接受任何参数，也不处理错误，只是用来执
 
 ## 四、Promise 的实践和应用
 
-TIP
+
 
 异步任务的执行分为并发和继发
 
@@ -1170,7 +1170,7 @@ preloadImage(urls[4])
 
 ### 3、Generator 函数实现继发加载 5 张图片
 
-TIP
+
 
 实现的基本思想
 
@@ -1374,7 +1374,7 @@ run(gen);
 
 ## 五、Promise 的构造函数方法
 
-TIP
+
 
 深入浅出 Promise 的构造函数方法，`Promise.resolve()` 和 `Promise.reject()` 、`Promise.all()`、`Promise.race()` 和 `Promise.allSettled()`、`Promise.any()`
 
@@ -1382,7 +1382,7 @@ TIP
 
 ### 1、Promise.resolve() 方法
 
-TIP
+
 
 有时需要将一个对象转为成功的 Promise 对象，`Promise.resolve` 方法就可以起到这个作用。
 
@@ -1483,7 +1483,7 @@ Promise.resolve(thenable).then((data) => {
 
 ### 2、Promise.reject() 方法
 
-TIP
+
 
 有时需要将一个对象转为失败的 Promise 对象，`Promise.reject`方法就可以起到这个作用。
 
@@ -1539,7 +1539,7 @@ p2.catch((data) => {
 
 ### 3、Promise.all() 方法
 
-TIP
+
 
 `Promise.all()`方法用于关注多个 Promise 对象的状态变化。其参数只要是一个迭代器对象或可遍历对象就可以。迭代的每个成员如果不是 Promise 对象，则会先将其转换为 Promise 对象，再做处理。
 
@@ -1672,7 +1672,7 @@ p.then((data) => {
 
 **`Promise.all()` 最常用的场景**
 
-TIP
+
 
 - 通过 Ajax 或其他方式从前端向后端获取数据的时候会用到
 - 如：同时获取多个数据，所有数据都获取到了，都显示出来。如果没获取到再次处理 ，类似应用用的到比较多的地方。
@@ -1681,7 +1681,7 @@ TIP
 
 ### 4、Promise.race() 方法
 
-TIP
+
 
 `Promise.race` 方法（race 翻译过来为“竞赛”）用来关注多个 Promise 的状态，看那个 Promise 的状态先改变，然后返回一个新的 Promise 对象，新的 Promise 的状态和返回值与最先改变的那个 Promise 对象一致。
 
@@ -1760,7 +1760,7 @@ p.then((data) => {
 
 ### 5、Promise.race() 应用
 
-TIP
+
 
 我们经常会有这样的需求，如果某个异步请求在 3s 内还没有响应结果，则把 Promise 的状态改变 rejected 的，再次发送请求。
 
@@ -1812,7 +1812,7 @@ p.then((data) => {
 
 ### 6、Promise.allSettled() 方法
 
-TIP
+
 
 `Promise.allSettled` 方法用来记录多个 Promise 的状态，他只忠于记录各个 Promise 的状态，其自身状态永远不受其他 Promise 状态的影响，返回的新的 Promise 实例永远为成功状态。
 
@@ -1883,7 +1883,7 @@ p.then((data) => {
 
 ### 7、Promise.any() 方法
 
-TIP
+
 
 `Promise.any` 用于关注多个 Promise 对象状态的改变
 
@@ -1993,7 +1993,7 @@ p.then((data) => {
 
 ### 8、经典面试题
 
-TIP
+
 
 定义一个方法，方法传入一个参数，参数的类型只要是 iterable 就行，这个方法用来
 
@@ -2086,7 +2086,7 @@ Promise._any([Promise.reject(33), Promise.reject(44)])
 
 ## 六、总结
 
-TIP
+
 
 总结本章重难点知识，理清思路，把握重难点。并能轻松回答以下问题，说明自己就真正的掌握了。
 
@@ -2102,7 +2102,7 @@ Promise 是什么 ？
 
 ### 2、Promise 3 种状态
 
-TIP
+
 
 - pending （未完成）
 - resolved/fulfilled（已成功）
@@ -2144,7 +2144,7 @@ resolve 和 reject 在调用的时候，是可以传递参数的，这个参数�
 
 ### 4、Promise 的实例方法
 
-TIP
+
 
 **`then()` 方法**
 
@@ -2172,7 +2172,7 @@ catch 是可以捕获错误信息的，当前的错误只要没有被前面的 c
 
 ### 5、Promise 的构造函数方法
 
-TIP
+
 
 **`Promise.resolve()` 方法**
 
@@ -2225,7 +2225,7 @@ Promise.reject("失败 ！");
 
 ## 七、测试题
 
-TIP
+
 
 自我测试：在不看答案的前提下，看看自己是否真正掌握了本节所学内容。
 

@@ -11,7 +11,7 @@ publish: true
 
 # TypeScript 注释指令，tsconfig.json，tsc 命令行编辑器
 
-TIP
+
 
 从本节内容开始学习 TypeScript 的注释指令，tsconfig.json，tsc 命令行编辑器相关内容
 
@@ -21,13 +21,13 @@ TIP
 
 ## 一、TypeScript 的注释指令
 
-TIP
+
 
 TypeScript 接受一些注释指令。所谓“注释指令”，指的是采用 JS 双斜杠注释的形式，向编译器发出的命令。
 
 ### 1、`// @ts-nocheck`
 
-TIP
+
 
 `// @ts-nocheck`告诉编译器不对当前脚本进行类型检查，可以用于 TypeScript 脚本，也可以用于 JavaScript 脚本。
 
@@ -41,7 +41,7 @@ const element = document.getElementById(123);
 
 ### 2、`// @ts-check`
 
-TIP
+
 
 如果一个 JavaScript 脚本顶部添加了`// @ts-check`，那么编译器将对该脚本进行类型检查，不论是否启用了`checkJs`编译选项。
 
@@ -56,7 +56,7 @@ console.log(isChceked); // 报错
 
 ### 3、`// @ts-ignore`
 
-TIP
+
 
 `// @ts-ignore`告诉编译器不对下一行代码进行类型检查，可以用于 TypeScript 脚本，也可以用于 JavaScript 脚本。
 
@@ -74,7 +74,7 @@ x = false; // 不报错
 
 ### 4、`// @ts-expect-error`
 
-TIP
+
 
 `// @ts-expect-error`主要用在测试用例，当下一行有类型错误时，它会压制 TypeScript 的报错信息（即不显示报错信息），把错误留给代码自己处理。
 
@@ -108,7 +108,7 @@ console.log(1 + 1);
 
 ### 5、JSDoc
 
-TIP
+
 
 TypeScript 直接处理 JS 文件时，如果无法推断出类型，会使用 JS 脚本里面的 JSDoc 注释。
 
@@ -134,7 +134,7 @@ TypeScript 编译器支持大部分的 JSDoc 声明，下面介绍其中的一�
 
 ### 5.1、@typedef
 
-TIP
+
 
 `@typedef`命令创建自定义类型，等同于 TypeScript 里面的类型别名
 
@@ -152,7 +152,7 @@ type NumberLike = string | number;
 
 ### 5.2、@type
 
-TIP
+
 
 `@type`命令定义变量的类型
 
@@ -199,7 +199,7 @@ let e;
 
 ### 5.3、@param
 
-TIP
+
 
 `@param`命令用于定义函数参数的类型
 
@@ -232,7 +232,7 @@ function foo(x) {}
 
 ### 5.4、@return，@returns
 
-TIP
+
 
 `@return`和`@returns`命令的作用相同，指定函数返回值的类型
 
@@ -254,7 +254,7 @@ function bar() {
 
 ### 5.5、@extends 和 类型修饰符
 
-TIP
+
 
 `@extends`命令用于定义继承的基类
 
@@ -286,7 +286,7 @@ class Base {
 
 ## 二、tsconfig.json 配置文件相关选项
 
-TIP
+
 
 `tsconfig.json`是 TypeScript 项目的配置文件，放在项目的根目录。反过来说，如果一个目录里面有`tsconfig.json`，TypeScript 就认为这是项目的根目录。
 
@@ -354,7 +354,7 @@ yarn add --dev @tsconfig/deno
 
 ### 1、与文件相关的选项
 
-TIP
+
 
 新建一个项目工程，目录结构如下
 
@@ -401,7 +401,7 @@ tsc
 
 ### 1.1、files 选项
 
-TIP
+
 
 - `files`属性指定编译的文件列表，如果其中有一个文件不存在，就会报错。
 - 它是一个数组，排在前面的文件先编译。
@@ -431,7 +431,7 @@ tsc
 
 ### 1.2、include 选项
 
-TIP
+
 
 `include`属性指定所要编译的文件列表，既支持逐一列出文件，也支持通配符。文件位置相对于当前配置文件而定。
 
@@ -464,7 +464,7 @@ tsc
 
 ### 1.3、include 属性支持三种通配符
 
-TIP
+
 
 - `?`：指代单个字符
 - `*`：指代任意字符，不含路径分隔符
@@ -494,7 +494,7 @@ TIP
 
 ### 1.4、exclude 选项
 
-TIP
+
 
 表示编译器需要排除的文件 或 文件夹
 
@@ -523,7 +523,7 @@ TIP
 
 ### 1.5、extends 选项
 
-TIP
+
 
 配置文件之间是可以继承的，我们可以将继承的配置信息抽离出来方便复用。
 
@@ -577,7 +577,7 @@ TIP
 
 ### 1.6、compileOnSave 选项
 
-TIP
+
 
 设置保存文件的时候自动编译
 
@@ -591,13 +591,13 @@ TIP
 
 ## 三、tsconfig.json 编译相关选项
 
-TIP
+
 
 在 TS 的 `tsconfig.json` 中跟编译相关的选项有 100 余项，我们只需要学习常用的选项（满足开发使用）即可。不常用的直接查阅官方文档即可 ！
 
 ### 1、compileOptions 选项
 
-TIP
+
 
 `compilerOptions`属性用来定制编译行为。这个属性可以省略，这时编译器将使用默认设置。
 
@@ -659,7 +659,7 @@ TIP
 
 ### 2、allowJs
 
-TIP
+
 
 `allowJs`允许 TypeScript 项目加载 JS 脚本（允许编译器编译 JS，JSX 文件）。编译时，也会将 JS 文件，一起拷贝到输出目录。
 
@@ -673,7 +673,7 @@ TIP
 
 ### 3、alwaysStrict
 
-TIP
+
 
 `alwaysStrict`确保脚本以 ECMAScript 严格模式进行解析，因此脚本头部不用写`"use strict"`。
 
@@ -681,7 +681,7 @@ TIP
 
 ### 4、allowSyntheticDefaultImports
 
-TIP
+
 
 `allowSyntheticDefaultImports`允许`import`命令默认加载没有`default`输出的模块。
 
@@ -689,7 +689,7 @@ TIP
 
 ### 5、allowUnreachableCode
 
-TIP
+
 
 `allowUnreachableCode`设置是否允许存在不可能执行到的代码。它的值有三种可能
 
@@ -699,7 +699,7 @@ TIP
 
 ### 6、allowUnusedLabels
 
-TIP
+
 
 `allowUnusedLabels`设置是否允许存在没有用到的代码标签（label）。它的值有三种可能
 
@@ -709,7 +709,7 @@ TIP
 
 ### 7、baseUrl
 
-TIP
+
 
 `baseUrl`的值为字符串，指定 TypeScript 项目的基准目录。
 
@@ -731,7 +731,7 @@ import { helloWorld } from "hello/world";
 
 ### 8、checkJs
 
-TIP
+
 
 ```
 checkJS`设置对 JS 文件同样进行类型检查。打开这个属性，也会自动打开`allowJs
@@ -749,13 +749,13 @@ checkJS`设置对 JS 文件同样进行类型检查。打开这个属性，也�
 
 ### 9、composite
 
-TIP
+
 
 `composite`打开某些设置，使得 TypeScript 项目可以进行增量构建，往往跟`incremental`属性配合使用。
 
 ### 10、declaration
 
-TIP
+
 
 `declaration`设置编译时是否为每个脚本生成类型声明文件`.d.ts`。
 
@@ -769,7 +769,7 @@ TIP
 
 ### 11、declarationDir
 
-TIP
+
 
 `declarationDir`设置生成的`.d.ts`文件所在的目录
 
@@ -784,7 +784,7 @@ TIP
 
 ### 12、declarationMap
 
-TIP
+
 
 `declarationMap`设置生成`.d.ts`类型声明文件的同时，还会生成对应的 Source Map 文件
 
@@ -799,19 +799,19 @@ TIP
 
 ### 13、emitBOM
 
-TIP
+
 
 `emitBOM`设置是否在编译结果的文件头添加字节顺序标志 BOM，默认值是`false`。
 
 ### 14、emitDeclarationOnly
 
-TIP
+
 
 `emitDeclarationOnly`设置编译后只生成`.d.ts`文件，不生成`.js`文件。
 
 ### 15、esModuleInterop
 
-TIP
+
 
 `esModuleInterop`修复了一些 CommonJS 和 ES6 模块之间的兼容性问题。
 
@@ -841,7 +841,7 @@ moment(); // 不报错
 
 ### 16、exactOptionalPropertyTypes
 
-TIP
+
 
 `exactOptionalPropertyTypes`设置可选属性不能赋值为`undefined`。
 
@@ -860,7 +860,7 @@ obj.foo = undefined; // 报错
 
 ### 17、forceConsistentCasingInFileNames
 
-TIP
+
 
 ```
 forceConsistentCasingInFileNames`设置文件名是否为大小写敏感，默认为`true
@@ -868,19 +868,19 @@ forceConsistentCasingInFileNames`设置文件名是否为大小写敏感，默�
 
 ### 18、incremental
 
-TIP
+
 
 `incremental`让 TypeScript 项目构建时产生文件`tsbuildinfo`，从而完成增量构建。
 
 ### 19、inlineSourceMap
 
-TIP
+
 
 `inlineSourceMap`设置将 SourceMap 文件写入编译后的 JS 文件中，否则会单独生成一个`.js.map`文件。
 
 ### 20、inlineSources
 
-TIP
+
 
 `inlineSources`设置将原始的`.ts`代码嵌入编译后的 JS 中。
 
@@ -888,13 +888,13 @@ TIP
 
 ### 21、isolatedModules
 
-TIP
+
 
 `isolatedModules`设置如果当前 TypeScript 脚本作为单个模块编译，是否会因为缺少其他脚本的类型信息而报错，主要便于非官方的编译工具（比如 Babel）正确编译单个脚本。
 
 ### 22、jsx
 
-TIP
+
 
 `jsx`设置如何处理`.tsx`文件。它可以取以下五个值。
 
@@ -914,7 +914,7 @@ TIP
 
 ### 23、lib
 
-TIP
+
 
 `lib`值是一个数组，描述项目需要加载的 TypeScript 内置类型描述文件，跟三斜线指令`/// <reference lib="" />`作用相同。
 
@@ -946,7 +946,7 @@ TypeScript 内置的类型描述文件，主要有以下一些，完整的清单
 
 ### 24、listEmittedFiles
 
-TIP
+
 
 `listEmittedFiles`设置编译时在终端显示，生成了哪些文件。
 
@@ -960,7 +960,7 @@ TIP
 
 ### 25、listFiles
 
-TIP
+
 
 `listFiles`设置编译时在终端显示，参与本次编译的文件列表。
 
@@ -974,7 +974,7 @@ TIP
 
 ### 26、mapRoot
 
-TIP
+
 
 `mapRoot`指定 SourceMap 文件的位置，而不是默认的生成位置。
 
@@ -989,7 +989,7 @@ TIP
 
 ### 27、module
 
-TIP
+
 
 `module`指定编译产物的模块格式。它的默认值与`target`属性有关，如果`target`是`ES3`或`ES5`，它的默认值是`commonjs`，否则就是`ES6/ES2015`。
 
@@ -1005,7 +1005,7 @@ TIP
 
 ### 28、moduleResolution
 
-TIP
+
 
 `moduleResolution`确定模块路径的算法，即如何查找模块。它可以取以下四种值。
 
@@ -1018,7 +1018,7 @@ TIP
 
 ### 29、moduleSuffixes
 
-TIP
+
 
 `moduleSuffixes`指定模块的后缀名
 
@@ -1034,37 +1034,37 @@ TIP
 
 ### 30、newLine
 
-TIP
+
 
 `newLine`设置换行符为`CRLF`（Windows）还是`LF`（Linux）。
 
 ### 31、noEmit
 
-TIP
+
 
 `noEmit`设置是否产生编译结果。如果不生成，TypeScript 编译就纯粹作为类型检查了。
 
 ### 32、noEmitHelpers
 
-TIP
+
 
 `noEmitHelpers`设置在编译结果文件不插入 TypeScript 辅助函数，而是通过外部引入辅助函数来解决，比如 NPM 模块`tslib`。
 
 ### 33、noEmitOnError
 
-TIP
+
 
 `noEmitOnError`指定一旦编译报错，就不生成编译产物，默认为`false`。
 
 ### 34、noFallthroughCasesInSwitch
 
-TIP
+
 
 `noFallthroughCasesInSwitch`设置是否对没有`break`语句（或者`return`和`throw`语句）的 switch 分支报错，即`case`代码里面必须有终结语句（比如`break`）。
 
 ### 35、noImplicitAny
 
-TIP
+
 
 `noImplicitAny`设置当一个表达式没有明确的类型描述、且编译器无法推断出具体类型时，是否允许将它推断为`any`类型。
 
@@ -1072,43 +1072,43 @@ TIP
 
 ### 36、noImplicitReturns
 
-TIP
+
 
 `noImplicitReturns`设置是否要求函数任何情况下都必须返回一个值，即函数必须有`return`语句。
 
 ### 37、noImplicitThis
 
-TIP
+
 
 `noImplicitThis`设置如果`this`被推断为`any`类型是否报错。
 
 ### 38、noUnusedLocals
 
-TIP
+
 
 `noUnusedLocals`设置是否允许未使用的局部变量。
 
 ### 39、noUnusedParameters
 
-TIP
+
 
 `noUnusedParameters`设置是否允许未使用的函数参数。
 
 ### 40、outDir
 
-TIP
+
 
 `outDir`指定编译产物的存放目录。如果不指定，编译出来的`.js`文件存放在对应的`.ts`文件的相同位置。
 
 ### 41、outFile
 
-TIP
+
 
 `outFile`设置将所有非模块的全局文件，编译在同一个文件里面。它只有在`module`属性为`None`、`System`、`AMD`时才生效，并且不能用来打包 CommonJS 或 ES6 模块。
 
 ### 42、paths
 
-TIP
+
 
 `paths`设置模块名和模块路径的映射，也就是 TypeScript 如何导入`require`或`imports`语句加载的模块。
 
@@ -1140,7 +1140,7 @@ TIP
 
 ### 43、preserveConstEnums
 
-TIP
+
 
 `preserveConstEnums`将`const enum`结构保留下来，不替换成常量值。
 
@@ -1154,31 +1154,31 @@ TIP
 
 ### 44、pretty
 
-TIP
+
 
 `pretty`设置美化输出终端的编译信息，默认为`true`。
 
 ### 45、removeComments
 
-TIP
+
 
 `removeComments`移除 TypeScript 脚本里面的注释，默认为`false`。
 
 ### 46、resolveJsonModule
 
-TIP
+
 
 `resolveJsonModule`允许 import 命令导入 JSON 文件。
 
 ### 47、rootDir
 
-TIP
+
 
 `rootDir`设置源码脚本所在的目录，主要跟编译后的脚本结构有关。`rootDir`对应目录下的所有脚本，会成为输出目录里面的顶层脚本。
 
 ### 48、rootDirs
 
-TIP
+
 
 `rootDirs`把多个不同目录，合并成一个目虚拟目录，便于模块定位。
 
@@ -1194,13 +1194,13 @@ TIP
 
 ### 49、sourceMap
 
-TIP
+
 
 `sourceMap`设置编译时是否生成 SourceMap 文件。
 
 ### 50、sourceRoot
 
-TIP
+
 
 `sourceRoot`在 SourceMap 里面设置 TypeScript 源文件的位置。
 
@@ -1215,7 +1215,7 @@ TIP
 
 ### 51、strict
 
-TIP
+
 
 `strict`用来打开 TypeScript 的严格检查。它的值是一个布尔值，默认是关闭的。
 
@@ -1253,7 +1253,7 @@ TIP
 
 ### 52、strictBindCallApply
 
-TIP
+
 
 `strictBindCallApply`设置是否对函数的`call()`、`bind()`、`apply()`这三个方法进行类型检查。
 
@@ -1271,7 +1271,7 @@ const n = fn.call(undefined, false);
 
 ### 53、strictFunctionTypes
 
-TIP
+
 
 `strictFunctionTypes`允许对函数更严格的参数检查。具体来说，如果函数 B 的参数是函数 A 参数的子类型，那么函数 B 不能替代函数 A。
 
@@ -1290,7 +1290,7 @@ let func: StringOrNumberFunc = fn;
 
 ### 54、strictNullChecks
 
-TIP
+
 
 `strictNullChecks`设置对`null`和`undefined`进行严格类型检查。如果打开`strict`属性，这一项就会自动设为`true`，否则为`false`。
 
@@ -1316,7 +1316,7 @@ function doSomething(x: string | null) {
 
 ### 55、strictPropertyInitialization
 
-TIP
+
 
 `strictPropertyInitialization`设置类的实例属性都必须初始化，包括以下几种情况。
 
@@ -1372,13 +1372,13 @@ class User {
 
 ### 56、suppressExcessPropertyErrors
 
-TIP
+
 
 `suppressExcessPropertyErrors`关闭对象字面量的多余参数的报错。
 
 ### 57、target
 
-TIP
+
 
 `target`指定编译出来的 JavaScript 代码的 ECMAScript 版本，比如`es2021`，默认是`es3`。
 
@@ -1400,7 +1400,7 @@ TIP
 
 ### 58、traceResolution
 
-TIP
+
 
 `traceResolution`设置编译时，在终端输出模块解析的具体步骤。
 
@@ -1414,7 +1414,7 @@ TIP
 
 ### 59、typeRoots
 
-TIP
+
 
 `typeRoots`设置类型模块所在的目录，默认是`node_modules/@types`，该目录里面的模块会自动加入编译。一旦指定了该属性，就不会再用默认值`node_modules/@types`里面的类型模块。
 
@@ -1430,7 +1430,7 @@ TIP
 
 ### 60、types
 
-TIP
+
 
 默认情况下，`typeRoots`目录下所有模块都会自动加入编译，如果指定了`types`属性，那么只有其中列出的模块才会自动加入编译。
 
@@ -1450,7 +1450,7 @@ TIP
 
 ### 61、useUnknownInCatchVariables
 
-TIP
+
 
 `useUnknownInCatchVariables`设置`catch`语句捕获的`try`抛出的返回值类型，从`any`变成`unknown`。
 
@@ -1478,7 +1478,7 @@ try {
 
 ## 四、tsc 命令行编译器
 
-TIP
+
 
 tsc 是 TypeScript 官方的命令行编译器，用来检查代码，并将其编译成 JavaScript 代码。
 
@@ -1508,7 +1508,7 @@ $ tsc app.ts util.ts --target esnext --outfile index.js
 
 ### 2、命令行参数
 
-TIP
+
 
 tsc 的命令行参数，大部分与 `tsconfig.json` 的属性一一对应。
 
@@ -1516,31 +1516,31 @@ tsc 的命令行参数，大部分与 `tsconfig.json` 的属性一一对应。
 
 ### 2.1、--all
 
-TIP
+
 
 `--all`：输出所有可用的参数
 
 ### 2.2、--allowJs
 
-TIP
+
 
 `--allowJs`：允许 TS 脚本加载 JS 模块，编译时将 JS 一起拷贝到输出目录
 
 ### 2.3、--allowUnreachableCode
 
-TIP
+
 
 `--allowUnreachableCode`：如果 TS 脚本有不可能运行到的代码，不报错
 
 ### 2.4、--allowUnusedLabels
 
-TIP
+
 
 `--allowUnusedLabels`：如果 TS 脚本有没有用到的标签，不报错
 
 ### 2.5、--alwaysStrict
 
-TIP
+
 
 ```
 --alwaysStrict`：总是在编译产物的头部添加`use strict
@@ -1548,67 +1548,67 @@ TIP
 
 ### 2.6、--baseUrl
 
-TIP
+
 
 `--baseUrl`：指定非相对位置的模块定位的基准 URL
 
 ### 2.7、--build
 
-TIP
+
 
 `--build`：启用增量编译
 
 ### 2.8、--checkJs
 
-TIP
+
 
 `--checkJs`：对 JS 脚本进行类型检查
 
 ### 2.9、--declaration
 
-TIP
+
 
 `--declaration`：为 TS 脚本生成一个类型生成文件
 
 ### 3.0、--declarationDir
 
-TIP
+
 
 `--declarationDir`：指定生成的类型声明文件的所在目录
 
 ### 3.1、--declarationMap
 
-TIP
+
 
 `--declarationMap`：为`.d.ts`文件生成 SourceMap 文件
 
 ### 3.2、--diagnostics
 
-TIP
+
 
 `--diagnostics`：构建后输出编译性能信息
 
 ### 3.3、--emitBOM
 
-TIP
+
 
 `--emitBOM`：在编译输出的 UTF-8 文件头部加上 BOM 标志
 
 ### 3.4、--emitDeclarationOnly
 
-TIP
+
 
 `--emitDeclarationOnly`：只编译输出类型声明文件，不输出 JS 文件
 
 ### 3.5、--esModuleInterop
 
-TIP
+
 
 `--esModuleInterop`：更容易使用 import 命令加载 CommonJS 模块
 
 ### 3.6、--exactOptionalPropertyTypes
 
-TIP
+
 
 ```
 --exactOptionalPropertyTypes`：不允许将可选属性设置为`undefined
@@ -1616,127 +1616,127 @@ TIP
 
 ### 3.7、--experimentalDecorators
 
-TIP
+
 
 `--experimentalDecorators`：支持早期的装饰器语法
 
 ### 3.8、--explainFiles
 
-TIP
+
 
 `--explainFiles`：输出进行编译的文件信息
 
 ### 3.9、--forceConsistentCasingInFileNames
 
-TIP
+
 
 `--forceConsistentCasingInFileNames`：文件名大小写敏感，默认打开
 
 ### 4.0、--help
 
-TIP
+
 
 `--help`：输出帮助信息、
 
 ### 4.1、--importHelpers
 
-TIP
+
 
 `--importHelpers`：从外部库（比如 tslib）输入辅助函数
 
 ### 4.2、--incremental
 
-TIP
+
 
 `--incremental`：启用增量构建
 
 ### 4.3、--init
 
-TIP
+
 
 `--init`：在当前目录创建一个全新的`tsconfig.json`文件，里面是预设的设置
 
 ### 4.4、--inlineSourceMap
 
-TIP
+
 
 `--inlineSourceMap`：SourceMap 信息嵌入 JS 文件，而不是生成独立的`.js.map`文件
 
 ### 4.5、--inlineSources
 
-TIP
+
 
 `--inlineSources`：将 TypeScript 源码作为 SourceMap 嵌入编译出来的 JS 文件
 
 ### 4.6、--isolatedModules
 
-TIP
+
 
 `--isolatedModules`：确保每个模块能够独立编译，不依赖其他输入的模块
 
 ### 4.7、--jsx
 
-TIP
+
 
 `--jsx`：设置如何处理 JSX 文件
 
 ### 4.8、--lib
 
-TIP
+
 
 `--lib`：设置目标环境需要哪些内置库的类型描述
 
 ### 4.9、--listEmittedFiles
 
-TIP
+
 
 `--listEmittedFiles`：编译后输出编译产物的文件名
 
 ### 5.0、--listFiles
 
-TIP
+
 
 `--listFiles`：编译过程中，列出读取的文件名
 
 ### 5.1、--listFilesOnly
 
-TIP
+
 
 `--listFilesOnly`：列出编译所要处理的文件，然后停止编译
 
 ### 5.2、--locale
 
-TIP
+
 
 `--locale`：指定编译时输出的语言，不影响编译结果
 
 ### 5.3、--mapRoot
 
-TIP
+
 
 `--mapRoot`：指定 SourceMap 文件的位置
 
 ### 5.4、--module
 
-TIP
+
 
 `--module`：指定编译生成的模块格式
 
 ### 5.5、--moduleResolution
 
-TIP
+
 
 `--moduleResolution`：指定如何根据模块名找到模块的位置
 
 ### 5.6、--moduleSuffixes
 
-TIP
+
 
 `--moduleSuffixes`：指定模块文件的后缀名
 
 ### 5.7、--newLine
 
-TIP
+
 
 ```
 --newLine`：指定编译产物的换行符，可以设为`crlf`或者`lf
@@ -1744,97 +1744,97 @@ TIP
 
 ### 5.8、--noEmit
 
-TIP
+
 
 `--noEmit`：不生成编译产物，只进行类型检查
 
 ### 5.9、--noEmitHelpers
 
-TIP
+
 
 `--noEmitHelpers`：不在编译产物中加入辅助函数
 
 ### 6.0、--noEmitOnError
 
-TIP
+
 
 `--noEmitOnError`：一旦报错，就停止编译，没有编译产物。
 
 ### 6.1、--noFallthroughCasesInSwitch
 
-TIP
+
 
 `--noFallthroughCasesInSwitch`：Switch 结构的`case`分支必须有终止语句（比如`break`）
 
 ### 6.2、--noImplicitAny
 
-TIP
+
 
 `--noImplicitAny`：类型推断只要为`any`类型就报错
 
 ### 6.3、--noImplicitReturns
 
-TIP
+
 
 `--noImplicitReturns`：函数内部没有显式返回语句（比如`return`）就报错
 
 ### 6.4、--noImplicitThis
 
-TIP
+
 
 `--noImplicitThis`：如果`this`关键字是`any`类型，就报错
 
 ### 6.5、--noImplicitUseStrict
 
-TIP
+
 
 `--noImplicitUseStrict`：编译产生的 JS 文件头部不添加`use strict`语句
 
 ### 6.6、--noResolve
 
-TIP
+
 
 `--noResolve`：不进行模块定位，除非该模块是由命令行传入
 
 ### 6.7、--noUnusedLocals
 
-TIP
+
 
 `--noUnusedLocals`：如果有未使用的局部变量就报错
 
 ### 6.8、--noUnusedParameters
 
-TIP
+
 
 `--noUnusedParameters`：如果有未使用的函数参数就报错
 
 ### 6.9、--outDir
 
-TIP
+
 
 `--outDir`：指定编译产物的存放目录
 
 ### 7.0、--outFile
 
-TIP
+
 
 `--outFile`：所有编译产物打包成一个指定文件
 
 ### 7.1、--preserveConstEnums
 
-TIP
+
 
 `--preserveConstEnums`：不将`const enum`结构在生成的代码中，替换成常量
 
 ### 7.2、--preserveWatchOutput
 
-TIP
+
 
 `--preserveWatchOutput`： watch 模式下不清屏
 
 ### 7.3、--pretty
 
-TIP
+
 
 ```
 --pretty`：美化显示编译时的终端输出。这是默认值，但是可以关闭`--pretty false
@@ -1842,115 +1842,115 @@ TIP
 
 ### 7.4、--project
 
-TIP
+
 
 `--project`（或者`-p`）：指定编译配置文件，或者该文件所在的目录
 
 ### 7.5、--removeComments
 
-TIP
+
 
 `--removeComments`：编译结果中移除代码注释
 
 ### 7.6、--resolveJsonModule
 
-TIP
+
 
 `--resolveJsonModule`：允许加载 JSON 文件
 
 ### 7.7、--rootDir
 
-TIP
+
 
 `--rootDir`：指定加载文件所在的根目录，该目录里面的目录结构会被复制到输出目录
 
 ### 7.8、--rootDirs
 
-TIP
+
 
 `--rootDirs`：允许模块定位时，多个目录被当成一个虚拟目录
 
 ### 7.9、--skipDefaultLibCheck
 
-TIP
+
 
 `--skipDefaultLibCheck`：跳过 TypeScript 内置类型声明文件的类型检查
 
 ### 8.0、--skipLibCheck
 
-TIP
+
 
 `--skipLibCheck`：跳过`.d.ts`类型声明文件的类型检查。这样可以加快编译速度
 
 ### 8.1、--showConfig
 
-TIP
+
 
 `--showConfig`：终端输出编译配置信息，而不进行配置
 
 ### 8.2、--sourcemap
 
-TIP
+
 
 `--sourcemap`：为编译产生的 JS 文件生成 SourceMap 文件（`.map` 文件）
 
 ### 8.3、--sourceRoot
 
-TIP
+
 
 `--sourceRoot`：指定 SourceMap 文件里面的 TypeScript 源码根目录位置
 
 ### 8.4、--strict
 
-TIP
+
 
 `--strict`：打开 TypeScript 严格检查模式
 
 ### 8.5、--strictBindCallApply
 
-TIP
+
 
 `--strictBindCallApply`：bind, call、apply 这三个函数的类型，匹配原始函数
 
 ### 8.6、--strictFunctionTypes
 
-TIP
+
 
 `--strictFunctionTypes`：如果函数 B 的参数是函数 A 参数的子类型，那么函数 B 不能替代函数 A
 
 ### 8.7、--strictNullChecks
 
-TIP
+
 
 `--strictNullChecks`：对`null`和`undefined`进行严格类型检查
 
 ### 8.8、--strictPropertyInitialization
 
-TIP
+
 
 `--strictPropertyInitialization`：类的属性必须进行初始值，但是允许在构造函数里面赋值
 
 ### 8.9、--suppressExcessPropertyErrors
 
-TIP
+
 
 `--suppressExcessPropertyErrors`：关闭对象字面量的多余参数的报错
 
 ### 9.0、--target
 
-TIP
+
 
 `--target`：指定编译出来的 JS 代码的版本，TypeScript 还会在编译时自动加入对应的库类型声明文件
 
 ### 9.1、--traceResolution
 
-TIP
+
 
 `--traceResolution`：编译时在终端输出模块解析（moduleResolution）的具体步骤
 
 ### 9.2、--typeRoots
 
-TIP
+
 
 ```
 --typeRoots`：设置类型模块所在的目录，替代默认的`node_modules/@types
@@ -1958,18 +1958,18 @@ TIP
 
 ### 9.3、--types
 
-TIP
+
 
 `--types`：设置`typeRoots`目录下需要包括在编译之中的类型模块
 
 ### 9.4、--version
 
-TIP
+
 
 `--version`：终端输出 tsc 的版本号
 
 ### 9.5、--watch
 
-TIP
+
 
 `--watch`（或者`-w`）：进入观察模式，只要文件有修改，就会自动重新编译

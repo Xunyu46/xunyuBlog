@@ -11,7 +11,7 @@ publish: true
 
 # ES6 Module 模块系统
 
-TIP
+
 
 本节内容我们开始学习 ES6 中的 Module 模块系统相关内容，以及 Module 在实际开发中的注意事项 和 应用。
 
@@ -46,13 +46,13 @@ TIP
 
 ## 一、JavaScript 模块化历程
 
-TIP
+
 
 深入浅出 JavaScript 模块化的发展历程、过程中遇到了哪些问题 及 模块化出现后解决了哪些问题 。
 
 ### 1、JS 发展中遇到的问题
 
-TIP
+
 
 早期 JS 能做的事情不多，其代码量也不大，我们通常把所有的 JS 写在一个文件中。但随着 JS 的发展，JS 能做的事情也就越来越多了，JS 的代码量也就越来越多，如果所有的 JS 代码都放在一个文件中，开发和维护都是极为不方便的，更不方便多人协作开发。
 
@@ -158,7 +158,7 @@ function max() {
 
 ### 2、早期模块化遇到的问题
 
-TIP
+
 
 通过上面案例的讲解，我们发现当我们把一个大的 JS 程序拆分成多个小的 JS 文件后，好外很明显，就是可以实现代码的复用，同时可以多人协作开发，每人开发一个小的功能，然后再把他们拼接起来。但同时也遇到了以下两个问题
 
@@ -169,7 +169,7 @@ TIP
 
 ### 3、解决多个 JS 文件变量命名冲突问题
 
-TIP
+
 
 多个 JS 文件中的变量之所以发生命名冲突问题，是因为这些相同的变量都在同一作用域（全局作用域下）
 
@@ -206,7 +206,7 @@ JS 模块化对于 JS 来说很重要，但 JS 原生不支持，所以社区制
 
 ## 二、认识 Module
 
-TIP
+
 
 ES Module 把一个 JS 文件当作一个独立的模块，这个文件内的所有变量，外部都无法获取。如果外部需要获取模块内的某个变量，就必需要使用`export`关键字输出该变量。在外部利用`import`关键字来导入该模块，并导入模块对外输出的内容。
 
@@ -218,7 +218,7 @@ ES Module 主要就是用来解决以下三大问题：
 
 ### 1、Module 需要的环境
 
-TIP
+
 
 在学习 Module 模块系统之前，首先需要知道一点，Module 模块系统它需要一个服务器环境才能正常的执行。
 
@@ -288,7 +288,7 @@ export default min; // 导出模块接口
 
 ## 三、Module 的导入与导出
 
-TIP
+
 
 深入浅出 `export default` 和 对应的 `import`，`export` 和 对应的 `import` 等
 
@@ -299,7 +299,7 @@ TIP
 
 ### 1、export default 和 对应的 import
 
-TIP
+
 
 - `export default` 命令为模块指定默认输出（导出）
 - `import` 用来加载模块，并导入模块中导出的内容
@@ -379,7 +379,7 @@ export default username;
 
 ### 2、export 和 对应的 import
 
-TIP
+
 
 - `export`命令用来指定模块的对外输出接口，可以对外输出多个接口，这一点与`export default`不同
 - `import` 命令用来导入其他模块的导出接口
@@ -456,7 +456,7 @@ export { foo, Person, sex };
 
 ### 4、export 导出取别名
 
-TIP
+
 
 使用 `as`关键字可以为导出的变量取别名，如果取了别名后，import 在导入时，需要用别名来导入。
 
@@ -482,7 +482,7 @@ export { foo as func, Person, sex };
 
 ### 5、import 导入时取别名
 
-TIP
+
 
 使用 `as`关键字可以为导入的变量取别名，如果取了别名后，后面输出内容只能使用别名。
 
@@ -508,7 +508,7 @@ console.log(sex);
 
 ### 6、import 整体导入
 
-TIP
+
 
 如果 export 导出接口很多，我们需要一个一个导入显然也是非常麻烦的，所以 import 也是允许一次性整体导入的。
 
@@ -547,7 +547,7 @@ export { foo, Person, sex };
 
 ### 7、export 与 export default 同时导出
 
-TIP
+
 
 我们可以在一个模块文件中同时用 export 来导出多个接口，也可以用 export default 导出默认输出（接口）
 
@@ -581,7 +581,7 @@ import 一次性导入所有接口
 
 ### 8、export 的注意事项
 
-TIP
+
 
 export 语句输出的接口与其对应的值是动态绑定关系，即可以通过接口取到模块内部实时的值
 
@@ -610,13 +610,13 @@ setTimeout(() => {
 
 ## 四、import 关键字
 
-TIP
+
 
 深入浅出 import 关键字导入模块相关特性
 
 ### 1、import 关键字
 
-TIP
+
 
 通过前面的学习，我们知道 import 关键字用来导入模块的输出接口。不过他还有一些重要的特点，需要我们掌握，具体如下：
 
@@ -628,7 +628,7 @@ TIP
 
 ### 2、import 只用来导入模块
 
-TIP
+
 
 import 可以只用来导入模块（模块中可以没有导出接口）
 
@@ -649,7 +649,7 @@ console.log("我是module.js模块中引入的代码 ...");
 
 ### 3、import 具有提升效果
 
-TIP
+
 
 import 命令具有提升效果，会提升到整个模块的头部，率先执行
 
@@ -703,7 +703,7 @@ console.log("我是module.js模块中引入的代码 ...");
 
 ### 4、import 是静态执行
 
-TIP
+
 
 import 是静态执行，也就是说 import 命令是编译阶段执行的，也就是说 import 导入的模块是编译阶段就确定好了。
 
@@ -719,7 +719,7 @@ import { bar } from "./module.js";
 
 ### 5、import 多次加载，只执行一次
 
-TIP
+
 
 多次加载同一个 import 语句，只会执行一次
 
@@ -757,7 +757,7 @@ export { foo, Person, sex };
 
 ### 6、一个模块中导入另一个模块
 
-TIP
+
 
 import 可以用于在一个模块中导入另一个模块，这个功能解决了多个 JS 文件之间的依赖关系
 
@@ -795,7 +795,7 @@ export default max;
 
 ## 五、import() 函数
 
-TIP
+
 
 在前面我们学习了 import 命令（关键字），import 命令会被 JS 引擎**静态分析**（也就是被加载的模块会在编译阶段就确定好），同时他会被提升到当前模块（代码）的最前面，并在执行阶段最先执行。
 
@@ -822,7 +822,7 @@ TIP
 
 ### 1、import() 动态加载模块
 
-TIP
+
 
 `import()`函数用于动态加载模块，他与`import`关键字存在以下区别
 
@@ -875,7 +875,7 @@ console.log("b.js模块执行了");
 
 ### 2、import() 函数返回值
 
-TIP
+
 
 `import()`函数的返回值为`promise`对象，`promise`对象的返回值(即`[[PromiseResult]]`属性值）为一个对象，这个对象的成员为模块对外导出的接口。
 
@@ -947,7 +947,7 @@ export default username;
 
 ### 3、一次性动态加载多模块
 
-TIP
+
 
 一次性动态加载多个模块，可以一个一个处理，但还需要用一个新的 Promise 对象包装下。
 
@@ -982,13 +982,13 @@ TIP
 
 ## 六、在实际开发中的注意事项
 
-TIP
+
 
 深入浅出在实际开发中的逐一实现：模块顶层的 this 指向、导入导出的复合写法
 
 ### 1、模块顶层的 this 指向
 
-TIP
+
 
 模块中，顶层的 this 指向 `undefined`
 
@@ -1010,7 +1010,7 @@ console.log(this); // module.js作为模块时，其顶层this指向undefined
 
 **JS 文件只能以模块方式加载**
 
-TIP
+
 
 在模块 `module.js` 文件中，如果 `this 指向 ≠ undefined` 时，抛出错误，提示用户需要使用模块化的方式来加载
 
@@ -1032,7 +1032,7 @@ if (typeof this !== "undefined") {
 
 ### 2、导入导出的复合写法（了解）
 
-TIP
+
 
 如果在一个模块之中先输入后输出同一个模块，则可以采用复合写法，将 import 语句与 export 语句写在一起。
 
@@ -1135,7 +1135,7 @@ export { a as default, b } from "./a.js";
 
 ## 七、应用（用户自定义配置项）
 
-TIP
+
 
 我们现在有这样一个需求，实现一个名为`ball.js`的模块，当我们在 html 页面加载这个模块时，导入其`init`接口，调用下`init()`函数，就可以实现在页面插入一个小球。
 
@@ -1222,7 +1222,7 @@ export default init;
 
 ## 八、总结
 
-TIP
+
 
 总结本章重难点知识，理清思路，把握重难点。并能轻松回答以下问题，说明自己就真正的掌握了。
 
@@ -1230,7 +1230,7 @@ TIP
 
 ### 1、Module 是如何加载的 ？
 
-TIP
+
 
 使用 script 标签加载模块时，需要添加 `type = "module"`
 
@@ -1246,7 +1246,7 @@ TIP
 
 ### 2、导出和导入
 
-TIP
+
 
 - 一个模块的导出可以被其它模块导入，并访问
 - 如果没有导出，也可以将其导入
@@ -1254,7 +1254,7 @@ TIP
 
 ### 3、export default 和 对应的 import
 
-TIP
+
 
 - `export default` 用于导出一个默认值，一个模块只能有一个。
 - `export default` 后面只能是变量或值，不能是声明变量的语句
@@ -1273,7 +1273,7 @@ import age from "./module.js";
 
 ### 4、export 和 对应的 import
 
-TIP
+
 
 export 用于导出声明或语句，其后不能是值或变量，只能是声明语句
 
@@ -1340,7 +1340,7 @@ import userSex, { foo, Person, sex } from "./module.js";
 
 ### 5、整体导入与导出
 
-TIP
+
 
 可以整体导入所有导出，包括 `export` 和 `export default` 的导出
 
@@ -1352,7 +1352,7 @@ import * as obj from "./module.js";
 
 ### 6、import 命令与 import 关键字
 
-TIP
+
 
 `import` 命令与 `import()` 函数都可以实现导入模块，并接受导出的接口，不过他们存在以下不同点
 
@@ -1370,7 +1370,7 @@ import 命令不能与 if 配合，实现按需加载，而`import()`函数可�
 
 ### 7、注意事项
 
-TIP
+
 
 - 模块顶层的 this 指向 undefined
 - export 和 import 命令只能出现在模块的顶层
@@ -1386,7 +1386,7 @@ export { a, b } from "./a.js"; // 导出从a模块导入的接口a，b
 
 ## 九、测试题
 
-TIP
+
 
 自我测试：在不看答案的前提下，看看自己是否真正掌握了本节所学内容。
 

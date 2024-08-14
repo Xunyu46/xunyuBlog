@@ -11,7 +11,7 @@ publish: true
 
 # TypeScript 类型运算符，类型映射，类型工具
 
-TIP
+
 
 从本节开始学习 TypeScript 类型运算符，类型映射相关等内容
 
@@ -20,13 +20,13 @@ TIP
 
 ## 一、类型运算符
 
-TIP
+
 
 TypeScript 提供强大的类型运算能力，可以使用各种类型运算符，对已有的类型进行计算，得到新类型。
 
 ### 1、keyof 运算符
 
-TIP
+
 
 keyof 是一个单目运算符，接受一个对象类型作为参数，返回该对象的所有键名组成的联合类型。
 
@@ -63,7 +63,7 @@ const c: KeyT = 0; // 正确
 
 ### 1.1、keyof 返回类型
 
-TIP
+
 
 由于 JavaScript 对象的键名只有三种类型，所以对于任意对象的键名的联合类型就是`string|number|symbol`。
 
@@ -103,7 +103,7 @@ type MyKeys<Obj extends object> = Capital<string & keyof Obj>;
 
 ### 1.2、keyof 返回属性名的索引类型
 
-TIP
+
 
 如果对象属性名采用索引形式，keyof 会返回属性名的索引类型。
 
@@ -136,7 +136,7 @@ const n: KeyU = "icoding"; // 正确
 
 ### 1.3、keyof 用于数组 或 元组类型
 
-TIP
+
 
 如果 keyof 运算符用于数组或元组类型，得到的结果可能出人意料。
 
@@ -161,7 +161,7 @@ const o: Result = "icoding"; // 报错
 
 ### 1.4、keyof 用于联合类型
 
-TIP
+
 
 对于联合类型，keyof 返回成员共有的键名。
 
@@ -177,7 +177,7 @@ const a: KeyT = "z"; // 正确
 
 ### 1.5、keyof 用于交叉类型
 
-TIP
+
 
 对于交叉类型，keyof 返回所有键名。
 
@@ -219,7 +219,7 @@ const c: Values = true; // 错误
 
 ### 2、keyof 运算符的用途
 
-TIP
+
 
 keyof 运算符往往用于精确表达对象的属性类型。
 
@@ -311,7 +311,7 @@ type NewObj = Concrete<MyObj>;
 
 ### 3、in 运算符
 
-TIP
+
 
 JavaScript 语言中，`in`运算符用来确定对象是否包含某个属性名。
 
@@ -348,7 +348,7 @@ type Foo = {
 
 ### 4、方括号运算符
 
-TIP
+
 
 方括号运算符（`[]`）用于取出对象的键值类型，比如`T[K]`会返回对象`T`的属性`K`的类型。
 
@@ -428,7 +428,7 @@ type Age = Person['a' + 'g' + 'e']; // 报错
 
 ### 5、`extends...?:` 条件运算符
 
-TIP
+
 
 TypeScript 提供类似 JavaScript 的`?:`运算符这样的三元运算符，但多出了一个`extends`关键字。
 
@@ -477,7 +477,7 @@ type T2 = RegExp extends Animal ? number : string;
 
 ### 5.2、判断联合类型
 
-TIP
+
 
 如果需要判断的类型是一个联合类型，那么条件运算符会展开这个联合类型。
 
@@ -556,7 +556,7 @@ type Result2 = LiteralTypeName<true | 1 | "a">;
 
 ### 6、infer 关键字
 
-TIP
+
 
 `infer`关键字用来定义泛型里面推断出来的类型参数，而不是外部传入的类型参数。
 
@@ -636,7 +636,7 @@ type Bar = Str extends `foo-${infer rest}` ? rest : never; // 'bar'
 
 ### 7、is 运算符
 
-TIP
+
 
 函数返回布尔值的时候，可以使用`is`运算符，限定返回值与参数之间的关系。
 
@@ -706,7 +706,7 @@ class Student {
 
 ### 8、模板字符串
 
-TIP
+
 
 TypeScript 允许使用模板字符串，构建类型。
 
@@ -760,7 +760,7 @@ type V = `${T}${U}`;
 
 ### 9、satisfies 运算符
 
-TIP
+
 
 `satisfies`运算符用来检测某个值是否符合指定类型。
 
@@ -837,7 +837,7 @@ const palette = {
 
 ## 二、类型映射
 
-TIP
+
 
 映射（mapping）指的是，将一种类型按照映射规则，转换成另一种类型，通常用于对象类型。
 
@@ -860,7 +860,7 @@ type B = {
 
 ### 1、类型映射语法
 
-TIP
+
 
 使用类型映射，就可以从类型`A`得到类型`B`
 
@@ -902,7 +902,7 @@ type B = {
 
 ### 1.2、映射类型的泛型写法
 
-TIP
+
 
 为了增加代码复用性，可以把常用的映射写成泛型。
 
@@ -1001,7 +1001,7 @@ type ReadonlyT = Readonly<T>;
 
 ### 2、映射修饰符
 
-TIP
+
 
 映射会原样复制原始对象的可选属性和只读属性。
 
@@ -1100,7 +1100,7 @@ type A<T> = {
 
 ### 3、键名重映射
 
-TIP
+
 
 TypeScript 4.1 引入了键名重映射（key remapping），允许改变键名
 
@@ -1160,7 +1160,7 @@ type LazyPerson = {
 
 ### 3.1、属性过滤
 
-TIP
+
 
 键名重映射还可以过滤掉某些属性。下面的例子是只保留字符串属性。
 
@@ -1187,7 +1187,7 @@ type FilteredUser = Filter<User>; // { name: string }
 
 ### 3.2、联合类型的映射
 
-TIP
+
 
 由于键名重映射可以修改键名类型，所以原始键名的类型不必是`string|number|symbol`，任意的联合类型都可以用来进行键名重映射。
 
@@ -1221,7 +1221,7 @@ type Config = {
 
 ## 三、TypeScript 类型工具
 
-TIP
+
 
 TypeScript 提供了一些内置的类型工具，用来方便地处理各种类型，以及生成新的类型。
 
@@ -1229,7 +1229,7 @@ TypeScript 提供了一些内置的类型工具，用来方便地处理各种类
 
 ### 1、`Awaited<Type>`
 
-TIP
+
 
 `Awaited<Type>`用来取出 Promise 的返回值类型，适合用在描述`then()`方法和 await 命令的参数类型。
 
@@ -1267,7 +1267,7 @@ type Awaited<T> = T extends null | undefined
 
 ### 2、`ConstructorParameters<Type>`
 
-TIP
+
 
 `ConstructorParameters<Type>`提取构造方法`Type`的参数类型，组成一个元组类型返回
 
@@ -1312,7 +1312,7 @@ type ConstructorParameters<T extends abstract new (...args: any) => any> =
 
 ### 3、`Exclude<UnionType, ExcludedMembers>`
 
-TIP
+
 
 `Exclude<UnionType, ExcludedMembers>`用来从联合类型`UnionType`里面，删除某些类型`ExcludedMembers`，组成一个新的类型返回。
 
@@ -1340,7 +1340,7 @@ type Exclude<T, U> = T extends U ? never : T;
 
 ### 4、`Extract<Type, Union>`
 
-TIP
+
 
 `Extract<UnionType, Union>`用来从联合类型`UnionType`之中，提取指定类型`Union`，组成一个新类型返回。它与`Exclude<T, U>`正好相反。
 
@@ -1367,7 +1367,7 @@ type Extract<T, U> = T extends U ? T : never;
 
 ### 5、`InstanceType<Type>`
 
-TIP
+
 
 ```
 InstanceType<Type>`提取构造函数的返回值的类型（即实例类型），参数`Type`是一个构造函数，等同于构造函数的`ReturnType<Type>
@@ -1425,7 +1425,7 @@ type InstanceType<T extends abstract new (...args: any) => any> =
 
 ### 6、`NonNullable<Type>`
 
-TIP
+
 
 `NonNullable<Type>`用来从联合类型`Type`删除`null`类型和`undefined`类型，组成一个新类型返回，也就是返回`Type`的非空类型版本。
 
@@ -1454,7 +1454,7 @@ type NonNullable<T> = T & {};
 
 ### 7、`Omit<Type, Keys>`
 
-TIP
+
 
 `Omit<Type, Keys>`用来从对象类型`Type`中，删除指定的属性`Keys`，组成一个新的对象类型返回。
 
@@ -1492,7 +1492,7 @@ type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;
 
 ### 8、`OmitThisParameter<Type>`
 
-TIP
+
 
 `OmitThisParameter<Type>`从函数类型中移除 this 参数
 
@@ -1520,7 +1520,7 @@ type OmitThisParameter<T> = unknown extends ThisParameterType<T>
 
 ### 9、`Parameters<Type>`
 
-TIP
+
 
 `Parameters<Type>`从函数类型`Type`里面提取参数类型，组成一个元组返回
 
@@ -1618,7 +1618,7 @@ type Parameters<T extends (...args: any) => any> = T extends (
 
 ### 10、`Partial<Type>`
 
-TIP
+
 
 `Partial<Type>`返回一个新类型，将参数类型`Type`的所有属性变为可选属性
 
@@ -1641,7 +1641,7 @@ type Partial<T> = {
 
 ### 11、`Pick<Type, Keys>`
 
-TIP
+
 
 `Pick<Type, Keys>`返回一个新的对象类型，第一个参数`Type`是一个对象类型，第二个参数`Keys`是`Type`里面被选定的键名。
 
@@ -1681,7 +1681,7 @@ type Pick<T, K extends keyof T> = {
 
 ### 12、`Readonly<Type>`
 
-TIP
+
 
 `Readonly<Type>`返回一个新类型，将参数类型`Type`的所有属性变为只读属性
 
@@ -1738,7 +1738,7 @@ worker.name = "李四"; // 报错
 
 ### 13、`Record<Keys, Type>`
 
-TIP
+
 
 `Record<Keys, Type>`返回一个对象类型，参数`Keys`用作键名，参数`Type`用作键值类型
 
@@ -1775,7 +1775,7 @@ type Record<K extends string | number | symbol, T> = { [P in K]: T };
 
 ### 14、`Required<Type>`
 
-TIP
+
 
 `Required<Type>`返回一个新类型，将参数类型`Type`的所有属性变为必选属性。它与`Partial<Type>`的作用正好相反。
 
@@ -1808,7 +1808,7 @@ type Partial<T> = {
 
 ### 15、`ReadonlyArray<Type>`
 
-TIP
+
 
 `ReadonlyArray<Type>`用来生成一个只读数组类型，类型参数`Type`表示数组成员的类型。
 
@@ -1837,7 +1837,7 @@ interface ReadonlyArray<T> {
 
 ### 16、`ReturnType<Type>`
 
-TIP
+
 
 `ReturnType<Type>`提取函数类型`Type`的返回值类型，作为一个新类型返回。
 
@@ -1896,7 +1896,7 @@ type ReturnType<T extends (...args: any) => any> = T extends (
 
 ### 17、`ThisParameterType<Type>`
 
-TIP
+
 
 `ThisParameterType<Type>`提取函数类型中`this`参数的类型。
 
@@ -1920,7 +1920,7 @@ type ThisParameterType<T> = T extends (this: infer U, ...args: never) => any
 
 ### 18、`ThisType<Type>`
 
-TIP
+
 
 `ThisType<Type>`不返回类型，只用来跟其他类型组成交叉类型，用来提示 TypeScript 其他类型里面的`this`的类型。
 
@@ -1966,7 +1966,7 @@ interface ThisType<T> {}
 
 ### 19、字符串类型工具
 
-TIP
+
 
 TypeScript 内置了四个字符串类型工具，专门用来操作字符串类型。这四个工具类型都定义在 TypeScript 自带的`.d.ts`文件里面。
 
@@ -1974,7 +1974,7 @@ TypeScript 内置了四个字符串类型工具，专门用来操作字符串类
 
 ### 19.1、`Uppercase<StringType>`
 
-TIP
+
 
 `Uppercase<StringType>`将字符串类型的每个字符转为大写
 
@@ -1989,7 +1989,7 @@ type B = Uppercase<A>;
 
 ### 19.2、`Lowercase<StringType>`
 
-TIP
+
 
 `Lowercase<StringType>`将字符串的每个字符转为小写
 
@@ -2004,7 +2004,7 @@ type B = Lowercase<A>;
 
 ### 19.3、`Capitalize<StringType>`
 
-TIP
+
 
 `Capitalize<StringType>`将字符串的第一个字符转为大写
 
@@ -2019,7 +2019,7 @@ type B = Capitalize<A>;
 
 ### 19.4、`Uncapitalize<StringType>`
 
-TIP
+
 
 `Uncapitalize<StringType>` 将字符串的第一个字符转为小写
 

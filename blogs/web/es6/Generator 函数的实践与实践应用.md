@@ -11,13 +11,13 @@ publish: true
 
 # Generator 函数的实践与实践应用
 
-TIP
+
 
 本节内容我们开始学习 ES6 中的 Generator 函数、方法、实践应用
 
 ## 一、Generator 函数基础语法
 
-TIP
+
 
 Generator 函数是 ES6 提供的一种异步编程解决方案，在学习他的异步应用之前，我们先来学习他的基本语法。
 
@@ -27,7 +27,7 @@ Generator 函数可以理解为是一个遍历器（迭代器）对象的生成�
 
 ### 1、Generator 函数写法
 
-TIP
+
 
 与普通函数相比，`Generator`函数的写法有如下两个特征：
 
@@ -60,7 +60,7 @@ function* gen() {}
 
 ### 2、Generator 函数的基本用法
 
-TIP
+
 
 Generator 函数可以理解为是一个遍历器（迭代器）对象的生成函数。
 
@@ -131,7 +131,7 @@ it.next(); // 第2次调用next
 
 ### 3、yield 表达式
 
-TIP
+
 
 `yield`语句相当于一个暂停标志
 
@@ -186,7 +186,7 @@ it.next();
 
 ### 4、区分 yield 与 return
 
-TIP
+
 
 - `yield`相当于是一个暂停标志，一个 Generator 函数中可以有多个`yield`语句。每次执行遇到 yield 语句，就会暂停执行，将`yield`后面表达式的值为返回对象的`value`属性值，`done`属性值为`false`。只能再次调用 next 方法，才会继续向下执行。
 - `return` 相当于终止遍历器，当代码执行到`return`语句后，其后所有的代码都不会执行了。`return`后面表达式的值为返回对象的`value`属性值，`done`属性值为`true`表示遍历器迭代完成（终止）
@@ -289,7 +289,7 @@ console.log(it.next()); // {value: undefined, done: true}
 
 ### 6、next 方法的参数
 
-TIP
+
 
 `yield`语句本身没有返回值，或者说总是返回 undefined。
 
@@ -325,7 +325,7 @@ it.next(10); // 10 12
 
 ### 7、带参的 next 方法应用
 
-TIP
+
 
 next 方法可以带一个参数，并且这个参数用来表示上一条`yield`语句的返回值，所以我们可以利用这个特点向 Generator 函数体的变量注入值。
 
@@ -354,7 +354,7 @@ it.next(); // 清心  33
 
 ### 8、yield\* 表达式
 
-TIP
+
 
 `yield*` 表达式用于在一个 Generator 函数中执行另一个 Generator 函数。
 
@@ -466,7 +466,7 @@ for (let v of gen()) {
 
 ### 9、遍历器的 throw 方法
 
-TIP
+
 
 Generator 函数返回的遍历器对象有一个`throw`方法，可以在函数体外抛出错误，并在函数体被 `try...catch` 捕获。
 
@@ -603,7 +603,7 @@ console.log(it.next()); // {value: undefined, done: true}
 
 ### 10、遍历器的 throw 方法和全局 throw 命令
 
-TIP
+
 
 全局 throw 命令在 Generator 体外抛出错误，并不能被 Generator 函数内部捕获，只能被外部的`try..catch`捕获
 
@@ -810,7 +810,7 @@ console.log(it.next()); // {value: 5, done: false}
 
 ### 12、Generator 函数的 return 方法
 
-TIP
+
 
 Generator 函数返回的遍历器对象有一个`return`方法，可以返回给定的值，并终结`Generator`的遍历。
 
@@ -913,7 +913,7 @@ console.log(it.next()); // {value: undefined, done: true}a
 
 ### 12、作为对象属性的 Generator 函数
 
-TIP
+
 
 如果一个对象的属性是 Generator 函数
 
@@ -982,13 +982,13 @@ it.sayHello(); // 大家好，我是Generator函数原型上的方法
 
 ## 二、Generator 函数应用
 
-TIP
+
 
 深入浅出 Generator 函数的实践和应用
 
 ### 1、Generator 函数实现 Iterator 接口
 
-TIP
+
 
 在学习 Iterator 迭代器（遍历器）时，我们知道，一个对象要想成为可迭代对象，能够被 `for..of` 遍历，必须满足：**“可迭代协议”** 和 **“迭代器协议”**
 
@@ -1066,7 +1066,7 @@ console.log(flat(arr, 1));
 
 ### 3、深度优先遍历 DOM 树
 
-TIP
+
 
 深度遍历以下 DOM 树的结构
 
@@ -1144,7 +1144,7 @@ TIP
 
 ## 三、重难点总结
 
-TIP
+
 
 关于本章讲解的 Generator 函数，重点掌握以下几个方面
 
@@ -1156,7 +1156,7 @@ function* gen() {}
 
 ### 2、Generator 函数的基本用法
 
-TIP
+
 
 Generator 函数用来生成一个遍历器对象，调用 Generator 函数并不会执行函数体中的代码，只有调用遍历器的 next 方法才会开始执行函数体中的代码。
 
@@ -1176,7 +1176,7 @@ console.log(it.next()); // {value: 3, done: false}
 
 ### 3、yield 和 return
 
-TIP
+
 
 yield 表达式相当于一个暂停标志，调用遍历器的 next 方法开始执行 Generator 函数体中，执行到 yield 表达式就会暂停执行，当再一次调用 next 方法时又会继承从原来位置开始向下执行代码，遇到 yield 又会暂停。
 
@@ -1184,7 +1184,7 @@ yield 表达式相当于一个暂停标志，调用遍历器的 next 方法开�
 
 ### 4、next 方法的参数
 
-TIP
+
 
 next 方法允许带一个参数，这个参数为上一次 yield 表达式的返回值。
 
@@ -1224,7 +1224,7 @@ it.next(); // {a: 1, b: 2}
 
 ### 5、yield\* 表达式
 
-TIP
+
 
 `yield*`表达式主要是为了解决在 Generator 函数中能调用 Generator 函数。因为 Generator 函数不能直接在一另一个 Generator 函数中调用
 
@@ -1232,7 +1232,7 @@ TIP
 
 ### 6、遍历器的 throw 和全局 throw 命令
 
-TIP
+
 
 遍历器的 throw 方法在 Genrator 函数体外抛出的错误可以在 Generator 函数体内被捕获。
 
@@ -1248,7 +1248,7 @@ TIP
 
 ### 7、Generator 函数的应用
 
-TIP
+
 
 - 用 Generator 函数实现 Iterator 接口
 - 实现将数组扁平化

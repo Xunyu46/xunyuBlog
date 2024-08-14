@@ -11,7 +11,7 @@ publish: true
 
 # 本地存储 Cookie、localStorage、sessionStorage 实践
 
-TIP
+
 
 本节内容我们开始学习本地存储，见名知意即我们将把数据存储在本地。本地存储相关的技术有：Cookie、localStorage、sessionStorage 的基本用法、实际应用、注意事项、面试真题解析等。
 
@@ -36,13 +36,13 @@ TIP
 
 ## 一、Cookie 简介
 
-TIP
+
 
 深入浅出 Cookie 是什么，Cookie 有什么用，在浏览器中如何操作 Cookie，基本用法，Cookie 的属性，Cookie 的封装 以及在实际开发中的应用和注意事项等。
 
 ### 1、Cookie 是什么
 
-TIP
+
 
 Cookie 的全称是 HTTP Cookie ，简称 Cookie
 
@@ -56,7 +56,7 @@ HTTP Cookie（也叫 Web Cookie 或浏览器 Cookie）是服务器发送到用�
 
 ### 2、在浏览器中操作 Cookie
 
-TIP
+
 
 找到浏览器开发者工具中，打开 Application，手动添加浏览器的 Cookie 信息
 
@@ -87,7 +87,7 @@ document.cookie;
 
 ### 3、Cookie 的主要作用
 
-TIP
+
 
 Cookie 主要用于以下三个方面：
 
@@ -105,7 +105,7 @@ Cookie 主要用于以下三个方面：
 
 ## 二、Cookie 的基本用法
 
-TIP
+
 
 这里我们主要学习浏览器端利用 JS 来操作 Cookie
 
@@ -136,7 +136,7 @@ document.cookie = "age=18";
 
 ### 2、读取 Cookie
 
-TIP
+
 
 读取 Cookie 的值是一个由名值对构成的字符串，每个名值对之间由 `;` （一个分号 `+` 一个空格）隔开
 
@@ -155,7 +155,7 @@ console.log(document.cookie); // username=icoding; sex=male; age=18
 
 ## 三、Cookie 的属性
 
-TIP
+
 
 深入浅出 Cookie 的属性 ，重点掌握 Cookie 的名称 Name 和 值 Value ，失效（到期）时间 Expires 或 Max-Age 即可，其他属性作为了解即可。
 
@@ -170,7 +170,7 @@ TIP
 
 ### 1、Cookie 的名称 Name 和 值 Value
 
-TIP
+
 
 Name 和 Value 是最重要的两个属性，创建 Cookie 时必须填写，其他属性可以使用默认值
 
@@ -204,7 +204,7 @@ console.log(cookie); // 用户名=艾编程; username=艾编程
 
 ### 2、expires 和 max-age 属性
 
-TIP
+
 
 - `expires` 和 `max-age`属性都可以设置 Cookie 的失效期，Cookie 的失效（到期）时间可以理解为 Cookie 生命的倒计时。
 - 如果 Cookie 没有设置失败时间，这样的 Cookie 称为：**“会话 Cookie”**，只要关闭浏览器，Cookie 就会被浏览器清除（注意是关闭浏览器，不是单个标签页）。
@@ -239,7 +239,7 @@ document.cookie = `age=33; max-age=${30 * 24 * 3600}`;
 
 ### 3、删除 Cookie
 
-TIP
+
 
 - 如果要删除一个 Cookie，我们只需要设置他的失效期，让他马上失效就好。
 - 如果 max-age 的值是 0 或 负数，则 Cookie 就会失效，从浏览器中被删除
@@ -259,7 +259,7 @@ document.cookie = "age=33;max-age=-1";
 
 ### 4、Domain 属性
 
-TIP
+
 
 `Domain` 属性指定了哪些域名可以访问该 Cookie。如果 Domain 省略未写，其默认为当前域名
 
@@ -283,7 +283,7 @@ document.cookie = `清心=124; domain='m.mi.com'`;
 
 ### 5、Path 路径
 
-TIP
+
 
 `Path` 属性指定了一个 URL 路径， 限定了访问 Cookie 的范围（同一域名下）
 
@@ -335,7 +335,7 @@ document.cookie = `doc='doc123'; path=/`;
 
 ### 6、判断是否为同一 Cookie
 
-TIP
+
 
 通过上面的学习，我们知道，只有当 Name、Domain、Path 这三个字段都相同时，才是同一个 Cookie
 
@@ -351,7 +351,7 @@ document.cookie = `doc='doc123'; path=/`;
 
 ### 7、HttpOnly 属性
 
-TIP
+
 
 设置了 HttpOnly 属性的 Cookie 不能通过 JS 去访问，禁止 JS 访问也是为了安全性考虑。
 
@@ -365,7 +365,7 @@ HttpOnly 属性不能通过 JS 来设置，只能通过服务端来设置。如�
 
 ### 8、Secure 安全标志
 
-TIP
+
 
 标记为 `Secure` 的 Cookie 只应通过被 HTTPS 协议加密过的请求发送给服务端。它永远不会使用不安全的 HTTP 发送（本地主机除外）
 
@@ -377,13 +377,13 @@ TIP
 
 ### 9、什么样的 Cookie 才能发送到服务器端
 
-TIP
+
 
 Domain、Path、Secure 都要满足条件，还不能过期的 Cookie 才能随着请求发送到服务器端
 
 ## 四、Cookie 的封装
 
-TIP
+
 
 前边几节中我们学习了通过 JS 来 写入、读取、删除 Cookie，我们在使用的过程中也发现了 Cookie 原生提供的方式都不好用。因此，我们现在开始对 Cookie 进行封装，让 Cookie 在实际开发中使用起来更方便。
 
@@ -391,7 +391,7 @@ TIP
 
 ### 1、封装 cookie
 
-TIP
+
 
 新建 `cookie.js` 文件，封装成一个模块 ，创建一个 Cookie 类，添加三个静态方法，将 Cookie 类做为接口导出
 
@@ -483,13 +483,13 @@ export default Cookie;
 
 ## 五、Cookie 的注意事项
 
-TIP
+
 
 在实际开发中需要注意，前后端都可以写入和获取 Cookie ，Cookie 有数量限制，Cookie 有大小限制。
 
 ### 1、Cookie 有数量限制
 
-TIP
+
 
 每个域名下的 Cookie 数量有限，具体有多少无法确定，得看浏览器，每个都会不一样
 
@@ -509,7 +509,7 @@ TIP
 
 ### 2、Cookie 有大小限制
 
-TIP
+
 
 Cookie 的存储容量很小，最多只有 4KB 左右（具体在以上表格中），这里对容量的限制不是针对一个 Cookie，是针对一个域名下的所有 Cookie 而言
 
@@ -519,7 +519,7 @@ Cookie 的存储容量很小，最多只有 4KB 左右（具体在以上表格�
 
 ### 3、前后端都可以写入 和 获取 Cookie
 
-TIP
+
 
 - 不仅仅前端可以创建 Cookie，随着请求发送到服务器端
 - 后端同样可以创建 Cookie ，通过响应发送到前端来，之后的请求总会携带 Cookie 发送到后端
@@ -529,7 +529,7 @@ TIP
 
 ## 六、服务端创建 Cookie
 
-TIP
+
 
 我们通过图解和代码来帮助大家理解服务端创建 Cookie 的过程。服务端是后台开发人员需要掌握的，我们这个阶段只需要先了解就好，因为需要操作服务器。
 
@@ -537,7 +537,7 @@ TIP
 
 ### 1、什么是 Node.js
 
-TIP
+
 
 - `Node.js` 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境。
 - `Node.js` 为 JavaScript 提供了在服务端运行的环境，使得 JavaScript 也能开发服务端的程序，前后端统一语言，统一模型的梦想得以实现
@@ -563,7 +563,7 @@ TIP
 
 ### 2、node 的安装
 
-TIP
+
 
 Node.js 官方下载地址：[https://nodejs.org/en/download/(opens new window)](https://nodejs.org/en/download/)
 
@@ -575,7 +575,7 @@ Node.js 官方下载地址：[https://nodejs.org/en/download/(opens new window)]
 
 ### 3、检测是否安装成功及版本号
 
-TIP
+
 
 在 window 的 cmd 命令窗口，输入 `node -v`
 
@@ -595,7 +595,7 @@ npm -v
 
 ### 4、node 搭建服务器
 
-TIP
+
 
 创建 `server.js` 文件
 
@@ -646,7 +646,7 @@ MIME 类型就是设定某种扩展名的文件用一种应用程序来打开的
 
 ### 5、服务端 Cookie 的创建过程
 
-TIP
+
 
 服务端在响应头中设置`Set-Cookie` 选项，然后发送到浏览器（客户端），浏览器对应的数据存储 Cookie 中，并在下次向同一服务器再发起请求时携带并发送到服务器上。
 
@@ -703,19 +703,19 @@ console.log("server running at 127.0.0.1:8889/");
 
 ## 七、Cookie 在实际开发中的实际应用
 
-TIP
+
 
 深入浅出 Cookie 在实际开发中的实际应用，使用 Cookie 实现中英文网站语言切换
 
 ### 1、Cookie 实现中英文网站语言切换
 
-TIP
+
 
 当用户第一次访问网站时，默认显示的是中文网站，如果点击了页面的英文切换按扭，则切换到英文网站。下次打开网站后显示的就是英文版的。
 
 ### 1.1、实现原理
 
-TIP
+
 
 - 第一次发送请求，服务端会判断请求头中是否有对应的 Cookie，如果没有，则默认发送的中文版的网站
 - 点击页面中英文按扭，在 Cookie 中添加`language=en; max-age=${365*24*3600}"`，然后利用`window.location='/'`重新向后端发送一次请求。
@@ -724,7 +724,7 @@ TIP
 
 ### 1.2、代码实现步骤
 
-TIP
+
 
 创建两个 HTML 页面
 
@@ -821,7 +821,7 @@ console.log("Server running at http://127.0.0.1:8889/");
 
 ### 2、升级版
 
-TIP
+
 
 在上面的版本中，我们没有办法在 cn.html 和 en.html 页面使用模块化加载 Cookie.js 来操作 Cookie，本质是因为`http://127.0.0.1:8889/Cookie` 请求失败，后端并没有针对这个请求做相关的响应（也就返回 Cookie.js 文件）。
 
@@ -933,13 +933,13 @@ console.log("Server running at http://127.0.0.1:8889/");
 
 ## 八、LocalStorage 简介
 
-TIP
+
 
 深入浅出 localStorage 在实际开发中的实践和应用
 
 ### 1、localStorage 是什么
 
-TIP
+
 
 有一些数据确实是需要存储在本地，但它却不需要发送到服务器端，所以它并不适合放在 Cookie 中。那么，localStorage 就是一个不错的选择。
 
@@ -952,7 +952,7 @@ localStorage 也是一种浏览器存储数据的方式（本地存储），它�
 
 ### 2、在浏览器中操作 localStorage
 
-TIP
+
 
 localStorage 也是按域名来存储的，在浏览器可直接查看。
 
@@ -964,13 +964,13 @@ Local Storage 中的数据是以键值对的形式存储的
 
 ## 九、LocalStorage 的基本用法
 
-TIP
+
 
 我们可以通过`window.localStorage`对象来操作浏览器中的 Local Storage 数据。
 
 ### 1、localStorage 对象
 
-TIP
+
 
 通过`window.localStorage`对象可以获取浏览器 Local Storage 中所有的项的数据
 
@@ -991,7 +991,7 @@ console.log(localStorage.length); // 3
 
 ### 2、localStorage 对象的方法
 
-TIP
+
 
 其中`window.localStorage`对象身上提供了以下方法来操作数据。
 
@@ -1004,7 +1004,7 @@ TIP
 
 ### 3、setItem(key,value)
 
-TIP
+
 
 `setItem(key,value)` 为本地的 Local Storage 添加一个数据项。
 
@@ -1018,7 +1018,7 @@ localStorage.setItem("background-color", "skyblue");
 
 ### 4、getItem(key)
 
-TIP
+
 
 `getItem(key)`根据对应的键名，获取对应的键值，获取不存在的会返回 null
 
@@ -1030,7 +1030,7 @@ localStorage.getItem("background-color"); // "skyblue"
 
 ### 5、removeItem(key)
 
-TIP
+
 
 ```
 removeItem(key)`方法根据键名 `key`，移除指定项，如果删除不存在的 `key`，不会报错。这个方法没有返回值或返回`undefined
@@ -1045,7 +1045,7 @@ localStorage.removeItem("color");
 
 ### 6、clear()
 
-TIP
+
 
 `clear()`方法用来移除所有的 localStorage 数据项
 
@@ -1059,19 +1059,19 @@ console.log(localStorage); // Storage {length: 0}
 
 ## 十、localStorage 的注意事项
 
-TIP
+
 
 深入浅出 localStorage 在实际项目开发中有哪些需要注意的，localStorage 的存储期限，键和值的类型，不同域名下能否共用 localStorage 等。
 
 ### 1、localStorage 的存储期限
 
-TIP
+
 
 localStorage 是持久化的本地存储，除非手动清楚（如 通过 JS 删除 或 清除浏览器缓存）否则，数据永远不会过期的。
 
 ### 1.1、与 localStorage 对应的是 sessionStorage
 
-TIP
+
 
 sessionStorage 当前会话结束（如：关闭浏览器）的时候，sessionStorage 中的数据会被清空
 
@@ -1099,14 +1099,14 @@ sessionStorage.clear();
 
 ### 1.2、localStorage 和 sessionStorage 什么时候用 ？
 
-TIP
+
 
 - 如需要永久话的存储一个数据，可保存在 localStorage 中
 - 需要会话结束（关闭浏览器）就消失，可保存在 sessionStorage 中
 
 ### 2、不同域名下能否共用 localStorage
 
-TIP
+
 
 localStorage 是按域名来存储的，即同一个域名下的所有页面都可以访问该域名下的 localStorage
 
@@ -1116,7 +1116,7 @@ localStorage 是按域名来存储的，即同一个域名下的所有页面都�
 
 ### 3、localStorage 的大小限制
 
-TIP
+
 
 单个域名下的`localStorage` 总大小有限制（不超过 `5MB`），但没有单个大小的限制。而 Cookie 是单个大小的限制，也跟浏览器有关系，不同浏览器大小限制不同。
 
@@ -1124,7 +1124,7 @@ TIP
 
 ### 4、localStorage 键和值的类型
 
-TIP
+
 
 - localStorage 存储的键和值只能是字符串类型
 - 不是字符串类型，也会先转化成字符串类型再存进去（localStorage 会自动转的，不需要手动转换）
@@ -1148,7 +1148,7 @@ console.log(localStorage);
 
 ## 十一、localStorage 的封装
 
-TIP
+
 
 因为 localStorage 的键和值只能是字符串类型的，但很多时候我们希望保存的 value 值是一个对象，根据对应的 key 来取值时，也能取出对应的对象。
 
@@ -1156,7 +1156,7 @@ TIP
 
 ### 1、封装 storage 对象
 
-TIP
+
 
 新建 `storage.js` 文件，封装成一个模块 ，创建一个 storage 对象，添加三个方法，将 storage 对象做为默认接口导出
 
@@ -1234,13 +1234,13 @@ export default {
 
 ## 十二、localStorage 在实际开发中的应用
 
-TIP
+
 
 深入浅出 localStorage 在实际开发中的应用，添加搜索框附近的历史记录，更改网站皮肤 等
 
 ### 1、添加搜索历史记录
 
-TIP
+
 
 当用户在搜索框搜索对应的关键字时，会把用户搜索过的关键字保存在搜索框下面，并且只限定能放 6 个，超过了就删除最早加入的，当然也可以手动删除不想要的。
 
@@ -1391,7 +1391,7 @@ searchButton.addEventListener("click", () => {
 
 **第二步：读取 localStorage 中的数据，显示在页面中**
 
-TIP
+
 
 - 当关闭页面后，再次打开，搜索框下的内容就消失了，所以我们需要把 localStorage 中存储的数据取出来插入到页面中
 - 这里要考虑第一次打开页面时，localStorage 中还没有存任何数据，所以取出的 localStorage 数据可能为 undefined，所以需要判断是过数据存在，在遍历取出的数据，生成 DOM 插入到页面。
@@ -1417,7 +1417,7 @@ function showKeywords() {
 
 **第三步：点击关键字右侧顶部的删除按扭，删除对应关键字**
 
-TIP
+
 
 - 因为添加的关键字比较多，所以我们不可能为每个关键字对应的 DOM 添加点击事件，这里我们可以利用事件代理，把`<i>`标签的点击事件委托给其祖先元素 `keywords-wrap`来处理。
 - 点击删除对应的 span 标签的同时，还需要将数组中对应项的数据删除，同时还要更新 localStorage
@@ -1539,13 +1539,13 @@ function deleteKeyword() {
 
 ### 2、更改网站皮肤
 
-TIP
+
 
 大家可以自己去实现，可以参考 [MDN 官方网站给出的实例(opens new window)](https://mdn.github.io/dom-examples/web-storage/)
 
 ## 十三、总结
 
-TIP
+
 
 总结本章重难点知识，理清思路，把握重难点。并能轻松回答以下问题，说明自己就真正的掌握了。
 
@@ -1553,7 +1553,7 @@ TIP
 
 ### 1、Cookie
 
-TIP
+
 
 - Cookie 是浏览器存储数据的一种方式
 - 存储在用户本地，而不是存储在服务器上
@@ -1561,7 +1561,7 @@ TIP
 
 ### 2、Cookie 的用法
 
-TIP
+
 
 写入 Cookie
 
@@ -1590,7 +1590,7 @@ console.log(info); // username=icoding; sex=male
 
 ### 3、Cookie 的属性
 
-TIP
+
 
 **名称（name）和 值（value）**
 
@@ -1631,7 +1631,7 @@ TIP
 
 ### 4、Cookie 在实际开发中的注意事项
 
-TIP
+
 
 - 前后端都可以写入和读取 Cookie
 - 每个域名下的 Cookie 数量有限
@@ -1639,7 +1639,7 @@ TIP
 
 ### 5、localStorage
 
-TIP
+
 
 - localStorage 是浏览器存储数据的一种方式
 - 存储在用户本地，不会发送到服务器端
@@ -1662,7 +1662,7 @@ localStorage.length;
 
 ### 7、localStorage 在实际开发中的注意事项
 
-TIP
+
 
 - localStorage 存储的数据，除非手动清楚（如 通过 JS 删除 或 清除浏览器缓存）否则，数据永远不会过期的。它是持久化的本地存储。
 - sessionStorage 存储的数据，是当前会话结束（如 关闭浏览器）的时候，sessionStorage 中的数据会被清空
@@ -1682,7 +1682,7 @@ TIP
 
 ## 十四、测试题
 
-TIP
+
 
 自我测试：在不看答案的前提下，看看自己是否真正掌握了本节所学内容。
 

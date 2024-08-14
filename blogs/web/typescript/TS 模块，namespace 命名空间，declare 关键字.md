@@ -11,7 +11,7 @@ publish: true
 
 # TS 模块，namespace 命名空间，declare 关键字
 
-TIP
+
 
 从本节开始学习 TypeScript 的模块，常用的两种方案：一种是 ES6 的模块，一种是 CommonJS 的模块。
 
@@ -24,7 +24,7 @@ TIP
 
 ## 一、模块
 
-TIP
+
 
 任何包含 import 或 export 语句的文件，就是一个模块（module）。相应地，如果文件不包含 export 语句，就是一个全局的脚本文件。
 
@@ -88,7 +88,7 @@ tsc .\src\b.ts
 
 ### 1、import type 语句
 
-TIP
+
 
 import 在一条语句中，可以同时输入类型和正常接口。
 
@@ -112,7 +112,7 @@ import { A, a } from "./a";
 
 ### 1.1、区分类型和正常接口
 
-TIP
+
 
 以上代码的方式很不利于区分类型和正常接口，容易造成混淆。为了解决这个问题，TypeScript 引入了两个解决方法。
 
@@ -172,7 +172,7 @@ export type { A, B };
 
 ### 1.3、将类作为类型输出
 
-TIP
+
 
 以下是 `export type` 将一个类作为类型输出的应用
 
@@ -201,7 +201,7 @@ const p: Point = { x: 1, y: 2 };
 
 ### 2、importsNotUsedAsValues 编译设置
 
-TIP
+
 
 TypeScript 特有的输入类型（type）的 import 语句，编译成 JavaScript 时怎么处理呢 ？
 
@@ -237,13 +237,13 @@ import type { TypeA } from "./a";
 
 ### 3、CommonJS 模块
 
-TIP
+
 
 CommonJS 是 Node.js 的专用模块格式，与 ES 模块格式不兼容。
 
 ### 3.1、import = 语句
 
-TIP
+
 
 TypeScript 使用`import =`语句输入 CommonJS 模块
 
@@ -290,7 +290,7 @@ import fs = require("fs");
 
 ### 3.2、export = 语句
 
-TIP
+
 
 TypeScript 使用`export =`语句，输出 CommonJS 模块的对象，等同于 CommonJS 的`module.exports`对象。
 
@@ -314,7 +314,7 @@ console.log(obj.foo); // 123
 
 ### 4、模块定位
 
-TIP
+
 
 模块定位（module resolution）指的是一种算法，用来确定 import 语句和 export 语句里面的模块文件位置。
 
@@ -340,7 +340,7 @@ import * as $ from "jquery";
 
 ### 4.1、相对模块
 
-TIP
+
 
 加载模块时，目标模块分为相对模块（relative import）和非相对模块两种（non-relative import）。
 
@@ -354,7 +354,7 @@ TIP
 
 ### 4.2、非相对模块
 
-TIP
+
 
 非相对模块指的是不带有路径信息的模块。下面 import 语句加载的模块，都是非相对模块。
 
@@ -365,7 +365,7 @@ TIP
 
 ### 5、Classic 方法
 
-TIP
+
 
 Classic 方法以当前脚本的路径作为“基准路径”，计算相对模块的位置。
 
@@ -377,7 +377,7 @@ Classic 方法以当前脚本的路径作为“基准路径”，计算相对模
 
 ### 6、Node 方法
 
-TIP
+
 
 Node 方法就是模拟 Node.js 的模块加载方法，也就是`require()`的实现方法。
 
@@ -397,13 +397,13 @@ Node 方法就是模拟 Node.js 的模块加载方法，也就是`require()`的�
 
 ### 7、路径映射
 
-TIP
+
 
 TypeScript 允许开发者在`tsconfig.json`文件里面，手动指定脚本模块的路径。
 
 ### 7.1、baseUrl
 
-TIP
+
 
 `baseUrl`字段可以手动指定脚本模块的基准目录
 
@@ -419,7 +419,7 @@ TIP
 
 ### 7.2、paths
 
-TIP
+
 
 `paths`字段指定非相对路径的模块与实际脚本的映射
 
@@ -442,7 +442,7 @@ TIP
 
 ### 7.3、rootDirs
 
-TIP
+
 
 `rootDirs`字段指定模块定位时必须查找的其他目录
 
@@ -458,7 +458,7 @@ TIP
 
 ### 8、tsc 的`--traceResolution`参数
 
-TIP
+
 
 由于模块定位的过程很复杂，tsc 命令有一个`--traceResolution`参数，能够在编译时在命令行显示模块定位的每一步。
 
@@ -470,7 +470,7 @@ tsc --traceResolution
 
 ### 9、tsc 的`--noResolve`参数
 
-TIP
+
 
 tsc 命令的`--noResolve`参数，表示模块定位时，只考虑在命令行传入的模块
 
@@ -493,7 +493,7 @@ tsc app.ts moduleA.ts --noResolve
 
 ## 二、namespace 命名空间
 
-TIP
+
 
 namespace 是一种将相关代码组织在一起的方式，中文译为 **“命名空间”**。
 
@@ -501,7 +501,7 @@ namespace 是一种将相关代码组织在一起的方式，中文译为 **“�
 
 ### 1、基础用法
 
-TIP
+
 
 namespace 用来建立一个容器，内部的所有变量和函数，都必须在这个容器里面使用。
 
@@ -643,7 +643,7 @@ namespace 与模块的作用是一致的，都是把相关代码组织在一起�
 
 ### 2、namespace 的输出
 
-TIP
+
 
 namespace 本身也可以使用`export`命令输出，供其他文件使用。
 
@@ -700,7 +700,7 @@ let t = new shapes.Triangle();
 
 ### 3、namespace 的合并
 
-TIP
+
 
 多个同名的 namespace 会自动合并，这一点跟 interface 一样。
 
@@ -818,7 +818,7 @@ namespace E {
 
 ## 三、declare 关键字
 
-TIP
+
 
 declare 关键字用来告诉编译器，某个类型是存在的，可以在当前文件中使用。
 
@@ -840,7 +840,7 @@ declare 只能用来描述已经存在的变量和数据结构，不能用来声
 
 ### 1、declare variable
 
-TIP
+
 
 declare 关键字可以给出外部变量的类型描述
 
@@ -892,7 +892,7 @@ declare let x: number = 1;
 
 ### 2、declare function
 
-TIP
+
 
 declare 关键字可以给出外部函数的类型描述。
 
@@ -923,7 +923,7 @@ function sayHello(username) {
 
 ### 3、declare class
 
-TIP
+
 
 declare 给出 class 类型描述的写法如下
 
@@ -966,7 +966,7 @@ declare class C {
 
 ### 4、declare module，declare namespace
 
-TIP
+
 
 如果想把变量、函数、类组织在一起，可以将 declare 与 module 或 namespace 一起使用。
 
@@ -1045,7 +1045,7 @@ declare module "moduleA" {
 
 ### 4.1、实践应用
 
-TIP
+
 
 以下案例中，一个项目有多个模块，可以在一个模块中，对另一个模块的接口进行类型扩展
 
@@ -1113,7 +1113,7 @@ declare module "my-plugin-*" {
 
 ### 5、declare global
 
-TIP
+
 
 如果要为 JavaScript 引擎的原生对象添加属性和方法，可以使用`declare global {}`语法。
 
@@ -1154,7 +1154,7 @@ const config = window.myAppConfig; // 报错
 
 ### 7、declare enum
 
-TIP
+
 
 declare 关键字给出 enum 类型描述的例子如下，下面的写法都是允许的。
 
@@ -1182,7 +1182,7 @@ declare const enum E4 {
 
 ### 8、declare module 用于类型声明文件
 
-TIP
+
 
 我们可以为每个模块脚本，定义一个`.d.ts`文件，把该脚本用到的类型定义都放在这个文件里面。
 
@@ -1226,13 +1226,13 @@ declare module "path" {
 
 ## 四、d.ts 类型声明文件
 
-TIP
+
 
 单独使用的模块，一般会同时提供一个单独的类型声明文件（declaration file），把本模块的外部接口的所有类型都写在这个文件里面，便于模块使用者了解接口，也便于编译器检查使用者的用法是否正确。
 
 ### 1、什么是类型声明文件
 
-TIP
+
 
 类型声明文件里面只有类型代码，没有具体的代码实现。它的文件名一般为`[模块名].d.ts`的形式，其中的`d`表示 declaration（声明）。
 
@@ -1291,7 +1291,7 @@ export = pi;
 
 ### 2、如何使用类型声明文件
 
-TIP
+
 
 下面是一个如何使用类型声明文件的简单例子，有一个类型声明文件`types.d.ts`
 
@@ -1330,7 +1330,7 @@ export const character: User = {
 
 ### 3、类型声明文件的来源
 
-TIP
+
 
 类型声明文件主要有以下三种来源：
 
@@ -1340,7 +1340,7 @@ TIP
 
 ### 3.1、自动生成
 
-TIP
+
 
 只要使用编译选项`declaration`，编译器就会在编译时自动生成单独的类型声明文件。
 
@@ -1362,7 +1362,7 @@ $ tsc --declaration
 
 ### 3.2、内置声明文件
 
-TIP
+
 
 安装 TypeScript 语言时，会同时安装一些内置的类型声明文件，主要是内置的全局对象（JavaScript 语言接口和运行环境 API）的类型声明。
 
@@ -1399,7 +1399,7 @@ TypeScript 编译器会自动根据编译目标`target`的值，加载对应的�
 
 ### 3.3、外部类型声明文件
 
-TIP
+
 
 如果项目中使用了外部的某个第三方代码库，那么就需要这个库的类型声明文件。
 
@@ -1471,7 +1471,7 @@ declare module "模块名";
 
 ### 4、declare 关键字
 
-TIP
+
 
 类型声明文件只包含类型描述，不包含具体实现，所以非常适合使用 declare 语句来描述类型。declare 关键字的具体用法，详见《declare 关键字》部分，这里讲解如何在类型声明文件里面使用它。
 
@@ -1544,7 +1544,7 @@ declare var d3: D3.Base;
 
 ### 5、模块发布
 
-TIP
+
 
 当前模块如果包含自己的类型声明文件，可以在 `package.json` 文件里面添加一个`types`字段或`typings`字段，指明类型声明文件的位置。
 
@@ -1588,7 +1588,7 @@ TIP
 
 ### 6、三斜杠命令
 
-TIP
+
 
 如果类型声明文件的内容非常多，可以拆分成多个文件，然后入口文件使用三斜杠命令，加载其他拆分后的文件。如下在 `/src/` 目录下
 
@@ -1619,7 +1619,7 @@ TIP
 
 ### 6.1、`/// <reference path="" />`
 
-TIP
+
 
 `/// <reference path="" />`是最常见的三斜杠命令，告诉编译器在编译时需要包括的文件，常用来声明当前脚本依赖的类型文件。
 
@@ -1668,7 +1668,7 @@ let myUrl = URL.parse("https://www.arryblog.com");
 
 ### 6.2、`/// <reference types="" />`
 
-TIP
+
 
 types 参数用来告诉编译器当前脚本依赖某个 DefinitelyTyped 类型库，通常安装在`node_modules/@types`目录。
 
@@ -1690,7 +1690,7 @@ types 参数的值是类型库的名称，也就是安装到`node_modules/@types
 
 ### 6.3、`/// <reference lib="" />`
 
-TIP
+
 
 `/// <reference lib="..." />`命令允许脚本文件显式包含内置 lib 库，等同于在`tsconfig.json`文件里面使用`lib`属性指定 lib 库。
 

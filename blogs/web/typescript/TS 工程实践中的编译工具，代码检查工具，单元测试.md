@@ -12,13 +12,13 @@ publish: true
 
 # TS 工程实践中的编译工具，代码检查工具，单元测试
 
-TIP
+
 
 从本节开始学习 TypeScript 工程实践中的编译工具，代码检查工具 TSLint 和 ESLint，Jest 单元测试，TS 工程实践知识总结相关内容。
 
 ## 一、TS 编译工具
 
-TIP
+
 
 前面我们用 Webpack 构建了 TS 的基础环境，并编写了 `Hello World` 程序。为了能将 TypeScript 编译成 JavaScript 我们用了一个 Webpack 的 loader ，即 `ts-loader` 。
 
@@ -26,7 +26,7 @@ TIP
 
 ### 1、解读 ts-loader
 
-TIP
+
 
 在 `webpack.base.config.js` 基础（公共）环境配置中
 
@@ -152,7 +152,7 @@ npm run build
 
 ### 3、fork-ts-checker-webpack-plugin 插件
 
-TIP
+
 
 如何在 `transpileOnly: true` 开启的状态下，又可以进行类型检查呢 ？
 
@@ -262,7 +262,7 @@ npm run build
 
 ### 4、awesome-typescript-loader
 
-TIP
+
 
 除了 `ts-loader` ，还有另一个 leader。 即：[awesome-typescript-loader(opens new window)](https://www.npmjs.com/package/awesome-typescript-loader)
 
@@ -278,7 +278,7 @@ TIP
 | ts-loader                 | 1600+    | 500+          | 3000+（时间较长）            |
 | awesome-typescript-loader | 2200+    | 1600+         | 1600+（类型检查有遗漏）      |
 
-TIP
+
 
 以上两个 loader 在开启 `transpileOnly` 的情况下，构建时间都有明显的缩短。但在加入类型检查进程时，`ts-loader` 的构建时间反而比较长。
 
@@ -292,7 +292,7 @@ TIP
 
 ### 5、TypeScript 与 Babel
 
-TIP
+
 
 我们肯定会有一个疑问：使用了 TypeScript，为什么还需要 Babel ？
 
@@ -322,7 +322,7 @@ TIP
 
 ### 6、使用 Babel 创建工程
 
-TIP
+
 
 新建一个项目，文件夹名称为 `ts-babel`
 
@@ -511,7 +511,7 @@ npm run type-check
 
 ### 6.6、在 Babel 中使用 TS 注意事项
 
-TIP
+
 
 有四种语法在 Babel 中是无法编译的
 
@@ -561,7 +561,7 @@ export = s;
 
 ### 7、如何选择 TypeScript 编译工具
 
-TIP
+
 
 有三点建议：
 
@@ -571,13 +571,13 @@ TIP
 
 ## 二、代码检查工具 TSLint 和 ESLint
 
-TIP
+
 
 深入浅出代码检查工具的来龙去脉以及相关应用，Jest 工具的使用，babel-jest 工具的使用等。
 
 ### 1、TSLint 转向 ESLint 的原因
 
-TIP
+
 
 TypeScript 官方转向从 TSLint 转向 ESLint 的原因：
 
@@ -588,7 +588,7 @@ TypeScript 官方转向从 TSLint 转向 ESLint 的原因：
 
 ### 2、使用了 TypeScript，为什么还需要 ESLint ？
 
-TIP
+
 
 从前面的学习中我们知道，TS 主要做两件事情：类型检查 和 语言转换，在这个过程中也会对语法错误进行检查。
 
@@ -606,7 +606,7 @@ TIP
 
 ### 3、如何在 TS 中使用 ESLint
 
-TIP
+
 
 基于前面的 hello world 工程进行改造
 
@@ -700,7 +700,7 @@ document.querySelectorAll(".app")[0].innerHTML = hello;
 
 ### 5、安装 ESLint 插件
 
-TIP
+
 
 除了使用脚本做代码检查，还可以安装 ESLint 的插件 ！来辅助开发。
 
@@ -733,7 +733,7 @@ TIP
 
 ### 6、babel-eslint 与 typescript-eslint
 
-TIP
+
 
 如果我们使用过 Babel ，也使用过 Babel 的 ESLint，接下来对比 babel-eslint 与 typescript-eslint，它们两者之间的区别如下。
 
@@ -749,13 +749,13 @@ TIP
 
 ## 三、Jest 单元测试
 
-TIP
+
 
 Jest 是由 Facebook 开源的一款 JavaScript 测试框架。它非常易于使用，快速而且功能强大，被广泛用于 React 项目 和 Node.js 应用程序。
 
 ### 1、TypeScript 工具体系
 
-TIP
+
 
 TS 的工具体系基本分成了 Babel 系 和 非 Babel 系，单元测试也不例外
 
@@ -769,7 +769,7 @@ TS 的工具体系基本分成了 Babel 系 和 非 Babel 系，单元测试也�
 
 ### 2、Jest 工具的使用
 
-TIP
+
 
 依然在前面 `hello world` 工程中来实现
 
@@ -796,7 +796,7 @@ icoding-ts
 
 ### 2.1、安装 Jest 相关包
 
-TIP
+
 
 在命令行终端中输入如下命令，安装三个包 `jest` 、`ts-jest` 和 `@types/jest`
 
@@ -837,7 +837,7 @@ module.exports = {
 
 ### 3、编写测试用例
 
-TIP
+
 
 下面会编写两个简单的函数，再为它们编写一个测试用例
 
@@ -921,7 +921,7 @@ npm run test
 
 ### 4、babel-jest 工具的使用
 
-TIP
+
 
 打开我们前面用到的 `ts-babel` 项目
 
@@ -946,7 +946,7 @@ npm i jest babel-jest @types/jest -D
 
 ### 4.1、编写测试用例
 
-TIP
+
 
 下面会编写两个简单的函数，再为它们编写一个测试用例
 
@@ -1011,7 +1011,7 @@ npm run test
 
 ### 4.2、启动类型检查脚本
 
-TIP
+
 
 如果要进行类型检查，我们仍然需要启动类型检查脚本
 
@@ -1031,7 +1031,7 @@ npm run type-check
 
 ## 四、TS 工程实践知识总结
 
-TIP
+
 
 总结 TypeScript 工程实践部分所学到的所有知识点，模块系统、命名空间，声明合并，`tsconfig.json` 主要配置，编译工具，代码检查工具，单元测试。
 
@@ -1063,7 +1063,7 @@ import x = require;
 
 ### 3、声明合并
 
-TIP
+
 
 定义：多个具有相同名称的声明会合并为一个声明
 
@@ -1081,7 +1081,7 @@ TIP
 
 ### 4、tsconfig.json 主要配置
 
-TIP
+
 
 TypeScript 中 `tsconfig.json` 配置文件中的主要配置信息，包括：文件选项、编译选项、工程引用
 
