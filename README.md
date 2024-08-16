@@ -27,6 +27,5 @@ actionText: About
 actionLink: /views/other/about
 footer: # 底部模块的配置
   record: XUNYUBLOG
-  startYear: 2023
-# footer: XUNYUBLOG | Copyright © 2023-present Xunyu
+  startYear: 2024
 ---
