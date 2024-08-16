@@ -7,7 +7,7 @@ import algolia from "./algolia";
 export default defineUserConfig({
   title: "xunyublog",
   // @ts-ignore
-  base: "./",
+  base: "xunyuBlog",
   description: "用代码将梦想照进现实",
   head: [["link", { rel: "icon", href: "favicon.ico" }]],
   theme: recoTheme({
