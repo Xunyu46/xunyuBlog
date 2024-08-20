@@ -308,5 +308,9 @@ export default {
       text: "数组字符串",
       children: ["/blogs/algorithm/数组字符串.md"],
     },
+    {
+      text: "回溯算法",
+      children: ["/blogs/algorithm/回溯算法.md"],
+    },
   ],
 };
