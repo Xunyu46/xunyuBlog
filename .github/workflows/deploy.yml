@@ -1,65 +1,53 @@
-name: GitHub Actions Build and Deploy
+# 将静态内容部署到 GitHub Pages 的简易工作流程
+name: Deploy static content to Pages
 
-# 触发条件
 on:
-  # 手动触发
-  workflow_dispatch:
-  # push 到指定分支
+  # 仅在推送到默认分支时运行。
   push:
-    branches:
-      - main
-    # 只在下列路径变更时触发
-    paths:
-      - 'docs/**'
-      - 'package.json'
+    branches: ['main']
 
-# 设置权限
+  # 这个选项可以使你手动在 Action tab 页面触发工作流
+  workflow_dispatch:
+
+# 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages。
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
-# 设置上海时区
-env:
-  TZ: Asia/Shanghai
+# 允许一个并发的部署
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
 
-# 任务
+# ----分割线：上面的内容与静态网址是一样的，一般不用改-----
+
 jobs:
-  build-and-deploy:
-    # 服务器环境：最新版 ubuntu
+  # 单次部署的工作描述
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20]
     steps:
-      # 拉取代码
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          fetch-depth: 0
-
-      # 安装 pnpm
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
-
-      # 设置 node 版本
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
-
-      # 打包静态文件
+          node-version: 20
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm install
       - name: Build
-        env:
-          APP_BASE_PATH: /${{ github.repository }}
-        run: pnpm install && pnpm run build
-
-      # 部署
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+        run: npm run build
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          # GitHub Pages 读取的分支
-          branch: gh-pages
-          # 静态文件所在目录
-          folder: dist
+          # Upload dist repository
+          path: './dist'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
