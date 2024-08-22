@@ -3,9 +3,9 @@ layout: home
 layoutClass: 'm-home-layout'
 
 hero:
-  name: 寻雨
-  text: 前端知识库
-  tagline: 用代码将梦想照进现实
+  name: 寻雨的博客
+  text: xunyu的前端知识库
+  tagline: 知识是进步的阶梯，争取每天都有知识点更新
   image:
     src: /logo.png
     alt: 茂茂物语
