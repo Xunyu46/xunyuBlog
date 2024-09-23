@@ -100,6 +100,10 @@ export const nav: DefaultTheme.Config['nav'] = [
         text: '每日面试题',
         link: '/blogs/interview/everyday/每日面试题.md',
       },
+      // {
+      //   text: '面试准备',
+      //   link: '/blogs/interview/prepare/面试准备.md'
+      // },
       { text: 'HTML', link: '/blogs/interview/html/' },
       { text: 'CSS', link: '/blogs/interview/css/' },
       { text: 'JavaScript', link: '/blogs/interview/javascript/' },
@@ -117,12 +121,4 @@ export const nav: DefaultTheme.Config['nav'] = [
     link: '/blogs/algorithm/二叉树.md',
   },
   { text: '项目', link: '/project/' },
-  {
-    text: '文件夹',
-    items: [
-      { text: 'vue', link: '/categories/vue/1/' },
-      { text: '微信小程序', link: '/categories/applet/1/' },
-      { text: '面试', link: '/categories/mianshi/1/' },
-    ],
-  },
 ]
