@@ -157,7 +157,7 @@ publish: true
 
 > 以上代码最终渲染效果如下：
 
-![image-20230812182233568](https://www.arryblog.com/assets/img/image-20230812182233568.32bb2f94.png)
+![image-20230812182233568](assets/image-20230812182233568.32bb2f94.png)
 
 如果我在`.main`中添加如下样式
 
@@ -169,7 +169,7 @@ publish: true
 
 最终渲染出来的效果如下，并不是我们企望的效果
 
-![image-20230812182403257](https://www.arryblog.com/assets/img/image-20230812182403257.47754a24.png)
+![image-20230812182403257](assets/image-20230812182403257.47754a24.png)
 
 注：
 
@@ -261,7 +261,7 @@ publish: true
 - 当屏幕尺寸 `> 750` 时，元素相对于浏览器左侧悬浮显示
 - 当屏幕尺寸 `<= 750` 时， 元素在组件内全屏显示
 
-![GIF2023-8-1219-29-15](https://www.arryblog.com/assets/img/GIF2023-8-1219-29-15.5f3bd9a4.gif)
+![GIF2023-8-1219-29-15](assets/GIF2023-8-1219-29-15.5f3bd9a4.gif)
 
 实现步骤
 

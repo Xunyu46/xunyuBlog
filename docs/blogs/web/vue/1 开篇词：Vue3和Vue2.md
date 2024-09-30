@@ -29,11 +29,11 @@ publish: true
 
 在 `Vue 2` 中，所有的源码都存在在 `src` 目录下：
 
-<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ddc2d129b1664b31935609ae4e713856~tplv-k3u1fbpfcp-watermark.image?" alt="image.png" width="80%" />
+<img src="./assets/ddc2d129b1664b31935609ae4e713856~tplv-k3u1fbpfcp-watermark.png" alt="image.png" width="80%" />
 
 `Vue 3` 相对于 `Vue 2` 使用 `monorepo` 的方式**进行包管理**，使用 `monorepo` 的管理方式，使得 `Vue 3` 源码模块职责显得特别地清晰明了，每个包独立负责一块核心功能的实现，方便开发和测试。如下图：
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a0dd5ab8f7fe4d45929bdd734fd01a12~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](./assets/a0dd5ab8f7fe4d45929bdd734fd01a12~tplv-k3u1fbpfcp-watermark.png)
 
 比如，`compiler-core` 专职负责与平台无关层的渲染器底层，对外提供统一调用函数，内部通过完整的测试用例保障功能的稳定性。而 `compiler-dom` 和 `compiler-ssr` 则依托于 `compiler-core` 分别实现浏览器和服务端侧的渲染器上层逻辑，模块核心职责清晰明了，提高了整体程序运行的健壮性！
 
@@ -43,7 +43,7 @@ publish: true
 
 组合式 API (`Composition API`) 是一系列 API 的集合，使我们可以使用函数而不是声明选项的方式书写 Vue 组件。通过下图我们可以清晰地看出来二者的区别：
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f13d16b31d3443ec9c29935870c9f7bb~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](./assets/f13d16b31d3443ec9c29935870c9f7bb~tplv-k3u1fbpfcp-watermark.png)
 
 但 `Composition API` 也并不是“银弹”，它也有自己适合的场景，所以 `Vue 3` 也是在实现层面做到了兼容 `Options API` 的写法。相对而言，`Composition API` 更适用于大型的项目，因为大型项目可能会产生大量状态逻辑的维护，甚至跨组件的逻辑复用；而对于中小型项目来说，`Options API` 可以在你写代码时减少思考组织状态逻辑的方式，也是一种不错的选择。
 
@@ -51,11 +51,11 @@ publish: true
 
 熟悉 Vue 2 源码的同学大致清楚 `Vue 2`的核心运作机制可以抽象为下图所示的样子：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fa72bab154fd45a7b793d6f33aaa3043~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](./assets/fa72bab154fd45a7b793d6f33aaa3043~tplv-k3u1fbpfcp-watermark.png)
 
 `Vue 3` 则在底层实现中，摒弃了 Vue 2 的部分实现，**采用全新的响应式模型进行重写**。这里我根据 Vue 3 的运行机制，也简单画了一张 Vue 3 的宏观草图，如下所示：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4b410850bd4d4e2198e62e4c38bf8b92~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](./assets/4b410850bd4d4e2198e62e4c38bf8b92~tplv-k3u1fbpfcp-watermark.png)
 
 可以粗略地看到：
 

@@ -37,7 +37,7 @@ publish: true
 
 > 如下图所示的案例
 
-![image-20230513161942213](https://www.arryblog.com/assets/img/image-20230513161942213.0e6da611.png)
+![image-20230513161942213](assets/image-20230513161942213.0e6da611.png)
 
 在父组件`App`中调用了同一个子组件`<List>`2 次，子组件的外观样式一样，但展示的主体内容模板和样式都不一样，这时候主体中需要展示的模板内容就需要通过父组件来传递。
 
@@ -78,7 +78,7 @@ publish: true
 
 > 我们利用`props`来传递模板内容，实现如下效果
 
-![image-20230513161942213](https://www.arryblog.com/assets/img/image-20230513161942213-168810915639229.0e6da611.png)
+![image-20230513161942213](assets/image-20230513161942213-168810915639229.0e6da611.png)
 
 - `App.vue`组件
 
@@ -538,7 +538,7 @@ Vue 为我们提供了以下三种插槽
 
 接下来，我们用插槽来实现下图所示的案例
 
-![image-20230513161942213](https://www.arryblog.com/assets/img/image-20230513161942213.0e6da611.png)
+![image-20230513161942213](assets/image-20230513161942213.0e6da611_1.png)
 
 - `App.vue`根组件
 
@@ -650,7 +650,7 @@ Vue 为我们提供了以下三种插槽
 
 ![image-20230513205906663](data:image/png;base64,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)
 
-![image-20230513210131239](https://www.arryblog.com/assets/img/16884714343548.aff92516.png)
+![image-20230513210131239](assets/16884714343548.aff92516.png)
 
 注：
 
@@ -844,9 +844,9 @@ Vue 为我们提供了以下三种插槽
 - 点击弹窗中的取消与确认按扭，都会关闭弹窗。
 - 点击右上角的关闭按扭会弹出一个提示框，询问是确定关闭弹窗吗？点击确定就会关才，点击取消，就不关闭。
 
-![GIF2023-5-1322-27-58](https://www.arryblog.com/assets/img/GIF2023-5-1322-27-58.ea7b94d0.gif)
+![GIF2023-5-1322-27-58](assets/GIF2023-5-1322-27-58.ea7b94d0.gif)
 
-![GIF2023-7-419-31-41](https://www.arryblog.com/assets/img/GIF2023-7-419-31-41.4137741f.gif)
+![GIF2023-7-419-31-41](assets/GIF2023-7-419-31-41.4137741f.gif)
 
 ### 1、实现步骤
 
@@ -951,7 +951,7 @@ Vue 为我们提供了以下三种插槽
 
 **第三步：** 在父组件中使用`Dialog`子组件，最终实现如下效果
 
-![image-20230704193038581](https://www.arryblog.com/assets/img/image-20230704193038581.ba674530.png)
+![image-20230704193038581](assets/image-20230704193038581.ba674530.png)
 
 - 在组件上添加`title`属性，将内容的标题传入子组件
 
@@ -1531,7 +1531,7 @@ Vue 为我们提供了以下三种插槽
 
 > 我们来实现如下图所示的无限滚动加载更多内容的案例
 
-![GIF2023-7-115-20-15](https://www.arryblog.com/assets/img/GIF2023-7-115-20-15.1cf72ecc.gif)
+![GIF2023-7-115-20-15](assets/GIF2023-7-115-20-15.1cf72ecc.gif)
 
 我们的需求
 
@@ -1868,7 +1868,7 @@ Vue 为我们提供了以下三种插槽
 
 ### 3、获取鼠标坐标
 
-![GIF 2023-7-115-40-15](https://www.arryblog.com/assets/img/GIF-2023-7-115-40-15.662db6ce.gif)
+![GIF 2023-7-115-40-15](assets/GIF-2023-7-115-40-15.662db6ce.gif)
 
 我们期望实现一个组件，这个组件内部主要封装了获取鼠标坐标的功能。当我们在使用这些组件时，我们希望拿在父组件中拿到当前鼠标的坐标，然后显示在页面中。
 
@@ -1935,7 +1935,7 @@ Vue 为我们提供了以下三种插槽
 - ①、在子组件中通过定义插槽的出口
 - ②、在父组件中使用子组件时，直接写在子组件标签中间的内容就是插槽内容。该内容会替换插槽出口`<slot>`标签
 
-![image-20230701160304665](https://www.arryblog.com/assets/img/image-20230701160304665.f7c323d9.png)
+![image-20230701160304665](assets/image-20230701160304665.f7c323d9.png)
 
 **具名插槽**
 
@@ -1947,7 +1947,7 @@ Vue 为我们提供了以下三种插槽
 - ①、在子组件中定义插槽出口
 - ②、在父组件中使用子组件时，指定插槽内容
 
-![image-20230701162302078](https://www.arryblog.com/assets/img/image-20230701162302078.add4b2ed.png)
+![image-20230701162302078](assets/image-20230701162302078.add4b2ed.png)
 
 插槽注意事项
 
@@ -2015,14 +2015,14 @@ Vue 为我们提供了以下三种插槽
 
 但如果出现如下图所示情况，我们需要将组件`<Root>`中的数据传递给到孙组件`<Item>`或后代组件`<ListChild>`时要如何传呢 ？
 
-![image-20230516153434804](https://www.arryblog.com/assets/img/image-20230516153434804.fdaa5e83.png)
+![image-20230516153434804](assets/image-20230516153434804.fdaa5e83.png)
 
 > 如果用之前讲到的`props`来实现，传递方式如下图：
 
 - 数据从`<Root>`组件传到`<Item>`组件：需要先将数据传递给到`<Aside>`组件，再通过`<Aside>`组件传递给到`<Item>`组件。
 - 数据从`<Root>`组件传到`<ListChild>`组件：需要先将数据传递给到`<Main>`组件，再通过`<Main>`组件传递给到`<List>`组件，最后通过`<List>`组件传递给到`<ListChild>`组件。
 
-![image-20230516150039593](https://www.arryblog.com/assets/img/image-20230516150039593.60d630dd.png)
+![image-20230516150039593](assets/image-20230516150039593.60d630dd.png)
 
 **代码演示**
 
@@ -2101,7 +2101,7 @@ Prop 逐级透传问题
 - 一个父组件相对于其所有的后代组件而言，他是数据提供者，我们称为**依赖提供（Provide）者**。
 - 所有该组件的后代组件，无论层级有多深，都可以**注入（Inject）**由祖先组件提供给整条链路的数据（依赖）
 
-![image-20230516151734357](https://www.arryblog.com/assets/img/image-20230516151734357.c2e52a23.png)
+![image-20230516151734357](assets/image-20230516151734357.c2e52a23.png)
 
 ### 3、依赖注入的基本使用
 
@@ -2354,7 +2354,7 @@ export default {
 
 > 以上代码最终渲染结果如下：
 
-![GIF2023-5-1618-07-33](https://www.arryblog.com/assets/img/GIF2023-5-1618-07-33.5412b3ec.gif)
+![GIF2023-5-1618-07-33](assets/GIF2023-5-1618-07-33.5412b3ec.gif)
 
 ### 5、应用层 Provide
 
@@ -2558,7 +2558,7 @@ export default {
 
 > 最终渲染效果如下：
 
-![GIF2023-5-1620-11-54](https://www.arryblog.com/assets/img/GIF2023-5-1620-11-54.3233261a.gif)
+![GIF2023-5-1620-11-54](assets/GIF2023-5-1620-11-54.3233261a.gif)
 
 ### 7、使用 Symbol 作为注入名
 

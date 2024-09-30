@@ -102,7 +102,7 @@ Vue 组件生命周期相关的内容
 | beforeUnmount | 组件销毁前 |
 | unmounted     | 组件销毁后 |
 
-![lifecycle.16e4c08e](https://www.arryblog.com/assets/img/lifecycle.16e4c08e.1ae3c5f4.png)
+![lifecycle.16e4c08e](assets/lifecycle.16e4c08e.1ae3c5f4.png)
 
 ### 3.1、生命周期函数的基本使用
 
@@ -224,7 +224,7 @@ export default {
 
 > 以上代码最终在 console 控制台打印如下结果
 
-![image-20230507175503890](https://www.arryblog.com/assets/img/image-20230507175503890.34866001.png)
+![image-20230507175503890](assets/image-20230507175503890.34866001.png)
 
 ### 3.3、beforeMount
 
@@ -260,7 +260,7 @@ export default {
 </template>
 ```
 
-![image-20230507182231593](https://www.arryblog.com/assets/img/image-20230507182231593.6d906f57.png)
+![image-20230507182231593](assets/image-20230507182231593.6d906f57.png)
 
 ### 3.4、mounted
 
@@ -306,7 +306,7 @@ export default {
 </template>
 ```
 
-![image-20230507203746519](https://www.arryblog.com/assets/img/image-20230507203746519.befc7964.png)
+![image-20230507203746519](assets/image-20230507203746519.befc7964.png)
 
 ### 3.5、beforeUpdate
 
@@ -339,7 +339,7 @@ export default {
 </template>
 ```
 
-![image-20230507193725029](https://www.arryblog.com/assets/img/image-20230507193725029.f6936708.png)
+![image-20230507193725029](assets/image-20230507193725029.f6936708.png)
 
 注：
 
@@ -378,7 +378,7 @@ export default {
 </template>
 ```
 
-![image-20230507194923976](https://www.arryblog.com/assets/img/image-20230507194923976.128e9d7b.png)
+![image-20230507194923976](assets/image-20230507194923976.128e9d7b.png)
 
 ### 3.7、beforeUnmount 与 unmounted
 
@@ -450,7 +450,7 @@ export default {
 
 > 以上代码最终执行效果如下：
 
-![GIF2023-5-721-01-23](https://www.arryblog.com/assets/img/GIF2023-5-721-01-23.5fbba7b6.gif)
+![GIF2023-5-721-01-23](assets/GIF2023-5-721-01-23.5fbba7b6.gif)
 
 ### 4、总结：Vue 生命周期
 
@@ -544,7 +544,7 @@ export default {
 </template>
 ```
 
-![GIF2023-5-716-31-58](https://www.arryblog.com/assets/img/GIF2023-5-716-31-58.93783f18.gif)
+![GIF2023-5-716-31-58](assets/GIF2023-5-716-31-58.93783f18.gif)
 
 ## 二、自定义指令
 
@@ -628,7 +628,7 @@ export default {
 
 > 以上代码最终渲染效果如下：
 
-![GIF2023-6-1716-31-38](https://www.arryblog.com/assets/img/GIF2023-6-1716-31-38.5770abc8.gif)
+![GIF2023-6-1716-31-38](assets/GIF2023-6-1716-31-38.5770abc8.gif)
 
 注：观察以上图片，可以看到
 
@@ -687,7 +687,7 @@ export default {
 </template>
 ```
 
-![image-20230617165331478](https://www.arryblog.com/assets/img/image-20230617165331478.a4348948.png)
+![image-20230617165331478](assets/image-20230617165331478.a4348948.png)
 
 注：
 
@@ -847,11 +847,11 @@ export default {
 
 > 当点击**更新 n 的值**按扭时，会在控制台打印如下内容。
 
-![image-20230508175727933](https://www.arryblog.com/assets/img/image-20230508175727933.7243e7d9.png)
+![image-20230508175727933](assets/image-20230508175727933.7243e7d9.png)
 
 > 当添加**更新 message 的值**按扭时，`updated`钩子也会调用，在控制台打印如下内容。
 
-![image-20230508175812856](https://www.arryblog.com/assets/img/image-20230508175812856.b0219359.png)
+![image-20230508175812856](assets/image-20230508175812856.b0219359.png)
 
 注意事项
 
@@ -971,7 +971,7 @@ export default {
 
 > 以上代码最终渲染效果如下，点击圆角变大按扭后，元素的圆角确实变大了。
 
-![GIF2023-6-2015-30-58](https://www.arryblog.com/assets/img/GIF2023-6-2015-30-58.bf41d792.gif)
+![GIF2023-6-2015-30-58](assets/GIF2023-6-2015-30-58.bf41d792.gif)
 
 ### 6、自定义指令函数写法
 
@@ -1025,7 +1025,7 @@ export default {
 
 > 以上代码最终执行后效果如下：
 
-![GIF2023-6-2015-30-58](https://www.arryblog.com/assets/img/GIF2023-6-2015-30-58.bf41d792.gif)
+![GIF2023-6-2015-30-58](assets/GIF2023-6-2015-30-58.bf41d792_1.gif)
 
 ### 7、自定义 v-style 和 v-display 指令
 
@@ -1085,7 +1085,7 @@ export default {
 
 > 最终渲染后效果如下：
 
-![GIF2023-6-200-09-07](https://www.arryblog.com/assets/img/GIF2023-6-200-09-07.b41c6830.gif)
+![GIF2023-6-200-09-07](assets/GIF2023-6-200-09-07.b41c6830.gif)
 
 ### 8、自定义全局指令
 
@@ -1209,7 +1209,7 @@ export default {
 
 > 以上案例，最终编译后，显示效果如下：
 
-![image-20230508183525300](https://www.arryblog.com/assets/img/image-20230508183525300.19692d2c.png)
+![image-20230508183525300](assets/image-20230508183525300.19692d2c.png)
 
 注：
 
@@ -1310,7 +1310,7 @@ mounted(el,binding,vnode,prevNode) {   }
 
 > 以上代码，使用`v-debounce`指令后效果如下：
 
-![GIF2023-6-1915-45-57](https://www.arryblog.com/assets/img/GIF2023-6-1915-45-57.9bb40018.gif)
+![GIF2023-6-1915-45-57](assets/GIF2023-6-1915-45-57.9bb40018.gif)
 
 **完整版代码**
 
@@ -1379,11 +1379,11 @@ app.mount('#app')
 
 > 以上代码效果如下：
 
-![GIF2023-6-1917-01-55](https://www.arryblog.com/assets/img/GIF2023-6-1917-01-55.351dae87.gif)
+![GIF2023-6-1917-01-55](assets/GIF2023-6-1917-01-55.351dae87.gif)
 
 > **拖拽动画的实现原理如下图**
 
-![image-20221013202829968](https://www.arryblog.com/assets/img/image-20221013202829968.e89506a5.png)
+![image-20221013202829968](assets/image-20221013202829968.e89506a5.png)
 
 实现步骤：
 
@@ -1652,7 +1652,7 @@ io.disconnect();
 
 当点击停止按扭停止侦听时，不管元素进入还是离开可视区，图下右边的控制台都不会有新的输出。
 
-![GIF2023-6-1918-56-31](https://www.arryblog.com/assets/img/GIF2023-6-1918-56-31.c72ba3b7.gif)
+![GIF2023-6-1918-56-31](assets/GIF2023-6-1918-56-31.c72ba3b7.gif)
 
 ### 3.2、IntersectionObserverEntry 对象
 
@@ -1714,11 +1714,11 @@ io.disconnect();
 
 > 当图片部分进入可视区时，`IntersectionObserverEntry`对象中属性的值如下：
 
-![image-20230619194240191](https://www.arryblog.com/assets/img/image-20230619194240191.faa13456.png)
+![image-20230619194240191](assets/image-20230619194240191.faa13456.png)
 
 ### 3.3、IntersectionObserver 实现图片懒加载
 
-![GIF2023-6-200-37-02](https://www.arryblog.com/assets/img/GIF2023-6-200-37-02.42005839.gif)
+![GIF2023-6-200-37-02](assets/GIF2023-6-200-37-02.42005839.gif)
 
 ```html
 <script>
@@ -1924,7 +1924,7 @@ io.disconnect();
 
 你会发现第一排图片元素永远都不会显示，而其它的图片元素一上来就全部显示了
 
-![image-20230620174616829](https://www.arryblog.com/assets/img/image-20230620174616829.bfaf1b5a.png)
+![image-20230620174616829](assets/image-20230620174616829.bfaf1b5a.png)
 
 ### 3.5、v-lazy 指令实现图片懒加载
 
@@ -2062,7 +2062,7 @@ export default {
 </template>
 ```
 
-![image-20230508222409745](https://www.arryblog.com/assets/img/image-20230508222409745-16876734041191.9bda6e37.png)
+![image-20230508222409745](assets/image-20230508222409745-16876734041191.9bda6e37.png)
 
 注：
 
@@ -2099,7 +2099,7 @@ export default {
 </template>
 ```
 
-![image-20230508223019331](https://www.arryblog.com/assets/img/image-20230508223019331-16876734041202.099a29d0.png)
+![image-20230508223019331](assets/image-20230508223019331-16876734041202.099a29d0.png)
 
 ### 3、ref 的唯一性
 
@@ -2128,7 +2128,7 @@ export default {
 </template>
 ```
 
-![image-20230508223802043](https://www.arryblog.com/assets/img/image-20230508223802043-16876734041203.7ea0e114.png)
+![image-20230508223802043](assets/image-20230508223802043-16876734041203.7ea0e114.png)
 
 注：
 
@@ -2159,7 +2159,7 @@ export default {
 </template>
 ```
 
-![image-20230508225316236](https://www.arryblog.com/assets/img/image-20230508225316236-16876734041204.18a70ff3.png)
+![image-20230508225316236](assets/image-20230508225316236-16876734041204.18a70ff3.png)
 
 注意事项：
 
@@ -2220,7 +2220,7 @@ export default {
 
 > 最终代码执行后，在控制台输出结果如下：
 
-![image-20230508231115396](https://www.arryblog.com/assets/img/image-20230508231115396-16876734041205.e4b1bab5.png)
+![image-20230508231115396](assets/image-20230508231115396-16876734041205.e4b1bab5.png)
 
 注：
 
@@ -2317,7 +2317,7 @@ export default {
 
 在父组件中通过模板引用访问到子组件实例后，仅能访问到公开的属性`publicData` 和 `publicMethod`
 
-![image-20230620184412313](https://www.arryblog.com/assets/img/image-20230620184412313.e9fd4d2b.png)
+![image-20230620184412313](assets/image-20230620184412313.e9fd4d2b.png)
 
 温馨提示
 
@@ -2327,7 +2327,7 @@ export default {
 
 > 开发`Count`计时器组件，最终效果如下
 
-![GIF2023-6-2019-42-38](https://www.arryblog.com/assets/img/GIF2023-6-2019-42-38.b7615a1c.gif)
+![GIF2023-6-2019-42-38](assets/GIF2023-6-2019-42-38.b7615a1c.gif)
 
 **组件实例的和属性**
 
@@ -2526,7 +2526,7 @@ function nextTick(callback?: () => void): Promise<void>
 </template>
 ```
 
-![image-20230620223347015](https://www.arryblog.com/assets/img/image-20230620223347015.c3d725b1.png)
+![image-20230620223347015](assets/image-20230620223347015.c3d725b1.png)
 
 ### 1.2、nextTick 中获取数据更新后 DOM
 
@@ -2566,7 +2566,7 @@ function nextTick(callback?: () => void): Promise<void>
 </template>
 ```
 
-![image-20230620223918321](https://www.arryblog.com/assets/img/image-20230620223918321.6ff6cc00.png)
+![image-20230620223918321](assets/image-20230620223918321.6ff6cc00.png)
 
 注：
 
@@ -2582,7 +2582,7 @@ function nextTick(callback?: () => void): Promise<void>
 
 JS 中的任务分为同步与异步，其中异步任务又分为：宏任务（Macro-take）和微任务（Micro-take）
 
-![image-20230215195040486](https://www.arryblog.com/assets/img/image-20230215195040486.f64a66b0.png)
+![image-20230215195040486](assets/image-20230215195040486.f64a66b0.png)
 
 | 宏任务                                                               | 微任务                                                         |
 | :------------------------------------------------------------------- | :------------------------------------------------------------- |
@@ -2679,7 +2679,7 @@ nextTick(() => {
 
 > 最终渲染后的执行结果如下：
 
-![image-20230620233905514](https://www.arryblog.com/assets/img/image-20230620233905514.421d3b86.png)
+![image-20230620233905514](assets/image-20230620233905514.421d3b86.png)
 
 ### 4、$nextTick
 
@@ -2789,7 +2789,7 @@ await nextTick(function () {
 
 当我们新增了对话消息时，对话框右边的滚动条就会滚动到最下面，显示最新的一条。
 
-![GIF2023-6-2023-55-53](https://www.arryblog.com/assets/img/GIF2023-6-2023-55-53.adc20f28.gif)
+![GIF2023-6-2023-55-53](assets/GIF2023-6-2023-55-53.adc20f28.gif)
 
 ```html
 <script>
@@ -2914,4 +2914,4 @@ await nextTick(function () {
 
 > 最终渲染后，在控制台输出内容如下：
 
-![image-20230621135357942](https://www.arryblog.com/assets/img/image-20230621135357942.0fe08377.png)
+![image-20230621135357942](assets/image-20230621135357942.0fe08377.png)

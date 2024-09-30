@@ -41,7 +41,7 @@ Vue Router 是 [Vue.js (opens new window)](https://vuejs.org/)的官方路由。
 
 > 接下来，我们按以上步骤，最终实现如下效果的单页面应用
 
-![GIF2023-8-218-02-39](https://www.arryblog.com/assets/img/GIF2023-8-218-02-39.d4123c52.gif)
+![GIF2023-8-218-02-39](assets/GIF2023-8-218-02-39.d4123c52.gif)
 
 ### 1.1、第一步：安装`vue-router@4.x`版本
 
@@ -211,7 +211,7 @@ const router = createRouter({
 
 默认情况下，链接被激活时会加上`router-link-active` Class 类名，比如前面提到的案例
 
-![image-20230802180836683](https://www.arryblog.com/assets/img/image-20230802180836683.2404cddb.png)
+![image-20230802180836683](assets/image-20230802180836683.2404cddb.png)
 
 我们可以通过添中`router-link-active`Class 类名，来控制被激活链接的样式
 
@@ -224,7 +224,7 @@ const router = createRouter({
 
 > 添加以上 css 后，最终渲染效果如下
 
-![GIF2023-8-218-14-48](https://www.arryblog.com/assets/img/GIF2023-8-218-14-48.1792bcc3.gif)
+![GIF2023-8-218-14-48](assets/GIF2023-8-218-14-48.1792bcc3.gif)
 
 我们还可以设置`<router-link>`组件的`active-class`属性值来更改链接激活时使用的 CSS 类名
 
@@ -241,7 +241,7 @@ const router = createRouter({
 
 > 以上代码，最终渲染后效果如下：
 
-![image-20230802182113674](https://www.arryblog.com/assets/img/image-20230802182113674.f40c316c.png)
+![image-20230802182113674](assets/image-20230802182113674.f40c316c.png)
 
 > 关于什么情况下会加上的`router-link-exact-active`Class 类名，及有什么用，后面会讲到
 
@@ -268,7 +268,7 @@ const router = createRouter({
 
 最终效果如下，注意观察，导航切换时，浏览器最顶部前进和后退按扭一直是不灰色，不可点状态。
 
-![GIF2023-8-218-31-06](https://www.arryblog.com/assets/img/GIF2023-8-218-31-06.c1be8089.gif)
+![GIF2023-8-218-31-06](assets/GIF2023-8-218-31-06.c1be8089.gif)
 
 ### 5、访问`router`实例和当前路由`route`
 
@@ -319,7 +319,7 @@ const router = createRouter({
 
 > 最终渲染后效果如下：
 
-![image-20230802190555269](https://www.arryblog.com/assets/img/image-20230802190555269.127c0c95.png)
+![image-20230802190555269](assets/image-20230802190555269.127c0c95.png)
 
 ### 6、嵌套路由
 
@@ -329,7 +329,7 @@ const router = createRouter({
 - 我们把`/home`、`/about`、`/news`看作是一级路由，则`/news/tab1`、`/news/tab2`、`/news/tab3`可以看成是二级路由。
 - 并且这些路由显示的内容是嵌套在`/news`路由所在组件中，所以我们在定义路由时，需要把这些二级路由作为`/news`路由的子路由。
 
-![GIF2023-8-219-03-19](https://www.arryblog.com/assets/img/GIF2023-8-219-03-19.199e6b47.gif)
+![GIF2023-8-219-03-19](assets/GIF2023-8-219-03-19.199e6b47.gif)
 
 以下代码为`/news`一级路由定义了三个子路由 ,记得先用`import`导入`Tab1`、`Tab2`、`Tab3`（用以下代码替换前面案例中的对应代码）
 
@@ -409,7 +409,7 @@ const router = createRouter({
 
 下图是链接地址为`/news/tab`时的截图，我们可以看`/news`和`/news/tab1`对应的 a 标签都加上激活状态的 class 类名，但只有`/news/tab1`对应的 a 标签加上了精确激活的 class 类名
 
-![image-20230802190846766](https://www.arryblog.com/assets/img/image-20230802190846766.9926de3b.png)
+![image-20230802190846766](assets/image-20230802190846766.9926de3b.png)
 
 如果精确激活的链接样式包含了激活链接的样式，则我们只需要针不同部分的样式，给精确激活的链接添加`router-link-exact-active`类名来实现。
 
@@ -568,7 +568,7 @@ const routes = [
 
 以上三种方式，最终都能实现，当我们访问`/news`路由时，会重定向到`/new/tab1`路由，具体效果如下
 
-![GIF2023-8-219-24-55](https://www.arryblog.com/assets/img/GIF2023-8-219-24-55.d07a785b.gif)
+![GIF2023-8-219-24-55](assets/GIF2023-8-219-24-55.d07a785b.gif)
 
 ### 9.1、注意事项
 
@@ -678,14 +678,14 @@ const routes = [
 
 > 最终`User.vue`组件渲染后效果如下：
 
-![image-20230803130053537](https://www.arryblog.com/assets/img/image-20230803130053537.25740485.png)
+![image-20230803130053537](assets/image-20230803130053537.25740485.png)
 
 ### 1.1、实战应用：根据 query 参数渲染数据
 
 - 当我们点击不同的新闻标题时，需要把当前新闻的`id`作为参数传递给到`Detail`组件
 - `Detail`组件接受传递过来的`id`值，向后端发请求获取当前 Id 对应的新闻详细内容，然后渲染在页面中
 
-![GIF2023-8-314-00-51](https://www.arryblog.com/assets/img/GIF2023-8-314-00-51.989268b9.gif)
+![GIF2023-8-314-00-51](assets/GIF2023-8-314-00-51.989268b9.gif)
 
 **实现步骤**
 
@@ -1228,7 +1228,7 @@ const routes = [
 
 我们来实现如下效果，当用户从`/news/1001`导航到`/news/1002`或`/news/1003`时都能拿到变化后的参数，然后根据参数的值来发请求获取新闻数据列表。
 
-![GIF2023-8-320-06-15](https://www.arryblog.com/assets/img/GIF2023-8-320-06-15.115eacaa.gif)
+![GIF2023-8-320-06-15](assets/GIF2023-8-320-06-15.115eacaa_1.gif)
 
 - `src/router/router.js` 创建路由实例
 
@@ -1495,11 +1495,11 @@ const routes = [
 
 > 最终渲染效果如下：
 
-![image-20230803204324259](https://www.arryblog.com/assets/img/image-20230803204324259.9ff0912a.png)
+![image-20230803204324259](assets/image-20230803204324259.9ff0912a.png)
 
-![image-20230803204421894](https://www.arryblog.com/assets/img/image-20230803204421894.ade058dd.png)
+![image-20230803204421894](assets/image-20230803204421894.ade058dd.png)
 
-![image-20230803204444342](https://www.arryblog.com/assets/img/image-20230803204444342.910877b7.png)
+![image-20230803204444342](assets/image-20230803204444342.910877b7.png)
 
 ### 2、别名是一个数组
 
@@ -1603,7 +1603,7 @@ const router = createRouter({
 
 我们利用命名视图实现如下图所示的效果
 
-![GIF2023-8-322-53-49](https://www.arryblog.com/assets/img/GIF2023-8-322-53-49.d7a92ef7.gif)
+![GIF2023-8-322-53-49](assets/GIF2023-8-322-53-49.d7a92ef7.gif)
 
 - `App.vue`
 
@@ -1994,7 +1994,7 @@ router.push({ path: '/news/tab1', params: { id: '001' } })
 
 接下来，我们利用编程式导航实现下图所示的导航切换
 
-![GIF2023-5-3122-01-26](https://www.arryblog.com/assets/img/GIF2023-5-3122-01-26.7a4c3716.gif)
+![GIF2023-5-3122-01-26](assets/GIF2023-5-3122-01-26.7a4c3716.gif)
 
 - 在`src`目录下新建`views`目录，在此目录所需要的路由组件
 
@@ -2165,7 +2165,7 @@ router.forward() // 与go(1) 是一样的
 
 最终渲染效果如下，先点击登录、注册、再点击后退会退到登录页，再点前进按扭，会前进到注册页。
 
-![GIF2023-5-3122-08-59](https://www.arryblog.com/assets/img/GIF2023-5-3122-08-59.4288407f.gif)
+![GIF2023-5-3122-08-59](assets/GIF2023-5-3122-08-59.4288407f.gif)
 
 ### 5、总结
 
@@ -2179,7 +2179,7 @@ router.forward() // 与go(1) 是一样的
 
 本小节结合前面学习过的 Vant UI 与 Vue Router 实现一个简单的应用导航框架，具体效果如下。
 
-![GIF2023-8-414-50-20](https://www.arryblog.com/assets/img/GIF2023-8-414-50-20.ec35d3e7.gif)
+![GIF2023-8-414-50-20](assets/GIF2023-8-414-50-20.ec35d3e7.gif)
 
 ### 1、实现步骤
 

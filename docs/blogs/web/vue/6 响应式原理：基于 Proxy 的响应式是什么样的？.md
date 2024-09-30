@@ -324,7 +324,7 @@ export function trackEffects(
 
 上面函数有点绕，其实核心就是在生成一个数据结构，什么样的数据结构呢？我们来画个图看看：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e1ad474b1f154b8dbc1211ce2c82aa34~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/e1ad474b1f154b8dbc1211ce2c82aa34~tplv-k3u1fbpfcp-watermark.image)
 
 我们创建了全局的 `targetMap` ，它的键是 `target`，值是 `depsMap`；这个 `depsMap` 的键是 `target` 的 `key`，值是 `dep` 集合，`dep` 集合中存储的是依赖的副作用函数 `effect`。
 

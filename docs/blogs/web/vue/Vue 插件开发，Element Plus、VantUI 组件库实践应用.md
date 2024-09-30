@@ -94,7 +94,7 @@ app1.mount('#app')
 
 > 当启动应用时，最终在控制台输出如下结果
 
-![image-20230726142822324](https://www.arryblog.com/assets/img/image-20230726142822324.c68428dd.png)
+![image-20230726142822324](assets/image-20230726142822324.c68428dd.png)
 
 如果`myPlugin`插件是一个函数，调用`app.use(myPlugin,options)`注册插件时，会将`app`和`options`作为参数传递函数。
 
@@ -118,7 +118,7 @@ app1.mount('#app')
 
 > 当启动应用时，最终在控制台输出如下结果
 
-![image-20230726142822324](https://www.arryblog.com/assets/img/image-20230726142822324.c68428dd.png)
+![image-20230726142822324](assets/image-20230726142822324.c68428dd_1.png)
 
 ### 3、插件的功能范围
 
@@ -229,7 +229,7 @@ app.mount('#app')
 
 > 最终渲染后效果如下，点击提交按扭，会显示提交成功提示框
 
-![GIF2023-7-2616-37-22](https://www.arryblog.com/assets/img/GIF2023-7-2616-37-22.1f36b243.gif)
+![GIF2023-7-2616-37-22](assets/GIF2023-7-2616-37-22.1f36b243.gif)
 
 ## 二、星级评分插件
 
@@ -247,7 +247,7 @@ app.mount('#app')
 
 > 最终渲染出效果如下：
 
-![GIF2023-7-2723-10-53](https://www.arryblog.com/assets/img/GIF2023-7-2723-10-53.cb6e0561.gif)
+![GIF2023-7-2723-10-53](assets/GIF2023-7-2723-10-53.cb6e0561.gif)
 
 ### 1、开发流程
 
@@ -808,7 +808,7 @@ app.use(Search)
 </template>
 ```
 
-![image-20230727191210111](https://www.arryblog.com/assets/img/image-20230727191210111.680eff26.png)
+![image-20230727191210111](assets/image-20230727191210111.680eff26.png)
 
 提示：
 
@@ -907,4 +907,4 @@ import 'vant/es/image-preview/style'
 </template>
 ```
 
-![GIF2023-7-2719-54-44](https://www.arryblog.com/assets/img/GIF2023-7-2719-54-44.0c040017.gif)
+![GIF2023-7-2719-54-44](assets/GIF2023-7-2719-54-44.0c040017.gif)

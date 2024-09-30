@@ -158,7 +158,7 @@ export const useCountStore = defineStore('count', {
 
 > 以上代码，最终渲染效果如下：
 
-![GIF2023-6-222-30-57](https://www.arryblog.com/assets/img/GIF2023-6-222-30-57.41822f71.gif)
+![GIF2023-6-222-30-57](assets/GIF2023-6-222-30-57.41822f71.gif)
 
 ### 5、Setup Store
 
@@ -233,7 +233,7 @@ export const useUserStore = defineStore('user', () => {
 
 > 最终渲染结果如下：
 
-![GIf2023-6-223-11-09](https://www.arryblog.com/assets/img/GIf2023-6-223-11-09.a7752510.gif)
+![GIf2023-6-223-11-09](assets/GIf2023-6-223-11-09.a7752510.gif)
 
 ### 6、解构 Store
 
@@ -287,7 +287,7 @@ export const useUserStore = defineStore('user', () => {
 
 > 最终渲染效果和我们预期一样，解构出来的属性保持了响应性
 
-![GIf2023-6-223-11-09](https://www.arryblog.com/assets/img/GIf2023-6-223-11-09.a7752510.gif)
+![GIf2023-6-223-11-09](assets/GIf2023-6-223-11-09.a7752510_1.gif)
 
 ## 二、深入 State
 
@@ -526,7 +526,7 @@ export const useCountStore = defineStore('count', () => {
 
 > 最终渲染效果如下：
 
-![GIF2023-6-321-45-45](https://www.arryblog.com/assets/img/GIF2023-6-321-45-45.8df5796a.gif)
+![GIF2023-6-321-45-45](assets/GIF2023-6-321-45-45.8df5796a.gif)
 
 ## 三、深入 Getter
 
@@ -688,7 +688,7 @@ export const useUserStore = defineStore('user', () => {
 
 > 最终渲染结果如下：
 
-![image-20230811173235167](https://www.arryblog.com/assets/img/image-20230811173235167.83c52371.png)
+![image-20230811173235167](assets/image-20230811173235167.83c52371.png)
 
 ### 2、订阅 action
 
@@ -789,7 +789,7 @@ export const useUserStore = defineStore('user', () => {
 
 > 程序运行后，点击获取用户信息按扭后，控制台的输出结果如下
 
-![image-20230603192628071](https://www.arryblog.com/assets/img/image-20230603192628071.773a25ad.png)
+![image-20230603192628071](assets/image-20230603192628071.773a25ad.png)
 
 温馨提示
 

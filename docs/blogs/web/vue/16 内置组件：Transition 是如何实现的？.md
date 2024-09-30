@@ -307,7 +307,7 @@ const remove = vnode => {
 
 为了更加清晰的看懂这个流程，我画了个状态流转图，可以简单看一下，方便理解：
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e286d7a4e5294b2c995b164d9dc102e8~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/e286d7a4e5294b2c995b164d9dc102e8~tplv-k3u1fbpfcp-watermark.image)
 
 ## JavaScript 钩子
 

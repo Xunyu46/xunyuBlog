@@ -30,7 +30,7 @@ publish: true
 
 这些函数会在路由跳转开始到结束过程中的某个时刻执行， 这些函数也被称为 **“导航（路由）守卫函数”**。
 
-![image-20230808140439166](https://www.arryblog.com/assets/img/image-20230808140439166.81316447.png)
+![image-20230808140439166](assets/image-20230808140439166.81316447.png)
 
 注：
 
@@ -44,7 +44,7 @@ publish: true
 
 > 下图展示了用户没有登录时，无法进入到用户中心，只有登录后，才可以进入。
 
-![GIF2023-6-10-12-25](https://www.arryblog.com/assets/img/GIF2023-6-10-12-25-16855495940786.2d00def9.gif)
+![GIF2023-6-10-12-25](assets/GIF2023-6-10-12-25-16855495940786.2d00def9.gif)
 
 ### 2、导航守卫分类
 
@@ -144,7 +144,7 @@ next({ path: '/home' })
 
 当点击对应的导航时会跳转到对应的页，但如果点击的是个人中心，则需要验证，验证通过则可以进入，否则会跳转到登录页。
 
-![GIF2023-8-720-54-40](https://www.arryblog.com/assets/img/GIF2023-8-720-54-40-16914129154652.8c2e4dec.gif)
+![GIF2023-8-720-54-40](assets/GIF2023-8-720-54-40-16914129154652.8c2e4dec.gif)
 
 实现原理
 
@@ -262,11 +262,11 @@ export { router }
 
 运行以上程序，从路由`/`跳转到`/about`时，在控制台打印输出：
 
-![image-20230807210707610](https://www.arryblog.com/assets/img/image-20230807210707610.2913231a.png)
+![image-20230807210707610](assets/image-20230807210707610.2913231a.png)
 
 当从路由`/about`跳转到`/user/1001`时，因为验证失败，则会跳转到`/login`，则在控制台打印输出
 
-![image-20230807210915732](https://www.arryblog.com/assets/img/image-20230807210915732.59c254bc.png)
+![image-20230807210915732](assets/image-20230807210915732.59c254bc.png)
 
 ### 6、优化版：登录及权限控制
 
@@ -277,7 +277,7 @@ export { router }
 - 用户可以通过登录页输入用户名和密码进行验证，验证成功可以进入任意页面，包括个人中心。
 - 如果点击了退出登录按扭，则回退出登录，返回到登录页，则不能再进入到用户中心，只能重新登录成功后才可以。
 
-![GIF2023-8-721-56-21](https://www.arryblog.com/assets/img/GIF2023-8-721-56-21.c4684731.gif)
+![GIF2023-8-721-56-21](assets/GIF2023-8-721-56-21.c4684731.gif)
 
 ### 6.1、实现原理
 
@@ -631,7 +631,7 @@ router.afterEach((to, from) => {
 
 ### 9、导航加载进度条
 
-![GIF2023-8-818-41-51](https://www.arryblog.com/assets/img/GIF2023-8-818-41-51.f76f2a29.gif)
+![GIF2023-8-818-41-51](assets/GIF2023-8-818-41-51.f76f2a29.gif)
 
 实现原理：
 
@@ -909,7 +909,7 @@ watch(
 
 > 接下来利用`beforeRouteUpdate`钩子来实现如下效果
 
-![GIF2023-8-320-06-15](https://www.arryblog.com/assets/img/GIF2023-8-320-06-15.115eacaa.gif)
+![GIF2023-8-320-06-15](assets/GIF2023-8-320-06-15.115eacaa.gif)
 
 - `News.vue` 组件
 
@@ -1011,7 +1011,7 @@ beforeRouteLeave(to, from) {
 
 ### 13、完整的导航解析流程
 
-![image-20230808140439166](https://www.arryblog.com/assets/img/image-20230808140439166.81316447.png)
+![image-20230808140439166](assets/image-20230808140439166.81316447_1.png)
 
 > 假设当前应用的路由配置如下：
 
@@ -1053,7 +1053,7 @@ const routes = [
 
 实现如下图所示的效果，用来演示各个路由钩子的执行时机和顺序
 
-![image-20230807192854383](https://www.arryblog.com/assets/img/image-20230807192854383.fad18e1b.png)
+![image-20230807192854383](assets/image-20230807192854383.fad18e1b.png)
 
 > 页面路由如下
 
@@ -1180,11 +1180,11 @@ export { router }
 
 - 当我们从`/b`跳转到`/a/1`时，控制台打印出下如结果
 
-![image-20230807193240464](https://www.arryblog.com/assets/img/image-20230807193240464.6712e4dc.png)
+![image-20230807193240464](assets/image-20230807193240464.6712e4dc.png)
 
 - 当我们从`/a/1`跳转到`/a/2`时，控制台打印出如下结果：
 
-![image-20230807193544026](https://www.arryblog.com/assets/img/image-20230807193544026.d4e25cc0.png)
+![image-20230807193544026](assets/image-20230807193544026.d4e25cc0.png)
 
 ### 14、总结
 
@@ -1212,7 +1212,7 @@ export { router }
 
 > 完整的导航解析流程
 
-![image-20230808140439166](https://www.arryblog.com/assets/img/image-20230808140439166.81316447.png)
+![image-20230808140439166](assets/image-20230808140439166.81316447_1_2.png)
 
 ## 二、路由组件过渡动画
 
@@ -1241,7 +1241,7 @@ export { router }
 
 > 当在不同的路由间进行切换时，被渲染的路由组件以淡入淡出的效果显示
 
-![GIF2023-6-119-49-17](https://www.arryblog.com/assets/img/GIF2023-6-119-49-17.fdcebb5b.gif)
+![GIF2023-6-119-49-17](assets/GIF2023-6-119-49-17.fdcebb5b.gif)
 
 - 定义路由
 
@@ -1387,7 +1387,7 @@ export { router }
 
 > 如下图：
 
-![GIF2023-6-119-47-14](https://www.arryblog.com/assets/img/GIF2023-6-119-47-14.35d2fc46.gif)
+![GIF2023-6-119-47-14](assets/GIF2023-6-119-47-14.35d2fc46.gif)
 
 你可以将`meta`路由元信息和动态的 `name` 或 自定义过渡 class 结合在一起，放在`<transition>` 上
 
@@ -1499,7 +1499,7 @@ export { router }
 
 > 如下图：
 
-![GIF2023-8-916-52-12](https://www.arryblog.com/assets/img/GIF2023-8-916-52-12.0e409ea6.gif)
+![GIF2023-8-916-52-12](assets/GIF2023-8-916-52-12.0e409ea6.gif)
 
 当从`/tab2/1`跳到`/tab1`时，采用的是淡入淡出动画。当从`tab1`跳转到`/tab2/1`时，采用的是左右滑动动画。 我们可以根据目标路由与当前路由的深度来决定采用何种动画过渡。
 
@@ -1615,7 +1615,7 @@ scrollBehavior(to, from, savedPosition) {
 }
 ```
 
-![GIF2023-6-119-52-04](https://www.arryblog.com/assets/img/GIF2023-6-119-52-04.02beb719.gif)
+![GIF2023-6-119-52-04](assets/GIF2023-6-119-52-04.02beb719.gif)
 
 ### 2、滚动到指定元素偏移位置
 
@@ -1647,14 +1647,14 @@ scrollBehavior(to, from, savedPosition) {
 <h3 class="title">我是h3.title元素，滚动位置相对我的偏移量</h3>
 ```
 
-![GIF2023-6-119-58-03](https://www.arryblog.com/assets/img/GIF2023-6-119-58-03.de3b7e6b.gif)
+![GIF2023-6-119-58-03](assets/GIF2023-6-119-58-03.de3b7e6b.gif)
 
 ### 3、保持原先滚动位置
 
 - 当通过浏览器的浏览器的 后退 / 前进 按钮返回到原来页面时，会滚动到原先滚动的位置。
 - 如果不是通过后退和前进按扭，则滚动到浏览器顶部。
 
-![GIF2023-6-120-04-29](https://www.arryblog.com/assets/img/GIF2023-6-120-04-29.180470fe.gif)
+![GIF2023-6-120-04-29](assets/GIF2023-6-120-04-29.180470fe.gif)
 
 **代码如下：**
 
@@ -1680,7 +1680,7 @@ scrollBehavior(to, from, savedPosition) {
 
 当我们点击锚点链接时，能平滑滚动到页面的锚点所在位置，如下图
 
-![GIF2023-8-917-47-03](https://www.arryblog.com/assets/img/GIF2023-8-917-47-03.ba9d7f5c.gif)
+![GIF2023-8-917-47-03](assets/GIF2023-8-917-47-03.ba9d7f5c.gif)
 
 **代码实现**
 
@@ -1719,7 +1719,7 @@ const router = createRouter({
 
 当进入到页面后，会先执行路由组件过渡动画，2 秒后动画执行完，滚动条再滚动到与浏览器顶部`100px`的位置
 
-![GIF2023-6-120-18-59](https://www.arryblog.com/assets/img/GIF2023-6-120-18-59.be2eb448.gif)
+![GIF2023-6-120-18-59](assets/GIF2023-6-120-18-59.be2eb448.gif)
 
 **代码如下**
 
@@ -1836,7 +1836,7 @@ const routes = [
 - 当我们点击`Tab2`导航进入当前路由时，才会加载`Tab2`组件，并将组件缓存起来，当后面再次进到`Tab2`页面，不会再加载对应组件，而是会从缓存中读取。
 - 当我们点击`Tab3`导航进入当前路由时，才会调用`component`后面的函数，渲染 DOM，插入页面
 
-![GIF2023-6-121-34-00](https://www.arryblog.com/assets/img/GIF2023-6-121-34-00.c8d5a48e.gif)
+![GIF2023-6-121-34-00](assets/GIF2023-6-121-34-00.c8d5a48e.gif)
 
 ### 2、静态与动态加载组件对比
 
@@ -2101,7 +2101,7 @@ export { router }
 
 > 最终渲染后效果如下：
 
-![GIF2023-6-20-10-32](https://www.arryblog.com/assets/img/GIF2023-6-20-10-32.8bc504a5.gif)
+![GIF2023-6-20-10-32](assets/GIF2023-6-20-10-32.8bc504a5.gif)
 
 注：
 

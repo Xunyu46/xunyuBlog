@@ -102,11 +102,11 @@ const patchKeyedChildren = (c1, c2, container, parentAnchor, parentComponent, pa
 
 那么先进入第一步头部比对流程：
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/074804630b39471e809def7080e9614d~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/074804630b39471e809def7080e9614d~tplv-k3u1fbpfcp-watermark.image)
 
 第一步执行时，会完成对 `a` 和 `b` 头部这 2 个节点进行 `patch`。当 `i = 2` 时，由于此时的 `c` 和 `e` 节点的 `key` 不一样，所以退出了头部比对流程，进入尾部比对：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8b9733b3694f4c81a22015672b56cdf0~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/8b9733b3694f4c81a22015672b56cdf0~tplv-k3u1fbpfcp-watermark.image)
 
 第二步执行时，会完成对 `c` 和 `d` 尾部这 2 个节点进行 `patch`。当 `e1 = 1` 时，由于`i > e1`，所以退出了尾部比对流程。肉眼可见，此时的情况是新节点多了个 `e` 节点的情况，所以我们需要添加多余的剩余节点：
 
@@ -164,11 +164,11 @@ const patchKeyedChildren = (c1, c2, container, parentAnchor, parentComponent, pa
 
 那么先进入第一步头部比对流程：
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/41f9b957775b441580d331f3c4f3656b~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/41f9b957775b441580d331f3c4f3656b~tplv-k3u1fbpfcp-watermark.image)
 
 第一步执行时，会完成对  `a`  和  `b`  头部这 2 个节点进行  `patch`。当  `i = 2`  时，由于此时的  `e`  和  `c`  节点的  `key`  不一样，所以退出了头部比对流程，进入尾部比对：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5d570fbb6d864c379a0eaf6011cc3521~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/5d570fbb6d864c379a0eaf6011cc3521~tplv-k3u1fbpfcp-watermark.image)
 
 第二步执行时，会完成对 `c` 和 `d` 尾部这 2 个节点进行 `patch`。当 `e2 = 1` 时，由于`i > e2`，所以退出了尾部比对流程。肉眼可见，此时的情况是新节点少了个 `e` 节点的情况，所以我们需要删除节点 `e`：
 
@@ -233,7 +233,7 @@ const patchKeyedChildren = (c1, c2, container, parentAnchor, parentComponent, pa
 
 此时经过步骤 1、2 后的结果可以表示为如下图：
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/29972b7a05414f8daf0ffcd348b650b3~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/29972b7a05414f8daf0ffcd348b650b3~tplv-k3u1fbpfcp-watermark.image)
 
 这种情况，既不满足 `i > e1` 也不满足 `i > e2` 的条件，所以对于这种情况应该如何处理呢？我们知道 `DOM` 更新的性能优劣关系大致为：`属性更新` > `位置移动` > `增删节点`。所以，我们需要尽可能地复用老节点，做属性更新，减少移动次数和增删节点的次数。
 
@@ -279,7 +279,7 @@ for (i = s2; i <= e2; i++) {
 keyToNewIndexMap = { e: 2, c: 3, d: 4, i: 5 }
 ```
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b9846f1800394683a19b5a68950f7fe6~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/b9846f1800394683a19b5a68950f7fe6~tplv-k3u1fbpfcp-watermark.image)
 
 ### 继续处理旧节点
 
@@ -357,7 +357,7 @@ for (i = s1; i <= e1; i++) {
 
 我们来看一下示例处理后的结果，如下图所示：
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dba3693544114cf19ff3114c8becab61~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/dba3693544114cf19ff3114c8becab61~tplv-k3u1fbpfcp-watermark.image)
 
 此时 `c`、`d`、`e` 因为是相同节点，所以进行 `patch` 更新，`f` 节点因为不存在于新的索引中，所以被删除。最后得到的 `newIndexToOldIndexMap` 数据结构大致如下：
 
@@ -415,7 +415,7 @@ move(nextChild, container, anchor, MoveType.REORDER)
 
 至此，完成了所有节点的增、删、更新、移动的操作，此次操作结果如下：
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1dcba8989ae348e6af85333a22280da2~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/1dcba8989ae348e6af85333a22280da2~tplv-k3u1fbpfcp-watermark.image)
 
 ## 最长递增子序列
 

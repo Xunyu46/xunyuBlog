@@ -568,7 +568,7 @@ type Slots = { [name: string]: Slot } // 多个插槽时，要通过插槽函数
 
 > 以上示例最终渲染效果如下：
 
-![image-20230711220200721](https://www.arryblog.com/assets/img/image-20230711220200721.b5601e88.png)
+![image-20230711220200721](assets/image-20230711220200721.b5601e88.png)
 
 ### 3、渲染函数的基本用法
 
@@ -722,7 +722,7 @@ function render(vnode, container, isSVG?: boolean) {}
 
 > 最终在控制台打印出的 A 是一个带有 render 选项的 JS 对象
 
-![image-20230704224251227](https://www.arryblog.com/assets/img/image-20230704224251227.d03ca8d8.png)
+![image-20230704224251227](assets/image-20230704224251227.d03ca8d8.png)
 
 ### 6、模板 VS 渲染函数
 
@@ -869,7 +869,7 @@ const A = {
 
 > 渲染器的作用就是把虚拟 DOM 渲染为真实 DOM
 
-![image-20230704174016339](https://www.arryblog.com/assets/img/image-20230704174016339.95a2fd65.png)
+![image-20230704174016339](assets/image-20230704174016339.95a2fd65.png)
 
 **代码示例**
 
@@ -951,7 +951,7 @@ function renderer(vnode, container) {
 
 > 以上 renderer 函数最终将 vnode 转换为一个真实 DOM 并渲染到页面中，具体效果如下：
 
-![image-20230704172611686](https://www.arryblog.com/assets/img/image-20230704172611686.e6edb1b4.png)
+![image-20230704172611686](assets/image-20230704172611686.e6edb1b4.png)
 
 温馨提示：
 
@@ -1115,7 +1115,7 @@ renderer(vnode2, document.getElementById('app2'))
 
 > 通过前面的学习，我们知道了 Vue 的渲染流程大致如下图：
 
-![render-pipeline.03805016](https://www.arryblog.com/assets/img/render-pipeline.03805016.b75c5864.png)
+![render-pipeline.03805016](assets/render-pipeline.03805016.b75c5864.png)
 
 编译
 
@@ -1296,7 +1296,7 @@ h(
 
 > 最终渲染效果如下：
 
-![GIF2023-7-1122-31-47](https://www.arryblog.com/assets/img/GIF2023-7-1122-31-47.0d202d28.gif)
+![GIF2023-7-1122-31-47](assets/GIF2023-7-1122-31-47.0d202d28.gif)
 
 ### 3、v-for
 
@@ -1483,7 +1483,7 @@ h(
 
 > 最终渲染效果如下：
 
-![GIF2023-7-1123-36-16](https://www.arryblog.com/assets/img/GIF2023-7-1123-36-16.79fd4332.gif)
+![GIF2023-7-1123-36-16](assets/GIF2023-7-1123-36-16.79fd4332.gif)
 
 ### 6、内置组件
 
@@ -1531,7 +1531,7 @@ h(
 
 > 最终渲染效果如下：
 
-![GIF2023-7-1123-44-21](https://www.arryblog.com/assets/img/GIF2023-7-1123-44-21.57add776.gif)
+![GIF2023-7-1123-44-21](assets/GIF2023-7-1123-44-21.57add776.gif)
 
 ### 7、渲染插槽
 
@@ -1720,7 +1720,7 @@ h(
 
 > 以上代码最终渲染效果如下：
 
-![image-20230712174144308](https://www.arryblog.com/assets/img/image-20230712174144308.2f614462.png)
+![image-20230712174144308](assets/image-20230712174144308.2f614462.png)
 
 ### 11、模板引用
 
@@ -1897,7 +1897,7 @@ MyComponent.emit = ['update']
 
 > 具体效果如下：
 
-![GIF2023-7-1918-26-28](https://www.arryblog.com/assets/img/GIF2023-7-1918-26-28.9fbdcdd5.gif)
+![GIF2023-7-1918-26-28](assets/GIF2023-7-1918-26-28.9fbdcdd5.gif)
 
 ### 1、项目介绍
 
@@ -1936,7 +1936,7 @@ MyComponent.emit = ['update']
 
 首先我们需要通过 UI 图，分析当前项目可以拆分成哪些组件，当前项目可以拆分成以下 3 个组件（未包含当前应用的 APP 组件）
 
-![image-20230719160511026](https://www.arryblog.com/assets/img/image-20230719160511026.fc3b8f15.png)
+![image-20230719160511026](assets/image-20230719160511026.fc3b8f15.png)
 
 | 组件      | 功能                                                  |
 | :-------- | :---------------------------------------------------- |
@@ -1946,7 +1946,7 @@ MyComponent.emit = ['update']
 
 > 组件间关系如下：
 
-![image-20230719160948206](https://www.arryblog.com/assets/img/image-20230719160948206.cee1c8b3.png)
+![image-20230719160948206](assets/image-20230719160948206.cee1c8b3.png)
 
 ### 2.2、实现 UI 静态布局
 

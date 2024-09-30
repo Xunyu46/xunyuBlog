@@ -80,7 +80,7 @@ export default {
 </template>
 ```
 
-![image-20230505214700831](https://www.arryblog.com/assets/img/image-20230505214700831.94052623.png)
+![image-20230505214700831](assets/image-20230505214700831.94052623.png)
 
 ### 1.2、双向数据绑定（v-model）
 
@@ -113,7 +113,7 @@ export default {
 - 当修改 data 中 text 属性的值时，页面中文本框中的内容也会发生变化
 - 当修改输入框中的内容时，data 中 text 属性的值也会同步发生变化。
 
-![GIF2023-5-521-50-08](https://www.arryblog.com/assets/img/GIF2023-5-521-50-08.98f7e8a7.gif)
+![GIF2023-5-521-50-08](assets/GIF2023-5-521-50-08.98f7e8a7.gif)
 
 ### 2、手动实现 input 元素双向数据绑定
 
@@ -151,7 +151,7 @@ export default {
 
 > 以上代码，最终渲染后效果如下图：
 
-![GIF2023-5-521-50-08](https://www.arryblog.com/assets/img/GIF2023-5-521-50-08.98f7e8a7.gif)
+![GIF2023-5-521-50-08](assets/GIF2023-5-521-50-08.98f7e8a7_1.gif)
 
 总结：
 
@@ -205,7 +205,7 @@ export default {
 
 > 最终渲染效果如下：
 
-![GIF2023-6-1516-11-39](https://www.arryblog.com/assets/img/GIF2023-6-1516-11-39.84501ded.gif)
+![GIF2023-6-1516-11-39](assets/GIF2023-6-1516-11-39.84501ded.gif)
 
 ### 4.2、单选按扭
 
@@ -240,7 +240,7 @@ export default {
 
 > 最终渲染效果如下：
 
-![GIF2023-5-615-25-34](https://www.arryblog.com/assets/img/GIF2023-5-615-25-34.a968ac52.gif)
+![GIF2023-5-615-25-34](assets/GIF2023-5-615-25-34.a968ac52.gif)
 
 > 也可动态绑定单选按扭 value 的属性值
 
@@ -268,7 +268,7 @@ export default {
 
 > 最终渲染效果和前面一样，如下：
 
-![GIF2023-5-615-25-34](https://www.arryblog.com/assets/img/GIF2023-5-615-25-34.a968ac52.gif)
+![GIF2023-5-615-25-34](assets/GIF2023-5-615-25-34.a968ac52_1.gif)
 
 ### 4.3、单一复选框
 
@@ -317,7 +317,7 @@ export default {
 </template>
 ```
 
-![GIF2023-5-619-19-46](https://www.arryblog.com/assets/img/GIF2023-5-619-19-46.5094b375.gif)
+![GIF2023-5-619-19-46](assets/GIF2023-5-619-19-46.5094b375.gif)
 
 - 也可以使用`v-bind`来动态绑定`true-value`和 `false-value`属性的值
 
@@ -373,7 +373,7 @@ export default {
 </template>
 ```
 
-![GIF2023-5-614-14-56](https://www.arryblog.com/assets/img/GIF2023-5-614-14-56.f645b330.gif)
+![GIF2023-5-614-14-56](assets/GIF2023-5-614-14-56.f645b330.gif)
 
 ### 3 4. 5 、 下拉列表： 单个选择器
 
@@ -406,7 +406,7 @@ export default {
 </template>
 ```
 
-![GIF2023-5-614-40-18](https://www.arryblog.com/assets/img/GIF2023-5-614-40-18.07a0d188.gif)
+![GIF2023-5-614-40-18](assets/GIF2023-5-614-40-18.07a0d188.gif)
 
 注意事项：
 
@@ -442,7 +442,7 @@ export default {
 </template>
 ```
 
-![GIF2023-5-614-44-51](https://www.arryblog.com/assets/img/GIF2023-5-614-44-51.4a1bab36.gif)
+![GIF2023-5-614-44-51](assets/GIF2023-5-614-44-51.4a1bab36.gif)
 
 ### 4.6、下拉列表：多选择器
 
@@ -478,7 +478,7 @@ export default {
 </template>
 ```
 
-![GIF2023-5-615-09-12](https://www.arryblog.com/assets/img/GIF2023-5-615-09-12.cfa4f948.gif)
+![GIF2023-5-615-09-12](assets/GIF2023-5-615-09-12.cfa4f948.gif)
 
 ### 5、v-model 指令修饰符
 
@@ -534,7 +534,7 @@ export default {
 </template>
 ```
 
-![GIF2023-5-617-33-07](https://www.arryblog.com/assets/img/GIF2023-5-617-33-07.2ac6638c.gif)
+![GIF2023-5-617-33-07](assets/GIF2023-5-617-33-07.2ac6638c.gif)
 
 ### 6、总结：表单输入绑定
 
@@ -620,7 +620,7 @@ export default {
 </template>
 ```
 
-![image-20230506190428263](https://www.arryblog.com/assets/img/image-20230506190428263.54eed7d8.png)
+![image-20230506190428263](assets/image-20230506190428263.54eed7d8.png)
 
 - 如何将表单元素绑定的值为动态数据
 
@@ -731,7 +731,7 @@ export default {
 
 > 具体效果如下：
 
-![GIF2023-4-2820-30-54](https://www.arryblog.com/assets/img/GIF2023-4-2820-30-54.884c5c37.gif)
+![GIF2023-4-2820-30-54](assets/GIF2023-4-2820-30-54.884c5c37.gif)
 
 ### 1.2、绑定对象
 
@@ -772,7 +772,7 @@ export default {
 
 > 以上代码编译后，最终显示效果如下：
 
-![image-20230428204249691](https://www.arryblog.com/assets/img/image-20230428204249691.a81c05fe.png)
+![image-20230428204249691](assets/image-20230428204249691.a81c05fe.png)
 
 我们将对象属性后面值改为变量，这样就可以通过 JS 来动态操作是否添加对应的`class`
 
@@ -820,7 +820,7 @@ export default {
 
 > 具体效果如下：
 
-![GIF2023-4-2820-53-34](https://www.arryblog.com/assets/img/GIF2023-4-2820-53-34.acdc97f5.gif)
+![GIF2023-4-2820-53-34](assets/GIF2023-4-2820-53-34.acdc97f5.gif)
 
 我们也可以将`:class`后面字面量形式的对象，改为一个变量，这个变量的值是一个对象
 
@@ -1172,7 +1172,7 @@ export default {
 
 > 以上代码，最终效果如下：
 
-![GIF2023-5-517-02-18](https://www.arryblog.com/assets/img/GIF2023-5-517-02-18.0784f53c.gif)
+![GIF2023-5-517-02-18](assets/GIF2023-5-517-02-18.0784f53c.gif)
 
 ### 4、案例：开关效果
 
@@ -1383,7 +1383,7 @@ export default {
 
 > 以上代码最终渲染后效果如下：
 
-![image-20230615210132776](https://www.arryblog.com/assets/img/image-20230615210132776.b28599f0.png)
+![image-20230615210132776](assets/image-20230615210132776.b28599f0.png)
 
 ### 2、v-else
 
@@ -1421,7 +1421,7 @@ export default {
 
 > 以上代码最终渲染后效果如下图：
 
-![GIF2023-6-1521-04-13](https://www.arryblog.com/assets/img/GIF2023-6-1521-04-13.12940b3b.gif)
+![GIF2023-6-1521-04-13](assets/GIF2023-6-1521-04-13.12940b3b.gif)
 
 注：
 
@@ -1455,7 +1455,7 @@ export default {
 
 > 以上代表最终渲染后效果如下：
 
-![image-20230427204525649](https://www.arryblog.com/assets/img/image-20230427204525649.1777da19.png)
+![image-20230427204525649](assets/image-20230427204525649.1777da19.png)
 
 注：
 
@@ -1538,7 +1538,7 @@ export default {
 
 > 最终渲染后效果如下：
 
-![image-20230615212516362](https://www.arryblog.com/assets/img/image-20230615212516362.9c7d07d2.png)
+![image-20230615212516362](assets/image-20230615212516362.9c7d07d2.png)
 
 ### 6、v-show
 
@@ -1581,7 +1581,7 @@ export default {
 
 > 以上代码最终渲染后效果如下：
 
-![image-20230427211730033](https://www.arryblog.com/assets/img/image-20230427211730033.1aa86572.png)
+![image-20230427211730033](assets/image-20230427211730033.1aa86572.png)
 
 ### 8、对比 v-if 与 v-show
 
@@ -1648,11 +1648,11 @@ export default {
 
 > 当`userInfo.isVip === 1`时，最终渲染效果如下：
 
-![image-20230427220526310](https://www.arryblog.com/assets/img/image-20230427220526310.bb35d9c5.png)
+![image-20230427220526310](assets/image-20230427220526310.bb35d9c5.png)
 
 > 当`userInfo.isVip === 0`时，最终渲染效果如下：
 
-![image-20230427220546036](https://www.arryblog.com/assets/img/image-20230427220546036.e075b928.png)
+![image-20230427220546036](assets/image-20230427220546036.e075b928.png)
 
 ### 10、选项卡特效
 
@@ -1660,7 +1660,7 @@ export default {
 
 > 如果你想让你的网站首次渲染页面时更快，可以改用`v-if`，实际开发主要还是根据用途来选择。
 
-![GIF2023-5-517-29-13](https://www.arryblog.com/assets/img/GIF2023-5-517-29-13.0ba14b9c.gif)
+![GIF2023-5-517-29-13](assets/GIF2023-5-517-29-13.0ba14b9c.gif)
 
 **代码示例**
 
@@ -2106,7 +2106,7 @@ export default {
 
 > 具体显示效果如下：
 
-![image-20230428163634391](https://www.arryblog.com/assets/img/image-20230428163634391.1004b3ef.png)
+![image-20230428163634391](assets/image-20230428163634391.1004b3ef.png)
 
 ### 7、v-for 与 v-if 结合
 
@@ -2292,7 +2292,7 @@ export default {
 
 > 我们希望在渲染好的列表前添加一项新的内容，并且要保证最终能正确渲染出如下效果。
 
-![GIF2023-6-160-02-03](https://www.arryblog.com/assets/img/GIF2023-6-160-02-03.557cffe6.gif)
+![GIF2023-6-160-02-03](assets/GIF2023-6-160-02-03.557cffe6.gif)
 
 **代码示例**
 
@@ -2347,7 +2347,7 @@ export default {
 
 > 最终终渲染效果如下：
 
-![GIF2023-6-1523-50-32](https://www.arryblog.com/assets/img/GIF2023-6-1523-50-32.e3458067.gif)
+![GIF2023-6-1523-50-32](assets/GIF2023-6-1523-50-32.e3458067.gif)
 
 最终渲染出来的效果，并不是我们想要的，注意观察右边的代码，我们发现在更新时，每一项`li`中的文字内容都发生了更新，但是`input`标签没有被更新。
 
@@ -2355,7 +2355,7 @@ export default {
 
 **DOM 渲染的内部原理 l 图**
 
-![image-20230615234715726](https://www.arryblog.com/assets/img/image-20230615234715726.d3d4e823.png)
+![image-20230615234715726](assets/image-20230615234715726.d3d4e823.png)
 
 所以在这种情况下（在中间或前面）插入新的内容时，我们不能拿元素的`index`索引来作为`key`属性的值，而应该选择唯一的`category_id`来作为`key`属性的值，这样不管在任何位置插入新的元素，都不会造成`key`值的变化。
 
@@ -2372,7 +2372,7 @@ export default {
 
 > 最终渲染效果如下：
 
-![GIF2023-6-160-29-28](https://www.arryblog.com/assets/img/GIF2023-6-160-29-28.1680fc30.gif)
+![GIF2023-6-160-29-28](assets/GIF2023-6-160-29-28.1680fc30.gif)
 
 观察右边代码区，我们发现每一项`li`中的文本内容也发生了更新，是因为渲染后，文本中对应的序号发生了变化，如果去掉序号，你会发现除了新增的第个`li`，其`li`中的内容都不会被更新
 
@@ -2387,11 +2387,11 @@ export default {
 
 > 最终渲染效果如下：
 
-![GIF2023-6-160-32-12](https://www.arryblog.com/assets/img/GIF2023-6-160-32-12.05d88147.gif)
+![GIF2023-6-160-32-12](assets/GIF2023-6-160-32-12.05d88147.gif)
 
 > 以`category_id`作为`key`属性的值，内部新旧虚拟 DOM 对比如下图
 
-![image-20230616002308766](https://www.arryblog.com/assets/img/image-20230616002308766.28f74d0c.png)
+![image-20230616002308766](assets/image-20230616002308766.28f74d0c.png)
 
 总结
 
@@ -2412,7 +2412,7 @@ export default {
 
 > 我们用`watch`侦听器和`computed`计算属性两种方式来实现，然后通过对比，看那一种更优。
 
-![GIF2023-5-519-07-07](https://www.arryblog.com/assets/img/GIF2023-5-519-07-07.df922863.gif)
+![GIF2023-5-519-07-07](assets/GIF2023-5-519-07-07.df922863.gif)
 
 - `watch`侦听器实现
 
@@ -2549,7 +2549,7 @@ export default {
 
 **代码演示：在数据过滤的基础上再排序**
 
-![GIF2023-5-520-54-27](https://www.arryblog.com/assets/img/GIF2023-5-520-54-27.c1b09235.gif)
+![GIF2023-5-520-54-27](assets/GIF2023-5-520-54-27.c1b09235.gif)
 
 `computed` 计算属性实现
 
@@ -2643,7 +2643,7 @@ this.productList.sort()
 
 **代码演示：对数组进行排序，并显示排序结果**
 
-![GIF2023-5-520-52-43](https://www.arryblog.com/assets/img/GIF2023-5-520-52-43.b984625e.gif)
+![GIF2023-5-520-52-43](assets/GIF2023-5-520-52-43.b984625e.gif)
 
 ```vue
 <script>
@@ -2817,7 +2817,7 @@ export default {
 </template>
 ```
 
-![GIF2023-5-620-59-36](https://www.arryblog.com/assets/img/GIF2023-5-620-59-36.b4dd7995.gif)
+![GIF2023-5-620-59-36](assets/GIF2023-5-620-59-36.b4dd7995.gif)
 
 > 上面案例中，用户输入的内容中携带的 JS 脚本，点击链接后，就可以把当前网站的`cookie`信息获取到，这是非常不安全的。
 
@@ -2853,7 +2853,7 @@ export default {
 </template>
 ```
 
-![GIF2023-5-621-14-47](https://www.arryblog.com/assets/img/GIF2023-5-621-14-47.6a7173e4.gif)
+![GIF2023-5-621-14-47](assets/GIF2023-5-621-14-47.6a7173e4.gif)
 
 > 如果有些数据只需要初始渲染，后面不需要再维护这些数据，则可以添加`v-once`来提高性能。
 
@@ -2929,9 +2929,9 @@ export default {
 </template>
 ```
 
-![image-20230506215135462](https://www.arryblog.com/assets/img/image-20230506215135462.3c49cc4c.png)
+![image-20230506215135462](assets/image-20230506215135462.3c49cc4c.png)
 
-![image-20230506215231670](https://www.arryblog.com/assets/img/image-20230506215231670.ee11ede1.png)
+![image-20230506215231670](assets/image-20230506215231670.ee11ede1.png)
 
 ### 6、总结
 

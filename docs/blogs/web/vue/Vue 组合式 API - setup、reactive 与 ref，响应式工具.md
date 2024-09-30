@@ -55,7 +55,7 @@ publish: true
 
 > 以上代码最终渲染结果如下：
 
-![GIF2023-7-818-26-01](https://www.arryblog.com/assets/img/GIF2023-7-818-26-01.2e15412c.gif)
+![GIF2023-7-818-26-01](assets/GIF2023-7-818-26-01.2e15412c.gif)
 
 接下来我们将正式开启组合式 API 的学习之旅，本章节具体内容安排如下：
 
@@ -115,7 +115,7 @@ publish: true
 
 > 最终渲染效果如下：
 
-![GIF2023-7-814-43-14](https://www.arryblog.com/assets/img/GIF2023-7-814-43-14.338bbb14.gif)
+![GIF2023-7-814-43-14](assets/GIF2023-7-814-43-14.338bbb14.gif)
 
 ### 2、setup() 函数中 this 指向
 
@@ -170,7 +170,7 @@ publish: true
 </template>
 ```
 
-![image-20230522151358423](https://www.arryblog.com/assets/img/image-20230522151358423.dd146084.png)
+![image-20230522151358423](assets/image-20230522151358423.dd146084.png)
 
 ### 4、setup() 函数暴露非响应式属性
 
@@ -201,7 +201,7 @@ publish: true
 </template>
 ```
 
-![GIF2023-5-2215-22-16](https://www.arryblog.com/assets/img/GIF2023-5-2215-22-16.70462a1f.gif)
+![GIF2023-5-2215-22-16](assets/GIF2023-5-2215-22-16.70462a1f.gif)
 
 注：
 
@@ -263,7 +263,7 @@ const objProxy = reactive(obj) // objProxy为obj对象的响应式代理
 
 > 以上代码最终渲染效果如下，当点击按扭更新 a、b 值时，页面中 a、b 的值会更新为最新的。
 
-![GIF2023-5-2215-51-30](https://www.arryblog.com/assets/img/GIF2023-5-2215-51-30.5c3c48f9.gif)
+![GIF2023-5-2215-51-30](assets/GIF2023-5-2215-51-30.5c3c48f9.gif)
 
 代码分析
 
@@ -461,7 +461,7 @@ function reactive(obj) {
 
 > 以上代码最终渲染效果如下：
 
-![GIF2023-5-1722-12-19](https://www.arryblog.com/assets/img/GIF2023-5-1722-12-19.4a33561b.gif)
+![GIF2023-5-1722-12-19](assets/GIF2023-5-1722-12-19.4a33561b.gif)
 
 ### 2.2、ref() 方法转换对象
 
@@ -489,7 +489,7 @@ function reactive(obj) {
 
 > 以上代码，最终在控制台输出如下结果：
 
-![image-20230522195240987](https://www.arryblog.com/assets/img/image-20230522195240987.ec33cf4c.png)
+![image-20230522195240987](assets/image-20230522195240987.ec33cf4c.png)
 
 分析输出结果
 
@@ -537,7 +537,7 @@ function reactive(obj) {
 </template>
 ```
 
-![GIF2023-5-1814-40-06](https://www.arryblog.com/assets/img/GIF2023-5-1814-40-06.af7c2bea.gif)
+![GIF2023-5-1814-40-06](assets/GIF2023-5-1814-40-06.af7c2bea.gif)
 
 注：
 
@@ -646,7 +646,7 @@ function ref(value) {
 
 > 以上代码渲染后效果如下：
 
-![GIF2023-5-1722-57-04](https://www.arryblog.com/assets/img/GIF2023-5-1722-57-04.6a787ae1.gif)
+![GIF2023-5-1722-57-04](assets/GIF2023-5-1722-57-04.6a787ae1.gif)
 
 ### 2、不能被自动解包的集合
 
@@ -714,7 +714,7 @@ console.log(map.get('count').value)
 
 > 最终渲染效果如下图：
 
-![GIF2023-7-817-08-42](https://www.arryblog.com/assets/img/GIF2023-7-817-08-42.982079d2.gif)
+![GIF2023-7-817-08-42](assets/GIF2023-7-817-08-42.982079d2.gif)
 
 注：
 
@@ -772,7 +772,7 @@ console.log(map.get('count').value)
 
 > 以上代码最终渲染结果如下：
 
-![GIF2023-7-817-22-18](https://www.arryblog.com/assets/img/GIF2023-7-817-22-18.2d48fd21.gif)
+![GIF2023-7-817-22-18](assets/GIF2023-7-817-22-18.2d48fd21.gif)
 
 注：
 
@@ -839,7 +839,7 @@ const variable = toRef(proxyObject, key, defaultValue)
 
 > 以上代码最终渲染结果如下：
 
-![GIF2023-7-923-42-52](https://www.arryblog.com/assets/img/GIF2023-7-923-42-52-16889813353901.7c158049.gif)
+![GIF2023-7-923-42-52](assets/GIF2023-7-923-42-52-16889813353901.7c158049.gif)
 
 注：
 
@@ -964,7 +964,7 @@ export default {
 
 > 以上代码最终渲染效果如下：
 
-![GIF2023-5-2222-25-47](https://www.arryblog.com/assets/img/GIF2023-5-2222-25-47.d5ca60e3.gif)
+![GIF2023-5-2222-25-47](assets/GIF2023-5-2222-25-47.d5ca60e3.gif)
 
 注意事项
 
@@ -1012,7 +1012,7 @@ export default {
 
 > 以上代码最终渲染效果如下：
 
-![GIF2023-5-1815-55-26](https://www.arryblog.com/assets/img/GIF2023-5-1815-55-26.5c88ba5a.gif)
+![GIF2023-5-1815-55-26](assets/GIF2023-5-1815-55-26.5c88ba5a.gif)
 
 ### 7、readonly() 方法
 
@@ -1111,7 +1111,7 @@ export default {
 
 > 以上代码最终效果如下：
 
-![GIF2023-5-1814-57-56](https://www.arryblog.com/assets/img/GIF2023-5-1814-57-56.bf03451c.gif)
+![GIF2023-5-1814-57-56](assets/GIF2023-5-1814-57-56.bf03451c.gif)
 
 注：
 
@@ -1285,7 +1285,7 @@ count.value = 100
 
 > 以上代码最终渲染效果如下：
 
-![GIF2023-7-913-52-10](https://www.arryblog.com/assets/img/GIF2023-7-913-52-10.ebc781dc.gif)
+![GIF2023-7-913-52-10](assets/GIF2023-7-913-52-10.ebc781dc.gif)
 
 分析执行结果
 
@@ -1350,7 +1350,7 @@ count.value = 100
 
 > 以上代码最终渲染效果如下：
 
-![GIF2023-5-2314-52-23](https://www.arryblog.com/assets/img/GIF2023-5-2314-52-23.eaac56f0.gif)
+![GIF2023-5-2314-52-23](assets/GIF2023-5-2314-52-23.eaac56f0.gif)
 
 ### 4.1、总结：customRef() 方法使用流程
 
@@ -1423,7 +1423,7 @@ function createRef(value) {
 
 > 如下：
 
-![GIF2023-5-2315-39-31](https://www.arryblog.com/assets/img/GIF2023-5-2315-39-31.3669680c.gif)
+![GIF2023-5-2315-39-31](assets/GIF2023-5-2315-39-31.3669680c.gif)
 
 ```html
 <script>
@@ -1593,7 +1593,7 @@ export default {
 
 > 点击更新按扭更新 props 的内容，`3s`后，`setup()`函数中的 props 的值也更新为了最新的。
 
-![GIF2023-7-914-23-39](https://www.arryblog.com/assets/img/GIF2023-7-914-23-39.9a84900a.gif)
+![GIF2023-7-914-23-39](assets/GIF2023-7-914-23-39.9a84900a.gif)
 
 ### 1.1、解构 props
 
@@ -1641,7 +1641,7 @@ setup(props, context) {
 
 > 以下为上面代码在某个案例中的打印结果
 
-![image-20230709150617759](https://www.arryblog.com/assets/img/image-20230709150617759.405c7a10.png)
+![image-20230709150617759](assets/image-20230709150617759.405c7a10.png)
 
 **代码示例**：
 
@@ -1734,7 +1734,7 @@ setup(props, context) {
 </template>
 ```
 
-![image-20230710162733492](https://www.arryblog.com/assets/img/image-20230710162733492.0a3bb939.png)
+![image-20230710162733492](assets/image-20230710162733492.0a3bb939.png)
 
 > 通过上图可以看到，`context`上下文对象是非响应式的，可以安全地解构
 

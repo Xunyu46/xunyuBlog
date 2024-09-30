@@ -20,7 +20,7 @@
 
 `<slot>`  元素是一个**插槽出口** (slot outlet)，标示了父元素提供的**插槽内容** (slot content) 将在哪里被渲染。
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8979e66c0c914abc9a97c92c228393fd~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/8979e66c0c914abc9a97c92c228393fd~tplv-k3u1fbpfcp-watermark.image)
 
 接下来，我们将一起探索，插槽内容是如何被渲染到指定出口的。
 

@@ -104,7 +104,7 @@ publish: true
 
 > 以上代码，最终实现效果如下：
 
-![GIF2023-6-2515-17-04](https://www.arryblog.com/assets/img/GIF2023-6-2515-17-04.ea42012c.gif)
+![GIF2023-6-2515-17-04](assets/GIF2023-6-2515-17-04.ea42012c.gif)
 
 ### 2、借助父组件通信的问题
 
@@ -112,7 +112,7 @@ publish: true
 
 > 如果通信的两个组件层级较深，如下图
 
-![image-20230625154139583](https://www.arryblog.com/assets/img/image-20230625154139583.545b8faa.png)
+![image-20230625154139583](assets/image-20230625154139583.545b8faa.png)
 
 注：
 
@@ -152,7 +152,7 @@ A1 组件需要与 B1 组件通信，则数据传递链接从 A1 -> A -> App -> 
 
 > 我们用下面一张图来描述发布订阅模式
 
-![image-20230625190918103](https://www.arryblog.com/assets/img/image-20230625190918103.92b9902b.png)
+![image-20230625190918103](assets/image-20230625190918103.92b9902b.png)
 
 发布订阅中心提供了**发布消息**和**订阅消息**的**接口**（API 方法），发布者调用发布消息接口即可发布消息，订阅者调用订阅消息接口就可以订阅消息。
 
@@ -207,7 +207,7 @@ salesOffices.emit(1000000, 55)
 
 > 最终在控制台输出如下内容
 
-![image-20230625171815424](https://www.arryblog.com/assets/img/image-20230625171815424.71458925.png)
+![image-20230625171815424](assets/image-20230625171815424.71458925.png)
 
 ### 3.2、按主题发布与订阅
 
@@ -277,7 +277,7 @@ salesOffices.emit('area80', 1000000, 55)
 
 > 最终在控制台输出如下内容
 
-![image-20230625175159258](https://www.arryblog.com/assets/img/image-20230625175159258.bb0b7456.png)
+![image-20230625175159258](assets/image-20230625175159258.bb0b7456.png)
 
 ### 3.3、完整版：发布与订阅
 
@@ -431,7 +431,7 @@ salesOffices.emit('b')
 
 > 接下来我们利用发布与订阅来实现 A 组件与 B 组件间的通信，实现原理如下图：
 
-![image-20230625231009216](https://www.arryblog.com/assets/img/image-20230625231009216.9ecc7647.png)
+![image-20230625231009216](assets/image-20230625231009216.9ecc7647.png)
 
 - 在`main.js`中将订阅发布对象 pubsub（相当前面说的 salesOffices）绑定到全局`$event`变量上，这样在任意组件内部就可以通过`this.$event`访问到`pubsub`对象
 
@@ -636,7 +636,7 @@ app.mount('#app')
 
 > 整个项目最终渲染效果如下：
 
-![GIF2023-6-2523-18-34](https://www.arryblog.com/assets/img/GIF2023-6-2523-18-34.4505f4f7.gif)
+![GIF2023-6-2523-18-34](assets/GIF2023-6-2523-18-34.4505f4f7.gif)
 
 ### 4、mitt 插件
 
@@ -984,7 +984,7 @@ is 属性值
 
 当使用 `<component :is="...">` 来在多个组件间作切换时，被切换掉的组件会被卸载，这会导致丢失其中所有已变化的状态——当这个组件再一次被显示时，会创建一个只带有初始状态的新实例。
 
-![GIF2023-5-1711-52-57](https://www.arryblog.com/assets/img/GIF2023-5-1711-52-57.25816480.gif)
+![GIF2023-5-1711-52-57](assets/GIF2023-5-1711-52-57.25816480.gif)
 
 注：
 
@@ -1189,7 +1189,7 @@ app.component("AsyncComp", AsyncComp);
 
 > 具体效果如下：
 
-![GIF2023-5-1717-11-47](https://www.arryblog.com/assets/img/GIF2023-5-1717-11-47.6d666368.gif)
+![GIF2023-5-1717-11-47](assets/GIF2023-5-1717-11-47.6d666368.gif)
 
 ### 4、异步组件加载与错误状态
 
@@ -1308,7 +1308,7 @@ const AsyncCompB = defineAsyncComponent({
 
 > 最终渲染后效果如下：
 
-![GIF2023-5-1717-43-07](https://www.arryblog.com/assets/img/GIF2023-5-1717-43-07.65e47283.gif)
+![GIF2023-5-1717-43-07](assets/GIF2023-5-1717-43-07.65e47283.gif)
 
 注：
 

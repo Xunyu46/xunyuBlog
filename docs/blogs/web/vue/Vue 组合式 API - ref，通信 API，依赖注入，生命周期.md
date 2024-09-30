@@ -231,7 +231,7 @@ Count.vue
 
 > 以上代码最终渲染效果如下：
 
-![GIF2023-5-1918-15-02](https://www.arryblog.com/assets/img/GIF2023-5-1918-15-02.b6427b47.gif)
+![GIF2023-5-1918-15-02](assets/GIF2023-5-1918-15-02.b6427b47.gif)
 
 注：
 
@@ -419,7 +419,7 @@ Count.vue
 
 > 以上代码，渲染后在控制台输出如下内容
 
-![image-20230519202930499](https://www.arryblog.com/assets/img/image-20230519202930499.2a83c5a4.png)
+![image-20230519202930499](assets/image-20230519202930499.2a83c5a4.png)
 
 ## 三、依赖与注入
 
@@ -518,7 +518,7 @@ Item.vue
 
 > 以上代码最终渲染效果如下：
 
-![GIF2023-5-1922-19-11](https://www.arryblog.com/assets/img/GIF2023-5-1922-19-11.5e6118f2.gif)
+![GIF2023-5-1922-19-11](assets/GIF2023-5-1922-19-11.5e6118f2.gif)
 
 ## 四、生命周期钩子
 
@@ -528,7 +528,7 @@ Item.vue
 
 > 我们再来回顾之前讲到的生命周期函数示图
 
-![lifecycle.16e4c08e](https://www.arryblog.com/assets/img/lifecycle.16e4c08e.1ae3c5f4.png)
+![lifecycle.16e4c08e](assets/lifecycle.16e4c08e.1ae3c5f4_1.png)
 
 注：
 
@@ -641,7 +641,7 @@ Count.vue
 
 > 以上代码最终渲染后效果如下：
 
-![GIF2023-5-1923-28-52](https://www.arryblog.com/assets/img/GIF2023-5-1923-28-52.df8c1a9e.gif)
+![GIF2023-5-1923-28-52](assets/GIF2023-5-1923-28-52.df8c1a9e.gif)
 
 ## 五、组合式 API 常见疑问
 
@@ -653,7 +653,7 @@ Count.vue
 
 > 具体效果如下：
 
-![GIF2023-7-1418-47-54](https://www.arryblog.com/assets/img/GIF2023-7-1418-47-54.02cd61b0.gif)
+![GIF2023-7-1418-47-54](assets/GIF2023-7-1418-47-54.02cd61b0.gif)
 
 ### 1、项目功能介绍
 

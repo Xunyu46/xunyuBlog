@@ -401,7 +401,7 @@ function genNode(node, context) {
 
 我们经过 `transform` 后得到的 `AST` 内容大致如下：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/394405922a8d4117b675e98b556e35be~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/394405922a8d4117b675e98b556e35be~tplv-k3u1fbpfcp-watermark.image)
 
 其中 `hoists` 内容中存储的是 `<p>hello world</p>` 节点的信息，其中 `type = 13` 表示的是 `VNODE_CALL` 类型，进入 `genVNodeCall` 函数中：
 
@@ -520,7 +520,7 @@ if (ast.codegenNode) {
 
 上面的例子中，我们生产的模版节点的 `codegenNode` 内容如下：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d06897e0dce74384a135537b16afd709~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/d06897e0dce74384a135537b16afd709~tplv-k3u1fbpfcp-watermark.image)
 
 其中 `type = 13` 表示的是 `VNODE_CALL` 类型，也进入 `genVNodeCall` 函数中，这里需要注意的是，因为我们 `template` 下包含了 2 个同级的标签，所以在 `transform` 阶段会创建一个 `patchFlag = STABLE_FRAGMENT` 这样一个根 `fragment` 的 `ast` 节点来包含 2 个 `p` 标签节点。
 

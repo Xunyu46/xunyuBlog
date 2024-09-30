@@ -497,7 +497,7 @@ publish: true
 
 > 最终渲染后效果如下：
 
-![image-20230623164308792](https://www.arryblog.com/assets/img/image-20230623164308792.fddac5c3.png)
+![image-20230623164308792](assets/image-20230623164308792.fddac5c3_1.png)
 
 ### 5、CSS Modules
 
@@ -542,7 +542,7 @@ publish: true
 
 > 以上代码，最终渲染后效果如下：
 
-![image-20230623172218207](https://www.arryblog.com/assets/img/image-20230623172218207.04e9d819.png)
+![image-20230623172218207](assets/image-20230623172218207.04e9d819_1.png)
 
 ### 5.1、自定义注入名称
 
@@ -615,7 +615,7 @@ publish: true
 
 > 以上代码最终渲染后效果如下：
 
-![image-20230623182044460](https://www.arryblog.com/assets/img/image-20230623182044460.6c163b7b.png)
+![image-20230623182044460](assets/image-20230623182044460.6c163b7b_1.png)
 
 注：
 
@@ -653,7 +653,7 @@ publish: true
 
 > 以上代码最终渲染后效果如下：
 
-![image-20230623183702349](https://www.arryblog.com/assets/img/image-20230623183702349.171954b3.png)
+![image-20230623183702349](assets/image-20230623183702349.171954b3_1.png)
 
 ### 7、CSS 预处理器
 
@@ -910,7 +910,7 @@ npm i sass -D # 安装sass 依赖包
 
 > 我们来看下面这副图
 
-![image-20230510164957048](https://www.arryblog.com/assets/img/image-20230510164957048.771ce9de.png)
+![image-20230510164957048](assets/image-20230510164957048.771ce9de_1.png)
 
 注：
 
@@ -1015,9 +1015,9 @@ npm i sass -D # 安装sass 依赖包
 
 > 代码最终渲染后结果
 
-![image-20230510171706123](https://www.arryblog.com/assets/img/image-20230510171706123.b79da80d.png)
+![image-20230510171706123](assets/image-20230510171706123.b79da80d_1.png)
 
-![image-20230630132934048](https://www.arryblog.com/assets/img/image-20230630132934048.cb597d5e.png)
+![image-20230630132934048](assets/image-20230630132934048.cb597d5e_1.png)
 
 ### 2、Prop 名字格式
 
@@ -1152,7 +1152,7 @@ npm i sass -D # 安装sass 依赖包
 </template>
 ```
 
-![image-20230510192021929](https://www.arryblog.com/assets/img/image-20230510192021929.2a76af59.png)
+![image-20230510192021929](assets/image-20230510192021929.2a76af59_1.png)
 
 ### 4、props 对象写法
 
@@ -1234,7 +1234,7 @@ export default {
 
 > 以上代码，最终渲染效果如下：
 
-![image-20230511144552371](https://www.arryblog.com/assets/img/image-20230511144552371.4ba5be8d.png)
+![image-20230511144552371](assets/image-20230511144552371.4ba5be8d_1.png)
 
 ### 4.1、属性支持的检测类型
 
@@ -1345,7 +1345,7 @@ userInfo:{
 
 > 最终渲染后效果如下图，可以正常显示效果，但是控制台会抛出警告
 
-![image-20230629145118670](https://www.arryblog.com/assets/img/image-20230629145118670.8368c1dd.png)
+![image-20230629145118670](assets/image-20230629145118670.8368c1dd_1.png)
 
 ### 5、Prop 校验
 
@@ -1453,7 +1453,7 @@ userInfo:{
 
 > 以上代码，最终渲染效果如下：
 
-![image-20230510201703963](https://www.arryblog.com/assets/img/image-20230510201703963.6db83acb.png)
+![image-20230510201703963](assets/image-20230510201703963.6db83acb_1.png)
 
 ### 6、Boolean 类型 Prop 简写形式
 
@@ -1524,7 +1524,7 @@ export default {
 
 > 以上代码，最终编译结果如下：
 
-![image-20230510205033391](https://www.arryblog.com/assets/img/image-20230510205033391.1b0e5d46.png)
+![image-20230510205033391](assets/image-20230510205033391.1b0e5d46_1.png)
 
 ### 7、使用一个对象绑定多个 Prop
 
@@ -1640,7 +1640,7 @@ App.vue
 </template>
 ```
 
-![image-20230510213454413](https://www.arryblog.com/assets/img/image-20230510213454413.0e76f57e.png)
+![image-20230510213454413](assets/image-20230510213454413.0e76f57e_1.png)
 
 ### 9、更新 prop 的值
 
@@ -1678,7 +1678,7 @@ App.vue
 
 > 以上案例最终渲染效果如下：
 
-![GIF2023-6-2915-42-32](https://www.arryblog.com/assets/img/GIF2023-6-2915-42-32.e46d645d.gif)
+![GIF2023-6-2915-42-32](assets/GIF2023-6-2915-42-32.e46d645d_1.gif)
 
 ### 10、单向数据流
 
@@ -1759,7 +1759,7 @@ m `Person.vue`
 
 > 代码渲染后效果如下：
 
-![GIF2023-5-1022-15-45](https://www.arryblog.com/assets/img/GIF2023-5-1022-15-45.4895b130.gif)
+![GIF2023-5-1022-15-45](assets/GIF2023-5-1022-15-45.4895b130_1.gif)
 
 针对场景二：
 
@@ -1795,7 +1795,7 @@ m `Person.vue`
 
 > 代码渲染后效果如下：
 
-![GIF2023-5-1022-12-42](https://www.arryblog.com/assets/img/GIF2023-5-1022-12-42.db21ff5e.gif)
+![GIF2023-5-1022-12-42](assets/GIF2023-5-1022-12-42.db21ff5e_1.gif)
 
 ### 10.2、更改对象 / 数组类型的 prop 值
 
@@ -1847,7 +1847,7 @@ Person.vue
 
 > 以上代码渲染后效果如下：
 
-![GIF2023-5-1023-10-31](https://www.arryblog.com/assets/img/GIF2023-5-1023-10-31.2447d825.gif)
+![GIF2023-5-1023-10-31](assets/GIF2023-5-1023-10-31.2447d825_1.gif)
 
 注：
 
@@ -2129,7 +2129,7 @@ export default {
 
 > 以上代码最终渲染效果如下
 
-![GIF2023-5-1119-52-14](https://www.arryblog.com/assets/img/GIF2023-5-1119-52-14.533111f3.gif)
+![GIF2023-5-1119-52-14](assets/GIF2023-5-1119-52-14.533111f3_1.gif)
 
 总结：自定义事件监听与触发
 
@@ -2179,7 +2179,7 @@ export default {
 </template>
 ```
 
-![image-20230511215305658](https://www.arryblog.com/assets/img/image-20230511215305658.f253aa1d.png)
+![image-20230511215305658](assets/image-20230511215305658.f253aa1d.png)
 
 温馨提示：
 
@@ -2281,7 +2281,7 @@ methods: { update(a, b, c) { // a b c对应传过来的数据 5 6 7 console.log(
 
 > 以上代码，最终渲染结果如下：
 
-![GIF2023-5-1121-30-04](https://www.arryblog.com/assets/img/GIF2023-5-1121-30-04.b8506a27.gif)
+![GIF2023-5-1121-30-04](assets/GIF2023-5-1121-30-04.b8506a27.gif)
 
 ### 5、自定义事件校验
 
@@ -2369,7 +2369,7 @@ export default {
 
 > 以上代码渲染后结果如下：
 
-![GIF2023-5-1122-38-55](https://www.arryblog.com/assets/img/GIF2023-5-1122-38-55.a0d340b3.gif)
+![GIF2023-5-1122-38-55](assets/GIF2023-5-1122-38-55.a0d340b3.gif)
 
 注：
 
@@ -2852,7 +2852,7 @@ emits:{
 
 我们在之前弹窗的基础之上做了相关优化，在弹出的框中可以输入内容，将输入的内容显示到父组件中。
 
-![GIF2023-6-2415-03-00](https://www.arryblog.com/assets/img/GIF2023-6-2415-03-00.0cead16e.gif)
+![GIF2023-6-2415-03-00](assets/GIF2023-6-2415-03-00.0cead16e.gif)
 
 完整版代码如下：
 
@@ -3017,7 +3017,7 @@ export default {
 <MyComponent v-model.capitalize="msg" />
 ```
 
-![GIF2023-6-2416-43-26](https://www.arryblog.com/assets/img/GIF2023-6-2416-43-26.d9a7e334.gif)
+![GIF2023-6-2416-43-26](assets/GIF2023-6-2416-43-26.d9a7e334.gif)
 
 **代码示例**
 
@@ -3208,7 +3208,7 @@ export default {
 
 > 以上代码最终被渲染的结果如下
 
-![image-20230629175017841](https://www.arryblog.com/assets/img/image-20230629175017841.c3679eb0.png)
+![image-20230629175017841](assets/image-20230629175017841.c3679eb0.png)
 
 ### 3、透传属性继承的注意事项
 
@@ -3292,7 +3292,7 @@ export default {
 
 > 以上代码最终渲染效果如下，点击 div 元素，`fn`与`add`方法都被调用了。
 
-![GIF2023-5-1218-11-40](https://www.arryblog.com/assets/img/GIF2023-5-1218-11-40.68e2e51c.gif)
+![GIF2023-5-1218-11-40](assets/GIF2023-5-1218-11-40.68e2e51c.gif)
 
 ### 4、禁用透传属性自动继承
 
@@ -3392,7 +3392,7 @@ export default {
 </template>
 ```
 
-![image-20230512200709432](https://www.arryblog.com/assets/img/image-20230512200709432.3c7d660f.png)
+![image-20230512200709432](assets/image-20230512200709432.3c7d660f.png)
 
 ### 5.1、$attrs 属性的注意事项
 
@@ -3446,7 +3446,7 @@ export default {
 
 > 以上代码最终渲染效果如下：
 
-![GIF2023-5-1220-56-57](https://www.arryblog.com/assets/img/GIF2023-5-1220-56-57.ecaf67a6.gif)
+![GIF2023-5-1220-56-57](assets/GIF2023-5-1220-56-57.ecaf67a6.gif)
 
 ### 6、多根组件透传属性的继承
 
@@ -3551,7 +3551,7 @@ export default {
 
 > 以上代码最终渲染效果如下，点击文字`Item组件`会触发 click 事件，更新 n 的值
 
-![GIF2023-5-1221-49-46](https://www.arryblog.com/assets/img/GIF2023-5-1221-49-46.ff09bd37.gif)
+![GIF2023-5-1221-49-46](assets/GIF2023-5-1221-49-46.ff09bd37.gif)
 
 ### 8、总结
 

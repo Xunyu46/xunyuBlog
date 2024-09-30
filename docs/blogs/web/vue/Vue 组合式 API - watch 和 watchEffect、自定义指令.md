@@ -93,7 +93,7 @@ publish: true
 
 > 以上代码最终渲染效果如下：
 
-![GIF2023-5-1819-50-13](https://www.arryblog.com/assets/img/GIF2023-5-1819-50-13.60b8aa74.gif)
+![GIF2023-5-1819-50-13](assets/GIF2023-5-1819-50-13.60b8aa74.gif)
 
 ### 3、使用组件
 
@@ -147,7 +147,7 @@ publish: true
 
 > 以上代码最终渲染效果如下：
 
-![GIF2023-7-1017-37-36](https://www.arryblog.com/assets/img/GIF2023-7-1017-37-36.5f2fe25d.gif)
+![GIF2023-7-1017-37-36](assets/GIF2023-7-1017-37-36.5f2fe25d.gif)
 
 ### 5、计算属性 computed
 
@@ -411,7 +411,7 @@ watch(
 
 > 以上代码最终执行结果如下，侦听器回调函数被调用了 4 次
 
-![image-20230710183920391](https://www.arryblog.com/assets/img/image-20230710183920391.c42d1840.png)
+![image-20230710183920391](assets/image-20230710183920391.c42d1840.png)
 
 总结：
 
@@ -471,7 +471,7 @@ watch(
 
 实现单位千米与米的转换
 
-![GIF2023-5-1823-38-48](https://www.arryblog.com/assets/img/GIF2023-5-1823-38-48.918f132e.gif)
+![GIF2023-5-1823-38-48](assets/GIF2023-5-1823-38-48.918f132e.gif)
 
 ```html
 <script setup>
@@ -587,11 +587,11 @@ onBeforeUnmount(() => {
 
 > 以上代码，如果不在生命周期函数`onBeforeUnmount`中调用`unwatch()`停止侦听器，组件被卸载后，侦听器依赖没有停止，最终渲染效果如下：
 
-![GIF2023-5-1915-38-47](https://www.arryblog.com/assets/img/GIF2023-5-1915-38-47.89195b07.gif)
+![GIF2023-5-1915-38-47](assets/GIF2023-5-1915-38-47.89195b07.gif)
 
 > 如果在生命周期函数`onBeforeUnmount`中调用`unwatch()`停止侦听器，则最终渲染效果如下：
 
-![GIF2023-5-1915-37-32](https://www.arryblog.com/assets/img/GIF2023-5-1915-37-32.4f4ad570.gif)
+![GIF2023-5-1915-37-32](assets/GIF2023-5-1915-37-32.4f4ad570.gif)
 
 ## 三、watchEffect() 方法
 
@@ -648,7 +648,7 @@ interface WatchEffectOptions {
 
 > 以上代码，最终渲染效果如下：
 
-![GIF2023-5-2316-59-59](https://www.arryblog.com/assets/img/GIF2023-5-2316-59-59.54ec803a.gif)
+![GIF2023-5-2316-59-59](assets/GIF2023-5-2316-59-59.54ec803a.gif)
 
 执行结果分析
 
@@ -894,7 +894,7 @@ controller.abort()
 
 > 以上代码最终渲染效果如下：
 
-![GIF2023-7-1423-35-57](https://www.arryblog.com/assets/img/GIF2023-7-1423-35-57.be519141.gif)
+![GIF2023-7-1423-35-57](assets/GIF2023-7-1423-35-57.be519141.gif)
 
 注：
 
