@@ -19,7 +19,6 @@ cache
 
 # log and lock files
 *.log
-yarn.lock
 package-lock.json
 
 # local env files
