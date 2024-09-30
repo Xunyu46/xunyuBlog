@@ -9,7 +9,7 @@
 - 与其它微前端方案不同，MF 的应用之间关系平等，没有主应用/子应用之分，每个应用都能导出/导入任意模块；
 - 等等。
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dbb78e89b39941818ab0c323d4873c1f~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/dbb78e89b39941818ab0c323d4873c1f~tplv-k3u1fbpfcp-watermark.image)
 
 > 图片摘自：《[Webpack 5 之 模块联合（Module Federation）](https://www.lumin.tech/articles/webpack-module-federation/#%E5%85%B1%E4%BA%AB%E6%A8%A1%E5%9D%97)》
 
@@ -156,7 +156,7 @@ module.exports = {
 
 到这里，简单示例就算是搭建完毕了，之后运行页面，打开开发者工具的 Network 面板，可以看到：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a52bfa6daf0e4c0fb181a6bdfb6698e2~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/a52bfa6daf0e4c0fb181a6bdfb6698e2~tplv-k3u1fbpfcp-watermark.image)
 
 其中：
 
@@ -273,7 +273,7 @@ module.exports = {
 
 - `singletong`：强制约束多个版本之间共用同一个依赖包，如果依赖包不满足版本 `requiredVersion` 版本要求则报警告：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0bbdf553eb2b4c8e9d38ffb2e1695948~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/0bbdf553eb2b4c8e9d38ffb2e1695948~tplv-k3u1fbpfcp-watermark.image)
 
 - `version`：声明依赖包版本，缺省默认会从包体的 `package.json` 的 `version` 字段解析；
 - `packageName`：用于从描述文件中确定所需版本的包名称，仅当无法从请求中自动确定包名称时才需要这样做；

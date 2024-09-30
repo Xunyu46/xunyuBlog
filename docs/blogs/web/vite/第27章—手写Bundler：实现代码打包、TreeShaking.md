@@ -4,7 +4,7 @@
 
 首先我们来梳理一下整体的实现思路，如下图所示:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/598856bbb7bd4dae8040143b203e85bb~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/598856bbb7bd4dae8040143b203e85bb~tplv-k3u1fbpfcp-watermark.image)
 
 第一步我们需要获取模块的内容并解析模块 AST，然后梳理模块间的依赖关系，生成一张模块依赖图(`ModuleGraph`)。
 
@@ -916,11 +916,11 @@ export class Graph {
 
 拓扑排序的核心在于对依赖图进行后续遍历，将被依赖的模块放到前面，如下图所示:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a33a6a2f4d284f1093b3ea5e796a03aa~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/a33a6a2f4d284f1093b3ea5e796a03aa~tplv-k3u1fbpfcp-watermark.image)
 
 其中 A 依赖 B 和 C，B 和 C 依赖 D，D 依赖 E，那么最后的拓扑排序即`E、D、B、C、A`。但也有一种特殊情况，就是出现循环的情况，如下面这张图所示:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a5de64cd3e114e98873976cd3dbc768f~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/a5de64cd3e114e98873976cd3dbc768f~tplv-k3u1fbpfcp-watermark.image)
 
 上图中的依赖关系呈现了`B->C->D->B`的循环依赖，这种情况是我们需要避免的。那么如何来检测出循环依赖呢？
 
@@ -943,7 +943,7 @@ function analyseModule(module: Module) {
 
 如果某个模块没有被记录到 analysedModule 中，则表示它的依赖模块并没有分析完，在这个前提下中，如果再次遍历到这个模块，说明已经出现了循环依赖，你可以对照下图理解:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a5de64cd3e114e98873976cd3dbc768f~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/a5de64cd3e114e98873976cd3dbc768f~tplv-k3u1fbpfcp-watermark_1.image)
 
 因此检测循环依赖的条件应该为下面这样:
 

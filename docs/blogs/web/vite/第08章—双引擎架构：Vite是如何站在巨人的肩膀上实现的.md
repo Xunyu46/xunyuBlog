@@ -6,7 +6,7 @@
 
 很多人对 Vite 的双引擎架构仅仅停留在`开发阶段使用 Esbuild，生产环境用 Rollup`的阶段，殊不知，Vite 真正的架构远没有这么简单。一图胜千言，这里放一张 Vite 架构图：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/02910cd2c6894bcdb3a9e0fc9e59f4c2~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/02910cd2c6894bcdb3a9e0fc9e59f4c2~tplv-k3u1fbpfcp-watermark_1.image)
 
 相信对于 Vite 的双引擎架构，你可以从图中略窥一二。在接下来的内容中，我会围绕这张架构图展开双引擎的介绍，到时候你会对这份架构图理解得更透彻。
 
@@ -22,13 +22,13 @@
 
 首先是**开发阶段的依赖预构建**阶段。
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f53b2429304e4808be5faea190bf05a7~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/f53b2429304e4808be5faea190bf05a7~tplv-k3u1fbpfcp-watermark.image)
 
 一般来说，`node_modules` 依赖的大小动辄几百 MB 甚至上 GB ，会远超项目源代码，相信大家都深有体会。如果这些依赖直接在 Vite 中使用，会出现一系列的问题，这些问题我们在**依赖预构建**的小节已经详细分析过，主要是 ESM 格式的兼容性问题和海量请求的问题，不再赘述。总而言之，对于第三方依赖，需要在应用启动前进行**打包**并且**转换为 ESM 格式**。
 
 Vite 1.x 版本中使用 Rollup 来做这件事情，但 Esbuild 的性能实在是太恐怖了，Vite 2.x 果断采用 Esbuild 来完成第三方依赖的预构建，至于性能到底有多强，大家可以参照它与传统打包工具的性能对比图:
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/df7f314cd598418f924c689020fbee88~tplv-k3u1fbpfcp-zoom-1.image)
+![](assets/df7f314cd598418f924c689020fbee88~tplv-k3u1fbpfcp-zoom-1.image)
 
 当然，Esbuild 作为打包工具也有一些缺点。
 
@@ -43,7 +43,7 @@ Vite 1.x 版本中使用 Rollup 来做这件事情，但 Esbuild 的性能实在
 
 在依赖预构建阶段， Esbuild 作为 Bundler 的角色存在。而在 TS(X)/JS(X) 单文件编译上面，Vite 也使用 Esbuild 进行语法转译，也就是将 Esbuild 作为 Transformer 来用。大家可以在架构图中`Vite Plugin Pipeline`部分注意到:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7b1ab2ef7b0443cb99b1aa48e908ffce~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/7b1ab2ef7b0443cb99b1aa48e908ffce~tplv-k3u1fbpfcp-watermark.image)
 
 也就是说，Esbuild 转译 TS 或者 JSX 的能力通过 Vite 插件提供，这个 Vite 插件在开发环境和生产环境都会执行，因此，我们可以得出下面这个结论:
 
@@ -53,7 +53,7 @@ Vite 1.x 版本中使用 Rollup 来做这件事情，但 Esbuild 的性能实在
 
 当 Vite 使用 Esbuild 做单文件编译之后，提升可以说**相当大**了，我们以一个巨大的、50 多 MB 的纯代码文件为例，来[对比](https://datastation.multiprocess.io/blog/2021-11-13-benchmarking-esbuild-swc-typescript-babel.html)`Esbuild`、`Babel`、`TSC` 包括 `SWC` 的编译性能:
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e31ab3a305b54a509471db143d531a10~tplv-k3u1fbpfcp-zoom-1.image)
+![](assets/e31ab3a305b54a509471db143d531a10~tplv-k3u1fbpfcp-zoom-1.image)
 
 可以看到，虽然 Esbuild Transfomer 能带来巨大的性能提升，但其自身也有局限性，最大的局限性就在于 TS 中的类型检查问题。这是因为 Esbuild 并没有实现 TS 的类型系统，在编译 `TS`(或者 `TSX`) 文件时仅仅抹掉了类型相关的代码，暂时没有能力实现类型检查。
 
@@ -67,7 +67,7 @@ Vite 1.x 版本中使用 Rollup 来做这件事情，但 Esbuild 的性能实在
 
 从架构图中可以看到，在生产环境中 Esbuild 压缩器通过插件的形式融入到了 Rollup 的打包流程中:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b9f3cba1416b4d778af6d62ca4430c44~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/b9f3cba1416b4d778af6d62ca4430c44~tplv-k3u1fbpfcp-watermark.image)
 
 那为什么 Vite 要将 Esbuild 作为生产环境下默认的压缩工具呢？因为压缩效率实在太高了！
 
@@ -80,7 +80,7 @@ Vite 1.x 版本中使用 Rollup 来做这件事情，但 Esbuild 的性能实在
 
 举个例子，我们可以看下面这个实际大型库(`echarts`)的压缩性能[测试项目](https://github.com/privatenumber/minification-benchmarks):
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/48a7b8bac5f54d84b33ab060c7df2299~tplv-k3u1fbpfcp-zoom-1.image)
+![](assets/48a7b8bac5f54d84b33ab060c7df2299~tplv-k3u1fbpfcp-zoom-1.image)
 
 压缩一个大小为`3.2 MB`的库，Terser 需要耗费`8798 ms`，而 Esbuild 仅仅需要`361 ms`，压缩效率较 Terser 提升了二三十倍，并且产物的体积几乎没有劣化，因此 Vite 果断将其内置为默认的压缩方案。
 
@@ -112,7 +112,7 @@ Rollup 在 Vite 中的重要性一点也不亚于 Esbuild，它既是 Vite 用�
 
 3. 异步 Chunk 加载优化。在异步引入的 Chunk 中，通常会有一些公用的模块，如现有两个异步引入的 Chunk: `A` 和 `B`，而且两者有一个公共依赖 C，如下图:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5adc9b7c9426424f99be3a7044e3469f~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/5adc9b7c9426424f99be3a7044e3469f~tplv-k3u1fbpfcp-watermark.image)
 
 一般情况下，Rollup 打包之后，会先请求 A，然后浏览器在加载 A 的过程中才决定请求和加载 C，但 Vite 进行优化之后，请求 A 的同时会自动预加载 C，通过优化 Rollup 产物依赖加载方式节省了不必要的网络开销。
 
@@ -120,13 +120,13 @@ Rollup 在 Vite 中的重要性一点也不亚于 Esbuild，它既是 Vite 用�
 
 无论是开发阶段还是生产环境，Vite 都根植于 Rollup 的插件机制和生态，如下面的架构图所示:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/db5342d894e649ca8a953e3880fc96fb~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/db5342d894e649ca8a953e3880fc96fb~tplv-k3u1fbpfcp-watermark.image)
 
 在开发阶段，Vite 借鉴了 [WMR](https://github.com/preactjs/wmr) 的思路，自己实现了一个 `Plugin Container`，用来模拟 Rollup 调度各个 Vite 插件的执行逻辑，而 Vite 的插件写法完全兼容 Rollup，因此在生产环境中将所有的 Vite 插件传入 Rollup 也没有问题。
 
 反过来说，Rollup 插件却不一定能完全兼容 Vite(这部分我们会在**插件开发**小节展开来说)。不过，目前仍然有不少 Rollup 插件可以直接复用到 Vite 中，你可以通过这个站点查看所有兼容 Vite 的 Rollup 插件: https://vite-rollup-plugins.patak.dev/ 。
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/383be75040ca49aca067d57e43014d04~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/383be75040ca49aca067d57e43014d04~tplv-k3u1fbpfcp-watermark.image)
 
 狼叔在[《以框架定位论前端的先进性》](https://mp.weixin.qq.com/s/mt2Uyh-lpHqHAHqjsen7zw) 提到现代前端框架的几大分类，Vite 属于`人有我优`的类型，因为类似的工具之前有 [Snowpack](https://www.snowpack.dev/)，Vite 诞生之后补齐了作为一个 no-bundle 构建工具的 Dev Server 能力(如 HMR)，确实比现有的工具能力更优。但更重要的是，Vite 在**社区生态**方面比 Snowpack 更占先天优势。
 

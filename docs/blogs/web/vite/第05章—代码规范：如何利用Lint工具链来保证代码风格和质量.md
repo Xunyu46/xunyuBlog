@@ -34,7 +34,7 @@ pnpm i eslint -D
 npx eslint --init
 ```
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c71cb725150d4e5c9d46539916047ef1~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/c71cb725150d4e5c9d46539916047ef1~tplv-k3u1fbpfcp-watermark.image)
 
 接着 ESLint 会帮我们自动生成`.eslintrc.js`配置文件。需要注意的是，在上述初始化流程中我们并没有用 npm 安装依赖，需要进行手动安装:
 
@@ -268,7 +268,7 @@ pnpm run lint:script
 
 这样我们就完成了 `ESLint 的规则检查`以及 `Prettier 的自动修复`。不过每次执行这个命令未免会有些繁琐，我们可以在`VSCode`中安装`ESLint`和`Prettier`这两个插件，并且在设置区中开启`Format On Save`:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8a3d00d6cabd4093b7ce7121464d5bb2~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/8a3d00d6cabd4093b7ce7121464d5bb2~tplv-k3u1fbpfcp-watermark.image)
 
 接下来在你按`Ctrl + S`保存代码的时候，Prettier 便会自动帮忙修复代码格式。
 
@@ -299,7 +299,7 @@ import viteEslint from 'vite-plugin-eslint'
 
 现在你可以试着重新启动项目， ESLint 的错误已经能够及时显示到命令行窗口中了。
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fe73069469414debbef973c6a9f0f8ae~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/fe73069469414debbef973c6a9f0f8ae~tplv-k3u1fbpfcp-watermark.image)
 
 > 由于这个插件采用另一个进程来运行 ESLint 的扫描工作，因此不会影响 Vite 项目的启动速度，这个大家不用担心。
 
@@ -395,7 +395,7 @@ import viteStylelint from '@amatlash/vite-plugin-stylelint'
 
 接下来，你就可以在命令行界面看到对应的 Stylelint 提示了:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e0957eaa8d1444f98a80173502f2395~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/7e0957eaa8d1444f98a80173502f2395~tplv-k3u1fbpfcp-watermark.image)
 
 ## Husky + lint-staged 的 Git 提交工作流集成
 
@@ -511,7 +511,7 @@ npx husky add .husky/commit-msg "npx --no-install commitlint -e $HUSKY_GIT_PARAM
 
 你可以发现在`.husky`目录下多出了`commit-msg`脚本文件，表示`commitlint`命令已经成功接入到 husky 的钩子当中。现在我们可以尝试对代码进行提交，假如输入一个错误的 commit 信息，commitlint 会自动抛出错误并退出:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0380e4bb149540649fc8b5f7f8e71c6e~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/0380e4bb149540649fc8b5f7f8e71c6e~tplv-k3u1fbpfcp-watermark.image)
 
 至此，我们便完成了 Git 提交信息的卡点扫描和规范检查。
 

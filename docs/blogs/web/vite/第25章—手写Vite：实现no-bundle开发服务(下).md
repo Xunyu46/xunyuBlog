@@ -1,6 +1,6 @@
 ﻿本小节为上一小节的续篇，我们基于下面的导图继续实现 no-bundle 构建服务:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/97c40a3172e54cc493db001f1879e025~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/97c40a3172e54cc493db001f1879e025~tplv-k3u1fbpfcp-watermark_1.image)
 
 接下来我们需要完成如下的模块:
 
@@ -122,7 +122,7 @@ import './App.css'
 
 在启动项目后，打开浏览器进行访问，可以看到样式已经正常生效:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/46823f9f56c6486bbf2ddc357aa5936b~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/46823f9f56c6486bbf2ddc357aa5936b~tplv-k3u1fbpfcp-watermark.image)
 
 ## 静态资源加载
 
@@ -167,7 +167,7 @@ async transform(code, id) {
 
 编译后的 App.tsx 内容如下:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c3dd1a0e85fe42c08f8dc5f05bb83867~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/c3dd1a0e85fe42c08f8dc5f05bb83867~tplv-k3u1fbpfcp-watermark.image)
 
 接着浏览器会发出带有`?import`后缀的请求，我们在 transform 中间件进行处理:
 
@@ -293,7 +293,7 @@ export async function startDevServer() {
 
 现在，你可以通过`pnpm dev`启动 playground 项目，在浏览器中访问，可以发现 svg 图片已经能够成功显示了:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c0b357d3958c459cbcc1c3d288cf97b1~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/c0b357d3958c459cbcc1c3d288cf97b1~tplv-k3u1fbpfcp-watermark.image)
 
 其实不光是 svg 文件，几乎所有格式的静态资源都可以按照如上的思路进行处理:
 
@@ -803,11 +803,11 @@ export function resolvePlugins(): Plugin[] {
 
 接下来你可以在 playground 项目下执行`pnpm dev`，然后查看页面，可以发现控制台出现了如下的 log 信息:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b945967aca1d4fd6a8582bd85620c077~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/b945967aca1d4fd6a8582bd85620c077~tplv-k3u1fbpfcp-watermark.image)
 
 查看网络面板，也能发现客户端脚本的请求被正常响应:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1f2e2dbf2b984edfacec509e18321180~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/1f2e2dbf2b984edfacec509e18321180~tplv-k3u1fbpfcp-watermark.image)
 
 OK，接下来我们就来继续完善客户端脚本的具体实现。
 
@@ -919,7 +919,7 @@ export function importAnalysisPlugin(): Plugin {
 
 接着启动 playground，打开页面后你可以发现 import.meta.hot 的实现代码已经被成功插入:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5f7d654bfa5846d29d3777afca63c5ec~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/5f7d654bfa5846d29d3777afca63c5ec~tplv-k3u1fbpfcp-watermark.image)
 
 现在，我们回到客户端脚本的实现中，来开发`createHotContext` 这个工具方法:
 
@@ -1028,11 +1028,11 @@ import.meta.hot.accept(() => {
 
 启动 playground，然后打开浏览器，可以看到如下的文本:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8206aa36285c403085251b9d2d80baaa~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/8206aa36285c403085251b9d2d80baaa~tplv-k3u1fbpfcp-watermark.image)
 
 现在回到编辑器中，修改文本内容，然后保存，你可以发现页面内容也跟着发生了变化，并且网络面板发出了拉取最新模块的请求，说明 HMR 已经成功生效:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/556efb91f2024b76ab74ba8f62baf6b9~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/556efb91f2024b76ab74ba8f62baf6b9~tplv-k3u1fbpfcp-watermark.image)
 
 同时，当你再次刷新页面，看到的仍然是最新的页面内容。这一点非常重要，之所以能达到这样的效果，是因为我们在文件改动后会调用 ModuleGraph 的 invalidateModule 方法，这个方法会清除热更模块以及所有上层引用方模块的编译缓存:
 
@@ -1131,7 +1131,7 @@ import.meta.hot.prune(() => removeStyle(id));`.trim()
 
 最后，你可以重启 playground 项目，本地尝试修改 CSS 代码，可以看到类似如下的热更新效果:
 
-![css-hmr1.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b85a27d44b4c471b98c7457424098d71~tplv-k3u1fbpfcp-watermark.image?)
+![css-hmr1.gif](assets/b85a27d44b4c471b98c7457424098d71~tplv-k3u1fbpfcp-watermark.image)
 
 ## 小结
 

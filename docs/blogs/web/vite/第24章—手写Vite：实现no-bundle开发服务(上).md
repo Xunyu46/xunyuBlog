@@ -14,7 +14,7 @@
 
 5. 最后，我们会实现一套系统化的模块热更新的能力，从搭建模块依赖图开始，逐步实现 HMR 服务端和客户端的开发。
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/97c40a3172e54cc493db001f1879e025~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/97c40a3172e54cc493db001f1879e025~tplv-k3u1fbpfcp-watermark.image)
 
 ## 搭建开发环境
 
@@ -134,7 +134,7 @@ require('../dist/index.js')
 
 那么`mini-vite`命令会自动安装到测试项目的`node_modules/.bin`目录中:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6fbe7e6ef1634e78803f28a6d1f90b7d~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/6fbe7e6ef1634e78803f28a6d1f90b7d~tplv-k3u1fbpfcp-watermark.image)
 
 接着我们在`playground`项目中执行`pnpm dev`命令(内部执行`mini-vite`)，可以看到如下的 log 信息:
 
@@ -182,7 +182,7 @@ export async function startDevServer() {
 
 再次执行`pnpm dev`，你可以发现终端出现如下的启动日志:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/49e6e563b19041acab43f5246e1b5209~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/49e6e563b19041acab43f5246e1b5209~tplv-k3u1fbpfcp-watermark.image)
 
 OK，`mini-vite` 的 cli 功能和服务启动的逻辑目前就已经成功搭建起来了。
 
@@ -338,7 +338,7 @@ export const BARE_IMPORT_RE = /^[\w@][^:]/
 
 现在，我们在`playground`项目根路径中执行`pnpm dev`，可以发现依赖扫描已经成功执行:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0a870441e5f3431c94cb5789a92791df~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/0a870441e5f3431c94cb5789a92791df~tplv-k3u1fbpfcp-watermark.image)
 
 当我们收集到所有的依赖信息之后，就可以对每个依赖进行打包，完成依赖预构建了:
 
@@ -541,7 +541,7 @@ export {
 
 OK，接下来让我们来测试一下预构建整体的功能。在 `playground` 项目中执行 `pnpm dev`，接着去项目的 `node_modules` 目录中，可以发现新增了`.m-vite` 目录及`react`、`react-dom`的预构建产物:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c4a1fbb12ead4bb4a7b5b75001949da6~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/c4a1fbb12ead4bb4a7b5b75001949da6~tplv-k3u1fbpfcp-watermark.image)
 
 ## 插件机制开发
 
@@ -781,7 +781,7 @@ app.listen(3000, async () => {
 
 接下来通过`pnpm dev`启动项目，然后访问`http://localhost:3000`，从网络面板中你可以查看到 HTML 的内容已经成功返回:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/24a244087a64467abcb94ae4ddd70c3e~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/24a244087a64467abcb94ae4ddd70c3e~tplv-k3u1fbpfcp-watermark.image)
 
 不过当前的页面并没有任何内容，因为 HTML 中引入的 TSX 文件并没有被正确编译。接下来，我们就来处理 TSX 文件的编译工作。
 
@@ -892,7 +892,7 @@ export const HASH_RE = /#.*$/s
 
 会自动发送一个路径为`/src/main.tsx`的请求，但如果服务端不做任何处理，是无法定位到源文件的，随之会返回 404 状态码:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/13e2fee3e7a44950b2a1820576013d3a~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/13e2fee3e7a44950b2a1820576013d3a~tplv-k3u1fbpfcp-watermark.image)
 
 因此，我们需要开发一个路径解析插件，对请求的路径进行处理，使之能转换真实文件系统中的路径。你可以新建文件`src/node/plugins/resolve.ts`，内容如下:
 
@@ -1113,11 +1113,11 @@ app.use(transformMiddleware(serverContext))
 
 然后在`playground`项目下执行`pnpm dev`，在浏览器里面访问`http://localhost:3000`，你可以在网络面板中发现 `main.tsx` 的内容以及被编译为下面这样:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c788e41eb93c4727958b501f2314ad7d~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/c788e41eb93c4727958b501f2314ad7d~tplv-k3u1fbpfcp-watermark.image)
 
 同时，页面内容也能被渲染出来了:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dd414e4167204fa08547e27e7d465c33~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/dd414e4167204fa08547e27e7d465c33~tplv-k3u1fbpfcp-watermark.image)
 
 OK，目前为止我们就基本上完成 JS/TS/JSX/TSX 文件的编译。
 

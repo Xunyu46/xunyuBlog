@@ -31,7 +31,7 @@ describe('example test', () => {
 
 接着在命令行执行 `pnpm test`，如果你可以看到如下的终端界面，说明测试环境已经搭建成功:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b77385f8d8da4e5689a97471d4a1b0b2~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/b77385f8d8da4e5689a97471d4a1b0b2~tplv-k3u1fbpfcp-watermark.image)
 
 ## 词法分析器开发
 
@@ -249,7 +249,7 @@ describe('testTokenizerFunction', () => {
 
 然后在终端执行`pnpm test`，可以发现如下的测试结果:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d0ca23fabb94409da8364d2dfd69e761~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/d0ca23fabb94409da8364d2dfd69e761~tplv-k3u1fbpfcp-watermark.image)
 
 说明此时一个简易版本的分词器已经被我们开发出来了，不过目前的分词器还比较简陋，仅仅支持有限的语法，不过在明确了核心的开发步骤之后，后面继续完善的过程就比较简单了。
 
@@ -257,7 +257,7 @@ describe('testTokenizerFunction', () => {
 
 在解析出词法 token 之后，我们就可以进入语法分析阶段了。在这个阶段，我们会依次遍历 token，对代码进行语法结构层面的分析，最后的目标是生成 AST 数据结构。至于代码的 AST 结构到底是什么样子，你可以去 [AST Explorer](https://astexplorer.net/) 网站进行在线预览:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fb95f9badf324b77b70b2e62015cb171~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/fb95f9badf324b77b70b2e62015cb171~tplv-k3u1fbpfcp-watermark.image)
 
 接下来，我们要做的就是将 token 数组转换为上图所示的 AST 数据。
 

@@ -8,9 +8,9 @@
 
 首先我们来复现一下问题场景，下面两张图代表了之前我在线上环境真实遇到的报错案例:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/89664e25ca4d43acba36586e4ac58b1e~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/89664e25ca4d43acba36586e4ac58b1e~tplv-k3u1fbpfcp-watermark.image)
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/475f676c3bb5445ea37b32919799a412~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/475f676c3bb5445ea37b32919799a412~tplv-k3u1fbpfcp-watermark.image)
 
 某些低版本浏览器并没有提供 `Promise` 语法环境以及对象和数组的各种 API，甚至不支持箭头函数语法，代码直接报错，从而导致线上白屏事故的发生，尤其是需要兼容到`IE 11`、`iOS 9`以及`Android 4.4`的场景中很容易会遇到。
 
@@ -155,7 +155,7 @@ iOS >= 9, Android >= 4.4, last 2 versions, > 0.2%, not dead
 
 对于这些配置对应的具体浏览器列表，大家可以去 https://browserslist.dev 站点查看:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c6a37f9917fd4be4b38d3ee8d5165625~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/c6a37f9917fd4be4b38d3ee8d5165625~tplv-k3u1fbpfcp-watermark.image)
 
 好，在说明了目标浏览器的配置之后，接下来我们来看另外一个重要的配置——`useBuiltIns`，它决定了添加 Polyfill 策略，默认是 `false`，即不添加任何的 Polyfill。你可以手动将`useBuiltIns`配置为`entry`或者`usage`，接下来我们看看这两个配置究竟有什么区别。
 
@@ -174,7 +174,7 @@ npx babel src --out-dir dist
 
 产物输出在`dist`目录中，你可以去观察一下产物的代码:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f56b93f6e9884779b7197d2ad369034b~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/f56b93f6e9884779b7197d2ad369034b~tplv-k3u1fbpfcp-watermark.image)
 
 Babel 已经根据`目标浏览器`的配置为我们添加了大量的 Polyfill 代码，`index.js`文件简单的几行代码被编译成近 300 行。实际上，Babel 所做的事情就是将你的`import "core-js"`代码替换成了产物中的这些具体模块的导入代码。
 
@@ -186,7 +186,7 @@ npx babel src --out-dir dist
 
 同样可以看到产物输出在了`dist/index.js`中，内容如下所示:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eecb694e85494faaa63dc00688787a09~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/eecb694e85494faaa63dc00688787a09~tplv-k3u1fbpfcp-watermark.image)
 
 > Polyfill 代码主要来自 `corejs` 和 `regenerator-runtime`，因此如果要运行起来，必须要装这两个库。
 
@@ -252,7 +252,7 @@ npx babel src --out-dir dist
 
 我们可以对比一下 `@babel/preset-env`下的产物结果:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fc40d9a6401640058b96c4821e6ff8c1~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/fc40d9a6401640058b96c4821e6ff8c1~tplv-k3u1fbpfcp-watermark.image)
 
 经过对比我们不难发现，`transform-runtime` 一方面能够让我们在代码中使用`非全局版本`的 Polyfill，这样就避免全局空间的污染，这也得益于 `core-js` 的 pure 版本产物特性；另一方面对于`asyncToGeneator`这类的工具函数，它也将其转换成了一段引入语句，不再将完整的实现放到文件中，节省了编译后文件的体积。
 
@@ -294,7 +294,7 @@ export default defineConfig({
 
 在引入插件后，我们可以尝试执行`npm run build`对项目进行打包，可以看到如下的产物信息:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d6b0cd1289814da78e89c90cc7aed81a~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/d6b0cd1289814da78e89c90cc7aed81a~tplv-k3u1fbpfcp-watermark.image)
 
 相比一般的打包过程，多出了`index-legacy.js`、`vendor-legacy.js`以及`polyfills-legacy.js`三份产物文件。让我们继续观察一下`index.html`的产物内容:
 
@@ -327,7 +327,7 @@ export default defineConfig({
 
 通过官方的`legacy`插件， Vite 会分别打包出`Modern`模式和`Legacy`模式的产物，然后将两种产物插入同一个 HTML 里面，`Modern`产物被放到 `type="module"`的 script 标签中，而`Legacy`产物则被放到带有 [nomodule](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-nomodule) 的 script 标签中。浏览器的加载策略如下图所示:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c2e76cdfdb1443a789d23439bd6aabce~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/c2e76cdfdb1443a789d23439bd6aabce~tplv-k3u1fbpfcp-watermark.image)
 
 这样产物便就能够同时放到现代浏览器和不支持`type="module"`的低版本浏览器当中执行。当然，在具体的代码语法层面，插件还需要考虑语法降级和 Polyfill 按需注入的问题，接下来我们就来分析一下 Vite 的官方`legacy`插件是如何解决这些问题的。
 
@@ -335,7 +335,7 @@ export default defineConfig({
 
 官方的`legacy`插件是一个相对复杂度比较高的插件，直接看源码可能会很难理解，这里我梳理了画了一张简化后的流程图，接下来我们就根据这张流程图来一一拆解这个插件在各个钩子阶段到底做了些什么。
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3363652bc9bd4118af2896c9b1cce9cf~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/3363652bc9bd4118af2896c9b1cce9cf~tplv-k3u1fbpfcp-watermark.image)
 
 首先是在`configResolved`钩子中调整了`output`属性，这么做的目的是让 Vite 底层使用的打包引擎 Rollup 能另外打包出一份`Legacy 模式`的产物，实现代码如下:
 
@@ -422,7 +422,7 @@ async function buildPolyfillChunk(
 
 因此，你可以理解为这个函数的作用即通过 `vite build` 对`renderChunk`中收集到 polyfill 代码进行打包，生成一个单独的 chunk:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/48ef64e0100a46f38b602b3b9a08560b~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/48ef64e0100a46f38b602b3b9a08560b~tplv-k3u1fbpfcp-watermark.image)
 
 > 需要注意的是，polyfill chunk 中除了包含一些 core-js 和 regenerator-runtime 的相关代码，也包含了 `SystemJS` 的实现代码，你可以将其理解为 ESM 的加载器，实现了在旧版浏览器下的模块加载能力。
 

@@ -93,7 +93,7 @@ export default App
 
 现在你可以执行`pnpm run dev`，然后到浏览器上查看效果:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0f2b53ea3fd74ef6bd7029749a282b91~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/0f2b53ea3fd74ef6bd7029749a282b91~tplv-k3u1fbpfcp-watermark.image)
 
 内容比较简单，如果页面出现红色的文字部分，就说明 `scss` 文件中的样式已经成功生效。好，现在我们封装一个全局的主题色，新建`src/variable.scss`文件，内容如下:
 
@@ -167,7 +167,7 @@ export function Header() {
 
 现在打开浏览器，可以看见 p 标签的类名已经被处理成了哈希值的形式:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b81adefe16484da98bebf6174db36300~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/b81adefe16484da98bebf6174db36300~tplv-k3u1fbpfcp-watermark.image)
 
 说明现在 CSS Modules 已经正式生效了！同样的，你也可以在配置文件中的`css.modules`选项来配置 CSS Modules 的功能，比如下面这个例子:
 
@@ -189,7 +189,7 @@ export default {
 
 再次访问页面，我们可以发现刚才的类名已经变成了我们自定义的形式:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9fc26be6dffd4b13b8b15603ba069f62~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/9fc26be6dffd4b13b8b15603ba069f62~tplv-k3u1fbpfcp-watermark.image)
 
 这是一个 CSS Modules 中很常见的配置，对开发时的调试非常有用。其它的一些配置项不太常用，大家可以去这个[地址](https://github.com/madyankin/postcss-modules)进行查阅。
 
@@ -339,7 +339,7 @@ export function Header() {
 
 启动项目可以看到如下的效果，说明样式已经正常生效:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/365202ff835848558a2fd69cffd97d83~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/365202ff835848558a2fd69cffd97d83~tplv-k3u1fbpfcp-watermark.image)
 
 除了本身的原子化 CSS 能力，Windi CSS 还有一些非常好用的高级功能，在此我给大家推荐自己常用的两个能力: **attributify** 和 **shortcuts**。
 
@@ -472,7 +472,7 @@ export default App
 
 当你启动项目之后可以看到 Tailwind CSS 的样式已经正常生效:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ee40cd8839f74ab6987e49d9bbe470a1~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/ee40cd8839f74ab6987e49d9bbe470a1~tplv-k3u1fbpfcp-watermark.image)
 
 ## 小结
 

@@ -56,7 +56,7 @@ npm run generate
 
 > 由于某些预编译后的依赖体积比较大(如 react-dom)，为了避免影响测试的准确性，这里我们在二次刷新的情况下测试，此时预编译产物会被强缓存。
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/72c3e130d11442c693fb34ebec6211b0~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/72c3e130d11442c693fb34ebec6211b0~tplv-k3u1fbpfcp-watermark.image)
 
 以页面首屏绘制的时间(FCP)来看，在开启了 HTTP2 之后，页面性能可以优化 60% 以上。而反观 HTTP 1.1 下的表现，不难发现大部分的时间开销用用在了请求排队上面，在并发请求很多的情况下性能直线下降。
 
@@ -91,7 +91,7 @@ npm run generate
 
 其中我们一般会声明 `href` 和 `as` 属性，分别表示资源地址和资源类型。`Preload`的浏览器[兼容性](https://caniuse.com/?search=preload)也比较好，目前 90% 以上的浏览器已经支持:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/48f9c0883a28467ab34291a1121d0340~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/48f9c0883a28467ab34291a1121d0340~tplv-k3u1fbpfcp-watermark.image)
 
 > 关于更多 Preload 的资源类型大家可以查阅 [MDN 文档](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload)。
 
@@ -103,7 +103,7 @@ npm run generate
 
 `modulepreload`的兼容性如下:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/935a6c4c0117487099cb979a8ef535ae~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/935a6c4c0117487099cb979a8ef535ae~tplv-k3u1fbpfcp-watermark.image)
 
 仅有 70% 左右的浏览器支持这个特性，不过在 Vite 中我们可以通过配置一键开启 `modulepreload` 的 Polyfill，从而在使所有支持原生 ESM 的浏览器([占比 90% 以上](https://caniuse.com/?search=type%3D%22%20module%22))都能使用该特性，配置方式如下:
 
@@ -124,7 +124,7 @@ export default {
 
 这样浏览器会在 A 页面加载完毕之后去加载`B`这个域名下的资源，如果用户跳转到了`B`页面中，浏览器会直接使用预加载好的资源，从而提升 B 页面的加载速度。而相比 Preload， `Prefetch` 的浏览器[兼容性](https://caniuse.com/?search=prefetch)不太乐观，具体数据如下图所示:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67896eeb64fc49ff9282d8c7bf369f4f~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/67896eeb64fc49ff9282d8c7bf369f4f~tplv-k3u1fbpfcp-watermark.image)
 
 ## 资源优化
 
@@ -152,7 +152,7 @@ export default defineConfig({
 
 当你执行`pnpm run build`之后，浏览器会自动打开产物分析页面:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d4635531ba794981b77921568fc9006a~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/d4635531ba794981b77921568fc9006a~tplv-k3u1fbpfcp-watermark.image)
 
 从中你可以很方便地观察到产物体积的分布情况，提高排查问题的效率，比如定位到体积某些过大的包，然后针对性地进行优化。
 

@@ -29,7 +29,7 @@
 
 顺便我们也回顾一下浏览器的渲染流程，如下图所示:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3d8044772f7849f6824febf1599559d8~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/3d8044772f7849f6824febf1599559d8~tplv-k3u1fbpfcp-watermark.image)
 
 当浏览器拿到如上的 HTML 内容之后，其实并不能渲染完整的页面内容，因为此时的 body 中基本只有一个空的 div 节点，并没有填入真正的页面内容。而接下来浏览器开始下载并执行 JS 代码，经历了框架初始化、数据请求、DOM 插入等操作之后才能渲染出完整的页面。也就是说，在 CSR 中完整的页面内容本质上通过 JS 代码执行之后才能够渲染。这主要会导致两个方面的问题:
 
@@ -52,7 +52,7 @@
 
 1. **解决模块加载问题**。在原有的构建过程之外，需要加入`SSR 构建`的过程 ，具体来说，我们需要另外生成一份 `CommonJS` 格式的产物，使之能在 Node.js 正常加载。当然，随着 Node.js 本身对 ESM 的支持越来越成熟，我们也可以复用前端 ESM 格式的代码，Vite 在开发阶段进行 SSR 构建也是这样的思路。
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5a6c6311afab4279bdb2e39e1a6094d5~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/5a6c6311afab4279bdb2e39e1a6094d5~tplv-k3u1fbpfcp-watermark.image)
 
 2. **移除样式代码的引入**。直接引入一行 css 在服务端其实是无法执行的，因为 Node.js 并不能解析 CSS 的内容。但 `CSS Modules` 的情况除外，如下所示:
 
@@ -67,7 +67,7 @@ console.log(styles)
 
 对于 SSR 的运行时，一般可以拆分为比较固定的生命周期阶段，简单来讲可以整理为以下几个核心的阶段:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ec6c0b862c904299a61ac563351805b1~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/ec6c0b862c904299a61ac563351805b1~tplv-k3u1fbpfcp-watermark.image)
 
 - 1. **加载 SSR 入口模块**。在这个阶段，我们需要确定 SSR 构建产物的入口，即组件的入口在哪里，并加载对应的模块。
 - 2. **进行数据预取**。这时候 Node 侧会通过查询数据库或者网络请求来获取应用所需的数据。
@@ -392,17 +392,17 @@ ReactDOM.hydrate(
 
 现在，我们基本开发完了 SSR 核心的逻辑，执行`npm run dev`启动项目:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/80c8d56d2ce04fab93b2a91cd5cb1dcf~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/80c8d56d2ce04fab93b2a91cd5cb1dcf~tplv-k3u1fbpfcp-watermark.image)
 
 打开浏览器后查看页面源码，你可以发现 SSR 生成的 HTML 已经顺利返回了:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dae53644dda8439b905d5d3dd956c212~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/dae53644dda8439b905d5d3dd956c212~tplv-k3u1fbpfcp-watermark.image)
 
 ### 4. 生产环境的 CSR 资源处理
 
 如果你现在执行`npm run build`及`npm run preview`进行生产环境的预览，会发现 SSR 可以正常返回内容，但所有的静态资源及 CSR 的代码都失效了:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/65c7877edc61489091df3b1bde861f18~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/65c7877edc61489091df3b1bde861f18~tplv-k3u1fbpfcp-watermark.image)
 
 不过开发阶段并没有这个问题，这是因为对于开发阶段的静态资源 Vite Dev Server 的中间件已经帮我们处理了，而生产环境所有的资源都已经打包完成，我们需要启用单独的静态资源服务来承载这些资源。这里你可以`serve-static`中间件来完成这个服务，首先安装对应第三方包:
 
@@ -550,7 +550,7 @@ async function createSsrMiddleware(app: Express): Promise<RequestHandler> {
 
 由于 Node.js 中不能使用浏览器里面诸如 `window`、`document`之类的 API，因此一旦在服务端执行到这样的 API 会报如下的错误：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0d756366a02140f089046dab28ff2b2b~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/0d756366a02140f089046dab28ff2b2b~tplv-k3u1fbpfcp-watermark.image)
 
 那么如何来解决这个问题呢？
 
@@ -607,7 +607,7 @@ console.log("link 内容: ", helmet.link.toString())
 
 启动服务后访问页面，可以发现终端能打印出如下的信息:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9a3e42dce502496badfc482ea75acceb~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/9a3e42dce502496badfc482ea75acceb~tplv-k3u1fbpfcp-watermark.image)
 
 如此一来，我们就能根据组件的状态确定 Head 内容，然后在`拼接 HTML`阶段将这些内容插入到模板中。
 
@@ -715,7 +715,7 @@ performance.measure('renderToString', 'render-start', 'render-end')
 
 接着我们启动服务后访问，可以看到如下的打点日志信息:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0c1b1fca61664929be812d4153fdbc13~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/0c1b1fca61664929be812d4153fdbc13~tplv-k3u1fbpfcp-watermark.image)
 
 同样的，我们可以将其它阶段的指标通过上述的方式收集起来，作为性能日志；另一方面，在生产环境下，我们一般需要结合具体的性能监控平台，对上述的各项指标进行打点上报，完成线上的 SSR 性能监控服务。
 
@@ -725,7 +725,7 @@ performance.measure('renderToString', 'render-start', 'render-end')
 
 SSG 与 SSR 最大的区别就是产出 HTML 的时间点从 SSR `运行时`变成了`构建时`，但核心的生命周期流程并没有发生变化:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/036b0dc90b7f4c4f9d0faa66b7fd3e7a~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/036b0dc90b7f4c4f9d0faa66b7fd3e7a~tplv-k3u1fbpfcp-watermark.image)
 
 这里给一段简单的实现代码:
 
@@ -777,7 +777,7 @@ ssg()
 
 虽然说基于示例代码我们可以搭建 Vite 的 SSR 项目，但面对实际的开发场景，我们仍然需要考虑诸多的工程化问题，你可以参考下面这张图:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8115f166f57e4c5aa13640fbad6aa232~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/8115f166f57e4c5aa13640fbad6aa232~tplv-k3u1fbpfcp-watermark.image)
 
 其中包括`路由管理`、`状态管理`、`CSR 降级`、`浏览器 API 的 SSR 兼容`、`自定义 Head`、`流式渲染`、`SSR 缓存`、`性能监控`以及更多的预渲染模式`SSG/SPR/ISR`。在后面的篇幅，我带你详细梳理了这些问题，分析各个问题的出现场景，并给出一些比较通用的解决思路和解决方案。相信通过这部分的学习，你也能驾驭更加复杂的 SSR 开发场景了。
 

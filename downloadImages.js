@@ -78,7 +78,7 @@ async function processMarkdownFiles(rootDir) {
   }
 }
 
-const rootDirectory = path.join(__dirname, "docs/blogs/web/vue"); // 替换为您的文档根目录
+const rootDirectory = path.join(__dirname, "docs/blogs/web/webpack"); // 替换为您的文档根目录
 processMarkdownFiles(rootDirectory).then(() => {
   console.log('Processing completed.');
 }).catch(error => {

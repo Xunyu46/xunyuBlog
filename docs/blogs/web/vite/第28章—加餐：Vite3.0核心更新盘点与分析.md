@@ -10,7 +10,7 @@
 
 对于用户侧来说，谈到框架的更新，文档自然是最重要的部分。现在你可以直接去 [vitejs.dev](https://v2.vitejs.dev/) 站点体验到 v3 版本的文档，目前文档同样是使用 [VitePress](https://vitepress.vuejs.org/) 进行搭建。下面是暗黑模式下的一张截图:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d6427bbb7de14afaa98bcb85ae5d8d66~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/d6427bbb7de14afaa98bcb85ae5d8d66~tplv-k3u1fbpfcp-watermark.image)
 
 怎么样，是不是比以前更加好看了呢？
 
@@ -24,7 +24,7 @@
 
 在执行 `vite` 命令启动项目时，终端的界面和之前会有所不同，而更重要的是，为了避免 Vite 开发服务的端口和别的应用冲突，默认的端口号从之前的 `3000` 变成了 `5173`。
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c3c10fedc3e04996a1eca4f595a506f6~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/c3c10fedc3e04996a1eca4f595a506f6~tplv-k3u1fbpfcp-watermark.image)
 
 ### 2. 开箱即用的 WebSocket 连接策略
 
@@ -38,7 +38,7 @@ Vite 3.0 在服务冷启动方面做了非常多的工作，来最大程度提�
 
 从 Vite 2.0 到 2.9 版本之前，Vite 会在服务启动之前进行依赖预构建，也就是使用 Esbuild 将项目中使用到的依赖扫描出来(Scan)，然后分别进行一次打包(Optimize)。
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c70c2bcca11049e0bc68c0f3171ce613~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/c70c2bcca11049e0bc68c0f3171ce613~tplv-k3u1fbpfcp-watermark.image)
 
 这样会造成两个问题:
 
@@ -51,7 +51,7 @@ Vite 3.0 在服务冷启动方面做了非常多的工作，来最大程度提�
 
 - Dev Server 启动后预构建(Optimize 阶段)在后台执行，也就是预构建不再阻塞 Dev Server 的启动，只需要等待 Scan 阶段完成，不过通常这个阶段的开销非常小。
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e7a3508c7f794cdfa04cc1bc53dfbe40~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/e7a3508c7f794cdfa04cc1bc53dfbe40~tplv-k3u1fbpfcp-watermark.image)
 
 - 如果某些依赖是 Dev Server 运行时才发现的，那么 Vite 会尽可能地复用已有预构建产物，尽量不进行 page reload。
 
@@ -59,7 +59,7 @@ Vite 3.0 在服务冷启动方面做了非常多的工作，来最大程度提�
 
 那问题就完全解决了吗？其实并不是，在某些场景下，Vite 仍然不可避免地需要二次预构建。如下面的这个例子:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9c34a6a46e494eef8dda6fc80a4bef5f~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/9c34a6a46e494eef8dda6fc80a4bef5f~tplv-k3u1fbpfcp-watermark.image)
 
 A 和 B 都是项目的第三方依赖，它们也同时依赖 C。那么当 Vite 预构建 A 的时候，将会 A 和 C 一起进行打包。但 Vite 在运行时发现了依赖 B，而 A 和 B 需要共享 C 的代码，这样 C 的代码可能就会被抽离成一个公共的 chunk，因此之前 A 的预构建产物可能就发生变化了，那么此时 Vite 必须要强制刷新页面，让浏览器使用最新的预构建产物。这仍然是一个二次预构建(所有依赖再次打包 + page reload)的过程。
 

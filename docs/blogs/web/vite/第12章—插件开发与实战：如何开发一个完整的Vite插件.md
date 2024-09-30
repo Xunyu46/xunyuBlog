@@ -56,7 +56,7 @@ export default {
 
 在[双引擎架构](https://juejin.cn/book/7050063811973218341/section/7060398408430780431)这一节中介绍过，Vite **开发阶段**会模拟 Rollup 的行为:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/02910cd2c6894bcdb3a9e0fc9e59f4c2~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/02910cd2c6894bcdb3a9e0fc9e59f4c2~tplv-k3u1fbpfcp-watermark_1_2.image)
 
 其中 Vite 会调用一系列与 Rollup 兼容的钩子，这个钩子主要分为三个阶段:
 
@@ -312,11 +312,11 @@ export default function testHookPlugin () {
 
 将插件加入到 Vite 配置文件中，然后启动，你可以观察到各个 Hook 的执行顺序:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/339255d0cdba48a2832f720a895892c9~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/339255d0cdba48a2832f720a895892c9~tplv-k3u1fbpfcp-watermark.image)
 
 由此我们可以梳理出 Vite 插件的执行顺序:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/83c255efbdec4c66971a30ff270c70a9~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/83c255efbdec4c66971a30ff270c70a9~tplv-k3u1fbpfcp-watermark.image)
 
 - 服务启动阶段: `config`、`configResolved`、`options`、`configureServer`、`buildStart`
 - 请求响应阶段: 如果是 `html` 文件，仅执行`transformIndexHtml`钩子；对于非 HTML 文件，则依次执行`resolveId`、`load`和`transform`钩子。相信大家学过 Rollup 的插件机制，已经对这三个钩子比较熟悉了。
@@ -337,7 +337,7 @@ export default function testHookPlugin () {
 ```
 
 `apply`参数还可以配置成一个函数，进行更灵活的控制:
-![plugin.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a93a37e0e4344b97b55bd67afe51d511~tplv-k3u1fbpfcp-zoom-1.image)
+![plugin.png](assets/a93a37e0e4344b97b55bd67afe51d511~tplv-k3u1fbpfcp-zoom-1.image)
 ```ts
 apply(config, { command }) {
   // 只用于非 SSR 情况下的生产环境构建
@@ -356,7 +356,7 @@ apply(config, { command }) {
 
 Vite 中插件的执行顺序如下图所示:
 
-![plugin.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d06b07cd29434ec9af7f9ea3fd39cba0~tplv-k3u1fbpfcp-watermark.image?)
+![plugin.png](assets/d06b07cd29434ec9af7f9ea3fd39cba0~tplv-k3u1fbpfcp-watermark.image)
 
 Vite 会依次执行如下的插件:
 
@@ -436,7 +436,7 @@ alert(`结果: ${fib(10)}`)
 
 这里我们使用了 `virtual:fib` 这个虚拟模块，虽然这个模块不存在真实的文件系统中，但你打开浏览器后可以发现这个模块导出的函数是可以正常执行的:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/216e84976e3c408cb845b64bf329943f~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/216e84976e3c408cb845b64bf329943f~tplv-k3u1fbpfcp-watermark.image)
 
 接着我们来尝试一下如何通过虚拟模块来读取内存中的变量，在`virtual-module.ts`中增加如下代码:
 
@@ -495,7 +495,7 @@ declare module 'virtual:*' {
 
 这样就解决了类型报错的问题。接着你可以去浏览器观察一下输出的情况:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/59c04f44a5334138ab722400c03c071c~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/59c04f44a5334138ab722400c03c071c~tplv-k3u1fbpfcp-watermark.image)
 
 Vite 环境变量能正确地在浏览器中打印出来，说明在内存中计算出来的`virtual:env`模块的确被成功地加载了。从中你可以看到，虚拟模块的内容完全能够被动态计算出来，因此它的灵活性和可定制程度非常高，实用性也很强，在 Vite 内部的插件被深度地使用，社区当中也有不少知名的插件(如 `vite-plugin-windicss`、`vite-plugin-svg-icons`等)也使用了虚拟模块的技术。
 
@@ -648,7 +648,7 @@ export default App
 
 打开浏览器，可以看到组件已经正常显示:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ad0d1812f0ac49759d2f284f49502ea9~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/ad0d1812f0ac49759d2f284f49502ea9~tplv-k3u1fbpfcp-watermark.image)
 
 ### 调试技巧
 
@@ -669,15 +669,15 @@ import inspect from 'vite-plugin-inspect'
 
 这样当你再次启动项目时，会发现多出一个调试地址:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/606340bc8b9b4f81be0b0ac22516f838~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/606340bc8b9b4f81be0b0ac22516f838~tplv-k3u1fbpfcp-watermark.image)
 
 你可以通过这个地址来查看项目中各个模块的编译结果：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0e972fc35eac4c168872317709707e5a~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/0e972fc35eac4c168872317709707e5a~tplv-k3u1fbpfcp-watermark.image)
 
 点击特定的文件后，你可以看到这个模块经过各个插件处理后的中间结果，如下图所示:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d40c06d94c96412cbf9fc2dccf35d5f1~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/d40c06d94c96412cbf9fc2dccf35d5f1~tplv-k3u1fbpfcp-watermark.image)
 
 通过这个面板，我们可以很清楚地看到相应模块经过插件处理后变成了什么样子，让插件的调试更加方便。
 

@@ -45,7 +45,7 @@ pnpm create vite
 
 在执行完这个命令后，pnpm 首先会自动下载 `create-vite` 这个第三方包，然后执行这个包中的项目初始化逻辑。因此，你很快就可以看到这样的交互界面:
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f7ca5186aa324841ba4f038642e355f3~tplv-k3u1fbpfcp-zoom-1.image)
+![](assets/f7ca5186aa324841ba4f038642e355f3~tplv-k3u1fbpfcp-zoom-1.image)
 
 后续的交互流程梳理如下:
 
@@ -68,7 +68,7 @@ pnpm create vite
 
 Vite 内置了以上不同前端框架的脚手架模板，这里我们以其中的`react`框架为例来讲解，选择`react`并按回车，紧接着选择`react-ts`完成命令交互。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d7ce24dcb52946168fa4e28773dabc7a~tplv-k3u1fbpfcp-zoom-1.image)
+![](assets/d7ce24dcb52946168fa4e28773dabc7a~tplv-k3u1fbpfcp-zoom-1.image)
 
 好，现在脚手架的模板已经生成完毕。你可以执行如下命令在本地启动项目:
 
@@ -83,15 +83,15 @@ pnpm run dev
 
 执行`pnpm run dev`之后你可以看到如下界面，表示项目已经成功启动啦。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e8ca697e5ca449f7af195245957856ff~tplv-k3u1fbpfcp-zoom-1.image)
+![](assets/e8ca697e5ca449f7af195245957856ff~tplv-k3u1fbpfcp-zoom-1.image)
 
 紧接着，我们立马去浏览器中打开`http://localhost:3000`页面，你可以看到：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5f4da134800544caacbc5834d347ff32~tplv-k3u1fbpfcp-zoom-1.image)
+![](assets/5f4da134800544caacbc5834d347ff32~tplv-k3u1fbpfcp-zoom-1.image)
 
 至此，我们成功搭建起了一个 React 前端项目。怎么样？利用 Vite 来初始化一个前端项目是不是非常简单？经过初步尝试，Vite 给人的第一感觉就是简洁、轻量、快速。我曾经拿 react 官方基于 Webpack 的脚手架`create-react-app`，也就是大家常说的`cra`来测试过，从项目初始化到依赖安装所花的时间与 Vite 对比如下:
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2adc237d5bbd409ca9c32fb7d36aa272~tplv-k3u1fbpfcp-zoom-1.image)
+![](assets/2adc237d5bbd409ca9c32fb7d36aa272~tplv-k3u1fbpfcp-zoom-1.image)
 
 Vite 已经比 cra 快了接近 6 倍，并且一开始就甩了 cra 一大截，显而易见地提升了初始化速度和开发体验。
 
@@ -142,7 +142,7 @@ Vite 已经比 cra 快了接近 6 倍，并且一开始就甩了 cra 一大截�
 
 由于现代浏览器原生支持了 ES 模块规范，因此原生的 ES 语法也可以直接放到浏览器中执行，只需要在 script 标签中声明 `type="module"` 即可。比如上面的 script 标签就声明了 type="module"，同时 src 指向了`/src/main.tsx`文件，此时相当于请求了`http://localhost:3000/src/main.tsx`这个资源，Vite 的 Dev Server 此时会接受到这个请求，然后读取对应的文件内容，进行一定的中间处理，最后将处理的结果返回给浏览器。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ee292d2f8917407ca8f47e94f8d8aeed~tplv-k3u1fbpfcp-zoom-1.image)
+![](assets/ee292d2f8917407ca8f47e94f8d8aeed~tplv-k3u1fbpfcp-zoom-1.image)
 
 我们可以来看看 `main.tsx` 的内容:
 
@@ -164,7 +164,7 @@ ReactDOM.render(
 
 这就归功了 Vite Dev Server 所做的“中间处理”了，也就是说，在读取到 `main.tsx`文件的内容之后，Vite 会对文件的内容进行编译，大家可以从 Chrome 的网络调试面板看到编译后的结果:
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e77d3505dfb24a42b53c6c986fb83e71~tplv-k3u1fbpfcp-zoom-1.image)
+![](assets/e77d3505dfb24a42b53c6c986fb83e71~tplv-k3u1fbpfcp-zoom-1.image)
 
 当然，大家不用纠结每句代码的含义，因为这涉及 Vite 内部的编译流程，我们会在后面的章节深入分析。这里你只需要知道，Vite 会将项目的源代码编译成浏览器可以识别的代码，与此同时，一个 import 语句即代表了一个 HTTP 请求，如下面两个 import 语句:
 
@@ -251,11 +251,11 @@ export default defineConfig({
 
 接下来你可以试着执行一下这个打包命令:
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2a2eadd5fcd143c7aa55f12979d8b3f0~tplv-k3u1fbpfcp-zoom-1.image)
+![](assets/2a2eadd5fcd143c7aa55f12979d8b3f0~tplv-k3u1fbpfcp-zoom-1.image)
 
 此时 Vite 已经生成了最终的打包产物，我们可以通过 `pnpm run preview` 命令预览一下打包产物的执行效果。
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e845b0e8c2f24b3a901bdc53754e80c9~tplv-k3u1fbpfcp-zoom-1.image)
+![](assets/e845b0e8c2f24b3a901bdc53754e80c9~tplv-k3u1fbpfcp-zoom-1.image)
 
 在浏览器中打开`http://localhost:5000`地址，你将看到和开发阶段一样的页面内容，证明我们成功完成第一个 Vite 项目的生产环境构建。
 

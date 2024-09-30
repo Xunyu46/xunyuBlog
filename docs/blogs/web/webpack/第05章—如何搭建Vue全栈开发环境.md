@@ -70,13 +70,13 @@ module.exports = {
 
 经过 `vue-loader` 处理后，SFC 各个模块会被等价转译为普通 JavaScript 模块，例如：
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c441aaebe67043e79788a43854ef4e3c~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/c441aaebe67043e79788a43854ef4e3c~tplv-k3u1fbpfcp-watermark.image)
 
 可以看到，`<template>` 内容会被转译为用于构造 [Virtual Dom](https://vuejs.org/guide/extras/rendering-mechanism.html#virtual-dom) 结构的 `render` 函数；`<script>` 标签导出的对象会被转译为 JavaScript 对象字面量形式。
 
 注意，上例 Webpack 配置还无法处理 CSS 代码，若此时添加 `<style>` 模块将导致报错：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5fc0ae8bd6404939aaff9134744051bf~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/5fc0ae8bd6404939aaff9134744051bf~tplv-k3u1fbpfcp-watermark.image)
 
 为此需要添加处理 CSS 的规则，完整配置：
 
@@ -99,7 +99,7 @@ module.exports = {
 
 同样的，`<style>` 模块也将被转译为 JavaScript 内容：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/558e51fc8a0d4653a2cc990ae6c2f583~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/558e51fc8a0d4653a2cc990ae6c2f583~tplv-k3u1fbpfcp-watermark.image)
 
 ## 运行页面
 
@@ -216,7 +216,7 @@ module.exports = {
 
 之后，运行 `npx webpack serve` 命令，即可自动打开带热更功能的页面：
 
-![244a39d2-a610-4b17-a37c-2ef4b53ab716.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f876c28d9d8c49c6b6f0f30faaf9057e~tplv-k3u1fbpfcp-watermark.image?)
+![244a39d2-a610-4b17-a37c-2ef4b53ab716.gif](assets/f876c28d9d8c49c6b6f0f30faaf9057e~tplv-k3u1fbpfcp-watermark.image)
 
 ## 复用其它编译工具
 
@@ -376,7 +376,7 @@ module.exports = {
 
 [SSR](https://web.dev/rendering-on-the-web/#server-rendering)\(Server Side Render\) 正是为了解决这些问题而出现的技术。本质上，SSR 是一种在服务端将组件渲染 HTML 字符串并发送到浏览器，最后在浏览器上将这些 HTML 片段“激活”为客户端上可交互的应用技术。
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/68c6fb2c07d1439bb312add6191eefb4~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/68c6fb2c07d1439bb312add6191eefb4~tplv-k3u1fbpfcp-watermark.image)
 
 在 Vue 场景下，通常可以选择 [Nuxt.js](https://nuxtjs.org/)、[Quasar](https://quasar.dev/)、[`@vue/server-renderer`](https://vuejs.org/guide/scaling-up/ssr.html) 等方案实现 SSR，这些技术的底层逻辑都包含三个大的步骤：
 
@@ -384,7 +384,7 @@ module.exports = {
 - 服务端接收到请求时，调用 Render 工具将组件渲染为 HTML 字符串，并返回给客户端；
 - 客户端运行 HTML，并再次执行组件代码，“激活\(Hydrate\)” 组件。
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/06c7576bbb6b4ee596baa2bf4f2192ed~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/06c7576bbb6b4ee596baa2bf4f2192ed~tplv-k3u1fbpfcp-watermark.image)
 
 接下来，我们使用 Webpack、Vue3、Express、[`@vue/server-renderer`](https://vuejs.org/guide/scaling-up/ssr.html) 框架搭建一套完备的 Vue SSR 引用，示例目录结构(代码已上传到 [小册仓库](https://github.com/Tecvan-fe/webpack-book-samples/tree/main/5-2_use-ssr))：
 
@@ -639,11 +639,11 @@ h3 {
 
 之后，编译并执行 `node server.js` 启动 Node 应用，访问页面时服务端将首先返回如下 HTML 内容：
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2b54e012772444efab25adcd91d8c0ec~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/2b54e012772444efab25adcd91d8c0ec~tplv-k3u1fbpfcp-watermark.image)
 
 页面也能正常运行 `App.vue` 交互效果：
 
-![6a9e1130-68d2-4f52-a756-390c0c4add09.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/667d9a7da7af44b38fbb7670496a740a~tplv-k3u1fbpfcp-watermark.image?)
+![6a9e1130-68d2-4f52-a756-390c0c4add09.gif](assets/667d9a7da7af44b38fbb7670496a740a~tplv-k3u1fbpfcp-watermark.image)
 
 > 提示：
 >
@@ -690,7 +690,7 @@ Vue CLI v4.5.15
 
 之后，[Vue CLI](https://cli.vuejs.org/) 会自动安装项目依赖，项目环境就算是搭建完毕了：
 
-![35aae884-b87b-4238-9a98-44ff2db09dce.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9e97ba4bfe51433697d24f6e626e4b1f~tplv-k3u1fbpfcp-watermark.image?)
+![35aae884-b87b-4238-9a98-44ff2db09dce.gif](assets/9e97ba4bfe51433697d24f6e626e4b1f~tplv-k3u1fbpfcp-watermark.image)
 
 [Vue CLI](https://cli.vuejs.org/) 提供的默认模板已经能够满足一般场景下的开发需求，必要时开发者还可以通过模板生成的 `vue.config.js` 修改工程化配置，例如：
 

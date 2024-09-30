@@ -50,13 +50,13 @@
 
 > 注意: importmap 可能存在浏览器兼容性问题，这里出现浏览器报错也属于正常情况，后文会介绍解决方案。
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1fc1154474e24e6f9eb67cc27436ca85~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/1fc1154474e24e6f9eb67cc27436ca85~tplv-k3u1fbpfcp-watermark.image)
 
 在支持 `import map`的浏览器中，在遇到`type="importmap"`的 script 标签时，浏览器会记录下第三方包的路径映射表，在遇到`bare import`时会根据这张表拉取远程的依赖代码。如上述的例子中，我们使用 `skypack`这个第三方的 ESM CDN 服务，通过`https://cdn.skypack.dev/react`这个地址我们可以拿到 React 的 ESM 格式产物。
 
 `import map`特性虽然简洁方便，但浏览器的兼容性却是个大问题，在 CanIUse 上的兼容性数据如下:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b561cef124664a49b4058494919f0b89~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/b561cef124664a49b4058494919f0b89~tplv-k3u1fbpfcp-watermark.image)
 
 它只能兼容市面上 `68%` 左右的浏览器份额，而反观`type="module"`的兼容性(兼容 95% 以上的浏览器)，`import map`的兼容性实属不太乐观。但幸运的是，社区已经有了对应的 Polyfill 解决方案——[es-module-shims](https://github.com/guybedford/es-module-shims)，完整地实现了包含 `import map`在内的各大 ESM 特性，还包括:
 
@@ -79,7 +79,7 @@
 
 值得一提的是，`es-module-shims` 基于 wasm 实现，性能并不差，相比浏览器原生的行为没有明显的性能下降:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fa8ee60f85ca4e04a86c5b0d4e747141~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/fa8ee60f85ca4e04a86c5b0d4e747141~tplv-k3u1fbpfcp-watermark.image)
 
 > 大家可以去[这个地址](https://github.com/guybedford/es-module-shims/tree/main/bench)查看具体的 benchmark 结果。
 
@@ -207,13 +207,13 @@ console.log(React)
 
 Node.js 执行以上的原生 ESM 代码并没有问题，但反过来，如果你想在 CommonJS 中 require 一个 ES 模块，就行不通了:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f250917cb4664109a2ccfb855ba36485~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/f250917cb4664109a2ccfb855ba36485~tplv-k3u1fbpfcp-watermark.image)
 
 其根本原因在于 require 是同步加载的，而 ES 模块本身具有异步加载的特性，因此两者天然互斥，即我们无法 require 一个 ES 模块。
 
 那是不是在 CommonJS 中无法引入 ES 模块了呢? 也不尽然，我们可以通过 `dynamic import`来引入:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f68ad58dd15e43bbb7a5ebbdb52a7539~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/f68ad58dd15e43bbb7a5ebbdb52a7539~tplv-k3u1fbpfcp-watermark.image)
 
 不知道你注意到没有，为了引入一个 ES 模块，我们必须要将原来同步的执行环境改为`异步`的，这就带来如下的几个问题:
 

@@ -92,7 +92,7 @@ module.exports = {
 
 配置完毕后，再次启动 `npx webpack` 命令，即可使用 HappyPack 的多进程能力提升构建性能。以 Three.js 为例，该项目包含 362 份 JS 文件，合计约 3w 行代码：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/03944215b70543889f573db3c1d0fb33~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/03944215b70543889f573db3c1d0fb33~tplv-k3u1fbpfcp-watermark.image)
 
 开启 HappyPack 前，构建耗时大约为 11000ms 到 18000ms 之间，开启后耗时降低到 5800ms 到 8000ms 之间，提升约 47\%。
 
@@ -169,7 +169,7 @@ module.exports = {
 
 最后，我们再来看看 HappyPack 的执行流程：
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7b8c529796f1480f8454cc3ac5f6b2a9~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/7b8c529796f1480f8454cc3ac5f6b2a9~tplv-k3u1fbpfcp-watermark.image)
 
 核心步骤：
 

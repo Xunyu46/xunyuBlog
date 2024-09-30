@@ -108,11 +108,11 @@ export function Header() {
 
 可以发现图片能够正常显示:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/66e4e71a894d4cb4ab8b6e5faca557a9~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/66e4e71a894d4cb4ab8b6e5faca557a9~tplv-k3u1fbpfcp-watermark.image)
 
 而图片路径也被解析为了正确的格式(`/`表示项目根路径):
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e338e4912cf04f03a796a16dd6f3268c~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/e338e4912cf04f03a796a16dd6f3268c~tplv-k3u1fbpfcp-watermark.image)
 
 OK，现在让我们进入 Header 组件的样式文件中添加`background`属性:
 
@@ -125,7 +125,7 @@ OK，现在让我们进入 Header 组件的样式文件中添加`background`属�
 
 再次回到浏览器，可以看到生效后的背景如下:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/dac9bddf83e345fc8369e6ae821d83f2~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/dac9bddf83e345fc8369e6ae821d83f2~tplv-k3u1fbpfcp-watermark.image)
 
 ### 3. SVG 组件方式加载
 
@@ -183,7 +183,7 @@ export function Header() {
 
 回到浏览器中，你可以看到 svg 已经成功渲染:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/795c22c495e74aebb7deea37e36e48ea~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/795c22c495e74aebb7deea37e36e48ea~tplv-k3u1fbpfcp-watermark.image)
 
 ## JSON 加载
 
@@ -237,7 +237,7 @@ worker.addEventListener('message', (e) => {
 
 打开浏览器的控制面板，你可以看到 Worker 传给主线程的信息已经成功打印:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5fe5b95939c74d8cba5a43826eab31c9~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/5fe5b95939c74d8cba5a43826eab31c9~tplv-k3u1fbpfcp-watermark.image)
 
 说明 Web Worker 脚本已经成功执行，也能与主线程正常通信。
 
@@ -279,7 +279,7 @@ Vite 会对`.wasm`文件的内容进行封装，默认导出为 init 函数，�
 
 回到浏览器，我们可以查看到计算结果，说明 .wasm 文件已经被成功执行:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7478ef95b7a847fca740218262b411cd~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/7478ef95b7a847fca740218262b411cd~tplv-k3u1fbpfcp-watermark.image)
 
 ### 其它静态资源
 
@@ -353,11 +353,11 @@ NODE_ENV = production
 
 接着执行`pnpm run build`，可以发现产物中的静态资源地址已经自动加上了 CDN 地址前缀:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2d910210d0b5484d8ebc4407b732b140~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/2d910210d0b5484d8ebc4407b732b140~tplv-k3u1fbpfcp-watermark.image)
 
 当然，HTML 中的一些 JS、CSS 资源链接也一起加上了 CDN 地址前缀:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/15adeface82d4320b330b440c049f3ab~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/15adeface82d4320b330b440c049f3ab~tplv-k3u1fbpfcp-watermark.image)
 
 当然，有时候可能项目中的某些图片需要存放到另外的存储服务，一种直接的方案是将完整地址写死到 src 属性中，如:
 
@@ -398,9 +398,9 @@ interface ImportMeta {
 
 接下来在`开发环境`启动项目或者`生产环境`打包后可以看到环境变量已经被替换，地址能够正常显示:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/40484ed4df404b87b40b104cf2b9fdee~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/40484ed4df404b87b40b104cf2b9fdee~tplv-k3u1fbpfcp-watermark.image)
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b6c4637475bb49818c9c5dd09001bb66~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/b6c4637475bb49818c9c5dd09001bb66~tplv-k3u1fbpfcp-watermark.image)
 
 至此，我们就彻底解决了图片资源生产环境域名替换的问题。
 
@@ -412,7 +412,7 @@ interface ImportMeta {
 
 对于比较小的资源，适合内联到代码中，一方面对`代码体积`的影响很小，另一方面可以减少不必要的网络请求，`优化网络性能`。而对于比较大的资源，就推荐单独打包成一个文件，而不是内联了，否则可能导致上 MB 的 base64 字符串内嵌到代码中，导致代码体积瞬间庞大，页面加载性能直线下降。
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0fb28454267d473aa02e8e0e486f2e9e~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/0fb28454267d473aa02e8e0e486f2e9e~tplv-k3u1fbpfcp-watermark.image)
 
 Vite 中内置的优化方案是下面这样的:
 
@@ -478,7 +478,7 @@ import viteImagemin from 'vite-plugin-imagemin'
 
 接下来我们可以尝试执行`pnpm run build`进行打包:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7cd29e4dcbaa416985b9187b1786d37c~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/7cd29e4dcbaa416985b9187b1786d37c~tplv-k3u1fbpfcp-watermark.image)
 
 Vite 插件已经自动帮助我们调用 `imagemin` 进行项目图片的压缩，可以看到压缩的效果非常明显，强烈推荐大家在项目中使用。
 
@@ -506,7 +506,7 @@ const icons = import.meta.glob('../../assets/icons/logo-*.svg')
 
 结果如下:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bb4489676ca341689048f9595a8f0fae~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/bb4489676ca341689048f9595a8f0fae~tplv-k3u1fbpfcp-watermark.image)
 
 可以看到对象的 value 都是动态 import，适合按需加载的场景。在这里我们只需要同步加载即可，可以使用 `import.meta.globEager`来完成:
 
@@ -515,7 +515,7 @@ const icons = import.meta.globEager('../../assets/icons/logo-*.svg')
 ```
 
 `icons`的结果打印如下:
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/038367c43dad4c399e3d00597ae852e3~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/038367c43dad4c399e3d00597ae852e3~tplv-k3u1fbpfcp-watermark.image)
 
 接下来我们稍作解析，然后将 svg 应用到组件当中:
 
@@ -531,7 +531,7 @@ const iconUrls = Object.values(icons).map((mod) => mod.default)
 
 回到页面中，我们发现浏览器分别发出了 5 个 svg 的请求:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3646903dde814c6c8cb7097b93f98667~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/3646903dde814c6c8cb7097b93f98667~tplv-k3u1fbpfcp-watermark.image)
 
 假设页面有 100 个 svg 图标，将会多出 100 个 HTTP 请求，依此类推。我们能不能把这些 svg 合并到一起，从而大幅减少网络请求呢？
 
@@ -605,11 +605,11 @@ import 'virtual:svg-icons-register'
 
 现在回到浏览器的页面中，发现雪碧图已经生成:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/37cb9d4403594a35a1c8c999d536d80c~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/37cb9d4403594a35a1c8c999d536d80c~tplv-k3u1fbpfcp-watermark.image)
 
 雪碧图包含了所有图标的具体内容，而对于页面每个具体的图标，则通过 `use` 属性来引用雪碧图的对应内容:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/17497a3a9abe40d2a5145bca8d2041f6~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/17497a3a9abe40d2a5145bca8d2041f6~tplv-k3u1fbpfcp-watermark.image)
 
 如此一来，我们就能将所有的 svg 内容都内联到 HTML 中，省去了大量 svg 的网络请求。
 

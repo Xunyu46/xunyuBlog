@@ -52,7 +52,7 @@ pnpm install react react-dom
 
 现在，你可以在终端执行`pnpm run build`，可以发现如下的日志信息:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3523afa4366640e5b1828ef8489c9d5e~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/3523afa4366640e5b1828ef8489c9d5e~tplv-k3u1fbpfcp-watermark.image)
 
 说明我们已经成功通过命令行完成了 Esbuild 打包！但命令行的使用方式不够灵活，只能传入一些简单的命令行参数，稍微复杂的场景就不适用了，所以一般情况下我们还是会用代码调用的方式。
 
@@ -111,13 +111,13 @@ runBuild()
 
 随后，你在命令行执行`node build.js`，就能在控制台发现如下日志信息:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5930170eb61e454cbaf2d3cafecf6b56~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/5930170eb61e454cbaf2d3cafecf6b56~tplv-k3u1fbpfcp-watermark.image)
 
 以上就是 Esbuild 打包的元信息，这对我们编写插件扩展 Esbuild 能力非常有用。
 
 接着，我们再观察一下 dist 目录，发现打包产物和相应的 SourceMap 文件也已经成功写入磁盘:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2b2ea97c4383430db899905b898d9e08~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/2b2ea97c4383430db899905b898d9e08~tplv-k3u1fbpfcp-watermark.image)
 
 其实`buildSync`方法的使用几乎相同，如下代码所示:
 
@@ -178,7 +178,7 @@ runBuild()
 
 我们在浏览器访问`localhost:8000`可以看到 Esbuild 服务器返回的编译产物如下所示：
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8b53224ddffe4f148e5020ba8239d847~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/8b53224ddffe4f148e5020ba8239d847~tplv-k3u1fbpfcp-watermark.image)
 
 后续每次在浏览器请求都会触发 Esbuild 重新构建，而每次重新构建都是一个增量构建的过程，耗时也会比首次构建少很多(一般能减少 70% 左右)。
 
@@ -434,7 +434,7 @@ render(<Greet />, document.getElementById('root'))
 
 示例代码中我们用到了 `Skypack` 这个提供 npm 第三方包 ESM 产物的 `CDN 服务`，我们可以通过 url 访问第三方包的资源，如下图所示:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/19c6f133b45e4b9f9dabfabad3d5c1e7~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/19c6f133b45e4b9f9dabfabad3d5c1e7~tplv-k3u1fbpfcp-watermark.image)
 
 现在我们需要通过 Esbuild 插件来识别这样的 url 路径，然后从网络获取模块内容并让 Esbuild 进行加载，甚至不再需要`npm install`安装依赖了，这看上去是不是很酷呢？
 
@@ -513,7 +513,7 @@ runBuild()
 
 通过`node build.js`执行打包脚本，发现插件不能 work，抛出了这样一个错误:
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b5a5e738b8944b3794fb7a494616df5f~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/b5a5e738b8944b3794fb7a494616df5f~tplv-k3u1fbpfcp-watermark.image)
 
 这是为什么呢？你可以回过头观察一下第三方包的响应内容:
 
@@ -524,7 +524,7 @@ export { default } from '/-/react-dom@v17.0.1-oZ1BXZ5opQ1DbTh7nu9r/dist=es2019,m
 
 进一步查看还有更多的模块内容:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/657eb439a26341c0bda2add74341ff05~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/657eb439a26341c0bda2add74341ff05~tplv-k3u1fbpfcp-watermark.image)
 
 因此我们可以得出一个结论：除了要解析 react-dom 这种直接依赖的路径，还要解析它依赖的路径，也就是间接依赖的路径。
 
@@ -542,11 +542,11 @@ build.onResolve({ filter: /.*/, namespace: 'http-url' }, (args) => ({
 
 加了这段逻辑后，Esbuild 路径解析的流程如下:
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0b63e55360154abfa5201507299758f1~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/0b63e55360154abfa5201507299758f1~tplv-k3u1fbpfcp-watermark.image)
 
 现在我们再次执行`node build.js`，发现依赖已经成功下载并打包了。
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/650ff1c2e05b4171a0576aa7ed9c2aad~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/650ff1c2e05b4171a0576aa7ed9c2aad~tplv-k3u1fbpfcp-watermark.image)
 
 ### 实战 2: 实现 HTML 构建插件
 
@@ -681,11 +681,11 @@ serve .
 
 可以看到如下的界面:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bcb88009c0284daa80282df46faa74f6~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/bcb88009c0284daa80282df46faa74f6~tplv-k3u1fbpfcp-watermark.image)
 
 再访问`localhost:3000`，会默认访问到 index.html 的内容：
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6df77e492987446cbff19730ba741ebc~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/6df77e492987446cbff19730ba741ebc~tplv-k3u1fbpfcp-watermark.image)
 
 这样一来，应用的内容就成功显示了，也说明 HTML 插件正常生效了。当然，如果要做一个足够通用的 HTML 插件，还需要考虑诸多的因素，比如`自定义 HTML 内容`、`自定义公共前缀(publicPath)`、`自定义 script 标签类型`以及 `多入口打包`等等，大家感兴趣的话可以自行扩展。(可参考[这个开源插件](https://github.com/sanyuan0704/ewas/blob/main/packages/esbuild-plugin-html/src/index.ts))
 

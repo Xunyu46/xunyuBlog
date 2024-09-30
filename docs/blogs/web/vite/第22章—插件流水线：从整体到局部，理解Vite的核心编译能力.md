@@ -6,7 +6,7 @@
 
 从[《双引擎架构》](https://juejin.cn/book/7050063811973218341/section/7060398408430780431)小节中我们知道 Vite 的插件机制是与 Rollup 兼容的，但它在开发和生产环境下的实现稍有差别，你可以回顾一下这张架构图:
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/02910cd2c6894bcdb3a9e0fc9e59f4c2~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/02910cd2c6894bcdb3a9e0fc9e59f4c2~tplv-k3u1fbpfcp-watermark_1_2_3.image)
 
 我们可以看到:
 
@@ -692,7 +692,7 @@ Vite 中提供了两种 JS 代码压缩的工具，即 Esbuild 和 Terser，分�
 
 - **vite:reporter**([点击查看实现](https://github.com/vitejs/vite/blob/v2.7.0/packages/vite/src/node/plugins/reporter.ts))。主要提供打包时的命令行构建日志:
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1d5b15eb7fd347da9b838c983047321b~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](assets/1d5b15eb7fd347da9b838c983047321b~tplv-k3u1fbpfcp-watermark.image)
 
 ### 4. 开发环境特有插件
 
