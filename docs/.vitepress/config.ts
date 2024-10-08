@@ -75,4 +75,7 @@ export default defineConfig({
       categoryId: 'DIC_kwDOLD4AD84Ch0xD',
     },
   },
+  vite: {
+    assetsInclude: ['**/*.image','**/*.awebp'], // 确保这一行在这里
+  },
 })
