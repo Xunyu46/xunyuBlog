@@ -113,7 +113,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: '浏览器网络', link: '/blogs/interview/brower/' },
       { text: 'Vue', link: '/blogs/interview/vue/1.v-if和v-for哪个优先级更高？.md' },
       { text: 'React', link: '/blogs/interview/react/' },
-      { text: '算法', link: '/blogs/interview/algorithm/' },
+      { text: '算法', link: '/blogs/interview/algorithm/1-面试总有套路，算法不是玄学——写给普通人的前端算法面试攻略.md' },
     ],
   },
   {
